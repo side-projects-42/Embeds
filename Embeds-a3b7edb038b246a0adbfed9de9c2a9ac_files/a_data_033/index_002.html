@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Chess</title>
+  <style type="text/css">
+    button {
+      height: 50px;
+      width: 50px;
+      font-size: 40px;
+    }
+
+  </style></head>
+  
+
+  <body>
+    <div id="board">
+      <div id="row-0">
+        <button class="square" id="row-0-column-0">♜</button>
+        <button class="square" id="row-0-column-1" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♞</button>
+        <button class="square" id="row-0-column-2">♝</button>
+        <button class="square" id="row-0-column-3" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♛</button>
+        <button class="square" id="row-0-column-4">♚</button>
+        <button class="square" id="row-0-column-5" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♝</button>
+        <button class="square" id="row-0-column-6">♞</button>
+        <button class="square" id="row-0-column-7" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♜</button>
+      </div>
+      <div id="row-1">
+        <button class="square" id="row-1-column-0" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♟</button>
+        <button class="square" id="row-1-column-1">♟</button>
+        <button class="square" id="row-1-column-2" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♟</button>
+        <button class="square" id="row-1-column-3">♟</button>
+        <button class="square" id="row-1-column-4" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♟</button>
+        <button class="square" id="row-1-column-5">♟</button>
+        <button class="square" id="row-1-column-6" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♟</button>
+        <button class="square" id="row-1-column-7">♟</button>
+      </div>
+      <div id="row-2">
+        <button class="square" id="row-2-column-0">&nbsp;</button>
+        <button class="square" id="row-2-column-1" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-2-column-2">&nbsp;</button>
+        <button class="square" id="row-2-column-3" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-2-column-4">&nbsp;</button>
+        <button class="square" id="row-2-column-5" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-2-column-6">&nbsp;</button>
+        <button class="square" id="row-2-column-7" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+      </div>
+      <div id="row-3">
+        <button class="square" id="row-3-column-0" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-3-column-1">&nbsp;</button>
+        <button class="square" id="row-3-column-2" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-3-column-3">&nbsp;</button>
+        <button class="square" id="row-3-column-4" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-3-column-5">&nbsp;</button>
+        <button class="square" id="row-3-column-6" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-3-column-7">&nbsp;</button>
+      </div>
+      <div id="row-4">
+        <button class="square" id="row-4-column-0">&nbsp;</button>
+        <button class="square" id="row-4-column-1" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-4-column-2">&nbsp;</button>
+        <button class="square" id="row-4-column-3" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-4-column-4">&nbsp;</button>
+        <button class="square" id="row-4-column-5" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-4-column-6">&nbsp;</button>
+        <button class="square" id="row-4-column-7" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+      </div>
+      <div id="row-5">
+        <button class="square" id="row-5-column-0" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-5-column-1">&nbsp;</button>
+        <button class="square" id="row-5-column-2" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-5-column-3">&nbsp;</button>
+        <button class="square" id="row-5-column-4" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-5-column-5">&nbsp;</button>
+        <button class="square" id="row-5-column-6" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">&nbsp;</button>
+        <button class="square" id="row-5-column-7">&nbsp;</button>
+      </div>
+      <div id="row-6">
+        <button class="square" id="row-6-column-0">♙</button>
+        <button class="square" id="row-6-column-1" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♙</button>
+        <button class="square" id="row-6-column-2">♙</button>
+        <button class="square" id="row-6-column-3" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♙</button>
+        <button class="square" id="row-6-column-4">♙</button>
+        <button class="square" id="row-6-column-5" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♙</button>
+        <button class="square" id="row-6-column-6">♙</button>
+        <button class="square" id="row-6-column-7" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♙</button>
+      </div>
+      <div id="row-7">
+        <button class="square" id="row-7-column-0" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♖</button>
+        <button class="square" id="row-7-column-1">♘</button>
+        <button class="square" id="row-7-column-2" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♗</button>
+        <button class="square" id="row-7-column-3">♕</button>
+        <button class="square" id="row-7-column-4" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♔</button>
+        <button class="square" id="row-7-column-5">♗</button>
+        <button class="square" id="row-7-column-6" style="background: rgb(126, 117, 123) none repeat scroll 0% 0%;">♘</button>
+        <button class="square" id="row-7-column-7">♖</button>
+      </div>
+    </div>
+    <script src="index_data_002/Piece.js"></script>
+    <script src="index_data_002/Knight.js"></script>
+    <script src="index_data_002/Rook.js"></script>
+    <script src="index_data_002/Bishop.js"></script>
+    <script src="index_data_002/Queen.js"></script>
+    <script src="index_data_002/King.js"></script>
+    <script src="index_data_002/Pawn.js"></script>
+    <script src="index_data_002/UtilityFunctions.js"></script>
+    <script src="index_data_002/Player.js"></script>
+    <script src="index_data_002/Board.js"></script>
+    <script src="index_data_002/UserInterface.js"></script>
+    <script src="index_data_002/Game.js"></script>
+  
+
+
+</body></html>

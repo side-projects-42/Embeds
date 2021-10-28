@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - 3D Drag out menu with guitar</title>
+  
+  
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css?family=Heebo:400,500,800,900&display=swap");
+:root {
+  --bg: #efdece;
+}
+
+h4 {
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.dynamicCursor {
+  max-width: 50px;
+  min-width: 18px;
+  transition: width 0s;
+  background: transparent !important;
+  border: 2px solid white !important;
+}
+
+@-webkit-keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  padding: 0;
+  background: #a92913;
+  padding: 0;
+  margin: 0;
+  box-shadow: 50vw 0 #381313 inset;
+  height: 100vh;
+  font-family: "Heebo", sans-serif;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+body .phone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .guitar {
+  width: 85px;
+  height: 175px;
+  z-index: 10;
+  position: absolute;
+  transition: all 0.7s 0.3s cubic-bezier(0.5, 0.005, 0.075, 0.985), transform 0.1s 0.7s;
+  left: 92px;
+  transform: scale(1.8);
+  top: 130px;
+  background-size: 1920px !important;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/gt.png);
+  -webkit-animation: guitar2 0.5s 0s steps(23, end) forwards;
+          animation: guitar2 0.5s 0s steps(23, end) forwards;
+}
+@-webkit-keyframes guitar {
+  0% {
+    background-position: 0 0;
+    transform: scale(1.8);
+  }
+  10% {
+    transform: scale(1.8);
+  }
+  100% {
+    background-position: -1840px 0;
+    transform: scale(1.8);
+  }
+}
+@keyframes guitar {
+  0% {
+    background-position: 0 0;
+    transform: scale(1.8);
+  }
+  10% {
+    transform: scale(1.8);
+  }
+  100% {
+    background-position: -1840px 0;
+    transform: scale(1.8);
+  }
+}
+@-webkit-keyframes guitar2 {
+  0% {
+    background-position: -1840px 0;
+    transform: scale(1.8);
+  }
+  10% {
+    transform: scale(1.8);
+  }
+  100% {
+    background-position: 0 0;
+    transform: scale(1.8);
+  }
+}
+@keyframes guitar2 {
+  0% {
+    background-position: -1840px 0;
+    transform: scale(1.8);
+  }
+  10% {
+    transform: scale(1.8);
+  }
+  100% {
+    background-position: 0 0;
+    transform: scale(1.8);
+  }
+}
+body .phone {
+  opacity: 0;
+  -webkit-animation: in 1s 0.5s forwards;
+          animation: in 1s 0.5s forwards;
+  width: 245px;
+  height: 489px;
+  perspective: 900;
+  border-radius: 24px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-reflect: below 4px linear-gradient(to top, white -120%, rgba(255, 255, 255, 0) 25%);
+}
+body .phone.open .guitar {
+  -webkit-animation: guitar 0.5s 0s steps(23, end) forwards;
+          animation: guitar 0.5s 0s steps(23, end) forwards;
+}
+body .phone.open .phone_inner__nav {
+  left: 170px;
+}
+body .phone.open .phone_inner__nav h3 {
+  opacity: 0;
+}
+body .phone.open .phone_inner__cube {
+  transform: rotateY(90deg);
+  left: 50px;
+}
+body .phone.open .phone_inner__cube h2 {
+  opacity: 0;
+  transform: translateZ(50px);
+}
+body .phone_frame {
+  width: 245px;
+  height: 489px;
+  position: absolute;
+  z-index: 2;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/frameIphone.png");
+  pointer-events: none;
+}
+body .phone_inner {
+  width: 225px;
+  height: 475px;
+  position: relative;
+  left: 10px;
+  top: 6px;
+  overflow: hidden;
+  transform-style: preserve-3D;
+  background: #ada59c;
+}
+body .phone_inner__nav {
+  position: absolute;
+  z-index: 2;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  transition: all 0.5s cubic-bezier(0.615, 0, 0.28, 1.005);
+  top: 39px;
+  left: 0;
+}
+body .phone_inner__nav h3 {
+  margin: 0;
+  font-size: 9px;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.615, 0, 0.28, 1.005);
+}
+body .phone_inner__nav .menu {
+  width: 18px;
+  height: 2px;
+  background: #111114;
+  position: absolute;
+  left: 16px;
+}
+body .phone_inner__nav .menu:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  width: 18px;
+  height: 2px;
+  background: #111114;
+}
+body .phone_inner__nav .menu:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 9px;
+  width: 10px;
+  height: 2px;
+  background: #111114;
+}
+body .phone_inner__cube {
+  transform-style: preserve-3D;
+  height: 100%;
+  position: relative;
+  left: 0;
+  transition: all 0.509s cubic-bezier(0.615, 0, 0.28, 1.005);
+}
+body .phone_inner__cube .shadow img {
+  position: absolute;
+  width: 210px;
+  top: 90px;
+  left: 20px;
+}
+body .phone_inner__cube h1 {
+  text-transform: uppercase;
+  margin: 0;
+  transform-origin: 0 50%;
+  position: absolute;
+  line-height: 0;
+  left: 47px;
+  letter-spacing: 3px;
+  top: 92px;
+  color: #c6bdad;
+  font-size: 55px;
+  text-shadow: 0 0 1px #bdb5ad;
+  transform-style: preserve-3D;
+}
+body .phone_inner__cube h1:nth-of-type(1) {
+  transform: rotate(90deg) translateZ(-0.9583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(2) {
+  transform: rotate(90deg) translateZ(-0.9166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(3) {
+  transform: rotate(90deg) translateZ(-0.875px);
+}
+body .phone_inner__cube h1:nth-of-type(4) {
+  transform: rotate(90deg) translateZ(-0.8333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(5) {
+  transform: rotate(90deg) translateZ(-0.7916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(6) {
+  transform: rotate(90deg) translateZ(-0.75px);
+}
+body .phone_inner__cube h1:nth-of-type(7) {
+  transform: rotate(90deg) translateZ(-0.7083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(8) {
+  transform: rotate(90deg) translateZ(-0.6666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(9) {
+  transform: rotate(90deg) translateZ(-0.625px);
+}
+body .phone_inner__cube h1:nth-of-type(10) {
+  transform: rotate(90deg) translateZ(-0.5833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(11) {
+  transform: rotate(90deg) translateZ(-0.5416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(12) {
+  transform: rotate(90deg) translateZ(-0.5px);
+}
+body .phone_inner__cube h1:nth-of-type(13) {
+  transform: rotate(90deg) translateZ(-0.4583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(14) {
+  transform: rotate(90deg) translateZ(-0.4166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(15) {
+  transform: rotate(90deg) translateZ(-0.375px);
+}
+body .phone_inner__cube h1:nth-of-type(16) {
+  transform: rotate(90deg) translateZ(-0.3333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(17) {
+  transform: rotate(90deg) translateZ(-0.2916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(18) {
+  transform: rotate(90deg) translateZ(-0.25px);
+}
+body .phone_inner__cube h1:nth-of-type(19) {
+  transform: rotate(90deg) translateZ(-0.2083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(20) {
+  transform: rotate(90deg) translateZ(-0.1666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(21) {
+  transform: rotate(90deg) translateZ(-0.125px);
+}
+body .phone_inner__cube h1:nth-of-type(22) {
+  transform: rotate(90deg) translateZ(-0.0833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(23) {
+  transform: rotate(90deg) translateZ(-0.0416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(24) {
+  transform: rotate(90deg) translateZ(0px);
+}
+body .phone_inner__cube h1:nth-of-type(25) {
+  transform: rotate(90deg) translateZ(0.0416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(26) {
+  transform: rotate(90deg) translateZ(0.0833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(27) {
+  transform: rotate(90deg) translateZ(0.125px);
+}
+body .phone_inner__cube h1:nth-of-type(28) {
+  transform: rotate(90deg) translateZ(0.1666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(29) {
+  transform: rotate(90deg) translateZ(0.2083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(30) {
+  transform: rotate(90deg) translateZ(0.25px);
+}
+body .phone_inner__cube h1:nth-of-type(31) {
+  transform: rotate(90deg) translateZ(0.2916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(32) {
+  transform: rotate(90deg) translateZ(0.3333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(33) {
+  transform: rotate(90deg) translateZ(0.375px);
+}
+body .phone_inner__cube h1:nth-of-type(34) {
+  transform: rotate(90deg) translateZ(0.4166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(35) {
+  transform: rotate(90deg) translateZ(0.4583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(36) {
+  transform: rotate(90deg) translateZ(0.5px);
+}
+body .phone_inner__cube h1:nth-of-type(37) {
+  transform: rotate(90deg) translateZ(0.5416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(38) {
+  transform: rotate(90deg) translateZ(0.5833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(39) {
+  transform: rotate(90deg) translateZ(0.625px);
+}
+body .phone_inner__cube h1:nth-of-type(40) {
+  transform: rotate(90deg) translateZ(0.6666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(41) {
+  transform: rotate(90deg) translateZ(0.7083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(42) {
+  transform: rotate(90deg) translateZ(0.75px);
+}
+body .phone_inner__cube h1:nth-of-type(43) {
+  transform: rotate(90deg) translateZ(0.7916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(44) {
+  transform: rotate(90deg) translateZ(0.8333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(45) {
+  transform: rotate(90deg) translateZ(0.875px);
+}
+body .phone_inner__cube h1:nth-of-type(46) {
+  transform: rotate(90deg) translateZ(0.9166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(47) {
+  transform: rotate(90deg) translateZ(0.9583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(48) {
+  transform: rotate(90deg) translateZ(1px);
+}
+body .phone_inner__cube h1:nth-of-type(49) {
+  transform: rotate(90deg) translateZ(1.0416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(50) {
+  transform: rotate(90deg) translateZ(1.0833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(51) {
+  transform: rotate(90deg) translateZ(1.125px);
+}
+body .phone_inner__cube h1:nth-of-type(52) {
+  transform: rotate(90deg) translateZ(1.1666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(53) {
+  transform: rotate(90deg) translateZ(1.2083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(54) {
+  transform: rotate(90deg) translateZ(1.25px);
+}
+body .phone_inner__cube h1:nth-of-type(55) {
+  transform: rotate(90deg) translateZ(1.2916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(56) {
+  transform: rotate(90deg) translateZ(1.3333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(57) {
+  transform: rotate(90deg) translateZ(1.375px);
+}
+body .phone_inner__cube h1:nth-of-type(58) {
+  transform: rotate(90deg) translateZ(1.4166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(59) {
+  transform: rotate(90deg) translateZ(1.4583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(60) {
+  transform: rotate(90deg) translateZ(1.5px);
+}
+body .phone_inner__cube h1:nth-of-type(61) {
+  transform: rotate(90deg) translateZ(1.5416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(62) {
+  transform: rotate(90deg) translateZ(1.5833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(63) {
+  transform: rotate(90deg) translateZ(1.625px);
+}
+body .phone_inner__cube h1:nth-of-type(64) {
+  transform: rotate(90deg) translateZ(1.6666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(65) {
+  transform: rotate(90deg) translateZ(1.7083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(66) {
+  transform: rotate(90deg) translateZ(1.75px);
+}
+body .phone_inner__cube h1:nth-of-type(67) {
+  transform: rotate(90deg) translateZ(1.7916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(68) {
+  transform: rotate(90deg) translateZ(1.8333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(69) {
+  transform: rotate(90deg) translateZ(1.875px);
+}
+body .phone_inner__cube h1:nth-of-type(70) {
+  transform: rotate(90deg) translateZ(1.9166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(71) {
+  transform: rotate(90deg) translateZ(1.9583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(72) {
+  transform: rotate(90deg) translateZ(2px);
+}
+body .phone_inner__cube h1:nth-of-type(73) {
+  transform: rotate(90deg) translateZ(2.0416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(74) {
+  transform: rotate(90deg) translateZ(2.0833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(75) {
+  transform: rotate(90deg) translateZ(2.125px);
+}
+body .phone_inner__cube h1:nth-of-type(76) {
+  transform: rotate(90deg) translateZ(2.1666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(77) {
+  transform: rotate(90deg) translateZ(2.2083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(78) {
+  transform: rotate(90deg) translateZ(2.25px);
+}
+body .phone_inner__cube h1:nth-of-type(79) {
+  transform: rotate(90deg) translateZ(2.2916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(80) {
+  transform: rotate(90deg) translateZ(2.3333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(81) {
+  transform: rotate(90deg) translateZ(2.375px);
+}
+body .phone_inner__cube h1:nth-of-type(82) {
+  transform: rotate(90deg) translateZ(2.4166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(83) {
+  transform: rotate(90deg) translateZ(2.4583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(84) {
+  transform: rotate(90deg) translateZ(2.5px);
+}
+body .phone_inner__cube h1:nth-of-type(85) {
+  transform: rotate(90deg) translateZ(2.5416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(86) {
+  transform: rotate(90deg) translateZ(2.5833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(87) {
+  transform: rotate(90deg) translateZ(2.625px);
+}
+body .phone_inner__cube h1:nth-of-type(88) {
+  transform: rotate(90deg) translateZ(2.6666666667px);
+}
+body .phone_inner__cube h1:nth-of-type(89) {
+  transform: rotate(90deg) translateZ(2.7083333333px);
+}
+body .phone_inner__cube h1:nth-of-type(90) {
+  transform: rotate(90deg) translateZ(2.75px);
+}
+body .phone_inner__cube h1:nth-of-type(91) {
+  transform: rotate(90deg) translateZ(2.7916666667px);
+}
+body .phone_inner__cube h1:nth-of-type(92) {
+  transform: rotate(90deg) translateZ(2.8333333333px);
+}
+body .phone_inner__cube h1:nth-of-type(93) {
+  transform: rotate(90deg) translateZ(2.875px);
+}
+body .phone_inner__cube h1:nth-of-type(94) {
+  transform: rotate(90deg) translateZ(2.9166666667px);
+}
+body .phone_inner__cube h1:nth-of-type(95) {
+  transform: rotate(90deg) translateZ(2.9583333333px);
+}
+body .phone_inner__cube h1:nth-of-type(96) {
+  transform: rotate(90deg) translateZ(3px);
+}
+body .phone_inner__cube h1:nth-of-type(97) {
+  transform: rotate(90deg) translateZ(3.0416666667px);
+}
+body .phone_inner__cube h1:nth-of-type(98) {
+  transform: rotate(90deg) translateZ(3.0833333333px);
+}
+body .phone_inner__cube h1:nth-of-type(99) {
+  transform: rotate(90deg) translateZ(3.125px);
+}
+body .phone_inner__cube h1:nth-of-type(100) {
+  transform: rotate(90deg) translateZ(3.1666666667px);
+}
+body .phone_inner__cube h2 {
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 14px;
+  line-height: 20px;
+  left: 24px;
+  width: 100px;
+  opacity: 1;
+  transform: translateZ(0);
+  transition: all 0.5s cubic-bezier(0.615, 0, 0.28, 1.005);
+}
+body .phone_inner__cube .logo {
+  position: absolute;
+  z-index: auto;
+  top: 64px;
+  left: 20px;
+}
+body .phone_inner__cube .logo img {
+  width: 50px;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  mix-blend-mode: darken;
+}
+body .phone_inner__cube ul {
+  padding: 0;
+  margin: 0 0 0 30px;
+}
+body .phone_inner__cube ul li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0 0 4px 0;
+  color: #111008;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+body .phone_inner__cube ul li:hover {
+  color: #a23426;
+}
+body .phone_inner__cube ul li.active {
+  color: #a23426;
+}
+body .phone_inner__cube ul.small {
+  font-size: 7px;
+  margin-top: 80px;
+}
+body .phone_inner__cube ul.small li {
+  margin: 0 0 6px 0;
+}
+body .phone_inner__cube ul.big {
+  margin-top: 157px;
+}
+body .phone_inner__cube .face--left, body .phone_inner__cube .face--front {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3D;
+  background: linear-gradient(to right, #f0ece5, var(--bg) 6%, var(--bg)), var(--bg);
+  position: absolute;
+  transform-style: preserve-3D;
+}
+body .phone_inner__cube .face--left {
+  transform: rotateY(-90deg) translateX(-150px);
+  width: 150px;
+  transform-origin: 0 0;
+  z-index: -1;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h4>Drag the phone right and left</h4>
+<div class="phone">
+  <div class="phone_frame"></div>
+  <canvas class="grain"></canvas>
+  <div class="guitar"></div>
+  <div class="phone_inner">
+    <div class="phone_inner__nav">
+      <div class="menu"></div>
+      <h3>Product details</h3>
+    </div>
+    <div class="phone_inner__cube">
+      <div class="face--front">
+        <div class="shadow">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/gshadow.png">
+        </div>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h1>Fender</h1>
+        <h2>Fender American Elite Strat</h2>
+      </div>
+      <div class="face--left">
+        <div class="logo">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/logoStrings.png">
+        </div>
+        <ul class="big">
+          <li class="active">Guitars</li>
+          <li>Basses</li>
+          <li>Amps</li>
+          <li>Pedals</li>
+          <li>Other</li>
+        </ul>
+        <ul class="small">
+          <li>About</li>
+          <li>Support</li>
+          <li>Terms</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="../abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script></body></html>

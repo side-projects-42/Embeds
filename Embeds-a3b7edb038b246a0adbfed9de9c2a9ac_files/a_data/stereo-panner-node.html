@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>StereoPannerNode example</title>
+
+  <link rel="stylesheet" href="stereo-panner-node.html">
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  
+  <link rel="stylesheet" href="../a_data_038/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="../a_data_025/bootstrap-theme.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="../a_data_025/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+
+<link rel="stylesheet" href="../a_data_038/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="../a_data_025/bootstrap-theme.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><script src="../a_data_025/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script></head>
+
+
+<!-- Optional theme -->
+
+
+<!-- Latest compiled and minified JavaScript -->
+
+
+
+
+<body>
+  <h1>StereoPannerNode example</h1>
+  <audio controls="controls">
+    <source src="stereo-panner-node_data/viper_002.txt" type="audio/ogg">
+    <source src="stereo-panner-node_data/viper.txt" type="audio/mp3">
+    <p>Browser too old to support HTML5 audio? How depressing!</p>
+  </audio>
+  <h2>Set stereo panning</h2>
+  <input class="panning-control" type="range" min="-1" max="1" step="0.1" value="0">
+  <span class="panning-value">0</span>
+  <pre>
+  </pre>
+
+<script>
+  let audioCtx;
+  const myAudio = document.querySelector( 'audio' );
+  const pre = document.querySelector( 'pre' );
+  const myScript = document.querySelector( 'script' );
+
+  const panControl = document.querySelector( '.panning-control' );
+  const panValue = document.querySelector( '.panning-value' );
+
+  pre.innerHTML = myScript.innerHTML;
+
+  myAudio.addEventListener( 'play', () => {
+    // Create audio context if it doesn't already exist
+    if ( !audioCtx ) {
+      audioCtx = new window.AudioContext();
+    }
+
+    // Create a MediaElementAudioSourceNode
+    // Feed the HTMLMediaElement into it
+    let source = audioCtx.createMediaElementSource( myAudio );
+
+    // Create a stereo panner
+    let panNode = audioCtx.createStereoPanner();
+
+    // Event handler function to increase panning to the right and left
+    // when the slider is moved
+
+    panControl.oninput = function () {
+      panNode.pan.value = panControl.value;
+      panValue.innerHTML = panControl.value;
+    }
+
+    // connect the AudioBufferSourceNode to the gainNode
+    // and the gainNode to the destination, so we can play the
+    // music and adjust the panning using the controls
+    source.connect( panNode );
+    panNode.connect( audioCtx.destination );
+  } )
+</script>
+
+
+</body></html>

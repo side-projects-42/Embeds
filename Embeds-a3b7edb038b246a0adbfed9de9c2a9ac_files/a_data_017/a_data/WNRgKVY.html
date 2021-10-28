@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Scope and Closures</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Qdm7JQkl8zYDO/jE2j1ekOjbXavLSSL4SnNwI77gnKkB4d85HZWTQeIZs75Gy0QI/COIjm6nH45kq1DtVJvghw==">
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/BritHemming/pen/WNRgKVY" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code">// Scope
+// scope answers the question of where are my functions and variables available to me 
+
+const cohort = 'Web43';
+
+// console.log(cohort)
+
+// const and let are not attached to the window object but var is 
+// global variables are defined outside of functions or blocks of code and would be available to me anywhere in my program 
+
+// functions are scoped similar to the way variable are scoped 
+
+// let study = 'HTML and CSS';
+
+// function sprintThree(){
+//   let study = 'JavaScript';
+//   return `We are studying ${study}`;
+// }
+
+// console.log(study);
+// console.log(sprintThree());
+
+// const dog = 'Ada';
+
+// function callDog(){
+//   console.log(dog);
+// }
+
+// function puppy(){
+//   const dog = 'Noa';
+//   callDog();
+// }
+
+// puppy();
+
+/*
+var
+- can be redecleared 
+- can be updated 
+- is function scoped 
+
+let 
+- cannot be redecleared 
+- can be updated
+- is block scoped 
+
+const 
+- cannot be redecleared 
+- cannot be updated 
+- is block scoped 
+*/
+
+// if(1 === 1){
+//   var answer = true;
+// } // these {} are a block of code and let and const cannot escape them
+
+// console.log(answer);
+
+// for(let i = 0; i &lt; 5; i++){
+//   console.log(i);
+// }
+
+// console.log(i);
+
+/*using const until we can't and then let but avoid var*/
+
+// function sayHi(name){
+//   var hello = 'hi';
+//   function yell(){
+//     console.log(name.toUpperCase());
+//   }
+//  return yell();
+// }
+
+// sayHi('Natalie');
+
+// // yell();
+
+// console.log(hello);
+
+// scope depends on where things were created. Functions and variables. If you create a function inside of another function that function will only be available inside of the function it was created in. It won't exist on the global scope. 
+
+
+//Hoisting 
+// hoisting in javascript allows you to access functions and varibale before they've been created 
+// function declearations and variable declearations (var) are hoisted 
+// working();
+
+function working(){
+  console.log('its working!');
+}
+
+// working();
+// console.log(myName);
+// // undefined means it exists but it does not yet have a value 
+
+// var myName = 'Brit';
+
+// console.log(myName);
+
+// what this file does 
+
+// invoke all functions here 
+
+// How this file does it 
+
+// write all functions here 
+
+//Closures 
+// give us the ability to put functions together 
+// code that's been identified elsewhere that we can use later 
+// we can pass values down but we can't pass them back up 
+
+// function country(countryName){
+//   let lang1 = 'French';
+//   let lang2 = 'English';
+//   console.log(`The official languages of ${countryName} are ${lang1} and ${lang2}`);
+//   debugger;
+//   function province(provName){
+//     console.log(`The official languages of ${countryName} are ${lang1} and ${lang2} and ${provName} has the largest population. The national food is ${food}`);
+//     debugger;
+//     function city(cityName){
+//       let food = 'maple syrup';
+//       console.log(`The official languages of ${countryName} are ${lang1} and ${lang2} and ${provName} has the largest population. ${cityName} is the biggest city in ${countryName}`);
+//       debugger;
+//     }// this closes city
+//     city('Toronto');
+//   }// this closes prov
+//   province('Ontario');
+// }// this closes country
+// country('Canada');
+
+// when a function reaches outside of it's scope to grab a value defined in the outter scope
+
+// function game(sport){
+//   let score = 0;
+//   return function win(){
+//     score ++;
+//     return `your ${sport} game score is ${score}`;
+//   }
+// }
+
+
+// const hockeyGame = game('hockey');
+// // console.log(hockeyGame);
+// console.log(hockeyGame());
+// console.log(hockeyGame());
+// console.log(hockeyGame());
+// console.log(hockeyGame());
+
+
+// const basketBallGame = game('Basketball');
+// console.log(basketBallGame());
+
+
+// function score(){
+//   return Math.floor(Math.random() * Math.floor(5) + 1);
+// }
+
+// console.log(score());
+// console.log(score());
+// console.log(score());
+// console.log(score());
+
+
+// Callbacks and Higher Order Functions 
+// Higher Order functions receive other functions as arguments
+// callback functions are passed into higher order functions as arguments 
+
+// const kitchen = function(ing1, ing2, chef){
+//   return chef(ing1, ing2);
+//   // pizzaChef('dough', 'sauce');
+//   // pastaChef('dough', 'sauce');
+// }
+
+// const pizzaChef = function(ing1, ing2){
+//   return `I took ${ing1} and ${ing2} and I made you a 🍕`;
+// }
+
+// const pastaChef = function(ing1, ing2){
+//   return `I took ${ing1} and ${ing2} and I made you a 🍝`;
+// }
+
+// console.log(kitchen('dough', 'sauce', pizzaChef));
+// console.log(kitchen('dough', 'sauce', pastaChef));
+
+
+
+function score(){
+  return Math.floor(Math.random() * Math.floor(5) + 1);
+}
+
+
+
+function hockeyGame(scorecb){
+  return {
+    Home: scorecb(),
+    Away: scorecb()
+  }
+}
+
+console.log(hockeyGame(score));
+
+// // function declearation  // only this one is hoisted
+// function add(num1, num2){
+//   return num1 + num2;
+// }
+
+// // function expression 
+// const add = function(num1, num2){
+//   return num1 + num2;
+// }
+
+// // arrow function 
+// const add = (num1, num2) =&gt; num1 + num2;
+
+function totalGameScore(scorecb, gamecb){
+  const totalGame = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  
+  for(let i = 0; i &lt; 3; i++){
+    const currentScore = gamecb(scorecb);
+    homeScore = homeScore + currentScore.Home
+    awayScore = awayScore + currentScore.Away
+    totalGame.push(`Period ${i + 1}: Away ${currentScore.Away} - Home: ${currentScore.Home}`);
+  }
+  return totalGame;
+}
+
+console.log(totalGameScore(score, hockeyGame));</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Scope and Closures" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Scope and Closures" data-src="https://cdpn.io/BritHemming/fullembedgrid/WNRgKVY?animations=run&amp;type=embed" src="../../a_data_013/a_data/WNRgKVY_data/WNRgKVY.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/BritHemming" target="_blank" rel="noopener"><img src="https://gravatar.com/avatar/a17a87280749c7d48db4f822eb07af22?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&amp;fit=crop&amp;format=auto&amp;height=256&amp;version=0&amp;width=256" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/BritHemming" target="_blank" rel="noopener">Brit Hemming</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/BritHemming" target="_blank" rel="noopener" class="about-user-more">
+See more by @BritHemming on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"","js":"// Scope\n// scope answers the question of where are my functions and variables available to me \n\nconst cohort = &#39;Web43&#39;;\n\n// console.log(cohort)\n\n// const and let are not attached to the window object but var is \n// global variables are defined outside of functions or blocks of code and would be available to me anywhere in my program \n\n// functions are scoped similar to the way variable are scoped \n\n// let study = &#39;HTML and CSS&#39;;\n\n// function sprintThree(){\n//   let study = &#39;JavaScript&#39;;\n//   return `We are studying ${study}`;\n// }\n\n// console.log(study);\n// console.log(sprintThree());\n\n// const dog = &#39;Ada&#39;;\n\n// function callDog(){\n//   console.log(dog);\n// }\n\n// function puppy(){\n//   const dog = &#39;Noa&#39;;\n//   callDog();\n// }\n\n// puppy();\n\n/*\nvar\n- can be redecleared \n- can be updated \n- is function scoped \n\nlet \n- cannot be redecleared \n- can be updated\n- is block scoped \n\nconst \n- cannot be redecleared \n- cannot be updated \n- is block scoped \n*/\n\n// if(1 === 1){\n//   var answer = true;\n// } // these {} are a block of code and let and const cannot escape them\n\n// console.log(answer);\n\n// for(let i = 0; i &lt; 5; i++){\n//   console.log(i);\n// }\n\n// console.log(i);\n\n/*using const until we can&#39;t and then let but avoid var*/\n\n// function sayHi(name){\n//   var hello = &#39;hi&#39;;\n//   function yell(){\n//     console.log(name.toUpperCase());\n//   }\n//  return yell();\n// }\n\n// sayHi(&#39;Natalie&#39;);\n\n// // yell();\n\n// console.log(hello);\n\n// scope depends on where things were created. Functions and variables. If you create a function inside of another function that function will only be available inside of the function it was created in. It won&#39;t exist on the global scope. \n\n\n//Hoisting \n// hoisting in javascript allows you to access functions and varibale before they&#39;ve been created \n// function declearations and variable declearations (var) are hoisted \n// working();\n\nfunction working() {\n  console.log(&#39;its working!&#39;);\n}\n\n// working();\n// console.log(myName);\n// // undefined means it exists but it does not yet have a value \n\n// var myName = &#39;Brit&#39;;\n\n// console.log(myName);\n\n// what this file does \n\n// invoke all functions here \n\n// How this file does it \n\n// write all functions here \n\n//Closures \n// give us the ability to put functions together \n// code that&#39;s been identified elsewhere that we can use later \n// we can pass values down but we can&#39;t pass them back up \n\n// function country(countryName){\n//   let lang1 = &#39;French&#39;;\n//   let lang2 = &#39;English&#39;;\n//   console.log(`The official languages of ${countryName} are ${lang1} and ${lang2}`);\n//   debugger;\n//   function province(provName){\n//     console.log(`The official languages of ${countryName} are ${lang1} and ${lang2} and ${provName} has the largest population. The national food is ${food}`);\n//     debugger;\n//     function city(cityName){\n//       let food = &#39;maple syrup&#39;;\n//       console.log(`The official languages of ${countryName} are ${lang1} and ${lang2} and ${provName} has the largest population. ${cityName} is the biggest city in ${countryName}`);\n//       debugger;\n//     }// this closes city\n//     city(&#39;Toronto&#39;);\n//   }// this closes prov\n//   province(&#39;Ontario&#39;);\n// }// this closes country\n// country(&#39;Canada&#39;);\n\n// when a function reaches outside of it&#39;s scope to grab a value defined in the outter scope\n\n// function game(sport){\n//   let score = 0;\n//   return function win(){\n//     score ++;\n//     return `your ${sport} game score is ${score}`;\n//   }\n// }\n\n\n// const hockeyGame = game(&#39;hockey&#39;);\n// // console.log(hockeyGame);\n// console.log(hockeyGame());\n// console.log(hockeyGame());\n// console.log(hockeyGame());\n// console.log(hockeyGame());\n\n\n// const basketBallGame = game(&#39;Basketball&#39;);\n// console.log(basketBallGame());\n\n\n// function score(){\n//   return Math.floor(Math.random() * Math.floor(5) + 1);\n// }\n\n// console.log(score());\n// console.log(score());\n// console.log(score());\n// console.log(score());\n\n\n// Callbacks and Higher Order Functions \n// Higher Order functions receive other functions as arguments\n// callback functions are passed into higher order functions as arguments \n\n// const kitchen = function(ing1, ing2, chef){\n//   return chef(ing1, ing2);\n//   // pizzaChef(&#39;dough&#39;, &#39;sauce&#39;);\n//   // pastaChef(&#39;dough&#39;, &#39;sauce&#39;);\n// }\n\n// const pizzaChef = function(ing1, ing2){\n//   return `I took ${ing1} and ${ing2} and I made you a 🍕`;\n// }\n\n// const pastaChef = function(ing1, ing2){\n//   return `I took ${ing1} and ${ing2} and I made you a 🍝`;\n// }\n\n// console.log(kitchen(&#39;dough&#39;, &#39;sauce&#39;, pizzaChef));\n// console.log(kitchen(&#39;dough&#39;, &#39;sauce&#39;, pastaChef));\n\n\n\nfunction score() {\n  return Math.floor(Math.random() * Math.floor(5) + 1);\n}\n\n\n\nfunction hockeyGame(scorecb) {\n  return {\n    Home: scorecb(),\n    Away: scorecb() };\n\n}\n\nconsole.log(hockeyGame(score));\n\n// // function declearation  // only this one is hoisted\n// function add(num1, num2){\n//   return num1 + num2;\n// }\n\n// // function expression \n// const add = function(num1, num2){\n//   return num1 + num2;\n// }\n\n// // arrow function \n// const add = (num1, num2) =&gt; num1 + num2;\n\nfunction totalGameScore(scorecb, gamecb) {\n  const totalGame = [];\n  let homeScore = 0;\n  let awayScore = 0;\n\n  for (let i = 0; i &lt; 3; i++) {if (window.CP.shouldStopExecution(0)) break;\n    const currentScore = gamecb(scorecb);\n    homeScore = homeScore + currentScore.Home;\n    awayScore = awayScore + currentScore.Away;\n    totalGame.push(`Period ${i + 1}: Away ${currentScore.Away} - Home: ${currentScore.Home}`);\n  }window.CP.exitedLoop(0);\n  return totalGame;\n}\n\nconsole.log(totalGameScore(score, hockeyGame));"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script></body></html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Linear vs Binary Search</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="4qoNoz+zDHOAy38lFFTMFOttnvwgm+2+i/n6x1GnFOiL785Uqjm3NC8EsLbpgFdKYt4DwbpRJyrwIexB16OISA==">
+<link rel="stylesheet" media="all" href="../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" class="active" aria-pressed="true">
+Pug
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+Sass
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" aria-pressed="false">
+Babel
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/MWbZoOa" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="pug" id="actual-html-code" class=" cm-s-default"><span class="cm-tag">h1</span><span class="cm-string"> Linear vs Binary</span>
+
+<span class="cm-tag">input</span><span class="cm-punctuation">(</span><span class="cm-attribute">type</span><span class="cm-operator">=</span><span class="cm-string">"text"</span> <span class="cm-attribute">maxLength</span><span class="cm-operator">=</span><span class="cm-string">"1"</span><span class="cm-punctuation">)</span><span class="cm-builtin">#random-letter</span>
+<span class="cm-qualifier">.controls</span>
+<span class="cm-indent">  </span><span class="cm-tag">button</span><span class="cm-builtin">#random-btn</span><span class="cm-string"> Random</span>
+<span class="cm-indent">  </span><span class="cm-tag">button</span><span class="cm-builtin">#search-btn</span><span class="cm-string"> Search</span>
+
+<span class="cm-qualifier">.searches</span>
+<span class="cm-indent">  </span><span class="cm-punctuation">-</span> <span class="cm-keyword">var</span> <span class="cm-def">alpha</span> <span class="cm-operator">=</span> <span class="cm-string">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>.<span class="cm-property">split</span>(<span class="cm-string">''</span>)
+
+<span class="cm-indent">  </span><span class="cm-qualifier">.linear-search</span>
+<span class="cm-indent">    </span><span class="cm-tag">h2</span><span class="cm-string"> Linear</span>
+<span class="cm-indent">    </span><span class="cm-tag">p</span><span class="cm-qualifier">.info</span><span class="cm-builtin">#linear-info</span><span class="cm-string"> &amp;nbsp;</span>
+<span class="cm-indent">    </span><span class="cm-tag">ul</span><span class="cm-qualifier">.data</span>
+<span class="cm-indent">      </span><span class="cm-keyword">for</span><span class="cm-variable"> char</span><span class="cm-keyword"> in</span> <span class="cm-variable">alpha</span>
+<span class="cm-indent">        </span><span class="cm-punctuation">-</span> <span class="cm-keyword">var</span> <span class="cm-def">id</span> <span class="cm-operator">=</span> <span class="cm-variable">char</span> <span class="cm-operator">+</span> <span class="cm-string">'-linear'</span>
+<span class="cm-indent">        </span><span class="cm-tag">li</span><span class="cm-punctuation">(</span><span class="cm-attribute">id</span><span class="cm-operator">=</span><span class="cm-variable">id</span><span class="cm-punctuation">)</span><span class="cm-punctuation">=</span> <span class="cm-variable">char</span>
+
+<span class="cm-indent">  </span><span class="cm-qualifier">.binary-search</span>
+<span class="cm-indent">    </span><span class="cm-tag">h2</span><span class="cm-string"> Binary</span>
+<span class="cm-indent">    </span><span class="cm-tag">p</span><span class="cm-qualifier">.info</span><span class="cm-builtin">#binary-info</span><span class="cm-string"> &amp;nbsp;</span>
+<span class="cm-indent">    </span><span class="cm-tag">ul</span><span class="cm-qualifier">.data</span>
+<span class="cm-indent">      </span><span class="cm-keyword">for</span><span class="cm-variable"> char</span><span class="cm-keyword"> in</span> <span class="cm-variable">alpha</span>
+<span class="cm-indent">        </span><span class="cm-punctuation">-</span> <span class="cm-keyword">var</span> <span class="cm-def">id</span> <span class="cm-operator">=</span> <span class="cm-variable">char</span> <span class="cm-operator">+</span> <span class="cm-string">'-binary'</span>
+<span class="cm-indent">        </span><span class="cm-tag">li</span><span class="cm-punctuation">(</span><span class="cm-attribute">id</span><span class="cm-operator">=</span><span class="cm-variable">id</span><span class="cm-punctuation">)</span><span class="cm-punctuation">=</span> <span class="cm-variable">char</span></code></pre>
+<a href="#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-sass" id="actual-css-code" class=" cm-s-default"><span class="cm-comment">// ## FONTS ##</span>
+<span class="cm-def">@font-face</span><span class="cm-operator">(</span><span class="cm-string">"</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">B</span><span class="cm-string">o</span><span class="cm-string">l</span><span class="cm-string">d"</span> <span class="cm-string">"</span><span class="cm-string">h</span><span class="cm-string">t</span><span class="cm-string">t</span><span class="cm-string">p</span><span class="cm-string">s</span><span class="cm-string">:</span><span class="cm-string">/</span><span class="cm-string">/</span><span class="cm-string">s</span><span class="cm-string">3</span><span class="cm-string">-</span><span class="cm-string">u</span><span class="cm-string">s</span><span class="cm-string">-</span><span class="cm-string">w</span><span class="cm-string">e</span><span class="cm-string">s</span><span class="cm-string">t</span><span class="cm-string">-</span><span class="cm-string">2</span><span class="cm-string">.</span><span class="cm-string">a</span><span class="cm-string">m</span><span class="cm-string">a</span><span class="cm-string">z</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">a</span><span class="cm-string">w</span><span class="cm-string">s</span><span class="cm-string">.</span><span class="cm-string">c</span><span class="cm-string">o</span><span class="cm-string">m</span><span class="cm-string">/</span><span class="cm-string">s</span><span class="cm-string">.</span><span class="cm-string">c</span><span class="cm-string">d</span><span class="cm-string">p</span><span class="cm-string">n</span><span class="cm-string">.</span><span class="cm-string">i</span><span class="cm-string">o</span><span class="cm-string">/</span><span class="cm-string">1</span><span class="cm-string">6</span><span class="cm-string">1</span><span class="cm-string">0</span><span class="cm-string">4</span><span class="cm-string">0</span><span class="cm-string">/</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">B</span><span class="cm-string">o</span><span class="cm-string">l</span><span class="cm-string">d"</span><span class="cm-operator">)</span>
+<span class="cm-def">@font-face</span><span class="cm-operator">(</span><span class="cm-string">"</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">M</span><span class="cm-string">e</span><span class="cm-string">d</span><span class="cm-string">i</span><span class="cm-string">u</span><span class="cm-string">m"</span> <span class="cm-string">"</span><span class="cm-string">h</span><span class="cm-string">t</span><span class="cm-string">t</span><span class="cm-string">p</span><span class="cm-string">s</span><span class="cm-string">:</span><span class="cm-string">/</span><span class="cm-string">/</span><span class="cm-string">s</span><span class="cm-string">3</span><span class="cm-string">-</span><span class="cm-string">u</span><span class="cm-string">s</span><span class="cm-string">-</span><span class="cm-string">w</span><span class="cm-string">e</span><span class="cm-string">s</span><span class="cm-string">t</span><span class="cm-string">-</span><span class="cm-string">2</span><span class="cm-string">.</span><span class="cm-string">a</span><span class="cm-string">m</span><span class="cm-string">a</span><span class="cm-string">z</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">a</span><span class="cm-string">w</span><span class="cm-string">s</span><span class="cm-string">.</span><span class="cm-string">c</span><span class="cm-string">o</span><span class="cm-string">m</span><span class="cm-string">/</span><span class="cm-string">s</span><span class="cm-string">.</span><span class="cm-string">c</span><span class="cm-string">d</span><span class="cm-string">p</span><span class="cm-string">n</span><span class="cm-string">.</span><span class="cm-string">i</span><span class="cm-string">o</span><span class="cm-string">/</span><span class="cm-string">1</span><span class="cm-string">6</span><span class="cm-string">1</span><span class="cm-string">0</span><span class="cm-string">4</span><span class="cm-string">0</span><span class="cm-string">/</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">M</span><span class="cm-string">e</span><span class="cm-string">d</span><span class="cm-string">i</span><span class="cm-string">u</span><span class="cm-string">m"</span><span class="cm-operator">)</span>
+
+<span class="cm-comment">// ## VARS ##</span>
+<span class="cm-variable-2">$white</span><span class="cm-operator">:</span> <span class="cm-keyword">white</span>
+<span class="cm-variable-2">$yellow</span><span class="cm-operator">:</span> <span class="cm-number">#FFF32B</span>
+<span class="cm-variable-2">$blue</span><span class="cm-operator">:</span> <span class="cm-number">#3BB0FF</span>
+<span class="cm-variable-2">$red</span><span class="cm-operator">:</span> <span class="cm-number">#FF014E</span>
+<span class="cm-variable-2">$green</span><span class="cm-operator">:</span> <span class="cm-number">#66FF00</span>
+<span class="cm-variable-2">$reg-stack</span><span class="cm-operator">:</span> <span class="cm-string">"</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">M</span><span class="cm-string">e</span><span class="cm-string">d</span><span class="cm-string">i</span><span class="cm-string">u</span><span class="cm-string">m"</span>, <span class="cm-string">"</span><span class="cm-string">L</span><span class="cm-string">u</span><span class="cm-string">c</span><span class="cm-string">i</span><span class="cm-string">d</span><span class="cm-string">a</span><span class="cm-string"> </span><span class="cm-string">C</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">s</span><span class="cm-string">o</span><span class="cm-string">l</span><span class="cm-string">e"</span>, <span class="cm-tag">Monaco</span>, <span class="cm-atom">monospace</span>
+<span class="cm-variable-2">$bold-stack</span><span class="cm-operator">:</span> <span class="cm-string">"</span><span class="cm-string">O</span><span class="cm-string">p</span><span class="cm-string">e</span><span class="cm-string">r</span><span class="cm-string">a</span><span class="cm-string">t</span><span class="cm-string">o</span><span class="cm-string">r</span><span class="cm-string">M</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">o</span><span class="cm-string">-</span><span class="cm-string">B</span><span class="cm-string">o</span><span class="cm-string">l</span><span class="cm-string">d"</span>, <span class="cm-string">"</span><span class="cm-string">L</span><span class="cm-string">u</span><span class="cm-string">c</span><span class="cm-string">i</span><span class="cm-string">d</span><span class="cm-string">a</span><span class="cm-string"> </span><span class="cm-string">C</span><span class="cm-string">o</span><span class="cm-string">n</span><span class="cm-string">s</span><span class="cm-string">o</span><span class="cm-string">l</span><span class="cm-string">e"</span>, <span class="cm-tag">Monaco</span>, <span class="cm-atom">monospace</span>
+
+<span class="cm-comment">// ## ANIMATIONS ##</span>
+<span class="cm-def">@keyframes</span> <span class="cm-tag">shake</span>
+  <span class="cm-number">10</span><span class="cm-operator">%</span>, <span class="cm-number">90</span><span class="cm-operator">%</span>
+    <span class="cm-property">transform</span><span class="cm-operator">:</span> <span class="cm-atom">translate3d</span><span class="cm-operator">(</span><span class="cm-number">-1</span><span class="cm-unit">px</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span><span class="cm-operator">)</span>
+  <span class="cm-number">20</span><span class="cm-operator">%</span>, <span class="cm-number">80</span><span class="cm-operator">%</span>
+    <span class="cm-property">transform</span><span class="cm-operator">:</span> <span class="cm-atom">translate3d</span><span class="cm-operator">(</span><span class="cm-number">2</span><span class="cm-unit">px</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span><span class="cm-operator">)</span>
+  <span class="cm-number">30</span><span class="cm-operator">%</span>, <span class="cm-number">50</span><span class="cm-operator">%</span>, <span class="cm-number">70</span><span class="cm-operator">%</span>
+    <span class="cm-property">transform</span><span class="cm-operator">:</span> <span class="cm-atom">translate3d</span><span class="cm-operator">(</span><span class="cm-number">-4</span><span class="cm-unit">px</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span><span class="cm-operator">)</span>
+  <span class="cm-number">40</span><span class="cm-operator">%</span>, <span class="cm-number">60</span><span class="cm-operator">%</span>
+    <span class="cm-property">transform</span><span class="cm-operator">:</span> <span class="cm-atom">translate3d</span><span class="cm-operator">(</span><span class="cm-number">4</span><span class="cm-unit">px</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span><span class="cm-operator">)</span>
+
+<span class="cm-tag">body</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-variable-2">$blue</span>
+  <span class="cm-property">text-align</span><span class="cm-operator">:</span> <span class="cm-atom">center</span>
+  <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-variable-2">$reg-stack</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$white</span>
+  
+<span class="cm-tag">h1</span>, <span class="cm-tag">h2</span>, <span class="cm-tag">h3</span>, <span class="cm-tag">h4</span>, <span class="cm-tag">h5</span>, <span class="cm-tag">h6</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$yellow</span>
+  <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-variable-2">$bold-stack</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">2</span><span class="cm-unit">em</span>
+  
+<span class="cm-tag">h1</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">3</span><span class="cm-unit">em</span>
+  
+<span class="cm-tag">input</span><span class="cm-builtin">#random-letter</span>
+  <span class="cm-property">text-align</span><span class="cm-operator">:</span> <span class="cm-atom">center</span>
+  <span class="cm-property">width</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-property">border</span><span class="cm-operator">:</span> <span class="cm-atom">none</span>
+  <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$white</span>
+  <span class="cm-property">padding-bottom</span><span class="cm-operator">:</span> <span class="cm-number">.2</span><span class="cm-unit">em</span>
+  <span class="cm-property">text-transform</span><span class="cm-operator">:</span> <span class="cm-atom">uppercase</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-variable-2">$blue</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">3</span><span class="cm-unit">em</span>
+  <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-variable-2">$reg-stack</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-keyword">white</span>
+  &amp;<span class="cm-qualifier">.shake</span>
+    <span class="cm-property">animation</span><span class="cm-operator">:</span> <span class="cm-tag">shake</span> <span class="cm-number">0.82</span><span class="cm-tag">s</span> <span class="cm-tag">cubic-bezier</span><span class="cm-operator">(</span><span class="cm-number">.36</span>,<span class="cm-number">.07</span>,<span class="cm-number">.19</span>,<span class="cm-number">.97</span><span class="cm-operator">)</span> <span class="cm-atom">both</span>
+  &amp;<span class="cm-variable-3">:focus</span>
+    <span class="cm-property">outline</span><span class="cm-operator">:</span> <span class="cm-atom">none</span>
+  
+<span class="cm-tag">button</span>
+  <span class="cm-property">text-align</span><span class="cm-operator">:</span> <span class="cm-atom">center</span>
+  <span class="cm-property">border</span><span class="cm-operator">:</span> <span class="cm-atom">none</span>
+  <span class="cm-property">background</span><span class="cm-operator">:</span> <span class="cm-variable-2">$blue</span>
+  <span class="cm-property">border</span><span class="cm-operator">:</span> <span class="cm-number">5</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$yellow</span>
+  <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$yellow</span>
+  <span class="cm-property">font-size</span><span class="cm-operator">:</span> <span class="cm-number">30</span><span class="cm-unit">px</span>
+  <span class="cm-property">font-family</span><span class="cm-operator">:</span> <span class="cm-variable-2">$bold-stack</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">.15</span><span class="cm-unit">em</span> <span class="cm-number">1.3</span><span class="cm-unit">em</span>
+  <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-property">border-color</span> <span class="cm-number">.2</span><span class="cm-tag">s</span>, <span class="cm-atom">color</span> <span class="cm-number">.2</span><span class="cm-tag">s</span>
+  <span class="cm-meta">-webkit-</span><span class="cm-property">transition</span><span class="cm-operator">:</span> <span class="cm-property">border-color</span> <span class="cm-number">.2</span><span class="cm-tag">s</span>, <span class="cm-atom">color</span> <span class="cm-number">.2</span><span class="cm-tag">s</span>
+  &amp;<span class="cm-variable-3">:hover</span>
+    <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$white</span>
+    <span class="cm-property">border-color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$white</span>
+    <span class="cm-property">cursor</span><span class="cm-operator">:</span> <span class="cm-atom">pointer</span>
+
+<span class="cm-qualifier">.searches</span>
+  <span class="cm-qualifier">.linear-search</span>, <span class="cm-qualifier">.binary-search</span>
+    <span class="cm-property">display</span><span class="cm-operator">:</span> <span class="cm-atom">inline-block</span>
+  
+<span class="cm-tag">ul</span><span class="cm-qualifier">.data</span>
+  <span class="cm-property">padding</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-property">margin</span><span class="cm-operator">:</span> <span class="cm-number">1</span><span class="cm-unit">em</span>
+  <span class="cm-property">margin-top</span><span class="cm-operator">:</span> <span class="cm-number">0</span>
+  <span class="cm-tag">li</span>
+    <span class="cm-property">display</span><span class="cm-operator">:</span> <span class="cm-atom">inline-block</span>
+    <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">2</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-atom">rgba</span><span class="cm-operator">(</span><span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span>,<span class="cm-number">0</span><span class="cm-operator">)</span>
+    &amp;<span class="cm-qualifier">.exempt</span>
+      <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$red</span>
+      <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">2</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$red</span>
+    &amp;<span class="cm-qualifier">.found</span>
+      <span class="cm-property">color</span><span class="cm-operator">:</span> <span class="cm-variable-2">$green</span>
+      <span class="cm-property">border-bottom</span><span class="cm-operator">:</span> <span class="cm-number">2</span><span class="cm-unit">px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$green</span></code></pre>
+<a href="#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="jsx" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">// ## Global Variables</span>
+<span class="cm-keyword">const</span> <span class="cm-def">ALPHABET</span> <span class="cm-operator">=</span> <span class="cm-string">'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</span>.<span class="cm-property">split</span>(<span class="cm-string">''</span>)
+<span class="cm-keyword">const</span> <span class="cm-def">ARR_LENGTH</span> <span class="cm-operator">=</span> <span class="cm-variable">ALPHABET</span>.<span class="cm-property">LENGTH</span>
+<span class="cm-keyword">const</span> <span class="cm-def">SEARCH_INTERVAL_TIME</span> <span class="cm-operator">=</span> <span class="cm-number">800</span>
+<span class="cm-keyword">let</span> <span class="cm-def">linear_interval</span>
+<span class="cm-keyword">let</span> <span class="cm-def">binary_interval</span>
+
+<span class="cm-comment">// ## Helper Functions</span>
+<span class="cm-keyword">function</span> <span class="cm-def">getArgumentsAsArray</span>() {
+  <span class="cm-keyword">let</span> <span class="cm-def">args</span> <span class="cm-operator">=</span> <span class="cm-variable">Array</span>.<span class="cm-property">from</span>(<span class="cm-variable-2">arguments</span>)
+  <span class="cm-keyword">if</span> (<span class="cm-keyword">typeof</span> <span class="cm-variable-2">args</span>[<span class="cm-number">0</span>] <span class="cm-operator">===</span> <span class="cm-string">"object"</span>) <span class="cm-variable-2">args</span> <span class="cm-operator">=</span> <span class="cm-variable-2">args</span>[<span class="cm-number">0</span>]
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">args</span>[<span class="cm-number">0</span>] <span class="cm-operator">&amp;&amp;</span> <span class="cm-variable-2">args</span>[<span class="cm-number">0</span>].<span class="cm-property">length</span>) <span class="cm-variable-2">args</span> <span class="cm-operator">=</span> <span class="cm-variable-2">args</span>[<span class="cm-number">0</span>]
+  <span class="cm-keyword">return</span> <span class="cm-variable-2">args</span>
+}
+<span class="cm-keyword">function</span> <span class="cm-def">sum</span>() {
+  <span class="cm-keyword">let</span> <span class="cm-def">args</span> <span class="cm-operator">=</span> <span class="cm-variable">getArgumentsAsArray</span>(<span class="cm-variable-2">arguments</span>)
+  <span class="cm-keyword">return</span> <span class="cm-variable">Array</span>.<span class="cm-property">from</span>(<span class="cm-variable-2">args</span>).<span class="cm-property">reduce</span>( (<span class="cm-def">p</span>, <span class="cm-def">c</span>) <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">p</span> <span class="cm-operator">+</span> <span class="cm-variable-2">c</span> )
+}
+<span class="cm-keyword">function</span> <span class="cm-def">avg</span>() {
+  <span class="cm-keyword">let</span> <span class="cm-def">args</span> <span class="cm-operator">=</span> <span class="cm-variable">getArgumentsAsArray</span>(<span class="cm-variable-2">arguments</span>)
+  <span class="cm-keyword">return</span> <span class="cm-variable">sum</span>(<span class="cm-variable-2">args</span>) <span class="cm-operator">/</span> <span class="cm-variable-2">args</span>.<span class="cm-property">length</span>
+}
+<span class="cm-keyword">function</span> <span class="cm-def">randomIndex</span>(<span class="cm-def">array</span>) {
+  <span class="cm-keyword">return</span> <span class="cm-variable">Math</span>.<span class="cm-property">ceil</span>(<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-variable-2">array</span>.<span class="cm-property">length</span>) <span class="cm-operator">-</span> <span class="cm-number">1</span>
+}
+<span class="cm-keyword">function</span> <span class="cm-def">randomElement</span>(<span class="cm-def">array</span>) {
+  <span class="cm-keyword">return</span> <span class="cm-variable-2">array</span>[<span class="cm-variable">randomIndex</span>(<span class="cm-variable-2">array</span>)]
+}
+
+<span class="cm-comment">// ## Search Functions</span>
+<span class="cm-keyword">function</span> <span class="cm-def">startLinearSearch</span>(<span class="cm-def">value</span>, <span class="cm-def">set</span>) {
+  <span class="cm-keyword">let</span> <span class="cm-def">current_value</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">current_elm</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">current_index</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">num_iterations</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">info</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'linear-info'</span>)
+  <span class="cm-variable">linear_interval</span> <span class="cm-operator">=</span> <span class="cm-variable">setInterval</span>( () <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">current_value</span> <span class="cm-operator">=</span> <span class="cm-variable-2">set</span>[<span class="cm-variable-2">current_index</span>]
+    <span class="cm-variable-2">current_elm</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string-2">`${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">-linear`</span>)
+    <span class="cm-variable-2">num_iterations</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span>
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_index</span> <span class="cm-operator">&gt;=</span> <span class="cm-variable-2">set</span>.<span class="cm-property">length</span>) { 
+      <span class="cm-variable">clearInterval</span>(<span class="cm-variable">linear_interval</span>)
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: -1, Value: none, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+      <span class="cm-keyword">return</span>
+    }
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_value</span> <span class="cm-operator">!=</span> <span class="cm-variable-2">value</span>) {
+      <span class="cm-variable-2">current_elm</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">"exempt"</span>
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: ${</span><span class="cm-variable-2">current_index</span><span class="cm-string-2">}</span><span class="cm-string-2">, Value: ${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+    }
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_value</span> <span class="cm-operator">==</span> <span class="cm-variable-2">value</span>) {
+      <span class="cm-variable">clearInterval</span>(<span class="cm-variable">linear_interval</span>)
+      <span class="cm-variable-2">current_elm</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">"found"</span>
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: ${</span><span class="cm-variable-2">current_index</span><span class="cm-string-2">}</span><span class="cm-string-2">, Value: ${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+      <span class="cm-keyword">return</span>
+    }
+    <span class="cm-variable-2">current_index</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span>
+  }, <span class="cm-variable">SEARCH_INTERVAL_TIME</span>)
+}
+<span class="cm-keyword">function</span> <span class="cm-def">startBinarySearch</span>(<span class="cm-def">value</span>, <span class="cm-def">set</span>) {
+  <span class="cm-keyword">let</span> <span class="cm-def">current_value</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">current_elm</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">current_index</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">num_iterations</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">min</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">max</span> <span class="cm-operator">=</span> <span class="cm-variable-2">set</span>.<span class="cm-property">length</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">info</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'binary-info'</span>)
+  <span class="cm-variable">binary_interval</span> <span class="cm-operator">=</span> <span class="cm-variable">setInterval</span>( () <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">num_iterations</span> <span class="cm-operator">+=</span> <span class="cm-number">1</span>
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">min</span> <span class="cm-operator">&gt;</span> <span class="cm-variable-2">max</span>) {
+      <span class="cm-variable">clearInterval</span>(<span class="cm-variable">binary_interval</span>)
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: -1, Value: none, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+      <span class="cm-keyword">return</span>
+    }
+    <span class="cm-variable-2">current_index</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">floor</span>(<span class="cm-variable">avg</span>(<span class="cm-variable-2">min</span>, <span class="cm-variable-2">max</span>))
+    <span class="cm-variable-2">current_value</span> <span class="cm-operator">=</span> <span class="cm-variable-2">set</span>[<span class="cm-variable-2">current_index</span>]
+    <span class="cm-variable-2">current_elm</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string-2">`${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">-binary`</span>)
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_value</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">value</span>) { 
+      <span class="cm-variable-2">min</span> <span class="cm-operator">=</span> <span class="cm-variable-2">current_index</span> <span class="cm-operator">+</span> <span class="cm-number">1</span>
+      <span class="cm-variable-2">set</span>.<span class="cm-property">slice</span>(<span class="cm-number">0</span>, <span class="cm-variable-2">min</span>).<span class="cm-property">forEach</span>( (<span class="cm-def">n</span>) <span class="cm-operator">=&gt;</span> { 
+        <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string-2">`${</span><span class="cm-variable-2">n</span><span class="cm-string-2">}</span><span class="cm-string-2">-binary`</span>).<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">"exempt"</span>
+      })
+      <span class="cm-comment">// current_elm.className = "exempt"</span>
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: ${</span><span class="cm-variable-2">current_index</span><span class="cm-string-2">}</span><span class="cm-string-2">, Value: ${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+    }
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_value</span> <span class="cm-operator">&gt;</span> <span class="cm-variable-2">value</span> ) {
+      <span class="cm-variable-2">max</span> <span class="cm-operator">=</span> <span class="cm-variable-2">current_index</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>
+      <span class="cm-variable-2">set</span>.<span class="cm-property">slice</span>(<span class="cm-variable-2">current_index</span>, <span class="cm-variable-2">set</span>.<span class="cm-property">length</span>).<span class="cm-property">forEach</span>( (<span class="cm-def">n</span>) <span class="cm-operator">=&gt;</span> { 
+        <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string-2">`${</span><span class="cm-variable-2">n</span><span class="cm-string-2">}</span><span class="cm-string-2">-binary`</span>).<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">"exempt"</span>
+      })
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: ${</span><span class="cm-variable-2">current_index</span><span class="cm-string-2">}</span><span class="cm-string-2">, Value: ${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+    }
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">current_value</span> <span class="cm-operator">==</span> <span class="cm-variable-2">value</span>) {
+      <span class="cm-variable">clearInterval</span>(<span class="cm-variable">binary_interval</span>)
+      <span class="cm-variable-2">current_elm</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">"found"</span>
+      <span class="cm-variable-2">info</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`Index: ${</span><span class="cm-variable-2">current_index</span><span class="cm-string-2">}</span><span class="cm-string-2">, Value: ${</span><span class="cm-variable-2">current_value</span><span class="cm-string-2">}</span><span class="cm-string-2">, Num Iterations: ${</span><span class="cm-variable-2">num_iterations</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span>
+      <span class="cm-keyword">return</span>
+    }
+  }, <span class="cm-variable">SEARCH_INTERVAL_TIME</span>)
+}
+
+
+<span class="cm-comment">// ## DOM triggered functions</span>
+<span class="cm-keyword">function</span> <span class="cm-def">reset</span>() {
+  <span class="cm-variable">clearInterval</span>(<span class="cm-variable">linear_interval</span>)
+  <span class="cm-variable">clearInterval</span>(<span class="cm-variable">binary_interval</span>)
+  <span class="cm-keyword">let</span> <span class="cm-def">exempt</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">'.exempt'</span>)
+  <span class="cm-variable">Array</span>.<span class="cm-property">prototype</span>.<span class="cm-property">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">exempt</span>, (<span class="cm-def">el</span>) <span class="cm-operator">=&gt;</span> { <span class="cm-variable-2">el</span>.<span class="cm-property">classList</span>.<span class="cm-property">remove</span>(<span class="cm-string">'exempt'</span>) })
+  <span class="cm-keyword">let</span> <span class="cm-def">found</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">'.found'</span>)
+  <span class="cm-variable">Array</span>.<span class="cm-property">prototype</span>.<span class="cm-property">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">found</span>, (<span class="cm-def">el</span>) <span class="cm-operator">=&gt;</span> { <span class="cm-variable-2">el</span>.<span class="cm-property">classList</span>.<span class="cm-property">remove</span>(<span class="cm-string">'found'</span>) })
+  <span class="cm-keyword">let</span> <span class="cm-def">info</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-string">'.info'</span>)
+  <span class="cm-variable">Array</span>.<span class="cm-property">prototype</span>.<span class="cm-property">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">info</span>, (<span class="cm-def">el</span>) <span class="cm-operator">=&gt;</span> { <span class="cm-variable-2">el</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string">'&amp;nbsp;'</span> })
+  <span class="cm-variable">enableButton</span>(<span class="cm-string">'random-btn'</span>)
+  <span class="cm-variable">enableButton</span>(<span class="cm-string">'search-btn'</span>)
+}
+<span class="cm-keyword">function</span> <span class="cm-def">getRandomLetter</span>() {
+  <span class="cm-variable">reset</span>()
+  <span class="cm-keyword">const</span> <span class="cm-def">value</span> <span class="cm-operator">=</span> <span class="cm-variable">randomElement</span>(<span class="cm-variable">ALPHABET</span>)
+  <span class="cm-keyword">let</span> <span class="cm-def">input</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'random-letter'</span>)
+  <span class="cm-variable-2">input</span>.<span class="cm-property">value</span> <span class="cm-operator">=</span> <span class="cm-variable-2">value</span>
+  <span class="cm-variable-2">input</span>.<span class="cm-property">style</span>.<span class="cm-property">webkitAnimationName</span> <span class="cm-operator">=</span> <span class="cm-string">'shake'</span>
+  <span class="cm-variable-2">input</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">'shake'</span>
+}
+<span class="cm-keyword">function</span> <span class="cm-def">disableButton</span>(<span class="cm-def">id</span>) {
+  <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-variable-2">id</span>).<span class="cm-property">disabled</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span>
+}
+<span class="cm-keyword">function</span> <span class="cm-def">enableButton</span>(<span class="cm-def">id</span>) {
+  <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-variable-2">id</span>).<span class="cm-property">disabled</span> <span class="cm-operator">=</span> <span class="cm-atom">false</span>
+}
+
+<span class="cm-comment">// ## Setup functions</span>
+<span class="cm-keyword">function</span> <span class="cm-def">setupInputHandlers</span> () {
+  <span class="cm-keyword">let</span> <span class="cm-def">input</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'random-letter'</span>)
+  <span class="cm-variable-2">input</span>.<span class="cm-property">onkeyup</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span>() {
+    <span class="cm-keyword">this</span>.<span class="cm-property">value</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>.<span class="cm-property">value</span>.<span class="cm-property">toUpperCase</span>()
+    <span class="cm-variable">reset</span>()
+  }
+  <span class="cm-variable-2">input</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'webkitAnimationEnd'</span>, <span class="cm-keyword">function</span>() {
+    <span class="cm-keyword">this</span>.<span class="cm-property">style</span>.<span class="cm-property">webkitAnimationName</span> <span class="cm-operator">=</span> <span class="cm-string">''</span>
+    <span class="cm-keyword">this</span>.<span class="cm-property">className</span> <span class="cm-operator">=</span> <span class="cm-string">''</span>
+  }, <span class="cm-atom">false</span>)
+  <span class="cm-keyword">let</span> <span class="cm-def">random_btn</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'random-btn'</span>)
+  <span class="cm-variable-2">random_btn</span>.<span class="cm-property">onclick</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">e</span>) {
+    <span class="cm-variable-2">e</span>.<span class="cm-property">preventDefault</span>()
+    <span class="cm-variable">getRandomLetter</span>()
+  }
+  <span class="cm-keyword">let</span> <span class="cm-def">search_btn</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'search-btn'</span>)
+  <span class="cm-variable-2">search_btn</span>.<span class="cm-property">onclick</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">e</span>) {
+    <span class="cm-variable-2">e</span>.<span class="cm-property">preventDefault</span>()
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">input</span>.<span class="cm-property">value</span>.<span class="cm-property">length</span>) {
+      <span class="cm-variable">startLinearSearch</span>(<span class="cm-variable-2">input</span>.<span class="cm-property">value</span>, <span class="cm-variable">ALPHABET</span>)
+      <span class="cm-variable">startBinarySearch</span>(<span class="cm-variable-2">input</span>.<span class="cm-property">value</span>, <span class="cm-variable">ALPHABET</span>)
+    }
+  }
+}
+<span class="cm-keyword">function</span> <span class="cm-def">inputFocus</span>() {
+  <span class="cm-keyword">let</span> <span class="cm-def">input</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">'random-letter'</span>)
+  <span class="cm-variable-2">input</span>.<span class="cm-property">focus</span>()
+}
+
+<span class="cm-comment">// Let's roll</span>
+<span class="cm-variable">window</span>.<span class="cm-property">onload</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">setupInputHandlers</span>()
+  <span class="cm-variable">inputFocus</span>()
+}</code></pre>
+<a href="#0" id="view-js-compiled-button" class="action-button bottom right view-compiled-button" data-type="js">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Linear vs Binary Search" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Linear vs Binary Search" data-src="https://cdpn.io/bgoonz/fullembedgrid/MWbZoOa?animations=run&amp;type=embed" src="MWbZoOa_data/MWbZoOa.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/youfoundron/fullpage/LZGWyp?default-tab=html%2Cresult">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;h1&gt;Linear vs Binary&lt;/h1&gt;\n&lt;input type=&quot;text&quot; maxLength=&quot;1&quot; id=&quot;random-letter&quot;/&gt;\n&lt;div class=&quot;controls&quot;&gt;\n  &lt;button id=&quot;random-btn&quot;&gt;Random&lt;/button&gt;\n  &lt;button id=&quot;search-btn&quot;&gt;Search&lt;/button&gt;\n&lt;/div&gt;\n&lt;div class=&quot;searches&quot;&gt;\n  &lt;div class=&quot;linear-search&quot;&gt;\n    &lt;h2&gt;Linear&lt;/h2&gt;\n    &lt;p class=&quot;info&quot; id=&quot;linear-info&quot;&gt;&amp;nbsp;&lt;/p&gt;\n    &lt;ul class=&quot;data&quot;&gt;\n      &lt;li id=&quot;A-linear&quot;&gt;A&lt;/li&gt;\n      &lt;li id=&quot;B-linear&quot;&gt;B&lt;/li&gt;\n      &lt;li id=&quot;C-linear&quot;&gt;C&lt;/li&gt;\n      &lt;li id=&quot;D-linear&quot;&gt;D&lt;/li&gt;\n      &lt;li id=&quot;E-linear&quot;&gt;E&lt;/li&gt;\n      &lt;li id=&quot;F-linear&quot;&gt;F&lt;/li&gt;\n      &lt;li id=&quot;G-linear&quot;&gt;G&lt;/li&gt;\n      &lt;li id=&quot;H-linear&quot;&gt;H&lt;/li&gt;\n      &lt;li id=&quot;I-linear&quot;&gt;I&lt;/li&gt;\n      &lt;li id=&quot;J-linear&quot;&gt;J&lt;/li&gt;\n      &lt;li id=&quot;K-linear&quot;&gt;K&lt;/li&gt;\n      &lt;li id=&quot;L-linear&quot;&gt;L&lt;/li&gt;\n      &lt;li id=&quot;M-linear&quot;&gt;M&lt;/li&gt;\n      &lt;li id=&quot;N-linear&quot;&gt;N&lt;/li&gt;\n      &lt;li id=&quot;O-linear&quot;&gt;O&lt;/li&gt;\n      &lt;li id=&quot;P-linear&quot;&gt;P&lt;/li&gt;\n      &lt;li id=&quot;Q-linear&quot;&gt;Q&lt;/li&gt;\n      &lt;li id=&quot;R-linear&quot;&gt;R&lt;/li&gt;\n      &lt;li id=&quot;S-linear&quot;&gt;S&lt;/li&gt;\n      &lt;li id=&quot;T-linear&quot;&gt;T&lt;/li&gt;\n      &lt;li id=&quot;U-linear&quot;&gt;U&lt;/li&gt;\n      &lt;li id=&quot;V-linear&quot;&gt;V&lt;/li&gt;\n      &lt;li id=&quot;W-linear&quot;&gt;W&lt;/li&gt;\n      &lt;li id=&quot;X-linear&quot;&gt;X&lt;/li&gt;\n      &lt;li id=&quot;Y-linear&quot;&gt;Y&lt;/li&gt;\n      &lt;li id=&quot;Z-linear&quot;&gt;Z&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;binary-search&quot;&gt;\n    &lt;h2&gt;Binary&lt;/h2&gt;\n    &lt;p class=&quot;info&quot; id=&quot;binary-info&quot;&gt;&amp;nbsp;&lt;/p&gt;\n    &lt;ul class=&quot;data&quot;&gt;\n      &lt;li id=&quot;A-binary&quot;&gt;A&lt;/li&gt;\n      &lt;li id=&quot;B-binary&quot;&gt;B&lt;/li&gt;\n      &lt;li id=&quot;C-binary&quot;&gt;C&lt;/li&gt;\n      &lt;li id=&quot;D-binary&quot;&gt;D&lt;/li&gt;\n      &lt;li id=&quot;E-binary&quot;&gt;E&lt;/li&gt;\n      &lt;li id=&quot;F-binary&quot;&gt;F&lt;/li&gt;\n      &lt;li id=&quot;G-binary&quot;&gt;G&lt;/li&gt;\n      &lt;li id=&quot;H-binary&quot;&gt;H&lt;/li&gt;\n      &lt;li id=&quot;I-binary&quot;&gt;I&lt;/li&gt;\n      &lt;li id=&quot;J-binary&quot;&gt;J&lt;/li&gt;\n      &lt;li id=&quot;K-binary&quot;&gt;K&lt;/li&gt;\n      &lt;li id=&quot;L-binary&quot;&gt;L&lt;/li&gt;\n      &lt;li id=&quot;M-binary&quot;&gt;M&lt;/li&gt;\n      &lt;li id=&quot;N-binary&quot;&gt;N&lt;/li&gt;\n      &lt;li id=&quot;O-binary&quot;&gt;O&lt;/li&gt;\n      &lt;li id=&quot;P-binary&quot;&gt;P&lt;/li&gt;\n      &lt;li id=&quot;Q-binary&quot;&gt;Q&lt;/li&gt;\n      &lt;li id=&quot;R-binary&quot;&gt;R&lt;/li&gt;\n      &lt;li id=&quot;S-binary&quot;&gt;S&lt;/li&gt;\n      &lt;li id=&quot;T-binary&quot;&gt;T&lt;/li&gt;\n      &lt;li id=&quot;U-binary&quot;&gt;U&lt;/li&gt;\n      &lt;li id=&quot;V-binary&quot;&gt;V&lt;/li&gt;\n      &lt;li id=&quot;W-binary&quot;&gt;W&lt;/li&gt;\n      &lt;li id=&quot;X-binary&quot;&gt;X&lt;/li&gt;\n      &lt;li id=&quot;Y-binary&quot;&gt;Y&lt;/li&gt;\n      &lt;li id=&quot;Z-binary&quot;&gt;Z&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"@font-face (&quot;OperatorMono-Bold&quot; &quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Bold&quot;);\n@font-face (&quot;OperatorMono-Medium&quot; &quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Medium&quot;);\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0);\n  }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0);\n  }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0);\n  }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0);\n  }\n}\nbody {\n  background: #3BB0FF;\n  text-align: center;\n  font-family: &quot;OperatorMono-Medium&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  color: white;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  color: #FFF32B;\n  font-family: &quot;OperatorMono-Bold&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  font-size: 2em;\n}\n\nh1 {\n  font-size: 3em;\n}\n\ninput#random-letter {\n  text-align: center;\n  width: 1em;\n  border: none;\n  border-bottom: 5px solid white;\n  padding-bottom: 0.2em;\n  text-transform: uppercase;\n  background: #3BB0FF;\n  font-size: 3em;\n  font-family: &quot;OperatorMono-Medium&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  color: white;\n}\ninput#random-letter.shake {\n  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;\n}\ninput#random-letter:focus {\n  outline: none;\n}\n\nbutton {\n  text-align: center;\n  border: none;\n  background: #3BB0FF;\n  border: 5px solid #FFF32B;\n  color: #FFF32B;\n  font-size: 30px;\n  font-family: &quot;OperatorMono-Bold&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  padding: 0.15em 1.3em;\n  margin: 1em;\n  transition: border-color 0.2s, color 0.2s;\n  -webkit-transition: border-color 0.2s, color 0.2s;\n}\nbutton:hover {\n  color: white;\n  border-color: white;\n  cursor: pointer;\n}\n\n.searches .linear-search, .searches .binary-search {\n  display: inline-block;\n}\n\nul.data {\n  padding: 0;\n  margin: 1em;\n  margin-top: 0;\n}\nul.data li {\n  display: inline-block;\n  border-bottom: 2px solid rgba(0, 0, 0, 0);\n}\nul.data li.exempt {\n  color: #FF014E;\n  border-bottom: 2px solid #FF014E;\n}\nul.data li.found {\n  color: #66FF00;\n  border-bottom: 2px solid #66FF00;\n}","js":"// ## Global Variables\nconst ALPHABET = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);\nconst ARR_LENGTH = ALPHABET.LENGTH;\nconst SEARCH_INTERVAL_TIME = 800;\nlet linear_interval;\nlet binary_interval;\n\n// ## Helper Functions\nfunction getArgumentsAsArray() {\n  let args = Array.from(arguments);\n  if (typeof args[0] === &quot;object&quot;) args = args[0];\n  if (args[0] &amp;&amp; args[0].length) args = args[0];\n  return args;\n}\nfunction sum() {\n  let args = getArgumentsAsArray(arguments);\n  return Array.from(args).reduce((p, c) =&gt; p + c);\n}\nfunction avg() {\n  let args = getArgumentsAsArray(arguments);\n  return sum(args) / args.length;\n}\nfunction randomIndex(array) {\n  return Math.ceil(Math.random() * array.length) - 1;\n}\nfunction randomElement(array) {\n  return array[randomIndex(array)];\n}\n\n// ## Search Functions\nfunction startLinearSearch(value, set) {\n  let current_value;\n  let current_elm;\n  let current_index = 0;\n  let num_iterations = 0;\n  let info = document.getElementById(&#39;linear-info&#39;);\n  linear_interval = setInterval(() =&gt; {\n    current_value = set[current_index];\n    current_elm = document.getElementById(`${current_value}-linear`);\n    num_iterations += 1;\n    if (current_index &gt;= set.length) {\n      clearInterval(linear_interval);\n      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    if (current_value != value) {\n      current_elm.className = &quot;exempt&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value == value) {\n      clearInterval(linear_interval);\n      current_elm.className = &quot;found&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    current_index += 1;\n  }, SEARCH_INTERVAL_TIME);\n}\nfunction startBinarySearch(value, set) {\n  let current_value;\n  let current_elm;\n  let current_index;\n  let num_iterations = 0;\n  let min = 0;\n  let max = set.length - 1;\n  let info = document.getElementById(&#39;binary-info&#39;);\n  binary_interval = setInterval(() =&gt; {\n    num_iterations += 1;\n    if (min &gt; max) {\n      clearInterval(binary_interval);\n      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    current_index = Math.floor(avg(min, max));\n    current_value = set[current_index];\n    current_elm = document.getElementById(`${current_value}-binary`);\n    if (current_value &lt; value) {\n      min = current_index + 1;\n      set.slice(0, min).forEach(n =&gt; {\n        document.getElementById(`${n}-binary`).className = &quot;exempt&quot;;\n      });\n      // current_elm.className = &quot;exempt&quot;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value &gt; value) {\n      max = current_index - 1;\n      set.slice(current_index, set.length).forEach(n =&gt; {\n        document.getElementById(`${n}-binary`).className = &quot;exempt&quot;;\n      });\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value == value) {\n      clearInterval(binary_interval);\n      current_elm.className = &quot;found&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n      return;\n    }\n  }, SEARCH_INTERVAL_TIME);\n}\n\n\n// ## DOM triggered functions\nfunction reset() {\n  clearInterval(linear_interval);\n  clearInterval(binary_interval);\n  let exempt = document.querySelectorAll(&#39;.exempt&#39;);\n  Array.prototype.forEach.call(exempt, el =&gt; {el.classList.remove(&#39;exempt&#39;);});\n  let found = document.querySelectorAll(&#39;.found&#39;);\n  Array.prototype.forEach.call(found, el =&gt; {el.classList.remove(&#39;found&#39;);});\n  let info = document.querySelectorAll(&#39;.info&#39;);\n  Array.prototype.forEach.call(info, el =&gt; {el.innerHTML = &#39;&amp;nbsp;&#39;;});\n  enableButton(&#39;random-btn&#39;);\n  enableButton(&#39;search-btn&#39;);\n}\nfunction getRandomLetter() {\n  reset();\n  const value = randomElement(ALPHABET);\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.value = value;\n  input.style.webkitAnimationName = &#39;shake&#39;;\n  input.className = &#39;shake&#39;;\n}\nfunction disableButton(id) {\n  document.getElementById(id).disabled = true;\n}\nfunction enableButton(id) {\n  document.getElementById(id).disabled = false;\n}\n\n// ## Setup functions\nfunction setupInputHandlers() {\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.onkeyup = function () {\n    this.value = this.value.toUpperCase();\n    reset();\n  };\n  input.addEventListener(&#39;webkitAnimationEnd&#39;, function () {\n    this.style.webkitAnimationName = &#39;&#39;;\n    this.className = &#39;&#39;;\n  }, false);\n  let random_btn = document.getElementById(&#39;random-btn&#39;);\n  random_btn.onclick = function (e) {\n    e.preventDefault();\n    getRandomLetter();\n  };\n  let search_btn = document.getElementById(&#39;search-btn&#39;);\n  search_btn.onclick = function (e) {\n    e.preventDefault();\n    if (input.value.length) {\n      startLinearSearch(input.value, ALPHABET);\n      startBinarySearch(input.value, ALPHABET);\n    }\n  };\n}\nfunction inputFocus() {\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.focus();\n}\n\n// Let&#39;s roll\nwindow.onload = () =&gt; {\n  setupInputHandlers();\n  inputFocus();\n};"};
+    __preprocessors = {
+      "html": "pug",
+      "css": "sass",
+      "js": "babel"
+    };
+    __preprocessorNames = {
+      "html": "Pug",
+      "css": "Sass",
+      "js": "Babel"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="../a_data_045/GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

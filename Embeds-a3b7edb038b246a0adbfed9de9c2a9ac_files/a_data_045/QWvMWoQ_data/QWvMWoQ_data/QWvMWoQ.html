@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - FullTextSearchjs</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="f1CKOaKKM14ZS55IiBWqQDzzDjEa9YsrA1coCvk41hC4zvLUs3BIatHD1E4iqFE6/Ly1ofh6prEg4A3lE5+Fug==">
+<link rel="stylesheet" media="all" href="../../GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" class="active" aria-pressed="true">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/QWvMWoQ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"dataTable"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>Full Text Search with Javascript<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>search what do you want to fined : <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"search"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"filter"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"txtFind"</span> <span class="cm-attribute">value</span>=<span class="cm-string">""</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"e.g :s c f"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">table</span> <span class="cm-attribute">id</span>=<span class="cm-string">"table"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>id<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Name<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Last Name<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Skill<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tbody</span> <span class="cm-attribute">class</span>=<span class="cm-string">"bodyTable"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>1<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Mekaeil<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Andisheh<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Front-End Developer<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>2<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>David<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Keri<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Back-End Developer<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>3<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Jack<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Cook<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Designer<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>4<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Stive<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Jobs<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Co-Founder<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>5<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Jany<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Anderson<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Web Designer<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tbody</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">table</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+
+
+
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">iframe</span> <span class="cm-attribute">height</span>=<span class="cm-string">"800"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"width: 90%;"</span> <span class="cm-attribute">scrolling</span>=<span class="cm-string">"no"</span> <span class="cm-attribute">title</span>=<span class="cm-string">"FullTextSearchjs"</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://codepen.io/bgoonz/embed/QWvMWoQ?default-tab=html%2Cresult"</span> <span class="cm-attribute">frameborder</span>=<span class="cm-string">"no"</span> <span class="cm-attribute">loading</span>=<span class="cm-string">"lazy"</span> <span class="cm-attribute">allowtransparency</span>=<span class="cm-string">"true"</span> <span class="cm-attribute">allowfullscreen</span>=<span class="cm-string">"true"</span><span class="cm-tag cm-bracket">&gt;</span>
+  See the Pen <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://codepen.io/bgoonz/pen/QWvMWoQ"</span><span class="cm-tag cm-bracket">&gt;</span>
+  FullTextSearchjs<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span> by Bryan C Guner (<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://codepen.io/bgoonz"</span><span class="cm-tag cm-bracket">&gt;</span>@bgoonz<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>)
+  on <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://codepen.io"</span><span class="cm-tag cm-bracket">&gt;</span>CodePen<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>.
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">iframe</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span>,
+<span class="cm-tag">html</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">font</span>: <span class="cm-number">100%</span>/<span class="cm-number">1.5</span> <span class="cm-string">"Open Sans"</span>, <span class="cm-atom">sans-serif</span>;
+}
+*,
+*::<span class="cm-variable-3">after</span>,
+*::<span class="cm-variable-3">before</span> {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+<span class="cm-qualifier">.dataTable</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">80%</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">1em</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-qualifier">.search</span> {
+  <span class="cm-property">margin</span>: <span class="cm-number">2em</span> <span class="cm-atom">auto</span> <span class="cm-number">1em</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-qualifier">.search</span> <span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"text"</span>] {
+  <span class="cm-property">width</span>: <span class="cm-number">60%</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#ccc</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0.5em</span> <span class="cm-number">1em</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.5em</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-qualifier">.search</span> <span class="cm-tag">input</span>[<span class="cm-tag">type</span>=<span class="cm-string">"submit"</span>] {
+  <span class="cm-property">width</span>: <span class="cm-number">20%</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0.5em</span> <span class="cm-number">1em</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#ff5951</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.5em</span>;
+  <span class="cm-property">background</span>: <span class="cm-atom">#ff5951</span>;
+  <span class="cm-property">cursor</span>: <span class="cm-atom">pointer</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">table</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">border-collapse</span>: <span class="cm-atom">collapse</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">table</span> <span class="cm-tag">thead</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#bbb</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">table</span> <span class="cm-tag">td</span>,
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">table</span> <span class="cm-tag">th</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">1em</span> <span class="cm-number">0.5em</span>;
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#ccc</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">th</span> <span class="cm-tag">td</span> {
+  <span class="cm-property">font-weight</span>: <span class="cm-number">900</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">1.2em</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">tr</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2n</span>) {
+  <span class="cm-property">background</span>: <span class="cm-atom">#f9f9f9</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">tr</span>:<span class="cm-variable-3">hover</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#eee</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">td</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-number">1em</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">tr</span><span class="cm-qualifier">.showRowResult</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">table-row</span> <span class="cm-keyword">!important</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">tr</span><span class="cm-qualifier">.showRowResult</span> <span class="cm-qualifier">.addBgCell</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#f4364c</span>;
+}
+<span class="cm-qualifier">.dataTable</span> <span class="cm-tag">tbody</span> <span class="cm-tag">tr</span><span class="cm-qualifier">.results</span>:<span class="cm-variable cm-callee">not</span>(<span class="cm-qualifier">.showRowResult</span>) {
+  <span class="cm-property">display</span>: <span class="cm-atom">none</span>;
+}
+</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-string">"use strict"</span>;
+
+<span class="cm-variable">document</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"DOMContentLoaded"</span>, <span class="cm-variable">filterTable</span>);
+
+<span class="cm-keyword">function</span> <span class="cm-def">filterTable</span>() {
+  <span class="cm-keyword">const</span> <span class="cm-def">inputFilter</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"txtFind"</span>); <span class="cm-comment">// get input type of text</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">bodyRow</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>
+    .<span class="cm-property">getElementById</span>(<span class="cm-string">"table"</span>)
+    .<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"tbody"</span>)[<span class="cm-number">0</span>]; <span class="cm-comment">// find Body Row Table</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">rowTable</span> <span class="cm-operator">=</span> <span class="cm-variable-2">bodyRow</span>.<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"tr"</span>); <span class="cm-comment">// get all of the rows</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">lengthRow</span> <span class="cm-operator">=</span> <span class="cm-variable-2">rowTable</span>.<span class="cm-property">length</span>; <span class="cm-comment">// calculate number of rows</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">lengthCol</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"table"</span>).<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"th"</span>)
+    .<span class="cm-property">length</span>; <span class="cm-comment">//number of table's column</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">arrStr</span> <span class="cm-operator">=</span> []; <span class="cm-comment">// create array for save all of value from input</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">saveNumRows</span> <span class="cm-operator">=</span> []; <span class="cm-comment">// create Array for save Row's number</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">backupArr</span> <span class="cm-operator">=</span> []; <span class="cm-comment">// get backup the array</span>
+  <span class="cm-keyword">const</span> <span class="cm-def">getNumRows</span> <span class="cm-operator">=</span> []; <span class="cm-comment">// create array for use one time !</span>
+  <span class="cm-keyword">let</span> <span class="cm-def">lenVal</span>;
+  <span class="cm-keyword">var</span> <span class="cm-def">goFilter</span>;
+  <span class="cm-keyword">let</span> <span class="cm-def">numRowArr</span>;
+
+  <span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">lengthRow</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+    <span class="cm-variable-2">getNumRows</span>[<span class="cm-variable-2">i</span>] <span class="cm-operator">=</span> <span class="cm-variable-2">rowTable</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"td"</span>)[<span class="cm-number">0</span>].<span class="cm-property">innerHTML</span>; <span class="cm-comment">// save all of the Row's number</span>
+  }
+  <span class="cm-variable-2">backupArr</span>[<span class="cm-number">0</span>] <span class="cm-operator">=</span> <span class="cm-variable-2">getNumRows</span>; <span class="cm-comment">// get Backup the all of the row</span>
+
+  <span class="cm-comment">// when user write and focus out</span>
+  <span class="cm-variable-2">inputFilter</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"keyup"</span>, <span class="cm-keyword">function</span> (<span class="cm-def">e</span>) {
+    <span class="cm-keyword">const</span> <span class="cm-def">val</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>.<span class="cm-property">value</span>.<span class="cm-property">toLowerCase</span>().<span class="cm-property">trim</span>();
+    <span class="cm-variable-2">arrStr</span> <span class="cm-operator">=</span> <span class="cm-variable-2">val</span>.<span class="cm-property">split</span>(<span class="cm-string">" "</span>); <span class="cm-comment">//save all of character in array</span>
+    <span class="cm-variable-2">lenVal</span> <span class="cm-operator">=</span> <span class="cm-variable-2">arrStr</span>.<span class="cm-property">length</span>; <span class="cm-comment">// get length of array</span>
+
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">val</span>.<span class="cm-property">length</span> <span class="cm-operator">==</span> <span class="cm-number">0</span>) {
+      <span class="cm-comment">// if length of input value is Zero</span>
+      <span class="cm-keyword">for</span> (<span class="cm-keyword">var</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">lengthRow</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+        <span class="cm-variable-2">saveNumRows</span>[<span class="cm-variable-2">i</span>] <span class="cm-operator">=</span> <span class="cm-variable-2">rowTable</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"td"</span>)[<span class="cm-number">0</span>].<span class="cm-property">innerHTML</span>; <span class="cm-comment">// save all of the Row's number</span>
+      } <span class="cm-comment">//for</span>
+    } <span class="cm-comment">//if</span>
+
+    <span class="cm-keyword">for</span> (<span class="cm-keyword">var</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">lenVal</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+      <span class="cm-variable-2">goFilter</span>(<span class="cm-variable-2">arrStr</span>[<span class="cm-variable-2">i</span>], <span class="cm-variable-2">lenVal</span>); <span class="cm-comment">// send value and length array</span>
+    } <span class="cm-comment">//for</span>
+  }); <span class="cm-comment">//inputFilter.addEventList ener</span>
+
+  <span class="cm-keyword">var</span> <span class="cm-def">goFilter</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> <span class="cm-def">goFilter</span>(<span class="cm-def">val</span>, <span class="cm-def">arrInput</span>) {
+    <span class="cm-keyword">for</span> (
+      <span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>, <span class="cm-def">counter</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>, <span class="cm-def">numRowArr</span> <span class="cm-operator">=</span> <span class="cm-variable-2">backupArr</span>[<span class="cm-variable-2">arrInput</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>].<span class="cm-property">length</span>;
+      <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">numRowArr</span>;
+      <span class="cm-variable-2">i</span><span class="cm-operator">++</span>
+    ) {
+      <span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">j</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>; <span class="cm-variable-2">j</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">lengthCol</span>; <span class="cm-variable-2">j</span><span class="cm-operator">++</span>) {
+        <span class="cm-keyword">const</span> <span class="cm-def">colTable</span> <span class="cm-operator">=</span> <span class="cm-variable-2">rowTable</span>[<span class="cm-variable">parseInt</span>(<span class="cm-variable-2">backupArr</span>[<span class="cm-variable-2">arrInput</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>][<span class="cm-variable-2">i</span>]) <span class="cm-operator">-</span> <span class="cm-number">1</span>]
+          .<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"td"</span>)
+          [<span class="cm-variable-2">j</span>].<span class="cm-property">innerHTML</span>.<span class="cm-property">toLowerCase</span>(); <span class="cm-comment">//get table's cell</span>
+
+        <span class="cm-keyword">if</span> (<span class="cm-variable-2">colTable</span>.<span class="cm-property">includes</span>(<span class="cm-variable-2">val</span>)) {
+          <span class="cm-variable-2">saveNumRows</span>[<span class="cm-variable-2">counter</span>] <span class="cm-operator">=</span> <span class="cm-variable-2">rowTable</span>[
+            <span class="cm-variable">parseInt</span>(<span class="cm-variable-2">backupArr</span>[<span class="cm-variable-2">arrInput</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>][<span class="cm-variable-2">i</span>]) <span class="cm-operator">-</span> <span class="cm-number">1</span>
+          ].<span class="cm-property">getElementsByTagName</span>(<span class="cm-string">"td"</span>)[<span class="cm-number">0</span>].<span class="cm-property">innerHTML</span>; <span class="cm-comment">// save number of row that is in result</span>
+
+          <span class="cm-variable-2">rowTable</span>[<span class="cm-variable">parseInt</span>(<span class="cm-variable-2">saveNumRows</span>[<span class="cm-variable-2">counter</span>]) <span class="cm-operator">-</span> <span class="cm-number">1</span>].<span class="cm-property">setAttribute</span>(
+            <span class="cm-string">"class"</span>,
+            <span class="cm-string">"showRowResult"</span>
+          ); <span class="cm-comment">// add class to display table-row for show</span>
+
+          <span class="cm-comment">//saveNumRows[counter] = backupArr[arrInput-1][i];</span>
+          <span class="cm-variable-2">counter</span><span class="cm-operator">++</span>;
+          <span class="cm-keyword">break</span>; <span class="cm-comment">// when any result finded , break the row and go to the next row</span>
+        } <span class="cm-comment">//if</span>
+        <span class="cm-keyword">else</span> {
+          <span class="cm-variable-2">rowTable</span>[<span class="cm-variable">parseInt</span>(<span class="cm-variable-2">backupArr</span>[<span class="cm-variable-2">arrInput</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>][<span class="cm-variable-2">i</span>]) <span class="cm-operator">-</span> <span class="cm-number">1</span>].<span class="cm-property">setAttribute</span>(
+            <span class="cm-string">"class"</span>,
+            <span class="cm-string">"results"</span>
+          ); <span class="cm-comment">// add class for hidden table's row that is not in result</span>
+        } <span class="cm-comment">//else</span>
+      } <span class="cm-comment">//for</span>
+    } <span class="cm-comment">//for</span>
+    <span class="cm-variable-2">backupArr</span>[<span class="cm-variable-2">arrInput</span>] <span class="cm-operator">=</span> <span class="cm-variable-2">saveNumRows</span>; <span class="cm-comment">// save number of rows in first Character or sevtence before Space</span>
+    <span class="cm-variable-2">saveNumRows</span> <span class="cm-operator">=</span> []; <span class="cm-comment">// remove element's array for reuse again</span>
+  }; <span class="cm-comment">//goFilter</span>
+} <span class="cm-comment">//filterTable</span>
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for FullTextSearchjs" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for FullTextSearchjs" data-src="https://cdpn.io/bgoonz/fullembedgrid/QWvMWoQ?animations=run&amp;type=embed" src="QWvMWoQ_data/QWvMWoQ.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../../GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;section class=&quot;dataTable&quot;&gt;\n\n  &lt;header&gt;\n    &lt;h1&gt;Full Text Search with Javascript&lt;/h1&gt;\n    &lt;h2&gt;search what do you want to fined : &lt;/h2&gt;\n  &lt;/header&gt;\n\n  &lt;section class=&quot;search&quot;&gt;\n    &lt;input type=&quot;text&quot; name=&quot;filter&quot; id=&quot;txtFind&quot; value=&quot;&quot; placeholder=&quot;e.g :s c f&quot;&gt;\n  &lt;/section&gt;\n\n  &lt;table id=&quot;table&quot;&gt;\n    &lt;thead&gt;\n      &lt;tr&gt;\n        &lt;th&gt;id&lt;/th&gt;\n        &lt;th&gt;Name&lt;/th&gt;\n        &lt;th&gt;Last Name&lt;/th&gt;\n        &lt;th&gt;Skill&lt;/th&gt;\n      &lt;/tr&gt;\n    &lt;/thead&gt;\n    &lt;tbody class=&quot;bodyTable&quot;&gt;\n      &lt;tr&gt;\n        &lt;td&gt;1&lt;/td&gt;\n        &lt;td&gt;Mekaeil&lt;/td&gt;\n        &lt;td&gt;Andisheh&lt;/td&gt;\n        &lt;td&gt;Front-End Developer&lt;/td&gt;\n      &lt;/tr&gt;\n      &lt;tr&gt;\n        &lt;td&gt;2&lt;/td&gt;\n        &lt;td&gt;David&lt;/td&gt;\n        &lt;td&gt;Keri&lt;/td&gt;\n        &lt;td&gt;Back-End Developer&lt;/td&gt;\n      &lt;/tr&gt;\n      &lt;tr&gt;\n        &lt;td&gt;3&lt;/td&gt;\n        &lt;td&gt;Jack&lt;/td&gt;\n        &lt;td&gt;Cook&lt;/td&gt;\n        &lt;td&gt;Designer&lt;/td&gt;\n      &lt;/tr&gt;\n      &lt;tr&gt;\n        &lt;td&gt;4&lt;/td&gt;\n        &lt;td&gt;Stive&lt;/td&gt;\n        &lt;td&gt;Jobs&lt;/td&gt;\n        &lt;td&gt;Co-Founder&lt;/td&gt;\n      &lt;/tr&gt;\n      &lt;tr&gt;\n        &lt;td&gt;5&lt;/td&gt;\n        &lt;td&gt;Jany&lt;/td&gt;\n        &lt;td&gt;Anderson&lt;/td&gt;\n        &lt;td&gt;Web Designer&lt;/td&gt;\n      &lt;/tr&gt;\n    &lt;/tbody&gt;\n  &lt;/table&gt;\n&lt;/section&gt;\n\n\n\n\n&lt;iframe height=&quot;800&quot; style=&quot;width: 90%;&quot; scrolling=&quot;no&quot; title=&quot;FullTextSearchjs&quot; src=&quot;https://codepen.io/bgoonz/embed/QWvMWoQ?default-tab=html%2Cresult&quot; frameborder=&quot;no&quot; loading=&quot;lazy&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot;&gt;\n  See the Pen &lt;a href=&quot;https://codepen.io/bgoonz/pen/QWvMWoQ&quot;&gt;\n  FullTextSearchjs&lt;/a&gt; by Bryan C Guner (&lt;a href=&quot;https://codepen.io/bgoonz&quot;&gt;@bgoonz&lt;/a&gt;)\n  on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.\n&lt;/iframe&gt;","css":"body,\nhtml {\n  margin: 0;\n  padding: 0;\n  font: 100%/1.5 &quot;Open Sans&quot;, sans-serif;\n}\n*,\n*::after,\n*::before {\n  box-sizing: border-box;\n}\n.dataTable {\n  margin: 0 auto;\n  width: 80%;\n  padding: 1em;\n  text-align: center;\n}\n.dataTable .search {\n  margin: 2em auto 1em;\n  width: 100%;\n}\n.dataTable .search input[type=&quot;text&quot;] {\n  width: 60%;\n  border: 1px solid #ccc;\n  padding: 0.5em 1em;\n  font-size: 1.5em;\n}\n.dataTable .search input[type=&quot;submit&quot;] {\n  width: 20%;\n  padding: 0.5em 1em;\n  border: 1px solid #ff5951;\n  color: #fff;\n  font-size: 1.5em;\n  background: #ff5951;\n  cursor: pointer;\n}\n.dataTable table {\n  width: 100%;\n  border-collapse: collapse;\n}\n.dataTable table thead {\n  background: #bbb;\n}\n.dataTable table td,\n.dataTable table th {\n  padding: 1em 0.5em;\n  border: 1px solid #ccc;\n}\n.dataTable th td {\n  font-weight: 900;\n  font-size: 1.2em;\n}\n.dataTable tbody tr:nth-child(2n) {\n  background: #f9f9f9;\n}\n.dataTable tbody tr:hover {\n  background: #eee;\n}\n.dataTable tbody td {\n  font-size: 1em;\n}\n.dataTable tbody tr.showRowResult {\n  display: table-row !important;\n}\n.dataTable tbody tr.showRowResult .addBgCell {\n  background: #f4364c;\n}\n.dataTable tbody tr.results:not(.showRowResult) {\n  display: none;\n}","js":"&quot;use strict&quot;;\n\ndocument.addEventListener(&quot;DOMContentLoaded&quot;, filterTable);\n\nfunction filterTable() {\n  const inputFilter = document.getElementById(&quot;txtFind&quot;); // get input type of text\n  const bodyRow = document.\n  getElementById(&quot;table&quot;).\n  getElementsByTagName(&quot;tbody&quot;)[0]; // find Body Row Table\n  const rowTable = bodyRow.getElementsByTagName(&quot;tr&quot;); // get all of the rows\n  const lengthRow = rowTable.length; // calculate number of rows\n  const lengthCol = document.getElementById(&quot;table&quot;).getElementsByTagName(&quot;th&quot;).\n  length; //number of table&#39;s column\n  let arrStr = []; // create array for save all of value from input\n  let saveNumRows = []; // create Array for save Row&#39;s number\n  const backupArr = []; // get backup the array\n  const getNumRows = []; // create array for use one time !\n  let lenVal;\n  var goFilter;\n  let numRowArr;\n\n  for (let i = 0; i &lt; lengthRow; i++) {if (window.CP.shouldStopExecution(0)) break;\n    getNumRows[i] = rowTable[i].getElementsByTagName(&quot;td&quot;)[0].innerHTML; // save all of the Row&#39;s number\n  }window.CP.exitedLoop(0);\n  backupArr[0] = getNumRows; // get Backup the all of the row\n\n  // when user write and focus out\n  inputFilter.addEventListener(&quot;keyup&quot;, function (e) {\n    const val = this.value.toLowerCase().trim();\n    arrStr = val.split(&quot; &quot;); //save all of character in array\n    lenVal = arrStr.length; // get length of array\n\n    if (val.length == 0) {\n      // if length of input value is Zero\n      for (var i = 0; i &lt; lengthRow; i++) {if (window.CP.shouldStopExecution(1)) break;\n        saveNumRows[i] = rowTable[i].getElementsByTagName(&quot;td&quot;)[0].innerHTML; // save all of the Row&#39;s number\n      } //for\n      window.CP.exitedLoop(1);} //if\n\n    for (var i = 0; i &lt; lenVal; i++) {if (window.CP.shouldStopExecution(2)) break;\n      goFilter(arrStr[i], lenVal); // send value and length array\n    } //for\n    window.CP.exitedLoop(2);}); //inputFilter.addEventList ener\n\n  var goFilter = function goFilter(val, arrInput) {\n    for (\n    let i = 0, counter = 0, numRowArr = backupArr[arrInput - 1].length;\n    i &lt; numRowArr;\n    i++)\n    {if (window.CP.shouldStopExecution(3)) break;\n      for (let j = 1; j &lt; lengthCol; j++) {if (window.CP.shouldStopExecution(4)) break;\n        const colTable = rowTable[parseInt(backupArr[arrInput - 1][i]) - 1].\n        getElementsByTagName(&quot;td&quot;)[\n        j].innerHTML.toLowerCase(); //get table&#39;s cell\n\n        if (colTable.includes(val)) {\n          saveNumRows[counter] = rowTable[\n          parseInt(backupArr[arrInput - 1][i]) - 1].\n          getElementsByTagName(&quot;td&quot;)[0].innerHTML; // save number of row that is in result\n\n          rowTable[parseInt(saveNumRows[counter]) - 1].setAttribute(\n          &quot;class&quot;,\n          &quot;showRowResult&quot;);\n          // add class to display table-row for show\n\n          //saveNumRows[counter] = backupArr[arrInput-1][i];\n          counter++;\n          break; // when any result finded , break the row and go to the next row\n        } //if\n        else {\n            rowTable[parseInt(backupArr[arrInput - 1][i]) - 1].setAttribute(\n            &quot;class&quot;,\n            &quot;results&quot;);\n            // add class for hidden table&#39;s row that is not in result\n          } //else\n      } //for\n      window.CP.exitedLoop(4);} //for\n    window.CP.exitedLoop(3);backupArr[arrInput] = saveNumRows; // save number of rows in first Character or sevtence before Space\n    saveNumRows = []; // remove element&#39;s array for reuse again\n  }; //goFilter\n} //filterTable"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="../../GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script></body></html>

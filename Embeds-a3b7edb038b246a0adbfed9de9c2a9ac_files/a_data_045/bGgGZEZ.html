@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Canvas particles</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="A8sTUWRkvJqv/T35VOv4ZQdntNdrWKwXZrVI+NqHcuqF64mG8/uZ3CE2vkWZDPY7S0iE6wT05ee6MbgflZs5gQ==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/bGgGZEZ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">canvas</span> <span class="cm-attribute">id</span>=<span class="cm-string">"canvas"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">canvas</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=</span>) <span class="cm-atom">#222</span>;
+}</code></pre>
+<a href="#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">/**</span>
+<span class="cm-comment"> * Generates random particles using canvas</span>
+<span class="cm-comment"> *</span>
+<span class="cm-comment"> * @class Particles</span>
+<span class="cm-comment"> * @constructor</span>
+<span class="cm-comment"> */</span>
+<span class="cm-keyword">function</span> <span class="cm-def">Particles</span>() {
+  <span class="cm-comment">//particle colors</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">colors</span> <span class="cm-operator">=</span> [<span class="cm-string">"255, 255, 255"</span>, <span class="cm-string">"255, 99, 71"</span>, <span class="cm-string">"19, 19, 19"</span>];
+  <span class="cm-comment">//adds gradient to particles on true</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">blurry</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span>;
+  <span class="cm-comment">//adds white border</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">border</span> <span class="cm-operator">=</span> <span class="cm-atom">false</span>;
+  <span class="cm-comment">//particle radius min/max</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">minRadius</span> <span class="cm-operator">=</span> <span class="cm-number">10</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">maxRadius</span> <span class="cm-operator">=</span> <span class="cm-number">35</span>;
+  <span class="cm-comment">//particle opacity min/max</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">minOpacity</span> <span class="cm-operator">=</span> <span class="cm-number">0.005</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">maxOpacity</span> <span class="cm-operator">=</span> <span class="cm-number">0.5</span>;
+  <span class="cm-comment">//particle speed min/max</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">minSpeed</span> <span class="cm-operator">=</span> <span class="cm-number">0.05</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">maxSpeed</span> <span class="cm-operator">=</span> <span class="cm-number">0.5</span>;
+  <span class="cm-comment">//frames per second</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">fps</span> <span class="cm-operator">=</span> <span class="cm-number">60</span>;
+  <span class="cm-comment">//number of particles</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">numParticles</span> <span class="cm-operator">=</span> <span class="cm-number">75</span>;
+  <span class="cm-comment">//required canvas variables</span>
+  <span class="cm-keyword">this</span>.<span class="cm-property">canvas</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">getElementById</span>(<span class="cm-string">"canvas"</span>);
+  <span class="cm-keyword">this</span>.<span class="cm-property">ctx</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>.<span class="cm-property">canvas</span>.<span class="cm-property">getContext</span>(<span class="cm-string">"2d"</span>);
+}
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Initializes everything</span>
+<span class="cm-comment"> * @method init</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">init</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">this</span>.<span class="cm-property">render</span>();
+  <span class="cm-keyword">this</span>.<span class="cm-property">createCircle</span>();
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * generates random number between min and max values</span>
+<span class="cm-comment"> * @param  {number} min value</span>
+<span class="cm-comment"> * @param  {number} max malue</span>
+<span class="cm-comment"> * @return {number} random number between min and max</span>
+<span class="cm-comment"> * @method _rand</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">_rand</span> <span class="cm-operator">=</span> (<span class="cm-def">min</span>, <span class="cm-def">max</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-keyword">return</span> <span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> (<span class="cm-variable-2">max</span> <span class="cm-operator">-</span> <span class="cm-variable-2">min</span>) <span class="cm-operator">+</span> <span class="cm-variable-2">min</span>;
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Sets canvas size and updates values on resize</span>
+<span class="cm-comment"> * @method render</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">render</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">const</span> <span class="cm-def">self</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>, <span class="cm-def">wHeight</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-variable">window</span>).<span class="cm-property">height</span>(), <span class="cm-def">wWidth</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-variable">window</span>).<span class="cm-property">width</span>();
+
+  <span class="cm-variable-2">self</span>.<span class="cm-property">canvas</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-variable-2">wWidth</span>;
+  <span class="cm-variable-2">self</span>.<span class="cm-property">canvas</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-variable-2">wHeight</span>;
+
+  <span class="cm-variable">$</span>(<span class="cm-variable">window</span>).<span class="cm-property">on</span>(<span class="cm-string">"resize"</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">render</span>);
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Randomly creates particle attributes</span>
+<span class="cm-comment"> * @method createCircle</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">createCircle</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">const</span> <span class="cm-def">particle</span> <span class="cm-operator">=</span> [];
+
+  <span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-keyword">this</span>.<span class="cm-property">numParticles</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+    <span class="cm-keyword">var</span> <span class="cm-def">self</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>;
+    <span class="cm-keyword">const</span> <span class="cm-def">color</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">colors</span>[<span class="cm-operator">~</span><span class="cm-operator">~</span><span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">colors</span>.<span class="cm-property">length</span>)];
+
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>] <span class="cm-operator">=</span> {
+      <span class="cm-property">radius</span>: <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-variable-2">self</span>.<span class="cm-property">minRadius</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">maxRadius</span>),
+      <span class="cm-property">xPos</span>: <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">width</span>),
+      <span class="cm-property">yPos</span>: <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">height</span>),
+      <span class="cm-property">xVelocity</span>: <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-variable-2">self</span>.<span class="cm-property">minSpeed</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">maxSpeed</span>),
+      <span class="cm-property">yVelocity</span>: <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-variable-2">self</span>.<span class="cm-property">minSpeed</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">maxSpeed</span>),
+      <span class="cm-property">color</span>:
+        <span class="cm-string-2">`rgba(${</span><span class="cm-variable-2">color</span><span class="cm-string-2">}</span><span class="cm-string-2">,${</span><span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-variable-2">self</span>.<span class="cm-property">minOpacity</span>, <span class="cm-variable-2">self</span>.<span class="cm-property">maxOpacity</span>)<span class="cm-string-2">}</span><span class="cm-string-2">)`</span>,
+    };
+
+    <span class="cm-comment">//once values are determined, draw particle on canvas</span>
+    <span class="cm-variable-2">self</span>.<span class="cm-property">draw</span>(<span class="cm-variable-2">particle</span>, <span class="cm-variable-2">i</span>);
+  }
+  <span class="cm-comment">//...and once drawn, animate the particle</span>
+  <span class="cm-variable-2">self</span>.<span class="cm-property">animate</span>(<span class="cm-variable-2">particle</span>);
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Draws particles on canvas</span>
+<span class="cm-comment"> * @param  {array} Particle array from createCircle method</span>
+<span class="cm-comment"> * @param  {number} i value from createCircle method</span>
+<span class="cm-comment"> * @method draw</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">draw</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">particle</span>, <span class="cm-def">i</span>) {
+  <span class="cm-keyword">const</span> <span class="cm-def">self</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>, <span class="cm-def">ctx</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">ctx</span>;
+
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">self</span>.<span class="cm-property">blurry</span> <span class="cm-operator">===</span> <span class="cm-atom">true</span>) {
+    <span class="cm-comment">//creates gradient if blurry === true</span>
+    <span class="cm-keyword">const</span> <span class="cm-def">grd</span> <span class="cm-operator">=</span> <span class="cm-variable-2">ctx</span>.<span class="cm-property">createRadialGradient</span>(
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span>,
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span>,
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span>,
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span>,
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span>,
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span> <span class="cm-operator">/</span> <span class="cm-number">1.25</span>
+    );
+
+    <span class="cm-variable-2">grd</span>.<span class="cm-property">addColorStop</span>(<span class="cm-number">1.0</span>, <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">color</span>);
+    <span class="cm-variable-2">grd</span>.<span class="cm-property">addColorStop</span>(<span class="cm-number">0.0</span>, <span class="cm-string">"rgba(34, 34, 34, 0)"</span>);
+    <span class="cm-variable-2">ctx</span>.<span class="cm-property">fillStyle</span> <span class="cm-operator">=</span> <span class="cm-variable-2">grd</span>;
+  } <span class="cm-keyword">else</span> {
+    <span class="cm-comment">//otherwise sets to solid color w/ opacity value</span>
+    <span class="cm-variable-2">ctx</span>.<span class="cm-property">fillStyle</span> <span class="cm-operator">=</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">color</span>;
+  }
+
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">self</span>.<span class="cm-property">border</span> <span class="cm-operator">===</span> <span class="cm-atom">true</span>) {
+    <span class="cm-variable-2">ctx</span>.<span class="cm-property">strokeStyle</span> <span class="cm-operator">=</span> <span class="cm-string">"#fff"</span>;
+    <span class="cm-variable-2">ctx</span>.<span class="cm-property">stroke</span>();
+  }
+
+  <span class="cm-variable-2">ctx</span>.<span class="cm-property">beginPath</span>();
+  <span class="cm-variable-2">ctx</span>.<span class="cm-property">arc</span>(
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span>,
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span>,
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span>,
+    <span class="cm-number">0</span>,
+    <span class="cm-number">2</span> <span class="cm-operator">*</span> <span class="cm-variable">Math</span>.<span class="cm-property">PI</span>,
+    <span class="cm-atom">false</span>
+  );
+  <span class="cm-variable-2">ctx</span>.<span class="cm-property">fill</span>();
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Animates particles</span>
+<span class="cm-comment"> * @param  {array} particle value from createCircle &amp; draw methods</span>
+<span class="cm-comment"> * @method animate</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">animate</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">particle</span>) {
+  <span class="cm-keyword">const</span> <span class="cm-def">self</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>, <span class="cm-def">ctx</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">ctx</span>;
+
+  <span class="cm-variable">setInterval</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-comment">//clears canvas</span>
+    <span class="cm-variable-2">self</span>.<span class="cm-property">clearCanvas</span>();
+    <span class="cm-comment">//then redraws particles in new positions based on velocity</span>
+    <span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">self</span>.<span class="cm-property">numParticles</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>) {
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span> <span class="cm-operator">+=</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xVelocity</span>;
+      <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span> <span class="cm-operator">-=</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yVelocity</span>;
+
+      <span class="cm-comment">//if particle goes off screen call reset method to place it offscreen to the left/bottom</span>
+      <span class="cm-keyword">if</span> (
+        <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span> <span class="cm-operator">&gt;</span> <span class="cm-variable-2">self</span>.<span class="cm-property">canvas</span>.<span class="cm-property">width</span> <span class="cm-operator">+</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span> <span class="cm-operator">||</span>
+        <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span> <span class="cm-operator">&gt;</span> <span class="cm-variable-2">self</span>.<span class="cm-property">canvas</span>.<span class="cm-property">height</span> <span class="cm-operator">+</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span>
+      ) {
+        <span class="cm-variable-2">self</span>.<span class="cm-property">resetParticle</span>(<span class="cm-variable-2">particle</span>, <span class="cm-variable-2">i</span>);
+      } <span class="cm-keyword">else</span> {
+        <span class="cm-variable-2">self</span>.<span class="cm-property">draw</span>(<span class="cm-variable-2">particle</span>, <span class="cm-variable-2">i</span>);
+      }
+    }
+  }, <span class="cm-number">1000</span> <span class="cm-operator">/</span> <span class="cm-variable-2">self</span>.<span class="cm-property">fps</span>);
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Resets position of particle when it goes off screen</span>
+<span class="cm-comment"> * @param  {array} particle value from createCircle &amp; draw methods</span>
+<span class="cm-comment"> * @param  {number} i value from createCircle method</span>
+<span class="cm-comment"> * @method resetParticle</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">resetParticle</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">particle</span>, <span class="cm-def">i</span>) {
+  <span class="cm-keyword">const</span> <span class="cm-def">self</span> <span class="cm-operator">=</span> <span class="cm-keyword">this</span>;
+
+  <span class="cm-keyword">const</span> <span class="cm-def">random</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-number">1</span>);
+
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">random</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0.5</span>) {
+    <span class="cm-comment">// 50% chance particle comes from left side of window...</span>
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span> <span class="cm-operator">=</span> <span class="cm-operator">-</span><span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span>;
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">height</span>);
+  } <span class="cm-keyword">else</span> {
+    <span class="cm-comment">//... or bottom of window</span>
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">xPos</span> <span class="cm-operator">=</span> <span class="cm-variable-2">self</span>.<span class="cm-property">_rand</span>(<span class="cm-number">0</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">width</span>);
+    <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">yPos</span> <span class="cm-operator">=</span> <span class="cm-variable">canvas</span>.<span class="cm-property">height</span> <span class="cm-operator">+</span> <span class="cm-variable-2">particle</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">radius</span>;
+  }
+  <span class="cm-comment">//redraw particle with new values</span>
+  <span class="cm-variable-2">self</span>.<span class="cm-property">draw</span>(<span class="cm-variable-2">particle</span>, <span class="cm-variable-2">i</span>);
+};
+
+<span class="cm-comment">/**</span>
+<span class="cm-comment"> * Clears canvas between animation frames</span>
+<span class="cm-comment"> * @method clearCanvas</span>
+<span class="cm-comment"> */</span>
+<span class="cm-variable">Particles</span>.<span class="cm-property">prototype</span>.<span class="cm-property">clearCanvas</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">this</span>.<span class="cm-property">ctx</span>.<span class="cm-property">clearRect</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">width</span>, <span class="cm-variable">canvas</span>.<span class="cm-property">height</span>);
+};
+
+<span class="cm-comment">// go go go!</span>
+<span class="cm-keyword">const</span> <span class="cm-def">particle</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Particles</span>().<span class="cm-property">init</span>();
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Canvas particles" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Canvas particles" data-src="https://cdpn.io/bgoonz/fullembedgrid/bGgGZEZ?animations=run&amp;type=embed" src="bGgGZEZ_data/bGgGZEZ.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/trhino/fullpage/JFmiK?default-tab=js,result&amp;height=375&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;","css":"body {\n  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;\n}","js":"/**\n * Generates random particles using canvas\n *\n * @class Particles\n * @constructor\n */\nfunction Particles() {\n  //particle colors\n  this.colors = [&quot;255, 255, 255&quot;, &quot;255, 99, 71&quot;, &quot;19, 19, 19&quot;];\n  //adds gradient to particles on true\n  this.blurry = true;\n  //adds white border\n  this.border = false;\n  //particle radius min/max\n  this.minRadius = 10;\n  this.maxRadius = 35;\n  //particle opacity min/max\n  this.minOpacity = 0.005;\n  this.maxOpacity = 0.5;\n  //particle speed min/max\n  this.minSpeed = 0.05;\n  this.maxSpeed = 0.5;\n  //frames per second\n  this.fps = 60;\n  //number of particles\n  this.numParticles = 75;\n  //required canvas variables\n  this.canvas = document.getElementById(&quot;canvas&quot;);\n  this.ctx = this.canvas.getContext(&quot;2d&quot;);\n}\n\n/**\n * Initializes everything\n * @method init\n */\nParticles.prototype.init = function () {\n  this.render();\n  this.createCircle();\n};\n\n/**\n * generates random number between min and max values\n * @param  {number} min value\n * @param  {number} max malue\n * @return {number} random number between min and max\n * @method _rand\n */\nParticles.prototype._rand = (min, max) =&gt; {\n  return Math.random() * (max - min) + min;\n};\n\n/**\n * Sets canvas size and updates values on resize\n * @method render\n */\nParticles.prototype.render = function () {\n  const self = this,wHeight = $(window).height(),wWidth = $(window).width();\n\n  self.canvas.width = wWidth;\n  self.canvas.height = wHeight;\n\n  $(window).on(&quot;resize&quot;, self.render);\n};\n\n/**\n * Randomly creates particle attributes\n * @method createCircle\n */\nParticles.prototype.createCircle = function () {\n  const particle = [];\n\n  for (let i = 0; i &lt; this.numParticles; i++) {\n    var self = this;\n    const color = self.colors[~~self._rand(0, self.colors.length)];\n\n    particle[i] = {\n      radius: self._rand(self.minRadius, self.maxRadius),\n      xPos: self._rand(0, canvas.width),\n      yPos: self._rand(0, canvas.height),\n      xVelocity: self._rand(self.minSpeed, self.maxSpeed),\n      yVelocity: self._rand(self.minSpeed, self.maxSpeed),\n      color:\n      `rgba(${color},${self._rand(self.minOpacity, self.maxOpacity)})` };\n\n\n    //once values are determined, draw particle on canvas\n    self.draw(particle, i);\n  }\n  //...and once drawn, animate the particle\n  self.animate(particle);\n};\n\n/**\n * Draws particles on canvas\n * @param  {array} Particle array from createCircle method\n * @param  {number} i value from createCircle method\n * @method draw\n */\nParticles.prototype.draw = function (particle, i) {\n  const self = this,ctx = self.ctx;\n\n  if (self.blurry === true) {\n    //creates gradient if blurry === true\n    const grd = ctx.createRadialGradient(\n    particle[i].xPos,\n    particle[i].yPos,\n    particle[i].radius,\n    particle[i].xPos,\n    particle[i].yPos,\n    particle[i].radius / 1.25);\n\n\n    grd.addColorStop(1.0, particle[i].color);\n    grd.addColorStop(0.0, &quot;rgba(34, 34, 34, 0)&quot;);\n    ctx.fillStyle = grd;\n  } else {\n    //otherwise sets to solid color w/ opacity value\n    ctx.fillStyle = particle[i].color;\n  }\n\n  if (self.border === true) {\n    ctx.strokeStyle = &quot;#fff&quot;;\n    ctx.stroke();\n  }\n\n  ctx.beginPath();\n  ctx.arc(\n  particle[i].xPos,\n  particle[i].yPos,\n  particle[i].radius,\n  0,\n  2 * Math.PI,\n  false);\n\n  ctx.fill();\n};\n\n/**\n * Animates particles\n * @param  {array} particle value from createCircle &amp; draw methods\n * @method animate\n */\nParticles.prototype.animate = function (particle) {\n  const self = this,ctx = self.ctx;\n\n  setInterval(() =&gt; {\n    //clears canvas\n    self.clearCanvas();\n    //then redraws particles in new positions based on velocity\n    for (let i = 0; i &lt; self.numParticles; i++) {\n      particle[i].xPos += particle[i].xVelocity;\n      particle[i].yPos -= particle[i].yVelocity;\n\n      //if particle goes off screen call reset method to place it offscreen to the left/bottom\n      if (\n      particle[i].xPos &gt; self.canvas.width + particle[i].radius ||\n      particle[i].yPos &gt; self.canvas.height + particle[i].radius)\n      {\n        self.resetParticle(particle, i);\n      } else {\n        self.draw(particle, i);\n      }\n    }\n  }, 1000 / self.fps);\n};\n\n/**\n * Resets position of particle when it goes off screen\n * @param  {array} particle value from createCircle &amp; draw methods\n * @param  {number} i value from createCircle method\n * @method resetParticle\n */\nParticles.prototype.resetParticle = function (particle, i) {\n  const self = this;\n\n  const random = self._rand(0, 1);\n\n  if (random &gt; 0.5) {\n    // 50% chance particle comes from left side of window...\n    particle[i].xPos = -particle[i].radius;\n    particle[i].yPos = self._rand(0, canvas.height);\n  } else {\n    //... or bottom of window\n    particle[i].xPos = self._rand(0, canvas.width);\n    particle[i].yPos = canvas.height + particle[i].radius;\n  }\n  //redraw particle with new values\n  self.draw(particle, i);\n};\n\n/**\n * Clears canvas between animation frames\n * @method clearCanvas\n */\nParticles.prototype.clearCanvas = function () {\n  this.ctx.clearRect(0, 0, canvas.width, canvas.height);\n};\n\n// go go go!\nconst particle = new Particles().init();"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

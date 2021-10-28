@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Data Structures Viz</title>
+  
+  
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+
+body {
+	/* 	margin-top: 60px; */
+	background-color: white;
+	font-family: "Comfortaa", serif;
+	font-size: 24px;
+	text-shadow: 5px 8px 36px #ffffff;
+}
+
+canvas {
+	display: block;
+	z-index: 1;
+	cursor: crosshair;
+}
+
+.text-area {
+	text-align: center;
+}
+
+body {
+	background: linear-gradient(-45deg, #da0000, #0008ffe5, #23d5a2d8, #2f2fbce5);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.ul {
+	margin-left: 30%;
+	display: table;
+}
+
+.numbers-area {
+	margin-left: 230px;
+	font-size: 24px;
+	color: black;
+	text-shadow: 5px 8px 36px #000000;
+}
+
+.label {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	padding: 4px 19px;
+}
+
+.label:hover {
+	color: white;
+	text-shadow: 5px 8px 36px #000000;
+}
+
+.button {
+	position: absolute;
+	background-color: #000000;
+	color: white;
+	padding: 4px 9px;
+	text-align: center;
+	font-family: 'ctx.font="24px Comfortaa";', serif;
+	font-size: 16px;
+	display: inline-block;
+	-webkit-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+	cursor: crosshair;
+}
+
+.button:hover {
+	background-color: #ffffff;
+	color: black;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div class="container-fluid">
+	<div class="row">
+		<div class="text-area">
+			<h1>
+				Data Structures Viz
+			</h1>
+			<h3 style="margin-top: -22px">
+				See Numbers Displayed as Various Data Structures
+			</h3>
+			<ul class="ul">
+				<button type="submit" class="button" style="z-index:2" id="randomizer" onclick="randomizer()">Generate Random Integers</button>
+				<label class="numbers-area" id="numbersArea"></label>
+			</ul>
+			<h5>
+				<label class="label" id="binaryTree" onclick="createBinaryTree()">Binary Tree</label>||
+				<label class="label" id="queue" onclick="createQueue()">Queue</label>||
+				<label class="label" id="stack" onclick="createStack()">Stack</label>||
+				<label class="label" id="linkedList" onclick="createLinkedList()">Linked List</label>||
+				<label class="label" id="heap" onclick="createHeap()">Heap</label>||
+				<label class="label" id="doubleLinkedList" onclick="createDblLinkedList()">Doubly Linked List</label>
+			</h5>
+			<p id="buttonAppear" style="z-index: 2"></p>
+		</div>
+	</div>
+
+	<div>
+		<canvas id="canvas" width="780" height="918">Canvas is not supported in your browser.</canvas>
+	</div>
+</div>
+    <script src="../../a_data_045/abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  <script src="GRNPEdY_data/bootstrap.js"></script>
+      <script id="rendered-js">
+var canvas = document.getElementById("canvas"),
+ctx = canvas.getContext("2d"),
+canvasWidth = window.innerWidth - 50,
+canvasHeight = window.innerHeight + 200,
+numbers = [];
+
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+
+ctx.fillRect(0, 0, canvas.width, 7);
+
+// Simple random number generator
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+// Generate random numbers to populate the structures
+function randomizer() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  numbers = [];
+  for (var i = 0; i < 8; i++) {if (window.CP.shouldStopExecution(0)) break;
+    numbers.push(Math.floor(random(0, 100)));
+  }window.CP.exitedLoop(0);
+  document.getElementById("numbersArea").innerHTML = numbers;
+  // document.getElementById("numbersArea").innerHTML = '<button>Some text here</button>';
+}
+
+function createBinaryTree() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  // ctx.beginPath();
+  // ctx.arc(100,75,50,0,2*Math.PI);
+  // ctx.stroke();
+  ctx.font = "24px Comfortaa";
+  ctx.fillText("Insert Binary Tree here - " + numbers, 50, 50);
+  return;
+}
+
+function createQueue() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  var startingTopLeft = canvasWidth / 5.5;
+  var center = [startingTopLeft + 35, 135];
+  ctx.font = "22px Comfortaa";
+  ctx.fillText("Index #:", center[0] - 125, center[1] + 75);
+  for (var i = 0; i < numbers.length; i++) {if (window.CP.shouldStopExecution(1)) break;
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 7;
+    ctx.strokeRect(startingTopLeft, 75, 100, 100);
+    ctx.font = "28px Comfortaa";
+    ctx.fillStyle = "white";
+    ctx.fillText(numbers[i], center[0], center[1]);
+    ctx.font = "22px Comfortaa";
+    ctx.fillStyle = "black";
+    ctx.fillText(i, center[0], center[1] + 75);
+    startingTopLeft += 100;
+    center[0] += 100;
+  }window.CP.exitedLoop(1);
+}
+
+function createStack() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  var startingX = canvasWidth / 2 - 75;
+  var startingY = 75;
+  var center = [startingX + 25, startingY + 50];
+  ctx.font = "22px Comfortaa";
+  ctx.fillText("Index #:", center[0] - 155, center[1]);
+  for (var i = 0; i < numbers.length; i++) {if (window.CP.shouldStopExecution(2)) break;
+    ctx.strokeStyle = "#000000";
+    ctx.lineWidth = 7;
+    ctx.strokeRect(startingX, startingY, 75, 75);
+    ctx.font = "24px Comfortaa";
+    ctx.fillStyle = "white";
+    ctx.fillText(numbers[numbers.length - 1 - i], center[0], center[1]);
+    ctx.font = "20px Comfortaa";
+    ctx.fillStyle = "black";
+    ctx.fillText(numbers.length - 1 - i, center[0] - 55, center[1]);
+    startingY += 75;
+    center[1] += 74;
+  }window.CP.exitedLoop(2);
+}
+
+function createLinkedList() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  ctx.font = "24px Comfortaa";
+  ctx.fillText("Insert Linked List here - " + numbers, 50, 50);
+  return;
+}
+
+function createHeap() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  ctx.font = "24px Comfortaa";
+  ctx.fillText("Insert Heap here - " + numbers, 50, 50);
+  return;
+}
+
+function createDblLinkedList() {
+  ctx.clearRect(0, 7, canvas.width, canvas.height);
+  ctx.font = "24px Comfortaa";
+  ctx.fillText("Insert Doubly Linked List here - " + numbers, 50, 50);
+  return;
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="../../a_data_045/abpWrBP_data/abpWrBP_data/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c5.js"></script>
+
+
+
+ 
+</body></html>

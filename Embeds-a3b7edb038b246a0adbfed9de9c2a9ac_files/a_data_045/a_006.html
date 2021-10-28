@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="edit-Type" edit="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>zip multiple images - JSFiddle</title>
+
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+
+      <script type="text/javascript">
+        var height
+        var force_height = null
+        var slug = "1dye9uws"
+        var show_src = "//fiddle.jshell.net/bgoonz/1dye9uws/2/show/dark/"
+        var resize_element_counter = 0
+        var shell_edit_url = "/bgoonz/1dye9uws/2/dark/"
+
+      </script>
+
+      <script src="a_data_007/highlight.js"></script>
+      <script src="a_data_007/embed.js"></script>
+      <link rel="stylesheet" media="screen" href="a_data_006/embed-dark.css">
+
+    <style type="text/css" media="screen">
+    /* */</style>
+
+  </head>
+  <body>
+    <div id="full-embed">
+        <header>
+          <h1>
+            <a href="https://jsfiddle.net/bgoonz/1dye9uws/2/" target="_blank">
+              <svg width="34" height="40">
+      <use xlink:href="//jsfiddle.net/sprite.svg#logo"></use>
+    </svg>Edit in JSFiddle
+            </a>
+          </h1>
+          <div id="actions">
+            <ul class="normalRes">
+                <li class="active">
+                  <a data-trigger-type="js" href="#JavaScript">JavaScript</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="html" href="#HTML">HTML</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="css" href="#CSS">CSS</a>
+                </li>
+                <li class="">
+                  <a data-trigger-type="result" href="#Result">Result</a>
+                </li>
+            </ul>
+            <div class="hl" style="left: 0px; width: 80px;"></div>
+          </div>
+        </header>
+
+        <div id="tabs">
+              <pre class="tCont JavaScript active hljs"><span class="hljs-keyword">let</span> links = [];
+
+$(<span class="hljs-string">'.gallery'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-string">'.thumb'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+  $(<span class="hljs-keyword">this</span>).removeClass().addClass(<span class="hljs-string">'thumbChecked'</span>);
+  $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"border"</span>, <span class="hljs-string">"2px solid #c32032"</span>);
+  links.push($(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'src'</span>));
+  <span class="hljs-built_in">console</span>.log(links);
+  
+  <span class="hljs-keyword">if</span> (links.length != <span class="hljs-number">0</span>) {
+    $(<span class="hljs-string">'.download'</span>).css(<span class="hljs-string">"display"</span>, <span class="hljs-string">"block"</span>);
+  }
+
+});
+
+
+$(<span class="hljs-string">'.gallery'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-string">'.thumbChecked'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+  $(<span class="hljs-keyword">this</span>).removeClass().addClass(<span class="hljs-string">'thumb'</span>);
+  $(<span class="hljs-keyword">this</span>).css(<span class="hljs-string">"border"</span>, <span class="hljs-string">"2px solid white"</span>);
+  <span class="hljs-keyword">let</span> itemtoRemove = $(<span class="hljs-keyword">this</span>).attr(<span class="hljs-string">'src'</span>);
+  links.splice($.inArray(itemtoRemove, links), <span class="hljs-number">1</span>);
+  <span class="hljs-built_in">console</span>.log(links);
+  
+  <span class="hljs-keyword">if</span> (links.length == <span class="hljs-number">0</span>) {
+    $(<span class="hljs-string">'.download'</span>).css(<span class="hljs-string">"display"</span>, <span class="hljs-string">"none"</span>);
+  }
+
+});
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generateZIP</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'TEST'</span>);
+  <span class="hljs-keyword">let</span> zip = <span class="hljs-keyword">new</span> JSZip();
+  <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> zipFilename = <span class="hljs-string">"Pictures.zip"</span>;
+
+  links.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">url, i</span>) </span>{
+    <span class="hljs-keyword">let</span> filename = links[i];
+    filename = filename.replace(<span class="hljs-regexp">/[\/\*\|\:\&lt;\&gt;\?\"\\]/gi</span>, <span class="hljs-string">''</span>).replace(<span class="hljs-string">"httpsi.imgur.com"</span>,<span class="hljs-string">""</span>);
+    <span class="hljs-comment">// loading a file and add it in a zip file</span>
+    JSZipUtils.getBinaryContent(url, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, data</span>) </span>{
+      <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-keyword">throw</span> err; <span class="hljs-comment">// or handle the error</span>
+      }
+      zip.file(filename, data, { <span class="hljs-attr">binary</span>: <span class="hljs-literal">true</span> });
+      count++;
+      <span class="hljs-keyword">if</span> (count == links.length) {
+        zip.generateAsync({ <span class="hljs-attr">type</span>: <span class="hljs-string">'blob'</span> }).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">content</span>) </span>{
+          saveAs(content, zipFilename);
+        });
+      }
+    });
+  });
+}
+</pre>
+              <pre class="tCont HTML hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"gallery"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"imgContainer"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/emBm6jv.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/l49aYS3.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/a0bs8oJ.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/PHYkTp9.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/a7fJPfn.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/WCzfMMt.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/QCFXhpg.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/esOG86I.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/LW8EKdK.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/ggECswm.jpg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/CHKrDLa.jpg"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/JpljA8l.mp4"</span> <span class="hljs-attr">autoplay</span>=<span class="hljs-string">""</span> <span class="hljs-attr">loop</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"thumb"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"max-width: 100%; height: 110px;"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://i.imgur.com/JpljA8l.mp4"</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"download"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://maxcdn.icons8.com/app/uploads/2016/10/download1.png"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"generateZIP()"</span> /&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+</pre>
+              <pre class="tCont CSS hljs">    <span class="hljs-selector-class">.gallery</span> {
+        <span class="hljs-attribute">text-align</span>: center;
+    }
+    <span class="hljs-selector-class">.gallery</span>&gt;<span class="hljs-selector-tag">img</span> {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+        <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;
+    }
+    <span class="hljs-selector-class">.gallery</span>&gt;<span class="hljs-selector-tag">img</span><span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">cursor</span>: pointer;
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-selector-class">.imgContainer</span> {
+        <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">10px</span>;
+    }
+
+    <span class="hljs-selector-class">.thumb</span> {
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">110px</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">160px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">2px</span>;
+        <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">0.6</span>);
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid white;
+    }
+
+    <span class="hljs-selector-class">.thumb</span><span class="hljs-selector-pseudo">:hover</span> {
+        <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">3px</span> <span class="hljs-number">3px</span> <span class="hljs-number">6px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">0.8</span>);
+        <span class="hljs-attribute">cursor</span>: pointer;
+    }
+    <span class="hljs-selector-class">.thumbChecked</span> {
+        <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">110px</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">160px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">2px</span>;
+        <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">2px</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">70</span>, <span class="hljs-number">0.6</span>);
+    }
+    <span class="hljs-selector-class">.download</span> {
+        <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">20px</span>;
+        <span class="hljs-attribute">display</span>: none;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+    }</pre>
+              <div class="tCont result " id="result">
+              </div>
+        </div>
+    </div>
+    
+  
+
+</body></html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Intro to Arrays</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ktN2m0iVvkAiNO4DmOHOmiIFtAyZUh58Y2N7BU0bbBFbyAmUJgGriPyIN3wpXufsXHCDgsj7F/etfvTjBfm5Nw==">
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/qBRKxVW" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-comment">// An array is used for holding a list of items where the order matters. </span>
+<span class="cm-comment">// Each thing inside of an array is called an item and the position of the item is called the index. </span>
+<span class="cm-comment">// The number of items in the array is called the length </span>
+<span class="cm-comment">// And each item in the array can be any type (string, number, boolean, object, array, etc.) </span>
+
+<span class="cm-comment">// Let's create an array - I am going to create an array of my favourite cities in the order that I like them</span>
+
+<span class="cm-keyword">const</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> [<span class="cm-string">'Tel Aviv'</span>, <span class="cm-string">'Cape Town'</span>, <span class="cm-string">'New York'</span>, <span class="cm-string">'Kigali'</span>, <span class="cm-string">'Istanbul'</span>, <span class="cm-string">'Lisbon'</span>];
+
+<span class="cm-comment">// what matters in the array is order and the index starts at 0 </span>
+<span class="cm-comment">// accessing data inside of an array using index </span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>[<span class="cm-number">0</span>]);
+
+<span class="cm-comment">// // how many items are in the array? </span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>.<span class="cm-property">length</span>);
+<span class="cm-comment">// how do we return the last item in an array?</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>[<span class="cm-variable">cities</span>.<span class="cm-property">length</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>]);
+
+<span class="cm-comment">// an array has a whole bunch of built in methods that we can use to work with it </span>
+<span class="cm-comment">//console.dir an arry and show all the methods available </span>
+
+<span class="cm-comment">// mutable vs immutable </span>
+<span class="cm-comment">// when you think mutant think mutation (change) - when something changes the original version that is referred to as mutable </span>
+<span class="cm-comment">// immutable - the method does not change the original thing - it returns a new array </span>
+
+<span class="cm-comment">// mutable method </span>
+<span class="cm-keyword">const</span> <span class="cm-def">numbers</span> <span class="cm-operator">=</span> [<span class="cm-number">1</span>, <span class="cm-number">2</span>, <span class="cm-number">3</span>, <span class="cm-number">4</span>, <span class="cm-number">5</span>, <span class="cm-number">6</span>, <span class="cm-number">7</span>, <span class="cm-number">8</span>, <span class="cm-number">9</span>];
+
+<span class="cm-keyword">const</span> <span class="cm-def">numbersBackwards</span> <span class="cm-operator">=</span> <span class="cm-variable">numbers</span>.<span class="cm-property">reverse</span>();
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">numbersBackwards</span>);
+
+<span class="cm-comment">// is the original array the same? or has it been changed? </span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">numbers</span>);
+
+<span class="cm-comment">// so the original array has been changed as well - this method changes the orginal data - it's mutable</span>
+<span class="cm-comment">// this is not necessarily bad or incorrect - it's just something to know about JS - some methods will modify the original data set</span>
+
+<span class="cm-comment">// immuatable method </span>
+<span class="cm-comment">// will create a new array and leave the orginal one intact </span>
+<span class="cm-comment">// why is this important? why do we care? well it takes a long time to collect data so data integrity can be important. We may want to do something with this data but we don't always want to mess with the original data set </span>
+
+
+<span class="cm-keyword">const</span> <span class="cm-def">sample</span> <span class="cm-operator">=</span> <span class="cm-variable">numbers</span>.<span class="cm-property">slice</span>(<span class="cm-number">2</span>,<span class="cm-number">4</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">sample</span>);
+
+<span class="cm-comment">// if I console.log numbers again - will the 3 and 4 be taken out? no</span>
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">numbers</span>);
+
+<span class="cm-comment">// // what happens if you want to use an mutable array method and not mutate the original? </span>
+<span class="cm-comment">// // to leave the original data intact you would need to make a copy of the array </span>
+<span class="cm-keyword">const</span> <span class="cm-def">backwardsNumbers</span> <span class="cm-operator">=</span> [<span class="cm-meta">...</span><span class="cm-variable">numbers</span>]; <span class="cm-comment">// this is called spreading the old array into it </span>
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">backwardsNumbers</span>);
+
+<span class="cm-comment">// // and then we can use the reverse method</span>
+
+<span class="cm-variable">backwardsNumbers</span>.<span class="cm-property">reverse</span>();
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">backwardsNumbers</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">numbers</span>);
+<span class="cm-comment">// // so any time you use a mutation method you would need to take a copy if you don't want to modify the original array</span>
+
+<span class="cm-comment">// Adding items to an array - one of the most common things you will want to do</span>
+
+<span class="cm-keyword">const</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> [<span class="cm-string">'Tel Aviv'</span>, <span class="cm-string">'Cape Town'</span>, <span class="cm-string">'New York'</span>, <span class="cm-string">'Kigali'</span>, <span class="cm-string">'Istanbul'</span>, <span class="cm-string">'Lisbon'</span>];
+
+<span class="cm-comment">// // add items to the beginning </span>
+<span class="cm-variable">cities</span>.<span class="cm-property">unshift</span>(<span class="cm-string">'Tbilsi'</span>);
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+
+<span class="cm-comment">// add items to the end </span>
+
+<span class="cm-variable">cities</span>.<span class="cm-property">push</span>(<span class="cm-string">'Tehran'</span>);
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+
+<span class="cm-comment">// removing items from an array </span>
+<span class="cm-comment">// remove the first item </span>
+<span class="cm-variable">cities</span>.<span class="cm-property">shift</span>();
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+
+<span class="cm-comment">// remove last item </span>
+<span class="cm-variable">cities</span>.<span class="cm-property">pop</span>();
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+
+<span class="cm-variable">BREAKOUT</span>
+<span class="cm-comment">// Create a new array called myFavouriteCity </span>
+<span class="cm-comment">// add your favourite city to the beginning of this array </span>
+<span class="cm-comment">// do not manipulate the original array</span>
+<span class="cm-comment">// console.log the new array </span>
+<span class="cm-comment">//console.log your favourite city</span>
+
+<span class="cm-comment">//answer </span>
+
+<span class="cm-keyword">const</span> <span class="cm-def">myFavouriteCity</span> <span class="cm-operator">=</span> [<span class="cm-meta">...</span><span class="cm-variable">cities</span>];
+<span class="cm-variable">myFavouriteCity</span>.<span class="cm-property">unshift</span>(<span class="cm-string">'Sofia'</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>); <span class="cm-comment">// check to make sure we didn't mutate this</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">myFavouriteCity</span>); <span class="cm-comment">// this is the new array</span>
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">myFavouriteCity</span>[<span class="cm-number">0</span>]); <span class="cm-comment">// your favourite city should be the first item in the new array </span>
+
+
+<span class="cm-comment">//.splice()</span>
+<span class="cm-comment">// used for removing items at a specific index </span>
+<span class="cm-keyword">const</span> <span class="cm-def">cities</span> <span class="cm-operator">=</span> [<span class="cm-string">'Tel Aviv'</span>, <span class="cm-string">'Cape Town'</span>, <span class="cm-string">'New York'</span>, <span class="cm-string">'Kigali'</span>, <span class="cm-string">'Istanbul'</span>, <span class="cm-string">'Lisbon'</span>];
+<span class="cm-comment">// :threadpls: I've had a bad experience in New York and I've decided New York is no longer one of my favourite cities - how could I remove New York? </span>
+<span class="cm-variable">cities</span>.<span class="cm-property">splice</span>(<span class="cm-number">2</span>,<span class="cm-number">1</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+<span class="cm-comment">// the first number is the index where you want to start removing items, and the second number is how many items you want removed </span>
+<span class="cm-variable">cities</span>.<span class="cm-property">splice</span>(<span class="cm-number">2</span>,<span class="cm-number">2</span>);
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">cities</span>);
+
+
+<span class="cm-comment">//.includes()</span>
+
+<span class="cm-keyword">const</span> <span class="cm-def">apples</span> <span class="cm-operator">=</span> [<span class="cm-string">'Jonagold'</span>, <span class="cm-string">'Cameo'</span>, <span class="cm-string">'Empire'</span>, <span class="cm-string">'McIntosh'</span>, <span class="cm-string">'Golden Delicious'</span>, <span class="cm-string">'Fuji'</span>, <span class="cm-string">'Cortland'</span>, <span class="cm-string">'Red Delicious'</span>, <span class="cm-string">'Gala'</span>, <span class="cm-string">'Granny Smith'</span>, <span class="cm-string">'Braeburn'</span>, <span class="cm-string">'Honeycrisp'</span>]
+
+<span class="cm-comment">// loop through this array - print out in the console if the item at each index true or false includes the word Delicious</span>
+
+<span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable">apples</span>.<span class="cm-property">length</span>; <span class="cm-variable">i</span><span class="cm-operator">++</span>){
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">apples</span>[<span class="cm-variable">i</span>].<span class="cm-property">includes</span>(<span class="cm-string">'Delicious'</span>));
+}
+
+
+<span class="cm-comment">//breakout - write a function to find out if any of the apple types include the word red - if they do return that type. The function should be reusable so that we can search for any string - 8 mins</span>
+
+<span class="cm-comment">// answer </span>
+
+<span class="cm-keyword">function</span> <span class="cm-def">appleType</span>(<span class="cm-def">arr</span>, <span class="cm-def">string</span>){
+  <span class="cm-keyword">for</span>(<span class="cm-keyword">let</span> <span class="cm-def">i</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>; <span class="cm-variable-2">i</span> <span class="cm-operator">&lt;</span> <span class="cm-variable-2">arr</span>.<span class="cm-property">length</span>; <span class="cm-variable-2">i</span><span class="cm-operator">++</span>){
+    <span class="cm-keyword">if</span>(<span class="cm-variable-2">arr</span>[<span class="cm-variable-2">i</span>].<span class="cm-property">includes</span>(<span class="cm-variable-2">string</span>)){
+      <span class="cm-keyword">return</span> <span class="cm-variable-2">arr</span>[<span class="cm-variable-2">i</span>];
+    }
+  }
+}
+
+<span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">appleType</span>(<span class="cm-variable">apples</span>, <span class="cm-string">'Red'</span>));
+
+
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Intro to Arrays" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Intro to Arrays" data-src="https://cdpn.io/bgoonz/fullembedgrid/qBRKxVW?animations=run&amp;type=embed" src="qBRKxVW_data/qBRKxVW.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/BritHemming/fullpage/RwrrPeG?default-tab=js,result&amp;height=265&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"","js":"// An array is used for holding a list of items where the order matters. \n// Each thing inside of an array is called an item and the position of the item is called the index. \n// The number of items in the array is called the length \n// And each item in the array can be any type (string, number, boolean, object, array, etc.) \n\n// Let&#39;s create an array - I am going to create an array of my favourite cities in the order that I like them\n\nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n\n// what matters in the array is order and the index starts at 0 \n// accessing data inside of an array using index \nconsole.log(cities[0]);\n\n// // how many items are in the array? \nconsole.log(cities.length);\n// how do we return the last item in an array?\nconsole.log(cities[cities.length - 1]);\n\n// an array has a whole bunch of built in methods that we can use to work with it \n//console.dir an arry and show all the methods available \n\n// mutable vs immutable \n// when you think mutant think mutation (change) - when something changes the original version that is referred to as mutable \n// immutable - the method does not change the original thing - it returns a new array \n\n// mutable method \nconst numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst numbersBackwards = numbers.reverse();\nconsole.log(numbersBackwards);\n\n// is the original array the same? or has it been changed? \nconsole.log(numbers);\n\n// so the original array has been changed as well - this method changes the orginal data - it&#39;s mutable\n// this is not necessarily bad or incorrect - it&#39;s just something to know about JS - some methods will modify the original data set\n\n// immuatable method \n// will create a new array and leave the orginal one intact \n// why is this important? why do we care? well it takes a long time to collect data so data integrity can be important. We may want to do something with this data but we don&#39;t always want to mess with the original data set \n\n\nconst sample = numbers.slice(2,4);\nconsole.log(sample);\n\n// if I console.log numbers again - will the 3 and 4 be taken out? no\n\nconsole.log(numbers);\n\n// // what happens if you want to use an mutable array method and not mutate the original? \n// // to leave the original data intact you would need to make a copy of the array \nconst backwardsNumbers = [...numbers]; // this is called spreading the old array into it \n\nconsole.log(backwardsNumbers);\n\n// // and then we can use the reverse method\n\nbackwardsNumbers.reverse();\n\nconsole.log(backwardsNumbers);\nconsole.log(numbers);\n// // so any time you use a mutation method you would need to take a copy if you don&#39;t want to modify the original array\n\n// Adding items to an array - one of the most common things you will want to do\n\nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n\n// // add items to the beginning \ncities.unshift(&#39;Tbilsi&#39;);\n\nconsole.log(cities);\n\n// add items to the end \n\ncities.push(&#39;Tehran&#39;);\n\nconsole.log(cities);\n\n// removing items from an array \n// remove the first item \ncities.shift();\nconsole.log(cities);\n\n// remove last item \ncities.pop();\nconsole.log(cities);\n\nBREAKOUT\n// Create a new array called myFavouriteCity \n// add your favourite city to the beginning of this array \n// do not manipulate the original array\n// console.log the new array \n//console.log your favourite city\n\n//answer \n\nconst myFavouriteCity = [...cities];\nmyFavouriteCity.unshift(&#39;Sofia&#39;);\nconsole.log(cities); // check to make sure we didn&#39;t mutate this\nconsole.log(myFavouriteCity); // this is the new array\nconsole.log(myFavouriteCity[0]); // your favourite city should be the first item in the new array \n\n\n//.splice()\n// used for removing items at a specific index \nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n// :threadpls: I&#39;ve had a bad experience in New York and I&#39;ve decided New York is no longer one of my favourite cities - how could I remove New York? \ncities.splice(2,1);\nconsole.log(cities);\n// the first number is the index where you want to start removing items, and the second number is how many items you want removed \ncities.splice(2,2);\nconsole.log(cities);\n\n\n//.includes()\n\nconst apples = [&#39;Jonagold&#39;, &#39;Cameo&#39;, &#39;Empire&#39;, &#39;McIntosh&#39;, &#39;Golden Delicious&#39;, &#39;Fuji&#39;, &#39;Cortland&#39;, &#39;Red Delicious&#39;, &#39;Gala&#39;, &#39;Granny Smith&#39;, &#39;Braeburn&#39;, &#39;Honeycrisp&#39;]\n\n// loop through this array - print out in the console if the item at each index true or false includes the word Delicious\n\nfor(let i = 0; i &lt; apples.length; i++){\n  console.log(apples[i].includes(&#39;Delicious&#39;));\n}\n\n\n//breakout - write a function to find out if any of the apple types include the word red - if they do return that type. The function should be reusable so that we can search for any string - 8 mins\n\n// answer \n\nfunction appleType(arr, string){\n  for(let i = 0; i &lt; arr.length; i++){\n    if(arr[i].includes(string)){\n      return arr[i];\n    }\n  }\n}\n\nconsole.log(appleType(apples, &#39;Red&#39;));"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="../../a_data_045/GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script></body></html>

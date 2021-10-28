@@ -1,0 +1,89 @@
+@font-face {
+	font-family: "FontAwesome";
+	src: url( "https://gridsound.github.io/daw/assets/fa-solid-900.woff" );
+}
+
+body {
+	font-family: sans-serif;
+	color: #ddd;
+	background-color: #222;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 40px auto 48px;
+	padding: 8px;
+	width: 90%;
+	border-radius: 4px;
+	background-color: #444;
+	box-shadow: 0 6px 0px 0px rgba( 0, 0, 0, .3 );
+}
+
+#title {
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+#title a {
+	color: orange;
+	text-decoration: none;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+}
+
+#wrapper {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#options {
+	margin-top: 8px;
+	font-size: 12px;
+}
+#options select {
+	height: 32px;
+	color: #ddd;
+	border: 0;
+	border-radius: 2px;
+	background-color: #333;
+}
+
+#parentDependencies,
+#dependencies {
+	position: absolute;
+	margin-top: 16px;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	font-size: 12px;
+	text-align: center;
+}
+#parentDependencies {
+	margin-top: 40px;
+}
+#parentDependencies:empty {
+	display: none;
+}
+#parentDependencies::before {
+	content: "Herited of\A0:\A0";
+}
+#dependencies::before {
+	content: "Dependencies\A0:\A0";
+}
+#dependencies:empty::after {
+	content: "No dependency :)";
+	font-style: italic;
+	opacity: .5;
+}
+#content ~ div a {
+	color: orange;
+	text-decoration: none;
+}
+#content ~ div a:hover {
+	text-decoration: underline;
+	text-decoration-skip: ink;
+}

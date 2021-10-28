@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="search_data/style.css">
+  
+        
+    </head>
+    <body>
+        <header>
+            <div id="header-inner">
+                <a href="#" id="logo"></a>
+                 <a class="navbar-brand" rel="home" href="#" title="logo">
+                        <img src="search_data/logo.png" width="90" height="80">
+                </a><div class="container blue circleBehind"><a class="navbar-brand" rel="home" href="#" title="logo">
+                    </a><a href="#" id="menu-icon"></a>
+                    
+                    <a href="https://ds-algo-official.netlify.app/content/resources/visualizations/sort.html">Sorting</a>
+                    <a href="#" class="current">Searching</a>
+             
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div id="array_container" style=""><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">52</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">7</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">52</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">18</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">36</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">97</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">64</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">38</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">35</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">88</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">82</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">89</div><div style="margin: 0px 0.2%; padding: 20px 0px 0px; width: 60px; height: 40px; background-color: rgb(64, 224, 208); text-align: center;">73</div></div>
+        </section>
+
+        <section>
+            <div id="array_container2">
+                <input id="texty" type="text" placeholder="Enter number">
+               <button class="custom button" id="b1" onclick="search(1)">Linear Search</button>
+                <button class="custom button" id="b2" onclick="search(2)">Binary Search</button>
+                <div id="resultDiv">
+                    <p id="result"></p>
+                </div>
+            </div>
+           
+        </section>
+
+        <script src="search_data/index.js"></script>
+        <script src="search_data/linearSearch.js"></script>
+        <script src="search_data/binarySearch.js"></script>
+    <script>
+window.open = function(){
+   return;
+}
+</script>
+
+<script>
+window.alias_open = window.open;
+
+window.open = function(url, name, specs, replace) { // Do nothing, or do something smart... };
+
+
+</script>
+<script type="text/javascript"> function popup(mylink, windowname) { if (! window.focus)return true; var href; if (typeof(mylink) == 'string') href=mylink; else href=mylink.href; window.open(href, windowname, 'width=400,height=200,scrollbars=yes'); return false; } </script>
+
+</body></html>

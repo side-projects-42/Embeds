@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - TroisJS InstancedMesh Test</title>
+  
+  
+  
+  
+<style>
+body, html {
+  margin: 0;
+}
+canvas {
+  display: block;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="app" data-v-app=""><canvas width="758" height="568"></canvas></div>
+    <script src="../abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  <script src="oNBNJMK_data/simplex-noise.js"></script>
+      <script id="rendered-js" type="module">
+// Made with TroisJS : https://github.com/troisjs/trois
+import { createApp } from 'https://unpkg.com/troisjs@0.1.10/build/trois.module.cdn.min.js';
+import { Object3D } from 'https://unpkg.com/three@0.125.2/build/three.module.js';
+
+const simplex = new SimplexNoise();
+
+createApp({
+  setup() {
+    const SIZE = 1.5,NX = 20,NY = 20,PADDING = 1;
+    const SIZEP = SIZE + PADDING;
+    const W = NX * SIZEP - PADDING;
+    const H = NY * SIZEP - PADDING;
+    return {
+      SIZE, NX, NY, PADDING,
+      SIZEP, W, H,
+      NUM_INSTANCES: NX * NY };
+
+  },
+  mounted() {
+    this.renderer = this.$refs.renderer;
+    this.mouse = this.renderer.three.mouse;
+    this.mouseV3 = this.renderer.three.mouseV3;
+
+    this.imesh = this.$refs.imesh.mesh;
+    this.light = this.$refs.light.light;
+
+    this.dummy = new Object3D();
+
+    this.renderer.onBeforeRender(this.animate);
+  },
+  methods: {
+    animate() {
+      this.light.position.x = this.mouseV3.x;
+      this.light.position.y = this.mouseV3.y;
+      this.updateInstanceMatrix();
+    },
+    updateInstanceMatrix() {
+      const x0 = -this.W / 2 + this.PADDING;
+      const y0 = -this.H / 2 + this.PADDING;
+      const time = Date.now() * 0.0001;
+      const mx = this.mouse.x * 0.1;
+      const my = this.mouse.y * 0.1;
+      const noise = 0.005;
+      let x, y, nx, ny, rx, ry;
+      for (let i = 0; i < this.NX; i++) {if (window.CP.shouldStopExecution(0)) break;
+        for (let j = 0; j < this.NY; j++) {if (window.CP.shouldStopExecution(1)) break;
+          x = x0 + i * this.SIZEP;
+          y = y0 + j * this.SIZEP;
+          nx = x * noise + mx;
+          ny = y * noise + my;
+          rx = simplex.noise3D(nx, ny, time) * Math.PI;
+          ry = simplex.noise3D(ny, nx, time) * Math.PI;
+          this.dummy.position.set(x, y, -10);
+          this.dummy.rotation.set(rx, ry, 0);
+          this.dummy.updateMatrix();
+          this.imesh.setMatrixAt(i * this.NY + j, this.dummy.matrix);
+        }window.CP.exitedLoop(1);
+      }window.CP.exitedLoop(0);
+      this.imesh.instanceMatrix.needsUpdate = true;
+    } } }).
+
+mount('#app');
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="../abpWrBP_data/abpWrBP_data/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c5.js"></script>
+
+
+
+ 
+</body></html>

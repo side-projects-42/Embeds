@@ -1,0 +1,380 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap Form Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="a_data_006/bootstrap.css" rel="stylesheet">
+    <link href="a_data_006/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="https://fourm-builder-gui.netlify.app/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://fourm-builder-gui.netlify.app/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://fourm-builder-gui.netlify.app/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://fourm-builder-gui.netlify.app/images/apple-touch-icon-114x114.png">
+  <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main-built" src="assets/js/main-built.js"></script></head>
+
+  <body>
+    <a href="https://github.com/bgoonz/form-builder-vanilla-js">
+      <svg width="80" height="80" viewBox="0 0 250 250" style="
+          fill: #151513;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          border: 0;
+          right: 0;
+        " aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+      </svg>
+    </a>
+    <style>
+      .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+      }
+      @keyframes octocat-wave {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        20%,
+        60% {
+          transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+          transform: rotate(10deg);
+        }
+      }
+      @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+          animation: none;
+        }
+        .github-corner .octo-arm {
+          animation: octocat-wave 560ms ease-in-out;
+        }
+      }
+    </style>
+    <div class="container">
+      <div class="row clearfix">
+        <!-- Components -->
+        <div class="col-md-6">
+          <h5>Drag &amp; Drop components</h5>
+          <hr>
+          <div class="tabbable">
+            <ul class="nav nav-tabs" id="formtabs">
+              <!-- Tab nav -->
+            <li class="active"><a href="#input" data-toggle="tab">Input</a></li>
+<li><a href="#radioscheckboxes" data-toggle="tab">Radios / Checkboxes</a></li>
+<li><a href="#select" data-toggle="tab">Select</a></li>
+<li><a href="#buttons" data-toggle="tab">Buttons</a></li>
+<li><a href="#rendered" data-toggle="tab">Rendered</a></li>
+<li><a href="#about" data-toggle="tab">About</a></li>
+</ul>
+            <form class="form-horizontal" id="components" role="form">
+              <fieldset>
+                <div class="tab-content">
+                  <!-- Tabs of snippets go here -->
+                <div class="tab-pane active" id="input"><div class="component"><!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+</div><div class="component"><!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwordinput">Password Input</label>
+  <div class="col-md-4">
+    <input id="passwordinput" name="passwordinput" type="password" placeholder="placeholder" class="form-control input-md">
+    <span class="help-block">help</span>
+  </div>
+</div>
+</div><div class="component"><!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="searchinput">Search Input</label>
+  <div class="col-md-4">
+    <input id="searchinput" name="searchinput" type="search" placeholder="placeholder" class="form-control input-md">
+    <p class="help-block">help</p>
+  </div>
+</div>
+</div><div class="component"><!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="prependedtext">Prepended Text</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">prepend</span>
+      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="placeholder" type="text">
+    </div>
+    <p class="help-block">help</p>
+  </div>
+</div>
+</div><div class="component"><!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="appendedtext">Appended Text</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="appendedtext" name="appendedtext" class="form-control" placeholder="placeholder" type="text">
+      <span class="input-group-addon">append</span>
+    </div>
+    <p class="help-block">help</p>
+  </div>
+</div></div><div class="component"><!-- Prepended checkbox -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="prependedcheckbox">Prepended Checkbox</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">     
+          <input type="checkbox">     
+      </span>
+      <input id="prependedcheckbox" name="prependedcheckbox" class="form-control" type="text" placeholder="placeholder">
+    </div>
+    <p class="help-block">help</p>
+  </div>
+</div>
+</div><div class="component"><!-- Appended checkbox -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="appendedcheckbox">Appended Checkbox</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="appendedcheckbox" name="appendedcheckbox" class="form-control" type="text" placeholder="placeholder">
+	        <span class="input-group-addon">     
+          <input type="checkbox">     
+      </span>
+    </div>
+    <p class="help-block">help</p>
+  </div>
+</div>
+</div><div class="component"><!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="buttondropdown">Button Drop Down</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="buttondropdown" name="buttondropdown" class="form-control" placeholder="placeholder" type="text">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Action
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+          <li><a href="#">Option one</a></li>
+          <li><a href="#">Option two</a></li>
+          <li><a href="#">Option three</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="component"><!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Text Area</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea">default text</textarea>
+  </div>
+</div>
+</div></div><div class="tab-pane" id="radioscheckboxes"><div class="component"><!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Multiple Radios</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1">
+      Option one
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      Option two
+    </label>
+	</div>
+  </div>
+</div>
+</div><div class="component"><!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Inline Radios</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+      1
+    </label> 
+    <label class="radio-inline" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="2">
+      2
+    </label> 
+    <label class="radio-inline" for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="3">
+      3
+    </label> 
+    <label class="radio-inline" for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="4">
+      4
+    </label>
+  </div>
+</div>
+</div><div class="component"><!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Multiple Checkboxes</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Option one
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Option two
+    </label>
+	</div>
+  </div>
+</div>
+</div><div class="component"><!-- Multiple Checkboxes (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Inline Checkboxes</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      1
+    </label>
+    <label class="checkbox-inline" for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      2
+    </label>
+    <label class="checkbox-inline" for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+      3
+    </label>
+    <label class="checkbox-inline" for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+      4
+    </label>
+  </div>
+</div>
+</div></div><div class="tab-pane" id="select"><div class="component"><!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1" selected="selected">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+</div><div class="component"><!-- Select Multiple -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectmultiple">Select Multiple</label>
+  <div class="col-md-4">
+    <select id="selectmultiple" name="selectmultiple" class="form-control" multiple="multiple">
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+</div></div><div class="tab-pane" id="buttons"><div class="component"><!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="filebutton">File Button</label>
+  <div class="col-md-4">
+    <input id="filebutton" name="filebutton" class="input-file" type="file">
+  </div>
+</div>
+</div><div class="component"><!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+  </div>
+</div>
+</div><div class="component"><!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button1id">Double Button</label>
+  <div class="col-md-8">
+    <button id="button1id" name="button1id" class="btn btn-success">Good Button</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button>
+  </div>
+</div>
+</div></div><div class="tab-pane" id="rendered"><h3>Rendered source of your form:</h3>
+<textarea id="render" class="col-md-12">&lt;form class="form-horizontal"&gt;
+&lt;fieldset&gt;
+
+&lt;!-- Form Name --&gt;
+&lt;legend&gt;Form Name&lt;/legend&gt;
+
+&lt;/fieldset&gt;
+&lt;/form&gt;
+</textarea>
+</div><div class="tab-pane" id="about"><h3>About</h3>
+
+<p>
+Created By Adam Moore (@<a href="http://twitter.com/minikomi">minikomi</a>) to help take the stress out of 
+writing all that markup to get bootstrap forms together. The original version of this was a big jQuery
+spaghetti mess, so as of March 2013 it has been rewritten using <a href="https://fourm-builder-gui.netlify.app/backbonejs.org">backbone.js</a> and 
+takes advantage of <a href="http://underscorejs.org/#template">underscode.js templates</a>.
+</p>
+
+<p>
+If you have a problem, or want a specific snippet added please check out the 
+<a href="https://github.com/minikomi/Bootstrap-Form-Builder">github project</a>. Note, this is only a simple tool so I'm not 
+that keen on adding many features (eg. saving/exporting forms, embedding forms etc.). 
+</p>
+
+<p>
+  Adding snippets is quite simple now (due to the rewrite!) so please don't hesitate to open an issue!
+</p>
+</div></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!-- / Components -->
+
+        <!-- Building Form. -->
+        <div class="col-md-6">
+          <div class="clearfix">
+            <h5>Your Form</h5>
+            <hr>
+            <div id="build">
+              <form id="target" class="form-horizontal"><fieldset><div class="component" data-content="&lt;form role=&quot;form&quot;&gt;
+    
+      
+      
+    &lt;div class=&quot;form-group&quot;&gt;
+	&lt;label class=&quot;col-md-12 control-label&quot;&gt; Form Name &lt;/label&gt;
+	&lt;div class=&quot;col-md-10&quot;&gt;
+		&lt;input class='form-control field' data-type=&quot;input&quot; type='text' name='name' id='name' value ='Form Name' /&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+    &lt;hr/&gt;
+    &lt;button id=&quot;save&quot; class='btn btn-info col-md-4'&gt;Save&lt;/button&gt;&amp;nbsp;&lt;button id=&quot;cancel&quot; class='btn btn-danger'&gt;Cancel&lt;/button&gt;
+&lt;/form&gt;
+" data-title="Form Name" data-trigger="manual" data-html="true"><!-- Form Name -->
+<legend>Form Name</legend>
+</div></fieldset></form>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-md-12 text-center">
+
+            </div>
+          </div>
+        </div>
+        <!-- / Building Form. -->
+      </div>
+    </div>
+    <!-- /container -->
+
+    <!-- Development -->
+    <!-- <script data-main="assets/js/main.js" src="assets/js/lib/require.js" ></script> -->
+
+    <!-- Production -->
+    <script data-main="assets/js/main-built.js" src="a_data_006/require.js"></script>
+  
+
+</body></html>

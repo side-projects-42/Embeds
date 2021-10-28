@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html class="js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive iFrames Pattern Grid</title>
+  <link rel="stylesheet" href="a_data_045/ZEeoyKv_data/ZEeoyKv_data/normalize.css">
+  <link rel="stylesheet" href="a_data/style.css">
+  <script async="" defer="defer" src="a_data/script.js"></script>
+<script async="" defer="defer" src="a_data_037/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    document.getElementsByTagName( "html" )[ 0 ].className = "js";
+  </script>
+  <style>
+    body {
+      overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 25px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+
+      background: rgb(139, 139, 139);
+    }
+
+    /* iframe */
+    iframe {
+      width: 280px !important;
+      height: 500px;
+    }
+
+    .js .iframe-header {
+      display: block;
+    }
+
+    .iframe-content {
+      /* ipad iframe hack */
+
+      height: 400px;
+      overflow: auto;
+      -webkit-overflow: auto;
+      -scrolling: touch;
+    }
+
+    .iframe-header a {
+      font-size: 30px;
+      color: white;
+      background: #000000;
+      display: block;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 3px solid gold;
+    }
+
+    .iframe-header a:hover,
+    .iframe-header a:focus {
+      background: #000000;
+    }
+
+    .iframe-full-screen .iframe-header {
+      display: block;
+      position: absolute;
+      height: 50px;
+      width: 100%;
+    }
+
+    .iframe-full-screen .iframe-content {
+      position: absolute;
+      top: 50px;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .iframe-full-screen .iframe-header a {
+      padding: 0;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+
+    }
+
+    .iframe-full-screen body {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+
+    }
+
+    .iframe-full-screen .iframe.iframe-active {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+      border: none;
+    }
+
+    .iframe-full-screen .iframe iframe {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+
+    .wrapper {
+      max-width: 1350px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: whitesmoke !important;
+      overflow: auto;
+    }
+
+    .item {
+      display: inline-block;
+      flex: 1 300px;
+    }
+
+    @media all and(max-height: 400px) {
+      .iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_002.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_003.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_004.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_005.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_006.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_007.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_008.html"></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/images.html"></iframe>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_009.html"></iframe>
+      </div>
+    </div>
+
+
+
+    <div class="item">
+      <div class="iframe">
+        <iframe loading="lazy" class="style-4" src="a_data/index_010.html"></iframe>
+      </div>
+    </div>
+    <div class="item">
+      <div class="iframe">
+        <iframe src="a_data/index_011.html"></iframe>
+      </div>
+
+
+
+</div>
+<div class="item">
+  <div class="iframe">
+    <iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/stereo-panner-node.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe">
+    <iframe loading="lazy" class="style-4" .="" src="a_data/index_090.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/index_013.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/index_014.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_080.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_016.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/JavaScript_Tabs_Style_2.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/accordion%20menu%202.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/js%20class%20-%20login%20system.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/primenumber.html"></iframe> </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe src="a_data/javascript%20tabs%20style%202.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"> <iframe src="a_data/lambda-vercel-ez3cbk.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_099.html"></iframe></div>
+</div>
+<!--------------------------------------------->
+
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_018.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_098.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_097.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_096.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_095.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_094.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_093.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_092.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_091.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_056.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_050.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_029.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_086.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_088.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_032.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_055.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_034.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_096.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_087.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_083.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_081.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" class="style-4" src="a_data/index_039.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_040.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_041.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_042.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_043.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_044.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_045.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_046.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_047.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_048.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_049.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_050.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_051.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_052.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_053.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_054.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_055.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_056.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_057.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_058.html"></iframe>
+  </div>
+</div>
+<!-- <div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/freecode-camp-cirriculumn-projects/weather-proxy/views/index.html " /></iframe></div>
+</div> -->
+<!-- <div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/future-tech-innov-creative/etc/Box2D/index.html " /></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/future-tech-innov-creative/etc/Performance/Snowmark/index.html " /></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/future-tech-innov-creative/etc/Performance/framerate/index.html " /></iframe></div>
+</div> -->
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_059.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_060.html"></iframe>
+  </div>
+</div>
+
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/DnaAnimation.html"></iframe></div>
+</div>
+
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_061.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_062.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_063.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_064.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_065.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_066.html"></iframe></div>
+</div>
+<!-- <div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/project-archive/ReactSolutionPracticeAssessment/public/index.html " /></iframe></div>
+</div> -->
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_067.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_068.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_069.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_070.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_071.html"></iframe>
+  </div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_072.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_073.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_074.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_075.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_076.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_077.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_078.html"></iframe></div>
+</div>
+<!-- <div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/project-archive/video-react-context-solution-refactor/build/index.html " /></iframe>
+  </div>
+</div> -->
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_079.html"></iframe>
+  </div>
+</div>
+<!-- <div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/project-archive/video-react-context-solution/public/index.html " /></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin"
+      src="./src/Project-Showcase/project-archive/video-react-context-solution/video-react-context-solution/public/index.html " /></iframe>
+  </div>
+</div> -->
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_080.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_081.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_082.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_083.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_084.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_085.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_086.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_087.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_088.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_089.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_090.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_091.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_092.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_093.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_094.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_095.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_096.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_097.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_098.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/index_099.html"></iframe></div>
+</div>
+<div class="item">
+  <div class="iframe"><iframe loading="lazy" sandbox="allow-scripts allow-forms allow-pointer-lock allow-same-origin" src="a_data/a.html"></iframe></div>
+</div>
+</div>
+
+
+
+<script async="" defer="defer" src="a_data_033/jquery.js"></script>
+<!-- <script src="./script.js">
+        const myDiv = document.getElementById('*')
+        let isResizing = false;
+        //Make the DIV element draggable:
+        dragElement(myDiv);
+        function dragElement(elmnt) {
+          if (!isResizing) {
+            let pos1 = 0,
+              pos2 = 0,
+              pos3 = 0,
+              pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+              //if present, the header is where you move the DIV from:
+              document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+              //otherwise, move the DIV from anywhere inside the DIV:
+              elmnt.onmousedown = dragMouseDown;
+            }
+            function dragMouseDown(e) {
+              e = e || window.event;
+              e.preventDefault();
+              // get the mouse cursor position at startup:
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              document.onmouseup = closeDragElement;
+              // call a function whenever the cursor moves:
+              document.onmousemove = elementDrag;
+            }
+            function elementDrag(e) {
+              e = e || window.event;
+              e.preventDefault();
+              // calculate the new cursor position:
+              pos1 = pos3 - e.clientX;
+              pos2 = pos4 - e.clientY;
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              // set the element's new position:
+              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+            function closeDragElement() {
+              //stop moving when mouse button is released:
+              document.onmouseup = null;
+              document.onmousemove = null;
+            }
+          }
+        }
+        // Resize
+        (function fourCorners() {
+          const resizers = document.querySelectorAll('.resizer')
+          let currentResizer
+          for (let resizer of resizers) {
+            resizer.addEventListener('mousedown', mouseDown)
+            function mouseDown(e) {
+              currentResizer = e.target
+              e.preventDefault()
+              isResizing = true;
+              let posX = e.clientX;
+              let posY = e.clientY;
+              myDiv.addEventListener('mousemove', mouseMove)
+              myDiv.addEventListener('mouseup', mouseUp)
+              function mouseMove(e) {
+                e.preventDefault()
+                const rect = myDiv.getBoundingClientRect()
+                if (currentResizer.classList.contains('se')) {
+                  //console.log(currentResizer.classList.value)
+                  myDiv.style.width = rect.width - (posX - e.clientX) + 'px';
+                  myDiv.style.height = rect.height - (posY - e.clientY) + 'px';
+                } else if (currentResizer.classList.contains('sw')) {
+                  //console.log(currentResizer.classList.value)
+                  myDiv.style.width = rect.width + (posX - e.clientX) + 'px';
+                  myDiv.style.height = rect.height - (posY - e.clientY) + 'px';
+                  myDiv.style.left = rect.left - (posX - e.clientX) + 'px';
+                } else if (currentResizer.classList.contains('ne')) {
+                  //console.log(currentResizer.classList.value)
+                  myDiv.style.width = rect.width - (posX - e.clientX) + 'px';
+                  myDiv.style.height = rect.height + (posY - e.clientY) + 'px';
+                  myDiv.style.top = rect.top - (posY - e.clientY) + 'px';
+                } else {
+                  //console.log(currentResizer.classList.value)
+                  myDiv.style.width = rect.width + (posX - e.clientX) + 'px';
+                  myDiv.style.height = rect.height + (posY - e.clientY) + 'px';
+                  myDiv.style.top = rect.top - (posY - e.clientY) + 'px';
+                  myDiv.style.left = rect.left - (posX - e.clientX) + 'px';
+                }
+                posX = e.clientX;
+                posY = e.clientY;
+              }
+              function mouseUp(e) {
+                myDiv.removeEventListener('mousemove', mouseMove)
+                myDiv.removeEventListener('mouseup', mouseUp)
+                isResizing = false
+              }
+            }
+          }
+        })()
+      </script> -->
+
+
+
+</body></html>
+<!-- partial -->

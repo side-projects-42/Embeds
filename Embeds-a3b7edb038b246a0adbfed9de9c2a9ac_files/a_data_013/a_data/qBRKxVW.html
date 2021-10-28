@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Intro to Arrays</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="a38bgIKaZ9mK6EhXQ6qaKl4A0zh7E32HksLqjNvei6ATugzcnIj2N31HV+FKr7bUiQPkZ5KJiTDbIVt5IstY6Q==">
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/qBRKxVW" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code">// An array is used for holding a list of items where the order matters. 
+// Each thing inside of an array is called an item and the position of the item is called the index. 
+// The number of items in the array is called the length 
+// And each item in the array can be any type (string, number, boolean, object, array, etc.) 
+
+// Let's create an array - I am going to create an array of my favourite cities in the order that I like them
+
+const cities = ['Tel Aviv', 'Cape Town', 'New York', 'Kigali', 'Istanbul', 'Lisbon'];
+
+// what matters in the array is order and the index starts at 0 
+// accessing data inside of an array using index 
+console.log(cities[0]);
+
+// // how many items are in the array? 
+console.log(cities.length);
+// how do we return the last item in an array?
+console.log(cities[cities.length - 1]);
+
+// an array has a whole bunch of built in methods that we can use to work with it 
+//console.dir an arry and show all the methods available 
+
+// mutable vs immutable 
+// when you think mutant think mutation (change) - when something changes the original version that is referred to as mutable 
+// immutable - the method does not change the original thing - it returns a new array 
+
+// mutable method 
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const numbersBackwards = numbers.reverse();
+console.log(numbersBackwards);
+
+// is the original array the same? or has it been changed? 
+console.log(numbers);
+
+// so the original array has been changed as well - this method changes the orginal data - it's mutable
+// this is not necessarily bad or incorrect - it's just something to know about JS - some methods will modify the original data set
+
+// immuatable method 
+// will create a new array and leave the orginal one intact 
+// why is this important? why do we care? well it takes a long time to collect data so data integrity can be important. We may want to do something with this data but we don't always want to mess with the original data set 
+
+
+const sample = numbers.slice(2,4);
+console.log(sample);
+
+// if I console.log numbers again - will the 3 and 4 be taken out? no
+
+console.log(numbers);
+
+// // what happens if you want to use an mutable array method and not mutate the original? 
+// // to leave the original data intact you would need to make a copy of the array 
+const backwardsNumbers = [...numbers]; // this is called spreading the old array into it 
+
+console.log(backwardsNumbers);
+
+// // and then we can use the reverse method
+
+backwardsNumbers.reverse();
+
+console.log(backwardsNumbers);
+console.log(numbers);
+// // so any time you use a mutation method you would need to take a copy if you don't want to modify the original array
+
+// Adding items to an array - one of the most common things you will want to do
+
+const cities = ['Tel Aviv', 'Cape Town', 'New York', 'Kigali', 'Istanbul', 'Lisbon'];
+
+// // add items to the beginning 
+cities.unshift('Tbilsi');
+
+console.log(cities);
+
+// add items to the end 
+
+cities.push('Tehran');
+
+console.log(cities);
+
+// removing items from an array 
+// remove the first item 
+cities.shift();
+console.log(cities);
+
+// remove last item 
+cities.pop();
+console.log(cities);
+
+BREAKOUT
+// Create a new array called myFavouriteCity 
+// add your favourite city to the beginning of this array 
+// do not manipulate the original array
+// console.log the new array 
+//console.log your favourite city
+
+//answer 
+
+const myFavouriteCity = [...cities];
+myFavouriteCity.unshift('Sofia');
+console.log(cities); // check to make sure we didn't mutate this
+console.log(myFavouriteCity); // this is the new array
+console.log(myFavouriteCity[0]); // your favourite city should be the first item in the new array 
+
+
+//.splice()
+// used for removing items at a specific index 
+const cities = ['Tel Aviv', 'Cape Town', 'New York', 'Kigali', 'Istanbul', 'Lisbon'];
+// :threadpls: I've had a bad experience in New York and I've decided New York is no longer one of my favourite cities - how could I remove New York? 
+cities.splice(2,1);
+console.log(cities);
+// the first number is the index where you want to start removing items, and the second number is how many items you want removed 
+cities.splice(2,2);
+console.log(cities);
+
+
+//.includes()
+
+const apples = ['Jonagold', 'Cameo', 'Empire', 'McIntosh', 'Golden Delicious', 'Fuji', 'Cortland', 'Red Delicious', 'Gala', 'Granny Smith', 'Braeburn', 'Honeycrisp']
+
+// loop through this array - print out in the console if the item at each index true or false includes the word Delicious
+
+for(let i = 0; i &lt; apples.length; i++){
+  console.log(apples[i].includes('Delicious'));
+}
+
+
+//breakout - write a function to find out if any of the apple types include the word red - if they do return that type. The function should be reusable so that we can search for any string - 8 mins
+
+// answer 
+
+function appleType(arr, string){
+  for(let i = 0; i &lt; arr.length; i++){
+    if(arr[i].includes(string)){
+      return arr[i];
+    }
+  }
+}
+
+console.log(appleType(apples, 'Red'));
+
+
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Intro to Arrays" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Intro to Arrays" data-src="https://cdpn.io/bgoonz/fullembedgrid/qBRKxVW?animations=run&amp;type=embed" src="../../a_data_017/a_data/qBRKxVW_data/qBRKxVW.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/BritHemming/fullpage/RwrrPeG?default-tab=js,result&amp;height=265&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"","js":"// An array is used for holding a list of items where the order matters. \n// Each thing inside of an array is called an item and the position of the item is called the index. \n// The number of items in the array is called the length \n// And each item in the array can be any type (string, number, boolean, object, array, etc.) \n\n// Let&#39;s create an array - I am going to create an array of my favourite cities in the order that I like them\n\nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n\n// what matters in the array is order and the index starts at 0 \n// accessing data inside of an array using index \nconsole.log(cities[0]);\n\n// // how many items are in the array? \nconsole.log(cities.length);\n// how do we return the last item in an array?\nconsole.log(cities[cities.length - 1]);\n\n// an array has a whole bunch of built in methods that we can use to work with it \n//console.dir an arry and show all the methods available \n\n// mutable vs immutable \n// when you think mutant think mutation (change) - when something changes the original version that is referred to as mutable \n// immutable - the method does not change the original thing - it returns a new array \n\n// mutable method \nconst numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];\n\nconst numbersBackwards = numbers.reverse();\nconsole.log(numbersBackwards);\n\n// is the original array the same? or has it been changed? \nconsole.log(numbers);\n\n// so the original array has been changed as well - this method changes the orginal data - it&#39;s mutable\n// this is not necessarily bad or incorrect - it&#39;s just something to know about JS - some methods will modify the original data set\n\n// immuatable method \n// will create a new array and leave the orginal one intact \n// why is this important? why do we care? well it takes a long time to collect data so data integrity can be important. We may want to do something with this data but we don&#39;t always want to mess with the original data set \n\n\nconst sample = numbers.slice(2,4);\nconsole.log(sample);\n\n// if I console.log numbers again - will the 3 and 4 be taken out? no\n\nconsole.log(numbers);\n\n// // what happens if you want to use an mutable array method and not mutate the original? \n// // to leave the original data intact you would need to make a copy of the array \nconst backwardsNumbers = [...numbers]; // this is called spreading the old array into it \n\nconsole.log(backwardsNumbers);\n\n// // and then we can use the reverse method\n\nbackwardsNumbers.reverse();\n\nconsole.log(backwardsNumbers);\nconsole.log(numbers);\n// // so any time you use a mutation method you would need to take a copy if you don&#39;t want to modify the original array\n\n// Adding items to an array - one of the most common things you will want to do\n\nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n\n// // add items to the beginning \ncities.unshift(&#39;Tbilsi&#39;);\n\nconsole.log(cities);\n\n// add items to the end \n\ncities.push(&#39;Tehran&#39;);\n\nconsole.log(cities);\n\n// removing items from an array \n// remove the first item \ncities.shift();\nconsole.log(cities);\n\n// remove last item \ncities.pop();\nconsole.log(cities);\n\nBREAKOUT\n// Create a new array called myFavouriteCity \n// add your favourite city to the beginning of this array \n// do not manipulate the original array\n// console.log the new array \n//console.log your favourite city\n\n//answer \n\nconst myFavouriteCity = [...cities];\nmyFavouriteCity.unshift(&#39;Sofia&#39;);\nconsole.log(cities); // check to make sure we didn&#39;t mutate this\nconsole.log(myFavouriteCity); // this is the new array\nconsole.log(myFavouriteCity[0]); // your favourite city should be the first item in the new array \n\n\n//.splice()\n// used for removing items at a specific index \nconst cities = [&#39;Tel Aviv&#39;, &#39;Cape Town&#39;, &#39;New York&#39;, &#39;Kigali&#39;, &#39;Istanbul&#39;, &#39;Lisbon&#39;];\n// :threadpls: I&#39;ve had a bad experience in New York and I&#39;ve decided New York is no longer one of my favourite cities - how could I remove New York? \ncities.splice(2,1);\nconsole.log(cities);\n// the first number is the index where you want to start removing items, and the second number is how many items you want removed \ncities.splice(2,2);\nconsole.log(cities);\n\n\n//.includes()\n\nconst apples = [&#39;Jonagold&#39;, &#39;Cameo&#39;, &#39;Empire&#39;, &#39;McIntosh&#39;, &#39;Golden Delicious&#39;, &#39;Fuji&#39;, &#39;Cortland&#39;, &#39;Red Delicious&#39;, &#39;Gala&#39;, &#39;Granny Smith&#39;, &#39;Braeburn&#39;, &#39;Honeycrisp&#39;]\n\n// loop through this array - print out in the console if the item at each index true or false includes the word Delicious\n\nfor(let i = 0; i &lt; apples.length; i++){\n  console.log(apples[i].includes(&#39;Delicious&#39;));\n}\n\n\n//breakout - write a function to find out if any of the apple types include the word red - if they do return that type. The function should be reusable so that we can search for any string - 8 mins\n\n// answer \n\nfunction appleType(arr, string){\n  for(let i = 0; i &lt; arr.length; i++){\n    if(arr[i].includes(string)){\n      return arr[i];\n    }\n  }\n}\n\nconsole.log(appleType(apples, &#39;Red&#39;));"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script></body></html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Linear vs Binary Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+<style>
+@font-face ("OperatorMono-Bold" "https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Bold");
+@font-face ("OperatorMono-Medium" "https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Medium");
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+body {
+  background: #3BB0FF;
+  text-align: center;
+  font-family: "OperatorMono-Medium", "Lucida Console", Monaco, monospace;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFF32B;
+  font-family: "OperatorMono-Bold", "Lucida Console", Monaco, monospace;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+input#random-letter {
+  text-align: center;
+  width: 1em;
+  border: none;
+  border-bottom: 5px solid white;
+  padding-bottom: 0.2em;
+  text-transform: uppercase;
+  background: #3BB0FF;
+  font-size: 3em;
+  font-family: "OperatorMono-Medium", "Lucida Console", Monaco, monospace;
+  color: white;
+}
+input#random-letter.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+input#random-letter:focus {
+  outline: none;
+}
+
+button {
+  text-align: center;
+  border: none;
+  background: #3BB0FF;
+  border: 5px solid #FFF32B;
+  color: #FFF32B;
+  font-size: 30px;
+  font-family: "OperatorMono-Bold", "Lucida Console", Monaco, monospace;
+  padding: 0.15em 1.3em;
+  margin: 1em;
+  transition: border-color 0.2s, color 0.2s;
+  -webkit-transition: border-color 0.2s, color 0.2s;
+}
+button:hover {
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+.searches .linear-search, .searches .binary-search {
+  display: inline-block;
+}
+
+ul.data {
+  padding: 0;
+  margin: 1em;
+  margin-top: 0;
+}
+ul.data li {
+  display: inline-block;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+ul.data li.exempt {
+  color: #FF014E;
+  border-bottom: 2px solid #FF014E;
+}
+ul.data li.found {
+  color: #66FF00;
+  border-bottom: 2px solid #66FF00;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h1>Linear vs Binary</h1>
+<input type="text" maxlength="1" id="random-letter">
+<div class="controls">
+  <button id="random-btn">Random</button>
+  <button id="search-btn">Search</button>
+</div>
+<div class="searches">
+  <div class="linear-search">
+    <h2>Linear</h2>
+    <p class="info" id="linear-info">&nbsp;</p>
+    <ul class="data">
+      <li id="A-linear">A</li>
+      <li id="B-linear">B</li>
+      <li id="C-linear">C</li>
+      <li id="D-linear">D</li>
+      <li id="E-linear">E</li>
+      <li id="F-linear">F</li>
+      <li id="G-linear">G</li>
+      <li id="H-linear">H</li>
+      <li id="I-linear">I</li>
+      <li id="J-linear">J</li>
+      <li id="K-linear">K</li>
+      <li id="L-linear">L</li>
+      <li id="M-linear">M</li>
+      <li id="N-linear">N</li>
+      <li id="O-linear">O</li>
+      <li id="P-linear">P</li>
+      <li id="Q-linear">Q</li>
+      <li id="R-linear">R</li>
+      <li id="S-linear">S</li>
+      <li id="T-linear">T</li>
+      <li id="U-linear">U</li>
+      <li id="V-linear">V</li>
+      <li id="W-linear">W</li>
+      <li id="X-linear">X</li>
+      <li id="Y-linear">Y</li>
+      <li id="Z-linear">Z</li>
+    </ul>
+  </div>
+  <div class="binary-search">
+    <h2>Binary</h2>
+    <p class="info" id="binary-info">&nbsp;</p>
+    <ul class="data">
+      <li id="A-binary">A</li>
+      <li id="B-binary">B</li>
+      <li id="C-binary">C</li>
+      <li id="D-binary">D</li>
+      <li id="E-binary">E</li>
+      <li id="F-binary">F</li>
+      <li id="G-binary">G</li>
+      <li id="H-binary">H</li>
+      <li id="I-binary">I</li>
+      <li id="J-binary">J</li>
+      <li id="K-binary">K</li>
+      <li id="L-binary">L</li>
+      <li id="M-binary">M</li>
+      <li id="N-binary">N</li>
+      <li id="O-binary">O</li>
+      <li id="P-binary">P</li>
+      <li id="Q-binary">Q</li>
+      <li id="R-binary">R</li>
+      <li id="S-binary">S</li>
+      <li id="T-binary">T</li>
+      <li id="U-binary">U</li>
+      <li id="V-binary">V</li>
+      <li id="W-binary">W</li>
+      <li id="X-binary">X</li>
+      <li id="Y-binary">Y</li>
+      <li id="Z-binary">Z</li>
+    </ul>
+  </div>
+</div>
+    <script src="../../a_data_045/abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  
+      <script id="rendered-js">
+// ## Global Variables
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const ARR_LENGTH = ALPHABET.LENGTH;
+const SEARCH_INTERVAL_TIME = 800;
+let linear_interval;
+let binary_interval;
+
+// ## Helper Functions
+function getArgumentsAsArray() {
+  let args = Array.from(arguments);
+  if (typeof args[0] === "object") args = args[0];
+  if (args[0] && args[0].length) args = args[0];
+  return args;
+}
+function sum() {
+  let args = getArgumentsAsArray(arguments);
+  return Array.from(args).reduce((p, c) => p + c);
+}
+function avg() {
+  let args = getArgumentsAsArray(arguments);
+  return sum(args) / args.length;
+}
+function randomIndex(array) {
+  return Math.ceil(Math.random() * array.length) - 1;
+}
+function randomElement(array) {
+  return array[randomIndex(array)];
+}
+
+// ## Search Functions
+function startLinearSearch(value, set) {
+  let current_value;
+  let current_elm;
+  let current_index = 0;
+  let num_iterations = 0;
+  let info = document.getElementById('linear-info');
+  linear_interval = setInterval(() => {
+    current_value = set[current_index];
+    current_elm = document.getElementById(`${current_value}-linear`);
+    num_iterations += 1;
+    if (current_index >= set.length) {
+      clearInterval(linear_interval);
+      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;
+      return;
+    }
+    if (current_value != value) {
+      current_elm.className = "exempt";
+      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;
+    }
+    if (current_value == value) {
+      clearInterval(linear_interval);
+      current_elm.className = "found";
+      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;
+      return;
+    }
+    current_index += 1;
+  }, SEARCH_INTERVAL_TIME);
+}
+function startBinarySearch(value, set) {
+  let current_value;
+  let current_elm;
+  let current_index;
+  let num_iterations = 0;
+  let min = 0;
+  let max = set.length - 1;
+  let info = document.getElementById('binary-info');
+  binary_interval = setInterval(() => {
+    num_iterations += 1;
+    if (min > max) {
+      clearInterval(binary_interval);
+      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;
+      return;
+    }
+    current_index = Math.floor(avg(min, max));
+    current_value = set[current_index];
+    current_elm = document.getElementById(`${current_value}-binary`);
+    if (current_value < value) {
+      min = current_index + 1;
+      set.slice(0, min).forEach(n => {
+        document.getElementById(`${n}-binary`).className = "exempt";
+      });
+      // current_elm.className = "exempt"
+      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;
+    }
+    if (current_value > value) {
+      max = current_index - 1;
+      set.slice(current_index, set.length).forEach(n => {
+        document.getElementById(`${n}-binary`).className = "exempt";
+      });
+      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;
+    }
+    if (current_value == value) {
+      clearInterval(binary_interval);
+      current_elm.className = "found";
+      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;
+      return;
+    }
+  }, SEARCH_INTERVAL_TIME);
+}
+
+
+// ## DOM triggered functions
+function reset() {
+  clearInterval(linear_interval);
+  clearInterval(binary_interval);
+  let exempt = document.querySelectorAll('.exempt');
+  Array.prototype.forEach.call(exempt, el => {el.classList.remove('exempt');});
+  let found = document.querySelectorAll('.found');
+  Array.prototype.forEach.call(found, el => {el.classList.remove('found');});
+  let info = document.querySelectorAll('.info');
+  Array.prototype.forEach.call(info, el => {el.innerHTML = '&nbsp;';});
+  enableButton('random-btn');
+  enableButton('search-btn');
+}
+function getRandomLetter() {
+  reset();
+  const value = randomElement(ALPHABET);
+  let input = document.getElementById('random-letter');
+  input.value = value;
+  input.style.webkitAnimationName = 'shake';
+  input.className = 'shake';
+}
+function disableButton(id) {
+  document.getElementById(id).disabled = true;
+}
+function enableButton(id) {
+  document.getElementById(id).disabled = false;
+}
+
+// ## Setup functions
+function setupInputHandlers() {
+  let input = document.getElementById('random-letter');
+  input.onkeyup = function () {
+    this.value = this.value.toUpperCase();
+    reset();
+  };
+  input.addEventListener('webkitAnimationEnd', function () {
+    this.style.webkitAnimationName = '';
+    this.className = '';
+  }, false);
+  let random_btn = document.getElementById('random-btn');
+  random_btn.onclick = function (e) {
+    e.preventDefault();
+    getRandomLetter();
+  };
+  let search_btn = document.getElementById('search-btn');
+  search_btn.onclick = function (e) {
+    e.preventDefault();
+    if (input.value.length) {
+      startLinearSearch(input.value, ALPHABET);
+      startBinarySearch(input.value, ALPHABET);
+    }
+  };
+}
+function inputFocus() {
+  let input = document.getElementById('random-letter');
+  input.focus();
+}
+
+// Let's roll
+window.onload = () => {
+  setupInputHandlers();
+  inputFocus();
+};
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="../../a_data_045/abpWrBP_data/abpWrBP_data/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c5.js"></script></body></html>

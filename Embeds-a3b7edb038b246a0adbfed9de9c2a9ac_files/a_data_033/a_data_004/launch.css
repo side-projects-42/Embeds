@@ -1,0 +1,135 @@
+/*
+la-navy: #1c2224
+la-pink: #ed1a7b
+la-blue: #37becc
+la-green: #84ce15
+la-yellow: #FFD800
+*/
+@font-face {
+  font-family: 'quatro-slab';
+  src: url('http://assets.launchacademy.com/fonts/QuatroSlab_Regular.eot'); /* IE9 Compat Modes */
+  src: url('http://assets.launchacademy.com/fonts/QuatroSlab_Regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quatro-slab';
+  src: url('http://assets.launchacademy.com/fonts/QuatroSlab_Medium.eot'); /* IE9 Compat Modes */
+  src: url('http://assets.launchacademy.com/fonts/QuatroSlab_Medium.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('http://assets.launchacademy.com/fonts/QuatroSlab_Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quatro-slab';
+  src: font-url('http://assets.launchacademy.com/fonts/QuatroSlab_Bold.eot'); /* IE9 Compat Modes */
+  src: font-url('http://assets.launchacademy.com/fonts/QuatroSlab_Bold.eot') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('http://assets.launchacademy.com/fonts/QuatroSlab_Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       font-url('http://assets.launchacademy.com/fonts/QuatroSlab_Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('http://assets.launchacademy.com/fonts/QuatroSlab_Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: #1c2224;
+  margin-top: 30px;
+  color:#f8f8f9;
+  text-align: center;
+}
+
+header img {
+  height: 100px;
+}
+
+h1, h2 {
+  color: #ed1a7b;
+  font-family: "quatro-slab", sans-serif;
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h2 {
+  margin-bottom: 0.2rem;
+}
+
+#your-play li {
+  padding: 1.1rem;
+}
+#your-play li a, .play-choice {
+  color: #37becc;
+}
+
+#your-play li a.active {
+  color: #84ce15;
+}
+
+.play-choice {
+  display: inline-block;
+  padding: 0 1.2rem;
+}
+
+#your-play li a:hover {
+  color: #84ce15;
+}
+
+#game-results {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+#game-results h3 {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+#game-results h4 {
+  margin: 5px 0;
+}
+
+#game-results h3.tie {
+  color: #FFD800;
+}
+
+#game-results.tie {
+  border: 5px dashed #FFD800;
+}
+
+#game-results h3.player {
+  color:#84ce15;
+}
+
+#game-results.player {
+  border: 5px dashed #84ce15;
+}
+
+#game-results h3.computer {
+  color: #ed1a7b;
+}
+
+#game-results.computer {
+  border: 5px dashed #ed1a7b;
+}
+
+a.button {
+  background-color: #ed1a7b;
+  color: white;
+  padding: 1rem 1.4rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+

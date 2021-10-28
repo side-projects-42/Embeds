@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style>
+		body {
+			color: silver !important;
+			font-weight: 900;
+			overflow-y: scroll;
+		}
+
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+		body {
+			overflow-x: hidden;
+		}
+
+		* {
+			font-family: 'Noto Sans JP', sans-serif;
+		}
+
+		#messages {
+			position: relative;
+			transform: translate(25%, 0);
+		}
+
+		.message {
+			width: calc(50vw - 6px);
+			height: 50px;
+			border: 3px solid #000000;
+			border-radius: 6px;
+			position: absolute;
+			left: 0;
+			margin: 0;
+		}
+
+		#sendbox {
+			position: fixed;
+			bottom: 0;
+		}
+
+		input[type="text"] {
+			border: 3px solid #000000;
+			border-radius: 6px;
+			width: calc(98vw - 60px);
+			height: 25px;
+			font-size: 15px;
+			outline: none;
+		}
+
+		input[type="submit"] {
+			border: 3px solid #000000;
+			border-radius: 6px;
+			background: #ffffff;
+			cursor: pointer;
+			width: 60px;
+			height: 35px;
+			outline: none;
+			font-size: 15px;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width">
+	<title>Testy</title>
+</head>
+
+<body align="center">
+	<div id="messages">
+	<div class="message" id="notlast">test2</div><br><br><br><div class="message" id="notlast">test2</div><br><br><br><div class="message" id="notlast">https://lambda-prep.netlify.app/</div><br><br><br><div class="message" id="notlast">https://edabit.com/challenges</div><br><br><br><div class="message" id="notlast">https://www.freecodecamp.org/learn/responsive-web-design/</div><br><br><br><div class="message" id="notlast">https://explainshell.com/</div><br><br><br><div class="message" id="notlast">https://github.com/bgoonz/past-lambda-student-repos</div><br><br><br><div class="message" id="notlast">Cell phone test</div><br><br><br><div class="message" id="notlast">hiiiiii</div><br><br><br><div class="message" id="notlast">asaa dude</div><br><br><br><div class="message" id="notlast">🙄😥</div><br><br><br><div class="message" id="notlast">Resource
+ Cloud Storage: 
+https://onedrive.live.com/embed?cid=D21009FDD967A241&amp;resid=D21009FDD967A241%21538729&amp;authkey=AHSDSyoYqzg2K2E</div><br><br><br><div class="message" id="notlast">Hey</div><br><br><br><div class="message" id="notlast"> how did you manage to get comments into a netlify static website?</div><br><br><br><div class="message" id="notlast">I am using repl.it as a json (comments) server</div><br><br><br><div class="message" id="notlast">adam test</div><br><br><br><div class="message" id="notlast">retest</div><br><br><br><div class="message" id="notlast">I just noticed... you're using the same repl for the lambda website and your data structures website.</div><br><br><br><div class="message" id="notlast">Yea I know... Just a bit too lazy to make a fork 😅</div><br><br><br><div class="message" id="last">hi</div><br><br><br></div>
+	<br>
+    <form id="sendbox" onsubmit="sendMessage();return false">
+      <input type="text" id="textbox" placeholder="Hello world!">
+      <input type="submit" value="send">
+    </form>
+  
+
+<script src="a_data_004/xss.js"></script>
+<script src="a_data_004/socket.js"></script>
+<script>
+  socket = io();
+  var previousMessages = "test2,test2,https://lambda-prep.netlify.app/,https://edabit.com/challenges,https://www.freecodecamp.org/learn/responsive-web-design/,https://explainshell.com/,https://github.com/bgoonz/past-lambda-student-repos,Cell phone test,hiiiiii,asaa dude,🙄😥,Resource Cloud Storage: https://onedrive.live.com/embed?cid=D21009FDD967A241&amp;resid=D21009FDD967A241%21538729&amp;authkey=AHSDSyoYqzg2K2E,Hey, how did you manage to get comments into a netlify static website?,I am using repl.it as a json (comments) server,adam test,retest,I just noticed... you&#39;re using the same repl for the lambda website and your data structures website.,Yea I know... Just a bit too lazy to make a fork 😅,hi".split(",");
+  console.log(previousMessages);
+  for (let step = 0; step < previousMessages.length; step++){
+    displayMsg(previousMessages[step]);
+  }
+
+  function sendMessage(){
+    var content = filterXSS(document.getElementById("textbox").value, {whiteList: [], stripIgnoreTag: true, stripIgnoreTagBody: ["script"]});
+    if(!content || content == "[removed]") return;
+    socket.emit("message", content);
+    document.getElementById("textbox").value = "";
+  }
+  socket.on("message", function(content){
+    displayMsg(content);
+  });
+
+  function displayMsg(msg){
+    if(document.getElementById("last"))document.getElementById("last").id = "notlast";
+    document.getElementById("messages").innerHTML = document.getElementById("messages").innerHTML + "<div class=\"message\" id=\"last\">" + msg + "</div><br><br><br>";
+    document.getElementById("last").scrollIntoView();
+  }
+</script></body></html>

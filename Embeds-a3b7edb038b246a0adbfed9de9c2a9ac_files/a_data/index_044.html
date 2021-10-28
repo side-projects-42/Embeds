@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html id="html" class=""><head class="">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" class="">
+    <title class="">Chart the Stock Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" class="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" class="">
+    <link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png" class="">
+    <link href="index_data_044/main.css" rel="stylesheet" type="text/css" class="">
+    <script type="text/javascript" src="index_data_044/socket.js" class=""></script>
+    <script type="text/javascript" src="index_data_044/Chart.js" class=""></script>
+  </head>
+
+  <body class="flex center">
+    <div class="">
+      <h1 class="inline">Chart the Stock Market</h1>
+      <h3 class="">
+        Stocks other people add will show up here in real time - four stocks
+        maximum - to remove a stock click the label
+      </h3>
+      <canvas id="stockCanvas" class="" style="display: block;" width="800" height="400"></canvas>
+      <div class="flex">
+        <input id="symbolInput" type="text" placeholder="enter stock symbol" class="">
+        <div class="btn" id="getStockBtn">get stock</div>
+      </div>
+      <h4 class="">
+        Note: The free tier of the stock api has a maximum of five
+        requests/minute and 500 requests/day
+      </h4>
+    </div>
+    <script type="text/javascript" src="index_data_044/stocks.js" class=""></script>
+  
+
+</body></html>

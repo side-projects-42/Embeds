@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Render Markdown Tool</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="lqTFcTjxQO8uZTrRGEPbvwd/ctNqm0r21wJOR2huYI0U6MIx7l0dpQyu1TyaCJz5JBvwXW7lWM4BKbZ+DcSFAQ==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" class="active" aria-pressed="true">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/ExZvGoZ" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Render markdown:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"load-post-form"</span><span class="cm-tag cm-bracket">&gt;</span>
+    Link to post (busy or steemit): <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"post-link-input"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">id</span>=<span class="cm-string">"load-post-button"</span><span class="cm-tag cm-bracket">&gt;</span>Load steem post<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">textarea</span> <span class="cm-attribute">rows</span>=<span class="cm-string">"12"</span> <span class="cm-attribute">style</span>=<span class="cm-string">"width: 100%;"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"input"</span><span class="cm-tag cm-bracket">&gt;</span>
+# Sample post
+and some content.
+
+Let's mention @ned
+or include a tag #steem. 
+
+https://youtu.be/B7C83L6iWJQ
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">textarea</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">id</span>=<span class="cm-string">"render-button-container"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span> <span class="cm-attribute">id</span>=<span class="cm-string">"render-button"</span><span class="cm-tag cm-bracket">&gt;</span>Render markdown<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Output:<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">id</span>=<span class="cm-string">"output"</span><span class="cm-tag cm-bracket">&gt;</span>
+    ...press the button...
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span> <span class="cm-tag cm-bracket">/&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Generated HTML markup<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">pre</span> <span class="cm-attribute">id</span>=<span class="cm-string">"output-markup"</span><span class="cm-tag cm-bracket">&gt;</span>
+            ...press the button...
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">pre</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://cdn.steemjs.com/lib/latest/steem.min.js"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://unpkg.com/jquery"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://unpkg.com/steem-content-renderer@latest"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-comment">&lt;!--&lt;script src="../dist/browser/steem-content-renderer.min.js"&gt;&lt;/script&gt;--&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+    <span class="cm-property">margin</span>: <span class="cm-number">5%</span> <span class="cm-atom">auto</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">3rem</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#f2f2f2</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#444444</span>;
+    <span class="cm-property">font-family</span>: <span class="cm-meta">-apple-</span><span class="cm-variable">system</span>, <span class="cm-variable">BlinkMacSystemFont</span>, <span class="cm-string">"Segoe UI"</span>, <span class="cm-variable">Roboto</span>,
+        <span class="cm-variable">Helvetica</span>, <span class="cm-variable">Arial</span>, <span class="cm-atom">sans-serif</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">16px</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1.8</span>;
+    <span class="cm-property">text-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">1px</span> <span class="cm-number">0</span> <span class="cm-atom">#ffffff</span>;
+    <span class="cm-property">max-width</span>: <span class="cm-number">800px</span>;
+}
+<span class="cm-tag">code</span> {
+    <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+}
+<span class="cm-tag">a</span> {
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#444444</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#444444</span>;
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+}
+<span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">0</span>;
+}
+<span class="cm-comment">/**/</span>
+<span class="cm-tag">h1</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">2.2em</span>;
+}
+<span class="cm-tag">h2</span>,
+<span class="cm-tag">h3</span>,
+<span class="cm-tag">h4</span>,
+<span class="cm-tag">h5</span> {
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">0</span>;
+}
+<span class="cm-builtin">#output</span> {
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#777</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+}
+<span class="cm-builtin">#output-markup</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#eee</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#777</span>;
+    <span class="cm-property">overflow-x</span>: <span class="cm-atom">scroll</span>;
+}
+<span class="cm-builtin">#render-button-container</span> {
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+}
+<span class="cm-builtin">#render-button</span> {
+    <span class="cm-property">padding</span>: <span class="cm-number">0.5rem</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">1.2em</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">0.5rem</span> <span class="cm-number">0.5rem</span>;
+}
+<span class="cm-qualifier">.load-post-form</span> {
+    <span class="cm-property">text-align</span>: <span class="cm-atom">right</span>;
+}
+<span class="cm-tag">header</span> <span class="cm-tag">small</span> {
+    <span class="cm-property">color</span>: <span class="cm-atom">#999</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">50%</span>;
+}
+<span class="cm-tag">img</span> {
+    <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+}
+</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">renderer</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">SteemContentRenderer</span>.<span class="cm-property">DefaultRenderer</span>({
+    <span class="cm-property">baseUrl</span>: <span class="cm-string">"https://steemit.com/"</span>,
+    <span class="cm-property">breaks</span>: <span class="cm-atom">true</span>,
+    <span class="cm-property">skipSanitization</span>: <span class="cm-atom">false</span>,
+    <span class="cm-property">allowInsecureScriptTags</span>: <span class="cm-atom">false</span>,
+    <span class="cm-property">addNofollowToLinks</span>: <span class="cm-atom">true</span>,
+    <span class="cm-property">doNotShowImages</span>: <span class="cm-atom">false</span>,
+    <span class="cm-property">ipfsPrefix</span>: <span class="cm-string">""</span>,
+    <span class="cm-property">assetsWidth</span>: <span class="cm-number">640</span>,
+    <span class="cm-property">assetsHeight</span>: <span class="cm-number">480</span>,
+    <span class="cm-property">imageProxyFn</span>: (<span class="cm-def">url</span>) <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">url</span>,
+    <span class="cm-property">usertagUrlFn</span>: (<span class="cm-def">account</span>) <span class="cm-operator">=&gt;</span> <span class="cm-string">"https://steemit.com/@"</span> <span class="cm-operator">+</span> <span class="cm-variable-2">account</span>,
+    <span class="cm-property">hashtagUrlFn</span>: (<span class="cm-def">hashtag</span>) <span class="cm-operator">=&gt;</span> <span class="cm-string">"https://steemit.com/trending/"</span> <span class="cm-operator">+</span> <span class="cm-variable-2">hashtag</span>,
+    <span class="cm-property">isLinkSafeFn</span>: (<span class="cm-def">url</span>) <span class="cm-operator">=&gt;</span> <span class="cm-atom">true</span>
+});
+
+<span class="cm-variable">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">ready</span>(() <span class="cm-operator">=&gt;</span> {
+    <span class="cm-keyword">const</span> <span class="cm-def">renderMarkdownBtnElem</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#render-button"</span>);
+    <span class="cm-keyword">const</span> <span class="cm-def">inputElem</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#input"</span>);
+    <span class="cm-keyword">const</span> <span class="cm-def">outputElem</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#output"</span>);
+    <span class="cm-keyword">const</span> <span class="cm-def">outputMarkupElem</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#output-markup"</span>);
+    <span class="cm-keyword">const</span> <span class="cm-def">loadPostButton</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#load-post-button"</span>);
+    <span class="cm-keyword">const</span> <span class="cm-def">postLinkInput</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>(<span class="cm-string">"#post-link-input"</span>);
+
+    <span class="cm-keyword">function</span> <span class="cm-def">setOutput</span>(<span class="cm-def">output</span>) {
+        <span class="cm-variable-2">outputElem</span>.<span class="cm-property">html</span>(<span class="cm-variable-2">output</span>);
+        <span class="cm-variable-2">outputMarkupElem</span>.<span class="cm-property">text</span>(<span class="cm-variable-2">output</span>);
+    }
+
+    <span class="cm-keyword">function</span> <span class="cm-def">render</span>() {
+        <span class="cm-keyword">const</span> <span class="cm-def">input</span> <span class="cm-operator">=</span> <span class="cm-variable-2">inputElem</span>.<span class="cm-property">val</span>();
+        <span class="cm-keyword">const</span> <span class="cm-def">output</span> <span class="cm-operator">=</span> <span class="cm-variable">renderer</span>.<span class="cm-property">render</span>(<span class="cm-variable-2">input</span>);
+
+        <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">"Rendered"</span>, <span class="cm-variable-2">output</span>);
+        <span class="cm-variable-2">setOutput</span>(<span class="cm-variable-2">output</span>);
+    }
+
+    <span class="cm-keyword">function</span> <span class="cm-def">getAuthorAndPermlinkFromLink</span>(<span class="cm-def">link</span>) {
+        <span class="cm-keyword">let</span> <span class="cm-def">author</span> <span class="cm-operator">=</span> <span class="cm-string">""</span>;
+        <span class="cm-keyword">let</span> <span class="cm-def">permlink</span> <span class="cm-operator">=</span> <span class="cm-string">""</span>;
+        <span class="cm-keyword">if</span> (<span class="cm-variable-2">link</span>.<span class="cm-property">length</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span>) {
+            <span class="cm-comment">/* tslint:disable max-line-length */</span>
+            <span class="cm-keyword">const</span> <span class="cm-def">regex</span> <span class="cm-operator">=</span> <span class="cm-string-2">/^\/?(?:https?:\/\/(?:steemit\.com|busy\.org))?(?:\/?[^\/\n]*\/)?@?([^\/\n]+)\/([^\/\n]+)$/giu</span>;
+            <span class="cm-comment">/* tslint:disable max-line-length */</span>
+            <span class="cm-keyword">const</span> <span class="cm-def">match</span> <span class="cm-operator">=</span> <span class="cm-variable-2">regex</span>.<span class="cm-property">exec</span>(<span class="cm-variable-2">link</span>);
+            <span class="cm-keyword">if</span> (<span class="cm-variable-2">match</span> <span class="cm-operator">&amp;&amp;</span> <span class="cm-variable-2">match</span>.<span class="cm-property">length</span> <span class="cm-operator">&gt;</span> <span class="cm-number">1</span>) {
+                <span class="cm-variable-2">author</span> <span class="cm-operator">=</span> <span class="cm-variable-2">match</span>[<span class="cm-number">1</span>];
+                <span class="cm-variable-2">permlink</span> <span class="cm-operator">=</span> <span class="cm-variable-2">match</span>[<span class="cm-number">2</span>];
+            }
+        }
+        <span class="cm-keyword">return</span> { <span class="cm-property">author</span>, <span class="cm-property">permlink</span> };
+    }
+
+    <span class="cm-variable-2">renderMarkdownBtnElem</span>.<span class="cm-property">on</span>(<span class="cm-string">"click"</span>, () <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">render</span>());
+
+    <span class="cm-variable-2">loadPostButton</span>.<span class="cm-property">on</span>(<span class="cm-string">"click"</span>, () <span class="cm-operator">=&gt;</span> {
+        <span class="cm-keyword">const</span> <span class="cm-def">postLink</span> <span class="cm-operator">=</span> <span class="cm-variable-2">postLinkInput</span>.<span class="cm-property">val</span>();
+        <span class="cm-keyword">const</span> { <span class="cm-def">author</span>, <span class="cm-def">permlink</span> } <span class="cm-operator">=</span> <span class="cm-variable-2">getAuthorAndPermlinkFromLink</span>(<span class="cm-variable-2">postLink</span>);
+        <span class="cm-keyword">if</span> (
+            <span class="cm-operator">!</span><span class="cm-variable-2">author</span> <span class="cm-operator">||</span>
+            <span class="cm-variable-2">author</span>.<span class="cm-property">length</span> <span class="cm-operator">===</span> <span class="cm-number">0</span> <span class="cm-operator">||</span>
+            <span class="cm-operator">!</span><span class="cm-variable-2">permlink</span> <span class="cm-operator">||</span>
+            <span class="cm-variable-2">permlink</span>.<span class="cm-property">length</span> <span class="cm-operator">===</span> <span class="cm-number">0</span>
+        ) {
+            <span class="cm-variable-2">inputElem</span>.<span class="cm-property">text</span>(<span class="cm-string">"Author or permlink is missing..."</span>);
+            <span class="cm-keyword">return</span>;
+        }
+
+        <span class="cm-variable-2">inputElem</span>.<span class="cm-property">text</span>(<span class="cm-string">"Loading post @"</span> <span class="cm-operator">+</span> <span class="cm-variable-2">author</span> <span class="cm-operator">+</span> <span class="cm-string">"/"</span> <span class="cm-operator">+</span> <span class="cm-variable-2">permlink</span> <span class="cm-operator">+</span> <span class="cm-string">" ..."</span>);
+        (<span class="cm-keyword">async</span> () <span class="cm-operator">=&gt;</span> {
+            <span class="cm-keyword">try</span> {
+                <span class="cm-keyword">const</span> <span class="cm-def">post</span> <span class="cm-operator">=</span> <span class="cm-keyword">await</span> <span class="cm-variable">steem</span>.<span class="cm-property">api</span>.<span class="cm-property">getContentAsync</span>(<span class="cm-variable-2">author</span>, <span class="cm-variable-2">permlink</span>);
+                <span class="cm-keyword">const</span> <span class="cm-def">postMarkdown</span> <span class="cm-operator">=</span> <span class="cm-variable-2">post</span>.<span class="cm-property">body</span>;
+                <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">"Content loaded"</span>, <span class="cm-variable-2">postMarkdown</span>);
+                <span class="cm-variable-2">inputElem</span>.<span class="cm-property">text</span>(<span class="cm-variable-2">postMarkdown</span>);
+                <span class="cm-variable-2">render</span>();
+            } <span class="cm-keyword">catch</span> (<span class="cm-def">error</span>) {
+                <span class="cm-variable-2">inputElem</span>.<span class="cm-property">text</span>(
+                    <span class="cm-string">"Error while loading post @"</span> <span class="cm-operator">+</span>
+                        <span class="cm-variable-2">author</span> <span class="cm-operator">+</span>
+                        <span class="cm-string">"/"</span> <span class="cm-operator">+</span>
+                        <span class="cm-variable-2">permlink</span> <span class="cm-operator">+</span>
+                        <span class="cm-string">": "</span> <span class="cm-operator">+</span>
+                        <span class="cm-variable-2">error</span>
+                );
+            }
+        })();
+    });
+});
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Render Markdown Tool" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Render Markdown Tool" data-src="https://cdpn.io/bgoonz/fullembedgrid/ExZvGoZ?animations=run&amp;type=embed" src="ExZvGoZ_data_002/ExZvGoZ.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/gschier/fullpage/jkivt?default-tab=html%2Cresult">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;h2&gt;Render markdown:&lt;/h2&gt;\n&lt;div class=&quot;load-post-form&quot;&gt;\n    Link to post (busy or steemit): &lt;input type=&quot;text&quot; id=&quot;post-link-input&quot;&gt;\n    &lt;button id=&quot;load-post-button&quot;&gt;Load steem post&lt;/button&gt;\n&lt;/div&gt;\n&lt;textarea rows=&quot;12&quot; style=&quot;width: 100%;&quot; id=&quot;input&quot;&gt;\n# Sample post\nand some content.\n\nLet&#39;s mention @ned\nor include a tag #steem. \n\nhttps://youtu.be/B7C83L6iWJQ\n\n        &lt;/textarea&gt;\n&lt;p id=&quot;render-button-container&quot;&gt;&lt;button id=&quot;render-button&quot;&gt;Render markdown&lt;/button&gt;&lt;/p&gt;\n\n&lt;h2&gt;Output:&lt;/h2&gt;\n&lt;p id=&quot;output&quot;&gt;\n    ...press the button...\n&lt;/p&gt;\n&lt;br /&gt;\n\n&lt;h2&gt;Generated HTML markup&lt;/h2&gt;\n&lt;pre id=&quot;output-markup&quot;&gt;\n            ...press the button...\n        &lt;/pre&gt;\n\n&lt;script src=&quot;https://cdn.steemjs.com/lib/latest/steem.min.js&quot;&gt;&lt;/script&gt;\n&lt;script src=&quot;https://unpkg.com/jquery&quot;&gt;&lt;/script&gt;\n&lt;script src=&quot;https://unpkg.com/steem-content-renderer@latest&quot;&gt;&lt;/script&gt;\n&lt;!--&lt;script src=&quot;../dist/browser/steem-content-renderer.min.js&quot;&gt;&lt;/script&gt;--&gt;","css":"body {\n    margin: 5% auto;\n    padding: 0 3rem;\n    background: #f2f2f2;\n    color: #444444;\n    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto,\n        Helvetica, Arial, sans-serif;\n    font-size: 16px;\n    line-height: 1.8;\n    text-shadow: 0 1px 0 #ffffff;\n    max-width: 800px;\n}\ncode {\n    background: white;\n}\na {\n    border-bottom: 1px solid #444444;\n    color: #444444;\n    text-decoration: none;\n}\na:hover {\n    border-bottom: 0;\n}\n/**/\nh1 {\n    font-size: 2.2em;\n}\nh2,\nh3,\nh4,\nh5 {\n    margin-bottom: 0;\n}\n#output {\n    border: 1px solid #777;\n    padding: 0.5rem;\n}\n#output-markup {\n    width: 100%;\n    padding: 0.5rem;\n    background: #eee;\n    border: 1px solid #777;\n    overflow-x: scroll;\n}\n#render-button-container {\n    text-align: center;\n}\n#render-button {\n    padding: 0.5rem;\n    font-size: 1.2em;\n    border-radius: 0.5rem 0.5rem;\n}\n.load-post-form {\n    text-align: right;\n}\nheader small {\n    color: #999;\n    font-size: 50%;\n}\nimg {\n    max-width: 100%;\n}","js":"const renderer = new SteemContentRenderer.DefaultRenderer({\n  baseUrl: &quot;https://steemit.com/&quot;,\n  breaks: true,\n  skipSanitization: false,\n  allowInsecureScriptTags: false,\n  addNofollowToLinks: true,\n  doNotShowImages: false,\n  ipfsPrefix: &quot;&quot;,\n  assetsWidth: 640,\n  assetsHeight: 480,\n  imageProxyFn: url =&gt; url,\n  usertagUrlFn: account =&gt; &quot;https://steemit.com/@&quot; + account,\n  hashtagUrlFn: hashtag =&gt; &quot;https://steemit.com/trending/&quot; + hashtag,\n  isLinkSafeFn: url =&gt; true });\n\n\n$(document).ready(() =&gt; {\n  const renderMarkdownBtnElem = $(&quot;#render-button&quot;);\n  const inputElem = $(&quot;#input&quot;);\n  const outputElem = $(&quot;#output&quot;);\n  const outputMarkupElem = $(&quot;#output-markup&quot;);\n  const loadPostButton = $(&quot;#load-post-button&quot;);\n  const postLinkInput = $(&quot;#post-link-input&quot;);\n\n  function setOutput(output) {\n    outputElem.html(output);\n    outputMarkupElem.text(output);\n  }\n\n  function render() {\n    const input = inputElem.val();\n    const output = renderer.render(input);\n\n    console.log(&quot;Rendered&quot;, output);\n    setOutput(output);\n  }\n\n  function getAuthorAndPermlinkFromLink(link) {\n    let author = &quot;&quot;;\n    let permlink = &quot;&quot;;\n    if (link.length &gt; 0) {\n      /* tslint:disable max-line-length */\n      const regex = /^\\/?(?:https?:\\/\\/(?:steemit\\.com|busy\\.org))?(?:\\/?[^\\/\\n]*\\/)?@?([^\\/\\n]+)\\/([^\\/\\n]+)$/giu;\n      /* tslint:disable max-line-length */\n      const match = regex.exec(link);\n      if (match &amp;&amp; match.length &gt; 1) {\n        author = match[1];\n        permlink = match[2];\n      }\n    }\n    return { author, permlink };\n  }\n\n  renderMarkdownBtnElem.on(&quot;click&quot;, () =&gt; render());\n\n  loadPostButton.on(&quot;click&quot;, () =&gt; {\n    const postLink = postLinkInput.val();\n    const { author, permlink } = getAuthorAndPermlinkFromLink(postLink);\n    if (\n    !author ||\n    author.length === 0 ||\n    !permlink ||\n    permlink.length === 0)\n    {\n      inputElem.text(&quot;Author or permlink is missing...&quot;);\n      return;\n    }\n\n    inputElem.text(&quot;Loading post @&quot; + author + &quot;/&quot; + permlink + &quot; ...&quot;);\n    (async () =&gt; {\n      try {\n        const post = await steem.api.getContentAsync(author, permlink);\n        const postMarkdown = post.body;\n        console.log(&quot;Content loaded&quot;, postMarkdown);\n        inputElem.text(postMarkdown);\n        render();\n      } catch (error) {\n        inputElem.text(\n        &quot;Error while loading post @&quot; +\n        author +\n        &quot;/&quot; +\n        permlink +\n        &quot;: &quot; +\n        error);\n\n      }\n    })();\n  });\n});"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

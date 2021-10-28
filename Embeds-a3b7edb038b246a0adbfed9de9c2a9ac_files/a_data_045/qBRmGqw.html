@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Light Javascript Table Filter</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="0FIFSYW2yDJcOn/r5brUOO3jktWyVbMwyZM7d4g2t4/Gt9yZJv4vLbU0lihave8VoeiNUExugGCGN6wfuPuKeA==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/qBRmGqw" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"container"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Light Javascript Table Filter<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"search"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"light-table-filter"</span> <span class="cm-attribute">data-table</span>=<span class="cm-string">"order-table"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Filter"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">table</span> <span class="cm-attribute">class</span>=<span class="cm-string">"order-table table"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Name<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Email<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Phone<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>Price<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">th</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">thead</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tbody</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>John Doe<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>john.doe@gmail.com<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>0123456789<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>99<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Jane Vanda<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>jane@vanda.org<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>9876543210<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>349<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>Alferd Penyworth<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>alfred@batman.com<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>6754328901<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>199<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">td</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tr</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">tbody</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">table</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default">((<span class="cm-def">document</span>) <span class="cm-operator">=&gt;</span> {
+    <span class="cm-string">"use strict"</span>;
+
+    <span class="cm-keyword">const</span> <span class="cm-def">LightTableFilter</span> <span class="cm-operator">=</span> (({ <span class="cm-def">forEach</span> }) <span class="cm-operator">=&gt;</span> {
+        <span class="cm-keyword">let</span> <span class="cm-def">_input</span>;
+
+        <span class="cm-keyword">function</span> <span class="cm-def">_onInputEvent</span>({ <span class="cm-def">target</span> }) {
+            <span class="cm-variable-2">_input</span> <span class="cm-operator">=</span> <span class="cm-variable-2">target</span>;
+            <span class="cm-keyword">const</span> <span class="cm-def">tables</span> <span class="cm-operator">=</span> <span class="cm-variable-2">document</span>.<span class="cm-property">getElementsByClassName</span>(
+                <span class="cm-variable-2">_input</span>.<span class="cm-property">getAttribute</span>(<span class="cm-string">"data-table"</span>)
+            );
+            <span class="cm-variable-2">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">tables</span>, ({ <span class="cm-def">tBodies</span> }) <span class="cm-operator">=&gt;</span> {
+                <span class="cm-variable-2">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">tBodies</span>, ({ <span class="cm-def">rows</span> }) <span class="cm-operator">=&gt;</span> {
+                    <span class="cm-variable-2">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">rows</span>, <span class="cm-variable">_filter</span>);
+                });
+            });
+        }
+
+        <span class="cm-keyword">function</span> <span class="cm-def">_filter</span>({ <span class="cm-def">textContent</span>, <span class="cm-def">style</span> }) {
+            <span class="cm-keyword">const</span> <span class="cm-def">text</span> <span class="cm-operator">=</span> <span class="cm-variable-2">textContent</span>.<span class="cm-property">toLowerCase</span>();
+            <span class="cm-keyword">const</span> <span class="cm-def">val</span> <span class="cm-operator">=</span> <span class="cm-variable-2">_input</span>.<span class="cm-property">value</span>.<span class="cm-property">toLowerCase</span>();
+            <span class="cm-variable-2">style</span>.<span class="cm-property">display</span> <span class="cm-operator">=</span> <span class="cm-operator">!</span><span class="cm-variable-2">text</span>.<span class="cm-property">includes</span>(<span class="cm-variable-2">val</span>) <span class="cm-operator">?</span> <span class="cm-string">"none"</span> : <span class="cm-string">"table-row"</span>;
+        }
+
+        <span class="cm-keyword">return</span> {
+            <span class="cm-property">init</span>() {
+                <span class="cm-keyword">const</span> <span class="cm-def">inputs</span> <span class="cm-operator">=</span> <span class="cm-variable-2">document</span>.<span class="cm-property">getElementsByClassName</span>(
+                    <span class="cm-string">"light-table-filter"</span>
+                );
+                <span class="cm-variable-2">forEach</span>.<span class="cm-property">call</span>(<span class="cm-variable-2">inputs</span>, (<span class="cm-def">input</span>) <span class="cm-operator">=&gt;</span> {
+                    <span class="cm-variable-2">input</span>.<span class="cm-property">oninput</span> <span class="cm-operator">=</span> <span class="cm-variable-2">_onInputEvent</span>;
+                });
+            }
+        };
+    })(<span class="cm-variable">Array</span>.<span class="cm-property">prototype</span>);
+
+    <span class="cm-variable-2">document</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"readystatechange"</span>, () <span class="cm-operator">=&gt;</span> {
+        <span class="cm-keyword">if</span> (<span class="cm-variable-2">document</span>.<span class="cm-property">readyState</span> <span class="cm-operator">===</span> <span class="cm-string">"complete"</span>) {
+            <span class="cm-variable-2">LightTableFilter</span>.<span class="cm-property">init</span>();
+        }
+    });
+})(<span class="cm-variable">document</span>);
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Light Javascript Table Filter" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Light Javascript Table Filter" data-src="https://cdpn.io/bgoonz/fullembedgrid/qBRmGqw?animations=run&amp;type=embed" src="qBRmGqw_data/qBRmGqw.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/oceatoon/fullpage/jKqEI?default-tab=js,result&amp;height=375&amp;theme=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://s.cdpn.io/3/bootstrap.min.css" target="_blank">https://s.cdpn.io/3/bootstrap.min.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;section class=&quot;container&quot;&gt;\n\n    &lt;h2&gt;Light Javascript Table Filter&lt;/h2&gt;\n\n    &lt;input type=&quot;search&quot; class=&quot;light-table-filter&quot; data-table=&quot;order-table&quot; placeholder=&quot;Filter&quot;&gt;\n\n    &lt;table class=&quot;order-table table&quot;&gt;\n        &lt;thead&gt;\n            &lt;tr&gt;\n                &lt;th&gt;Name&lt;/th&gt;\n                &lt;th&gt;Email&lt;/th&gt;\n                &lt;th&gt;Phone&lt;/th&gt;\n                &lt;th&gt;Price&lt;/th&gt;\n            &lt;/tr&gt;\n        &lt;/thead&gt;\n        &lt;tbody&gt;\n            &lt;tr&gt;\n                &lt;td&gt;John Doe&lt;/td&gt;\n                &lt;td&gt;john.doe@gmail.com&lt;/td&gt;\n                &lt;td&gt;0123456789&lt;/td&gt;\n                &lt;td&gt;99&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n                &lt;td&gt;Jane Vanda&lt;/td&gt;\n                &lt;td&gt;jane@vanda.org&lt;/td&gt;\n                &lt;td&gt;9876543210&lt;/td&gt;\n                &lt;td&gt;349&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n                &lt;td&gt;Alferd Penyworth&lt;/td&gt;\n                &lt;td&gt;alfred@batman.com&lt;/td&gt;\n                &lt;td&gt;6754328901&lt;/td&gt;\n                &lt;td&gt;199&lt;/td&gt;\n            &lt;/tr&gt;\n        &lt;/tbody&gt;\n    &lt;/table&gt;\n\n&lt;/section&gt;","css":"","js":"(document =&gt; {\n  &quot;use strict&quot;;\n\n  const LightTableFilter = (({ forEach }) =&gt; {\n    let _input;\n\n    function _onInputEvent({ target }) {\n      _input = target;\n      const tables = document.getElementsByClassName(\n      _input.getAttribute(&quot;data-table&quot;));\n\n      forEach.call(tables, ({ tBodies }) =&gt; {\n        forEach.call(tBodies, ({ rows }) =&gt; {\n          forEach.call(rows, _filter);\n        });\n      });\n    }\n\n    function _filter({ textContent, style }) {\n      const text = textContent.toLowerCase();\n      const val = _input.value.toLowerCase();\n      style.display = !text.includes(val) ? &quot;none&quot; : &quot;table-row&quot;;\n    }\n\n    return {\n      init() {\n        const inputs = document.getElementsByClassName(\n        &quot;light-table-filter&quot;);\n\n        forEach.call(inputs, input =&gt; {\n          input.oninput = _onInputEvent;\n        });\n      } };\n\n  })(Array.prototype);\n\n  document.addEventListener(&quot;readystatechange&quot;, () =&gt; {\n    if (document.readyState === &quot;complete&quot;) {\n      LightTableFilter.init();\n    }\n  });\n})(document);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

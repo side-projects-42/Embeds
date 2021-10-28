@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - A Simple Fade Effect on Scroll</title>
+  
+  
+  
+  
+<style>
+:root {
+  --gray: #ededed;
+  --red: #e74c3c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font: 20px/30px sans-serif;
+}
+
+h1 {
+  padding: 0 15px;
+  margin: 10vh 0;
+  line-height: normal;
+  text-align: center;
+}
+
+.img-wrapper {
+  display: grid;
+  height: 100vh;
+}
+
+.img-wrapper div {
+  grid-column: 1;
+  grid-row: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--gray);
+  transition: opacity 0.1s;
+}
+
+section:last-of-type {
+  max-width: 800px;
+  padding: 0 15px;
+  margin: 15vh auto;
+}
+
+section:last-of-type p + p {
+  margin-top: 20px;
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  padding: 0 20px 10px;
+}
+
+.page-footer span {
+  color: var(--red);
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <section>
+  <h1>A Simple Fade Effect on Scroll</h1>
+  <div class="img-wrapper">
+    <div style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cinque-terre-back.jpg);"></div>
+    <div class="front" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cinque-terre-front.jpg);"></div>
+  </div>
+</section>
+
+<section>
+  <p>
+    The Cinque Terre is a coastal area within Liguria, in the northwest 
+of Italy. It lies in the west of La Spezia Province, and comprises five 
+villages: Monterosso al Mare, Vernazza, Corniglia, Manarola, and 
+Riomaggiore. The coastline, the five villages, and the surrounding 
+hillsides are all part of the Cinque Terre National Park a UNESCO World 
+Heritage Site.
+  </p>
+  <p>
+    The Cinque Terre area is a popular tourist destination. Over the 
+centuries, people have built terraces on the rugged, steep landscape 
+right up to the cliffs that overlook the sea. Paths, trains and boats 
+connect the villages as cars can reach them from the outside only via 
+narrow and precarious mountain roads with great difficulty.
+  </p>
+</section>
+    <script src="../abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  
+      <script id="rendered-js">
+const checkpoint = 300;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector(".front").style.opacity = opacity;
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="../abpWrBP_data/abpWrBP_data/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c5.js"></script>
+
+
+
+ 
+</body></html>

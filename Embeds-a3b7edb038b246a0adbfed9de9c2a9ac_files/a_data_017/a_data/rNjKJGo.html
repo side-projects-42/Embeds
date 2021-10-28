@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Intro to Objects</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="C8IYU68QUXqITizptQw4LNhVQHRofgPvaKlF7CDdzSCgYw/XUbz2y7hJiYj+XM01TNs9LdRVQfvS95/B6f8HAw==">
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/rNjKJGo" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code">// Objects 
+// another fundamental building block of JS
+// allow us to group together properties and values 
+// order of properties doesn't matter 
+// Everything in JavaScript is an object! Objects are used for collections of data 
+
+// // anatomy of an object 
+
+const dog = {
+  // key value pairs (properties:values)
+  name: 'Ada',
+  breed: 'bali dog',
+  age: 3, 
+  colour: 'brindle',
+  favFood: 'Salmon',
+  // methods - functions that belong to objects 
+  eat: function(){
+    // string template literal 
+    return `${this.name} likes to eat ${this.favFood}`;
+  }
+}
+// // notice that it does not return the key value pairs to us in the same order - order doesn't matter in an object - if you want order to matter then you want to use an array. 
+
+console.log(dog);
+
+// // // how do we access things within an object? for example how can I access the dogs name? 
+// // // dot notation 
+console.log(dog.name);
+
+// // brack notation - this would be useful if you had keys with spaces in them
+// // could get data from another language for example
+console.log(dog['name']);
+
+// // // implicit binding (we will talk about this more next week, but basically when the function is invoked we look to the left of the dot and that's what this refers to - this is about 80% of use cases and it applies to objects with methods)
+
+console.log(dog.eat());
+
+// // nesting objects 
+const dog = {
+  // key value pairs (properties:values)
+  name: 'Ada',
+  breed: 'bali dog',
+  age: 3, 
+  colour: 'brindle',
+  favFood: 'Salmon',
+  sister: {
+    name: 'Noa',
+    breed: 'bali dog',
+    age: '8 months',
+},
+  
+  eat: function(){
+    // string template literal 
+    return `${this.name} likes to eat ${this.favFood}`;
+  }
+}
+
+
+console.log(dog.sister.name);
+
+// // we can also put objects inside of arrays
+const places = [
+  {city: 'Tel Aviv', country: 'Israel', region: 'Middle East'},
+  {city: 'Toronto', country: 'Canada', region: 'North America'},
+  {city: 'Najaf', country: 'Iraq', region: 'Middle East'},
+  {city: 'Amman', country: 'Jordan', region: 'Middle East'},
+  {city: 'Seattle', country: 'USA', region: 'North America'},
+  {city: 'Quito', country:'Equador', region: 'South America'},
+  {city: 'Dar Es Salaam', country: 'Tanzania', region:'East Africa'}
+];
+
+console.log(places);
+
+// // create a new array called middleEast
+// // loop through places array and push the city names that are in the middle east to this new array
+
+const middleEast = [];
+for (i = 0; i &lt;= places.length-1; i++) {
+  // console.log(places[i].region);
+  if(places[i].region === 'Middle East'){
+    middleEast.push(places[i].city);
+  }
+}
+console.log(middleEast);
+
+// // create a function that adds a new object to the end of an array 
+// // the function should take 4 params - array name, city, country and region 
+// // it should return the array with the new object 
+
+//Add a new object to the array
+function addCountry(array, city, country, region) {
+    array.push({city , country , region});
+  return array;
+  }
+console.log(addCountry(places, 'Sofia', 'Bulgaria', 'Europe'));
+
+
+// // Changing values in an object 
+const places = [
+  {city: 'Tel Aviv', country: 'Israel', region: 'Middle East'},
+  {city: 'Toronto', country: 'Canada', region: 'North America'},
+  {city: 'Najaf', country: 'Iraq', region: 'Middle East'},
+  {city: 'Amman', country: 'Jordan', region: 'Middle East'},
+  {city: 'Seattle', country: 'USA', region: 'North America'},
+  {city: 'Quito', country:'Ecuador', region: 'Central America'},// change the region in Ecuador 
+  {city: 'Dar Es Salaam', country: 'Tanzania', region:'East Africa'}
+];
+
+// // write a function that changes the region at a specific index 
+
+function changeRegion(array, index, region){
+  array[index].region = region;
+  return array;
+}
+console.log(changeRegion(places, 5, 'South America'));
+// // we can also use functions to create an object 
+// // make a pet object that takes a name speices and well_behaved as a boolean and returns this information to us as an object
+
+// // For example, if we invoke `makePetObject`
+// //  * passing 'Noa', 'dog', and true as arguments,
+// //  * the returned value should look like:
+// //  * {
+// //  *   name: 'Noa',
+// //  *   species: 'dog',
+// //  *   well_behaved: true,
+// //  * }
+// // */
+
+function createPet(obj, name, species, well_behaved){
+  obj = {name, species, well_behaved};
+  return obj;
+}
+
+
+console.log(createPet('myPet','Noa', 'dog', true));
+console.log(myPet);
+
+function createPet(name, species, well_behaved){
+  return {name, species, well_behaved};
+}
+
+
+//REVIEW 
+
+/// Making a website responsive 
+// need a viewport meta tag in the head of your HTML doc 
+// media queries 
+// @media(max-width: 800px){
+   // styles go in here
+// }
+// max width is for desktop first design -- scales down
+// min width is mobile first -- scales up
+
+// USE SCALABLE UNITS TO SIZE THINGS!!!!!!!!
+
+// Accessibility 
+// make sure you are using semantic HTML 
+// make sure alt attributes are filled out
+
+
+// Intro to JS 
+// Variable - decleared using var, let or const 
+// var - can be redecleared, can be updated, it is function scoped
+// let - cannot be redecleared, can be updated, it is block scoped 
+// const - cannot be redecleared, cannot be updated, it is block scoped 
+// RULE OF THUMB - use const till you can't and then use let but stay away from var 
+
+// functions 
+function functionName(param1, param2){
+  return param1 + param2;
+}
+
+// arguments happen when the function is invoked - the order we pass them in is the order in which they replace the parameters 
+functionName(3, 4);
+// 3 is going to take the place of param1 
+// 4 is going to take the place of param2 
+
+// if(conditional goes here - needs to be equated to true or false){
+  // if the condition is true - this code will run 
+  // code goes here
+// }else if(another condition){
+  // more code
+//}else{ // else statements never have a condition they say "if nothing else is true pick me!"
+// more code
+//}
+
+// anatomy of a loop 
+// for loops are for iterating through data and then doing something with it usually based on some condition 
+// first thing in a loop is where the loop starts this will almost always be 0
+// condition - how long you want the loop to run 
+// iteration - i++ is most common and says iterate by 1
+// for(let i = 0; i &lt; array.length; i++){
+    // code here
+//}
+
+// ARRAYs
+// order matters
+// index starts at 0 
+// const array =[0,1,2,3,4,5];
+// when we use arrays we have access to array methods 🎉
+// pay attention to if the method is mutable - you may want to copy the array if it is
+
+
+// sprint challenge - you may have an array method on there that was not covered in class - we need you to get in the habit of looking things up</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Intro to Objects" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Intro to Objects" data-src="https://cdpn.io/bgoonz/fullembedgrid/rNjKJGo?animations=run&amp;type=embed" src="../../a_data_013/a_data/rNjKJGo_data/rNjKJGo.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/BritHemming/fullpage/mdVVJZW?default-tab=js,result&amp;height=265&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"","js":"// Objects \n// another fundamental building block of JS\n// allow us to group together properties and values \n// order of properties doesn&#39;t matter \n// Everything in JavaScript is an object! Objects are used for collections of data \n\n// // anatomy of an object \n\nconst dog = {\n  // key value pairs (properties:values)\n  name: &#39;Ada&#39;,\n  breed: &#39;bali dog&#39;,\n  age: 3, \n  colour: &#39;brindle&#39;,\n  favFood: &#39;Salmon&#39;,\n  // methods - functions that belong to objects \n  eat: function(){\n    // string template literal \n    return `${this.name} likes to eat ${this.favFood}`;\n  }\n}\n// // notice that it does not return the key value pairs to us in the same order - order doesn&#39;t matter in an object - if you want order to matter then you want to use an array. \n\nconsole.log(dog);\n\n// // // how do we access things within an object? for example how can I access the dogs name? \n// // // dot notation \nconsole.log(dog.name);\n\n// // brack notation - this would be useful if you had keys with spaces in them\n// // could get data from another language for example\nconsole.log(dog[&#39;name&#39;]);\n\n// // // implicit binding (we will talk about this more next week, but basically when the function is invoked we look to the left of the dot and that&#39;s what this refers to - this is about 80% of use cases and it applies to objects with methods)\n\nconsole.log(dog.eat());\n\n// // nesting objects \nconst dog = {\n  // key value pairs (properties:values)\n  name: &#39;Ada&#39;,\n  breed: &#39;bali dog&#39;,\n  age: 3, \n  colour: &#39;brindle&#39;,\n  favFood: &#39;Salmon&#39;,\n  sister: {\n    name: &#39;Noa&#39;,\n    breed: &#39;bali dog&#39;,\n    age: &#39;8 months&#39;,\n},\n  \n  eat: function(){\n    // string template literal \n    return `${this.name} likes to eat ${this.favFood}`;\n  }\n}\n\n\nconsole.log(dog.sister.name);\n\n// // we can also put objects inside of arrays\nconst places = [\n  {city: &#39;Tel Aviv&#39;, country: &#39;Israel&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Toronto&#39;, country: &#39;Canada&#39;, region: &#39;North America&#39;},\n  {city: &#39;Najaf&#39;, country: &#39;Iraq&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Amman&#39;, country: &#39;Jordan&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Seattle&#39;, country: &#39;USA&#39;, region: &#39;North America&#39;},\n  {city: &#39;Quito&#39;, country:&#39;Equador&#39;, region: &#39;South America&#39;},\n  {city: &#39;Dar Es Salaam&#39;, country: &#39;Tanzania&#39;, region:&#39;East Africa&#39;}\n];\n\nconsole.log(places);\n\n// // create a new array called middleEast\n// // loop through places array and push the city names that are in the middle east to this new array\n\nconst middleEast = [];\nfor (i = 0; i &lt;= places.length-1; i++) {\n  // console.log(places[i].region);\n  if(places[i].region === &#39;Middle East&#39;){\n    middleEast.push(places[i].city);\n  }\n}\nconsole.log(middleEast);\n\n// // create a function that adds a new object to the end of an array \n// // the function should take 4 params - array name, city, country and region \n// // it should return the array with the new object \n\n//Add a new object to the array\nfunction addCountry(array, city, country, region) {\n    array.push({city , country , region});\n  return array;\n  }\nconsole.log(addCountry(places, &#39;Sofia&#39;, &#39;Bulgaria&#39;, &#39;Europe&#39;));\n\n\n// // Changing values in an object \nconst places = [\n  {city: &#39;Tel Aviv&#39;, country: &#39;Israel&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Toronto&#39;, country: &#39;Canada&#39;, region: &#39;North America&#39;},\n  {city: &#39;Najaf&#39;, country: &#39;Iraq&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Amman&#39;, country: &#39;Jordan&#39;, region: &#39;Middle East&#39;},\n  {city: &#39;Seattle&#39;, country: &#39;USA&#39;, region: &#39;North America&#39;},\n  {city: &#39;Quito&#39;, country:&#39;Ecuador&#39;, region: &#39;Central America&#39;},// change the region in Ecuador \n  {city: &#39;Dar Es Salaam&#39;, country: &#39;Tanzania&#39;, region:&#39;East Africa&#39;}\n];\n\n// // write a function that changes the region at a specific index \n\nfunction changeRegion(array, index, region){\n  array[index].region = region;\n  return array;\n}\nconsole.log(changeRegion(places, 5, &#39;South America&#39;));\n// // we can also use functions to create an object \n// // make a pet object that takes a name speices and well_behaved as a boolean and returns this information to us as an object\n\n// // For example, if we invoke `makePetObject`\n// //  * passing &#39;Noa&#39;, &#39;dog&#39;, and true as arguments,\n// //  * the returned value should look like:\n// //  * {\n// //  *   name: &#39;Noa&#39;,\n// //  *   species: &#39;dog&#39;,\n// //  *   well_behaved: true,\n// //  * }\n// // */\n\nfunction createPet(obj, name, species, well_behaved){\n  obj = {name, species, well_behaved};\n  return obj;\n}\n\n\nconsole.log(createPet(&#39;myPet&#39;,&#39;Noa&#39;, &#39;dog&#39;, true));\nconsole.log(myPet);\n\nfunction createPet(name, species, well_behaved){\n  return {name, species, well_behaved};\n}\n\n\n//REVIEW \n\n/// Making a website responsive \n// need a viewport meta tag in the head of your HTML doc \n// media queries \n// @media(max-width: 800px){\n   // styles go in here\n// }\n// max width is for desktop first design -- scales down\n// min width is mobile first -- scales up\n\n// USE SCALABLE UNITS TO SIZE THINGS!!!!!!!!\n\n// Accessibility \n// make sure you are using semantic HTML \n// make sure alt attributes are filled out\n\n\n// Intro to JS \n// Variable - decleared using var, let or const \n// var - can be redecleared, can be updated, it is function scoped\n// let - cannot be redecleared, can be updated, it is block scoped \n// const - cannot be redecleared, cannot be updated, it is block scoped \n// RULE OF THUMB - use const till you can&#39;t and then use let but stay away from var \n\n// functions \nfunction functionName(param1, param2){\n  return param1 + param2;\n}\n\n// arguments happen when the function is invoked - the order we pass them in is the order in which they replace the parameters \nfunctionName(3, 4);\n// 3 is going to take the place of param1 \n// 4 is going to take the place of param2 \n\n// if(conditional goes here - needs to be equated to true or false){\n  // if the condition is true - this code will run \n  // code goes here\n// }else if(another condition){\n  // more code\n//}else{ // else statements never have a condition they say &quot;if nothing else is true pick me!&quot;\n// more code\n//}\n\n// anatomy of a loop \n// for loops are for iterating through data and then doing something with it usually based on some condition \n// first thing in a loop is where the loop starts this will almost always be 0\n// condition - how long you want the loop to run \n// iteration - i++ is most common and says iterate by 1\n// for(let i = 0; i &lt; array.length; i++){\n    // code here\n//}\n\n// ARRAYs\n// order matters\n// index starts at 0 \n// const array =[0,1,2,3,4,5];\n// when we use arrays we have access to array methods 🎉\n// pay attention to if the method is mutable - you may want to copy the array if it is\n\n\n// sprint challenge - you may have an array method on there that was not covered in class - we need you to get in the habit of looking things up"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script></body></html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - CSS Grid: Excel Spreadsheet</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="dMEHrKJ/GlDEoCeBmx7UN7B+iWIFXPQz9UaN5+8fGlPWMUE/8CS+BAa8zq8V1MbSKYuwre399idvdXPBaq8atg==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" aria-pressed="false">
+Pug
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" class="active" aria-pressed="true">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/abJYgGX" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="pug" id="actual-html-code" class=" cm-s-default"><span class="cm-qualifier">.main-content</span>
+<span class="cm-indent">  </span><span class="cm-qualifier">.title</span><span class="cm-string"> Book1 - Excel</span>
+<span class="cm-indent">  </span><span class="cm-qualifier">.menu-bar</span>
+<span class="cm-indent">    </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'File'</span>,<span class="cm-string">'Home'</span>, <span class="cm-string">'Insert'</span>, <span class="cm-string">'Page Layout'</span>, <span class="cm-string">'Formulas'</span>,<span class="cm-string">'Data'</span>, <span class="cm-string">'Review'</span>, <span class="cm-string">'View'</span>, <span class="cm-string">'Help'</span>]
+<span class="cm-indent">      </span><span class="cm-tag">div</span>
+<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-punctuation">=</span> <span class="cm-variable">val</span>
+<span class="cm-indent">  </span><span class="cm-qualifier">.icon-bar</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__clipboard</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-paste</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-string"> Paste</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon</span><span class="cm-qualifier">.icon-cut</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon</span><span class="cm-qualifier">.icon-copy</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Clipboard</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__font</span>
+<span class="cm-indent">      </span><span class="cm-tag">select</span><span class="cm-qualifier">.font-name</span>
+<span class="cm-indent">        </span><span class="cm-tag">option</span><span class="cm-punctuation">(</span><span class="cm-attribute">selected</span><span class="cm-punctuation">)</span><span class="cm-string"> Noto Sans</span>
+<span class="cm-indent">        </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'Arial'</span>, <span class="cm-string">'Calibri'</span>, <span class="cm-string">'Comic Sans MS'</span>, <span class="cm-string">'Courier New'</span>, <span class="cm-string">'Impact'</span>, <span class="cm-string">'Georgia'</span>, <span class="cm-string">'Garamond'</span>, <span class="cm-string">'Lato'</span>,<span class="cm-string">'Open Sans'</span>,<span class="cm-string">'Palatino'</span>, <span class="cm-string">'Verdana'</span>]
+<span class="cm-indent">          </span><span class="cm-tag">option</span><span class="cm-punctuation">(</span><span class="cm-attribute">style</span><span class="cm-operator">=</span><span class="cm-string">"--font:"</span><span class="cm-operator">+</span><span class="cm-variable">val</span><span class="cm-punctuation">)</span><span class="cm-punctuation">=</span> <span class="cm-variable">val</span>
+<span class="cm-indent">      </span><span class="cm-tag">select</span><span class="cm-qualifier">.font-size</span>
+<span class="cm-indent">        </span><span class="cm-tag">option</span><span class="cm-punctuation">(</span><span class="cm-attribute">selected</span><span class="cm-punctuation">)</span><span class="cm-string"> 14</span>
+<span class="cm-indent">        </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'16'</span>, <span class="cm-string">'18'</span>,<span class="cm-string">'20'</span>,<span class="cm-string">'22'</span>, <span class="cm-string">'24'</span>,<span class="cm-string">'26'</span>,<span class="cm-string">'28'</span>,<span class="cm-string">'36'</span>,<span class="cm-string">'48'</span>,<span class="cm-string">'72'</span>]
+<span class="cm-indent">          </span><span class="cm-tag">option</span><span class="cm-punctuation">=</span> <span class="cm-variable">val</span>
+<span class="cm-indent">      </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'bold'</span>,<span class="cm-string">'italic'</span>,<span class="cm-string">'underline'</span>, <span class="cm-string">'border'</span>,<span class="cm-string">'fill'</span>,<span class="cm-string">'color'</span>]
+<span class="cm-indent">        </span><span class="cm-tag">div</span><span class="cm-punctuation">(</span><span class="cm-attribute">class</span><span class="cm-operator">=</span><span class="cm-string">'icon icon-'</span><span class="cm-operator">+</span><span class="cm-variable">val</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Font</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__alignment</span>
+<span class="cm-indent">      </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'alignt'</span>,<span class="cm-string">'alignm'</span>,<span class="cm-string">'alignb'</span>, <span class="cm-string">'orientation'</span>,<span class="cm-string">'alignl'</span>,<span class="cm-string">'alignc'</span>,<span class="cm-string">'alignr'</span>,<span class="cm-string">'indentinc'</span>,<span class="cm-string">'indentdec'</span>]
+<span class="cm-indent">        </span><span class="cm-tag">div</span><span class="cm-punctuation">(</span><span class="cm-attribute">class</span><span class="cm-operator">=</span><span class="cm-string">'icon icon-'</span><span class="cm-operator">+</span><span class="cm-variable">val</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.wrap-text</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-string"> Wrap Text</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.merge-center</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">        </span><span class="cm-tag">span</span><span class="cm-string"> Merge &amp; Center</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Alignment</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__number</span>
+<span class="cm-indent">      </span><span class="cm-tag">select</span><span class="cm-qualifier">.number-format</span>
+<span class="cm-indent">        </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'General'</span>,<span class="cm-string">'Number'</span>,<span class="cm-string">'Currency'</span>, <span class="cm-string">'Accounting'</span>,<span class="cm-string">'Short Date'</span>, <span class="cm-string">'Long Date'</span>,<span class="cm-string">'Time'</span>,<span class="cm-string">'Currency'</span>,<span class="cm-string">'Percentage'</span>]
+<span class="cm-indent">          </span><span class="cm-tag">option</span><span class="cm-punctuation">=</span> <span class="cm-variable">val</span>
+<span class="cm-indent">      </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'acc'</span>,<span class="cm-string">'percent'</span>,<span class="cm-string">'comma'</span>, <span class="cm-string">'decimalinc'</span>,<span class="cm-string">'decimaldec'</span>]
+<span class="cm-indent">        </span><span class="cm-tag">div</span><span class="cm-punctuation">(</span><span class="cm-attribute">class</span><span class="cm-operator">=</span><span class="cm-string">'icon icon-'</span><span class="cm-operator">+</span><span class="cm-variable">val</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Number</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__styles</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.conditional</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.format-table</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cell-style</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Conditional Formatting</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Format as Table</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Cell Styles</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Styles</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.icon-bar__cells</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cell-insert</span> 
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cell-delete</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cell-format</span>
+<span class="cm-indent">        </span><span class="cm-qualifier">.icon</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Insert</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Delete</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-desc</span><span class="cm-string"> Format</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.icon-bar__name</span><span class="cm-string"> Cells</span>
+<span class="cm-indent">  </span><span class="cm-qualifier">.cell-content</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span><span class="cm-string"> fx</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span>
+<span class="cm-indent">  </span><span class="cm-qualifier">.cells</span>
+<span class="cm-indent">    </span><span class="cm-qualifier">.cells__spacer</span>
+<span class="cm-indent">    </span><span class="cm-keyword">each</span><span class="cm-variable"> val, index</span><span class="cm-keyword"> in</span> [<span class="cm-string">'A'</span>,<span class="cm-string">'B'</span>,<span class="cm-string">'C'</span>, <span class="cm-string">'D'</span>,<span class="cm-string">'E'</span>,<span class="cm-string">'F'</span>,<span class="cm-string">'G'</span>,<span class="cm-string">'H'</span>,<span class="cm-string">'I'</span>,<span class="cm-string">'J'</span>,<span class="cm-string">'K'</span>]
+<span class="cm-indent">      </span><span class="cm-qualifier">.cells__alphabet</span><span class="cm-punctuation">=</span> <span class="cm-variable">val</span>
+<span class="cm-indent">    </span><span class="cm-keyword">- for</span><span class="cm-variable"> (var i=1; i&lt;21; i++)</span>
+<span class="cm-indent">      </span><span class="cm-qualifier">.cells__number</span><span class="cm-punctuation">=</span> <span class="cm-variable">i</span>
+<span class="cm-indent">    </span><span class="cm-keyword">- for</span><span class="cm-variable"> (var i=0; i&lt;214; i++)</span>
+<span class="cm-indent">      </span><span class="cm-tag">input</span><span class="cm-qualifier">.cells__input</span>
+<span class="cm-indent">    </span><span class="cm-tag">input</span><span class="cm-qualifier">.input__explanation</span><span class="cm-punctuation">(</span><span class="cm-attribute">value</span><span class="cm-operator">=</span><span class="cm-string">"Part of the CSS Grid Collection 👉🏻"</span><span class="cm-punctuation">)</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span><span class="cm-qualifier">.input__see-more</span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://codepen.io/collection/DQvYpQ/"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Click here!</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span><span class="cm-qualifier">.input__sm-1</span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://twitter.com/meowlivia_"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Twitter</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span><span class="cm-qualifier">.input__sm-2</span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://github.com/oliviale"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> GitHub</span>
+<span class="cm-indent">    </span><span class="cm-tag">div</span><span class="cm-qualifier">.input__sm-3</span>
+<span class="cm-indent">      </span><span class="cm-tag">a</span><span class="cm-punctuation">(</span><span class="cm-attribute">href</span><span class="cm-operator">=</span><span class="cm-string">"https://dribbble.com/oliviale"</span> <span class="cm-attribute">target</span><span class="cm-operator">=</span><span class="cm-string">"_blank"</span><span class="cm-punctuation">)</span><span class="cm-string"> Dribbble</span>
+</code></pre>
+<a href="#0" id="view-html-compiled-button" class="action-button bottom right view-compiled-button" data-type="html">
+View Compiled
+</a>
+</div>
+<div id="css-box" class="code-wrap code-box box active" role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-variable-2">$gray</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">243</span>, <span class="cm-number">242</span>, <span class="cm-number">241</span>);
+<span class="cm-variable-2">$green</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">33</span>, <span class="cm-number">115</span>, <span class="cm-number">70</span>);
+<span class="cm-variable-2">$gray-dark</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">230</span>, <span class="cm-number">230</span>, <span class="cm-number">230</span>);
+<span class="cm-variable-2">$gray-darker</span>: <span class="cm-variable cm-callee">rgb</span>(<span class="cm-number">205</span>, <span class="cm-number">205</span>, <span class="cm-number">205</span>);
+
+<span class="cm-def">@mixin</span> <span class="cm-tag">flex-centered</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+}
+
+* {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  <span class="cm-property">font-family</span>: <span class="cm-string">"Noto Sans"</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#444</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-number">14px</span>;
+}
+
+<span class="cm-tag">aside</span><span class="cm-qualifier">.context</span> {
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#333</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-number">1.7</span>;
+  <span class="cm-tag">a</span> {
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#333</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">3px</span> <span class="cm-number">0</span>;
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">dashed</span>;
+    &amp;:<span class="cm-variable-3">hover</span> {
+      <span class="cm-property">border-bottom</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span>;
+    }
+  }
+  <span class="cm-qualifier">.explanation</span> {
+    <span class="cm-property">max-width</span>: <span class="cm-number">700px</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">6em</span> <span class="cm-atom">auto</span> <span class="cm-number">0</span>;
+  }
+}
+
+<span class="cm-tag">footer</span> {
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">4em</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-tag">a</span> {
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">transparent</span>;
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">dashed</span> <span class="cm-atom">#333</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#333</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">5px</span>;
+    &amp;:<span class="cm-variable-3">hover</span> {
+      <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">255</span>, <span class="cm-number">0.1</span>);
+    }
+    <span class="cm-qualifier">.icons</span> {
+      <span class="cm-property">margin-top</span>: <span class="cm-number">12px</span>;
+      <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+      <span class="cm-property">font-size</span>: <span class="cm-number">20px</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.main-content</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">2</span>, <span class="cm-number">45px</span>) <span class="cm-number">115px</span> <span class="cm-number">60px</span> <span class="cm-atom">auto</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+  &gt; <span class="cm-tag">div</span> {
+    <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+  }
+}
+
+<span class="cm-qualifier">.title</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$green</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">place-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">color</span>: <span class="cm-atom">#fff</span>;
+}
+
+<span class="cm-qualifier">.menu-bar</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">10</span>, <span class="cm-variable">max-content</span>);
+  <span class="cm-property">padding</span>: <span class="cm-number">15px</span>;
+  <span class="cm-property">grid-gap</span>: <span class="cm-number">30px</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$gray</span>;
+  <span class="cm-tag">div</span>:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2</span>) <span class="cm-tag">span</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+    <span class="cm-property">border-bottom</span>: <span class="cm-number">5px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$green</span>;
+    <span class="cm-property">padding-bottom</span>: <span class="cm-number">6px</span>;
+    <span class="cm-property">font-weight</span>: <span class="cm-number">700</span>;
+  }
+}
+
+<span class="cm-qualifier">.cell-content</span> {
+  <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-dark</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$gray-dark</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">50px</span> <span class="cm-atom">auto</span>;
+  <span class="cm-tag">div</span> {
+    <span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    &amp;:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">1</span>) {
+      <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+      <span class="cm-property">color</span>: <span class="cm-atom">#999</span>;
+      <span class="cm-property">font</span>: <span class="cm-atom">italic</span> <span class="cm-number">700</span> <span class="cm-number">18px</span> <span class="cm-string">"Merriweather"</span>, <span class="cm-atom">serif</span>;
+      <span class="cm-property">border-right</span>: <span class="cm-atom">none</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.cells</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">40px</span> <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">11</span>, <span class="cm-variable cm-callee">calc</span>((<span class="cm-number">100%</span> - <span class="cm-number">50px</span>) <span class="cm-operator">/</span> <span class="cm-number">11</span>));
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">21</span>, <span class="cm-number">25px</span>);
+  <span class="cm-property">grid-gap</span>: <span class="cm-number">1px</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$gray-darker</span>;
+  <span class="cm-property">grid-auto-flow</span>: <span class="cm-atom">dense</span>;
+  <span class="cm-property">max-width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  &amp;<span class="cm-tag">__spacer</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable-2">$gray-dark</span>;
+    <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+    &amp;:<span class="cm-variable-3">after</span> {
+      <span class="cm-property">content</span>: <span class="cm-string">""</span>;
+      <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+      <span class="cm-property">right</span>: <span class="cm-number">4px</span>;
+      <span class="cm-property">bottom</span>: <span class="cm-number">4px</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">80%</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(
+        <span class="cm-number">135deg</span>,
+        <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>,
+        <span class="cm-atom">#bbb</span> <span class="cm-number">30px</span>,
+        <span class="cm-atom">#bbb</span> <span class="cm-number">55px</span>,
+        <span class="cm-atom">transparent</span> <span class="cm-number">55px</span>
+      );
+    }
+  }
+  &amp;<span class="cm-tag">__alphabet</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable-2">$gray-dark</span>;
+    <span class="cm-def">@include</span> <span class="cm-tag">flex-centered</span>;
+  }
+  &amp;<span class="cm-tag">__number</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable-2">$gray-dark</span>;
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">1</span>;
+    <span class="cm-def">@include</span> <span class="cm-tag">flex-centered</span>;
+  }
+  &amp;<span class="cm-tag">__input</span> {
+    <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">6px</span>;
+  }
+  <span class="cm-tag">input</span>, <span class="cm-tag">button</span> {
+    <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">6px</span>;
+    <span class="cm-property">font-family</span>: <span class="cm-string">'Noto Sans'</span>, <span class="cm-atom">sans-serif</span>;
+  }
+}
+
+<span class="cm-qualifier">.input</span> {
+  &amp;<span class="cm-tag">__explanation</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">3</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-number">15</span>;
+  }
+  &amp;<span class="cm-tag">__see-more</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">5</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-number">15</span>;
+    <span class="cm-property">text-align</span>: <span class="cm-atom">left</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">6px</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  }
+  &amp;<span class="cm-tag">__sm-1</span>, &amp;<span class="cm-tag">__sm-2</span>, &amp;<span class="cm-tag">__sm-3</span> {
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">6px</span>;
+    <span class="cm-property">grid-row</span>: <span class="cm-number">15</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#fff</span>;
+  }
+  &amp;<span class="cm-tag">__sm-1</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">8</span>;
+  }
+  &amp;<span class="cm-tag">__sm-2</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">9</span>;
+  }
+  &amp;<span class="cm-tag">__sm-3</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">10</span>;
+  }
+}
+
+<span class="cm-qualifier">.icon-bar</span> {
+  <span class="cm-property">background</span>: <span class="cm-variable-2">$gray</span>;
+  <span class="cm-property">box-shadow</span>: <span class="cm-number">0</span> <span class="cm-number">3px</span> <span class="cm-number">5px</span> <span class="cm-variable cm-callee">rgba</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-number">0.1</span>);
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">10px</span> <span class="cm-number">15px</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">6</span>, <span class="cm-variable">max-content</span>);
+  <span class="cm-property">grid-template-rows</span>: <span class="cm-atom">auto</span> <span class="cm-number">35px</span>;
+  <span class="cm-property">grid-auto-flow</span>: <span class="cm-atom">dense</span>;
+  &gt; <span class="cm-tag">div</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+    <span class="cm-property">grid-template-rows</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">2</span>, <span class="cm-number">30px</span>) <span class="cm-number">30px</span>;
+    <span class="cm-property">border-right</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    <span class="cm-property">grid-gap</span>: <span class="cm-number">5px</span>;
+  }
+  &amp;<span class="cm-tag">__name</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-number">12px</span>;
+    <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">align-self</span>: <span class="cm-atom">end</span>;
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">3px</span>;
+  }
+  <span class="cm-qualifier">.icon-desc</span> {
+    <span class="cm-property">margin-top</span>: <span class="cm-number">5px</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1.15</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">13px</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-image</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/spriteExcel.png</span>);
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__clipboard</span> {
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">50px</span> <span class="cm-number">30px</span>;
+  <span class="cm-property">padding-right</span>: <span class="cm-number">10px</span>;
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    &amp;-<span class="cm-tag">paste</span> {
+      <span class="cm-def">@include</span> <span class="cm-tag">flex-centered</span>;
+      <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+      <span class="cm-property">grid-row</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+      <span class="cm-qualifier">.icon</span> {
+        <span class="cm-property">background-position</span>: <span class="cm-number">-30px</span> <span class="cm-number">-60px</span>;
+        <span class="cm-property">height</span>: <span class="cm-number">45px</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+      }
+      <span class="cm-tag">span</span> {
+        <span class="cm-property">margin-top</span>: <span class="cm-number">5px</span>;
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      }
+    }
+    &amp;-<span class="cm-tag">cut</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">0</span> <span class="cm-number">0</span>;
+    }
+    &amp;-<span class="cm-tag">copy</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-30px</span> <span class="cm-number">0</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__font</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">3</span>, <span class="cm-number">30px</span>) <span class="cm-number">40px</span> <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">2</span>, <span class="cm-number">30px</span>) ;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">space-around</span>;
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">5</span>;
+  }
+  <span class="cm-tag">select</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">25px</span>;
+    &amp;:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">1</span>) {
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">4</span>;
+      <span class="cm-tag">option</span> {
+        <span class="cm-property">font-family</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--font</span>);
+      }
+    }
+    &amp;:<span class="cm-variable cm-callee">nth-child</span>(<span class="cm-number">2</span>) {
+      <span class="cm-property">margin-left</span>: <span class="cm-number">-6px</span>;
+      <span class="cm-property">grid-column</span>: <span class="cm-number">5</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">2</span>;
+    }
+  }
+  <span class="cm-qualifier">.icon</span> {
+    &amp;-<span class="cm-tag">bold</span> {
+      <span class="cm-property">background-position</span>:  <span class="cm-number">-30px</span> <span class="cm-number">-150px</span>;
+    }
+    &amp;-<span class="cm-tag">italic</span> {
+      <span class="cm-property">background-position</span>:  <span class="cm-number">-60px</span> <span class="cm-number">-150px</span>;
+    }
+    &amp;-<span class="cm-tag">underline</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-90px</span> <span class="cm-number">-150px</span>;
+      <span class="cm-property">border-right</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+      <span class="cm-property">margin-right</span>: <span class="cm-number">-2px</span>;
+    }
+    &amp;-<span class="cm-property">border</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-60px</span> <span class="cm-number">0</span>;
+      <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">5px</span>;
+    }
+    &amp;-<span class="cm-property">fill</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-90px</span> <span class="cm-number">0</span>;
+      <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+      <span class="cm-property">margin-left</span>: <span class="cm-number">-2px</span>;
+    }
+    &amp;-<span class="cm-property">color</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-120px</span> <span class="cm-number">0</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__alignment</span> {
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">5</span>, <span class="cm-number">30px</span>) <span class="cm-number">160px</span>;
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">1</span> <span class="cm-operator">/</span> <span class="cm-variable">span</span> <span class="cm-number">6</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    &amp;-<span class="cm-tag">alignt</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-150px</span> <span class="cm-number">0</span>;
+    }
+    &amp;-<span class="cm-tag">alignm</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-180px</span> <span class="cm-number">0</span>;
+    }
+    &amp;-<span class="cm-tag">alignb</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-210px</span> <span class="cm-number">0</span>;
+    }
+    &amp;-<span class="cm-tag">orientation</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-240px</span> <span class="cm-number">0</span>;
+      <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    }
+    &amp;-<span class="cm-tag">alignl</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">0</span> <span class="cm-number">-30px</span>;
+      <span class="cm-property">grid-column</span>: <span class="cm-number">1</span>;
+    }
+    &amp;-<span class="cm-tag">alignc</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-30px</span> <span class="cm-number">-30px</span>;
+    }
+    &amp;-<span class="cm-tag">alignr</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-60px</span> <span class="cm-number">-30px</span>;
+    }
+    &amp;-<span class="cm-tag">indentinc</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-90px</span> <span class="cm-number">-30px</span>;
+      <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    }
+    &amp;-<span class="cm-tag">indentdec</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-120px</span> <span class="cm-number">-30px</span>;
+    }
+  }
+  <span class="cm-qualifier">.wrap-text</span>, <span class="cm-qualifier">.merge-center</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-number">6</span>;
+    <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    <span class="cm-property">padding-left</span>: <span class="cm-number">5px</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-qualifier">.icon</span> {
+      <span class="cm-property">width</span>: <span class="cm-number">30px</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">30px</span>;
+    }
+    <span class="cm-tag">span</span> {
+      <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      <span class="cm-property">padding-left</span>: <span class="cm-number">5px</span>;
+    }
+  }
+  <span class="cm-qualifier">.wrap-text</span> {
+    <span class="cm-property">grid-row</span>: <span class="cm-number">1</span>;
+    <span class="cm-qualifier">.icon</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-270px</span> <span class="cm-number">0</span>;
+    }
+  }
+  <span class="cm-qualifier">.merge-center</span> {
+    <span class="cm-qualifier">.icon</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-150px</span> <span class="cm-number">-30px</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__number</span> {
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">5</span>, <span class="cm-number">30px</span>);
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+  <span class="cm-tag">select</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">5</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">25px</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    &amp;-<span class="cm-tag">acc</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-180px</span> <span class="cm-number">-30px</span>;
+    }
+    &amp;-<span class="cm-tag">percent</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-210px</span> <span class="cm-number">-30px</span>;
+    }
+    &amp;-<span class="cm-tag">comma</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-240px</span> <span class="cm-number">-30px</span>;
+    }
+    &amp;-<span class="cm-tag">decimalinc</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">-270px</span> <span class="cm-number">-30px</span>;
+      <span class="cm-property">border-left</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-variable-2">$gray-darker</span>;
+    }
+    &amp;-<span class="cm-tag">decimaldec</span> {
+      <span class="cm-property">background-position</span>: <span class="cm-number">0</span> <span class="cm-number">-60px</span>;
+    }
+  }
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">5</span>;
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__styles</span> {
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-number">80px</span> <span class="cm-number">70px</span> <span class="cm-number">60px</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">-8px</span> <span class="cm-atom">auto</span> <span class="cm-number">5px</span>;
+  }
+  <span class="cm-qualifier">.conditional</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-75px</span> <span class="cm-number">-60px</span>;
+  }
+  <span class="cm-qualifier">.format-table</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-120px</span> <span class="cm-number">-60px</span>;
+  }
+  <span class="cm-qualifier">.cell-style</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-165px</span> <span class="cm-number">-60px</span>;
+  }
+}
+
+<span class="cm-qualifier">.icon-bar__cells</span> {
+  <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">3</span>, <span class="cm-number">50px</span>);
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-number">10px</span>;
+  <span class="cm-property">text-align</span>: <span class="cm-atom">center</span>;
+  <span class="cm-qualifier">.icon-bar__name</span> {
+    <span class="cm-property">grid-column</span>: <span class="cm-variable">span</span> <span class="cm-number">3</span>;
+  }
+  <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">45px</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">-8px</span> <span class="cm-atom">auto</span> <span class="cm-number">5px</span>;
+  }
+  <span class="cm-qualifier">.cell-insert</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-210px</span> <span class="cm-number">-60px</span>;
+  }
+  <span class="cm-qualifier">.cell-delete</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-255px</span> <span class="cm-number">-60px</span>;
+  }
+  <span class="cm-qualifier">.cell-format</span> <span class="cm-qualifier">.icon</span> {
+    <span class="cm-property">background-position</span>: <span class="cm-number">-30px</span> <span class="cm-number">-105px</span>;
+  }
+}</code></pre>
+<a href="#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for CSS Grid: Excel Spreadsheet" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for CSS Grid: Excel Spreadsheet" data-src="https://cdpn.io/bgoonz/fullembedgrid/abJYgGX?animations=run&amp;type=embed" src="abJYgGX_data/abJYgGX.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/oliviale/fullpage/rPjgmB?default-tab=css,result&amp;height=375&amp;theme=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css</a>
+</li>
+</ol>
+<h3>External JavaScript</h3>
+<ol class="list-of-resources">
+<li>
+<a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" target="_blank">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>
+</li>
+</ol>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;main-content&quot;&gt;\n  &lt;div class=&quot;title&quot;&gt;Book1 - Excel&lt;/div&gt;\n  &lt;div class=&quot;menu-bar&quot;&gt;\n    &lt;div&gt;&lt;span&gt;File&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Insert&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Page Layout&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Formulas&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Data&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Review&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;View&lt;/span&gt;&lt;/div&gt;\n    &lt;div&gt;&lt;span&gt;Help&lt;/span&gt;&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;icon-bar&quot;&gt;\n    &lt;div class=&quot;icon-bar__clipboard&quot;&gt;\n      &lt;div class=&quot;icon-paste&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;span&gt;Paste&lt;/span&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;icon icon-cut&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-copy&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Clipboard&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;icon-bar__font&quot;&gt;\n      &lt;select class=&quot;font-name&quot;&gt;\n        &lt;option selected=&quot;selected&quot;&gt;Noto Sans&lt;/option&gt;\n        &lt;option style=&quot;--font:Arial&quot;&gt;Arial&lt;/option&gt;\n        &lt;option style=&quot;--font:Calibri&quot;&gt;Calibri&lt;/option&gt;\n        &lt;option style=&quot;--font:Comic Sans MS&quot;&gt;Comic Sans MS&lt;/option&gt;\n        &lt;option style=&quot;--font:Courier New&quot;&gt;Courier New&lt;/option&gt;\n        &lt;option style=&quot;--font:Impact&quot;&gt;Impact&lt;/option&gt;\n        &lt;option style=&quot;--font:Georgia&quot;&gt;Georgia&lt;/option&gt;\n        &lt;option style=&quot;--font:Garamond&quot;&gt;Garamond&lt;/option&gt;\n        &lt;option style=&quot;--font:Lato&quot;&gt;Lato&lt;/option&gt;\n        &lt;option style=&quot;--font:Open Sans&quot;&gt;Open Sans&lt;/option&gt;\n        &lt;option style=&quot;--font:Palatino&quot;&gt;Palatino&lt;/option&gt;\n        &lt;option style=&quot;--font:Verdana&quot;&gt;Verdana&lt;/option&gt;\n      &lt;/select&gt;\n      &lt;select class=&quot;font-size&quot;&gt;\n        &lt;option selected=&quot;selected&quot;&gt;14&lt;/option&gt;\n        &lt;option&gt;16&lt;/option&gt;\n        &lt;option&gt;18&lt;/option&gt;\n        &lt;option&gt;20&lt;/option&gt;\n        &lt;option&gt;22&lt;/option&gt;\n        &lt;option&gt;24&lt;/option&gt;\n        &lt;option&gt;26&lt;/option&gt;\n        &lt;option&gt;28&lt;/option&gt;\n        &lt;option&gt;36&lt;/option&gt;\n        &lt;option&gt;48&lt;/option&gt;\n        &lt;option&gt;72&lt;/option&gt;\n      &lt;/select&gt;\n      &lt;div class=&quot;icon icon-bold&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-italic&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-underline&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-border&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-fill&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-color&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Font&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;icon-bar__alignment&quot;&gt;\n      &lt;div class=&quot;icon icon-alignt&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-alignm&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-alignb&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-orientation&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-alignl&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-alignc&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-alignr&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-indentinc&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-indentdec&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;wrap-text&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;span&gt;Wrap Text&lt;/span&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;merge-center&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;&lt;span&gt;Merge &amp; Center&lt;/span&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Alignment&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;icon-bar__number&quot;&gt;\n      &lt;select class=&quot;number-format&quot;&gt;\n        &lt;option&gt;General&lt;/option&gt;\n        &lt;option&gt;Number&lt;/option&gt;\n        &lt;option&gt;Currency&lt;/option&gt;\n        &lt;option&gt;Accounting&lt;/option&gt;\n        &lt;option&gt;Short Date&lt;/option&gt;\n        &lt;option&gt;Long Date&lt;/option&gt;\n        &lt;option&gt;Time&lt;/option&gt;\n        &lt;option&gt;Currency&lt;/option&gt;\n        &lt;option&gt;Percentage&lt;/option&gt;\n      &lt;/select&gt;\n      &lt;div class=&quot;icon icon-acc&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-percent&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-comma&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-decimalinc&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon icon-decimaldec&quot;&gt;&lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Number&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;icon-bar__styles&quot;&gt;\n      &lt;div class=&quot;conditional&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;format-table&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cell-style&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Conditional Formatting&lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Format as Table&lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Cell Styles&lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Styles&lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;icon-bar__cells&quot;&gt;\n      &lt;div class=&quot;cell-insert&quot;&gt; \n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cell-delete&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cell-format&quot;&gt;\n        &lt;div class=&quot;icon&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Insert&lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Delete&lt;/div&gt;\n      &lt;div class=&quot;icon-desc&quot;&gt;Format&lt;/div&gt;\n      &lt;div class=&quot;icon-bar__name&quot;&gt;Cells&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;cell-content&quot;&gt;\n    &lt;div&gt;fx&lt;/div&gt;\n    &lt;div&gt;&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;cells&quot;&gt;\n    &lt;div class=&quot;cells__spacer&quot;&gt;&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;A&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;B&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;C&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;D&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;E&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;F&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;G&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;H&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;I&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;J&lt;/div&gt;\n    &lt;div class=&quot;cells__alphabet&quot;&gt;K&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;1&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;2&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;3&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;4&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;5&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;6&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;7&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;8&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;9&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;10&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;11&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;12&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;13&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;14&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;15&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;16&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;17&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;18&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;19&lt;/div&gt;\n    &lt;div class=&quot;cells__number&quot;&gt;20&lt;/div&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;cells__input&quot;/&gt;\n    &lt;input class=&quot;input__explanation&quot; value=&quot;Part of the CSS Grid Collection 👉🏻&quot;/&gt;\n    &lt;div class=&quot;input__see-more&quot;&gt;&lt;a href=&quot;https://codepen.io/collection/DQvYpQ/&quot; target=&quot;_blank&quot;&gt;Click here!&lt;/a&gt;&lt;/div&gt;\n    &lt;div class=&quot;input__sm-1&quot;&gt;&lt;a href=&quot;https://twitter.com/meowlivia_&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;&lt;/div&gt;\n    &lt;div class=&quot;input__sm-2&quot;&gt;&lt;a href=&quot;https://github.com/oliviale&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/div&gt;\n    &lt;div class=&quot;input__sm-3&quot;&gt;&lt;a href=&quot;https://dribbble.com/oliviale&quot; target=&quot;_blank&quot;&gt;Dribbble&lt;/a&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"* {\n  box-sizing: border-box;\n}\n\nbody {\n  background: #fff;\n  font-family: &quot;Noto Sans&quot;, sans-serif;\n  color: #444;\n  font-size: 14px;\n}\n\naside.context {\n  text-align: center;\n  color: #333;\n  line-height: 1.7;\n}\naside.context a {\n  text-decoration: none;\n  color: #333;\n  padding: 3px 0;\n  border-bottom: 1px dashed;\n}\naside.context a:hover {\n  border-bottom: 1px solid;\n}\naside.context .explanation {\n  max-width: 700px;\n  margin: 6em auto 0;\n}\n\nfooter {\n  text-align: center;\n  margin: 4em auto;\n  width: 100%;\n}\nfooter a {\n  text-decoration: none;\n  display: inline-block;\n  width: 45px;\n  height: 45px;\n  border-radius: 50%;\n  background: transparent;\n  border: 1px dashed #333;\n  color: #333;\n  margin: 5px;\n}\nfooter a:hover {\n  background: rgba(255, 255, 255, 0.1);\n}\nfooter a .icons {\n  margin-top: 12px;\n  display: inline-block;\n  font-size: 20px;\n}\n\n.main-content {\n  display: grid;\n  min-height: 100vh;\n  grid-template-rows: repeat(2, 45px) 115px 60px auto;\n  max-width: 100%;\n}\n.main-content &gt; div {\n  max-width: 100%;\n}\n\n.title {\n  background: #217346;\n  text-align: center;\n  display: grid;\n  place-content: center;\n  color: #fff;\n}\n\n.menu-bar {\n  display: grid;\n  grid-template-columns: repeat(10, max-content);\n  padding: 15px;\n  grid-gap: 30px;\n  background: #f3f2f1;\n}\n.menu-bar div:nth-child(2) span {\n  display: inline-block;\n  position: relative;\n  border-bottom: 5px solid #217346;\n  padding-bottom: 6px;\n  font-weight: 700;\n}\n\n.cell-content {\n  border: 1px solid #e6e6e6;\n  background: #e6e6e6;\n  display: grid;\n  padding: 10px;\n  grid-template-columns: 50px auto;\n}\n.cell-content div {\n  border: 1px solid #cdcdcd;\n  background: #fff;\n  display: flex;\n  align-items: center;\n}\n.cell-content div:nth-child(1) {\n  justify-content: center;\n  color: #999;\n  font: italic 700 18px &quot;Merriweather&quot;, serif;\n  border-right: none;\n}\n\n.cells {\n  position: relative;\n  display: grid;\n  grid-template-columns: 40px repeat(11, calc((100% - 50px) / 11));\n  grid-template-rows: repeat(21, 25px);\n  grid-gap: 1px;\n  background: #cdcdcd;\n  grid-auto-flow: dense;\n  max-width: 100%;\n  overflow: hidden;\n}\n.cells__spacer {\n  background: #e6e6e6;\n  position: relative;\n}\n.cells__spacer:after {\n  content: &quot;&quot;;\n  position: absolute;\n  right: 4px;\n  bottom: 4px;\n  height: 80%;\n  width: 100%;\n  background: linear-gradient(135deg, transparent 30px, #bbb 30px, #bbb 55px, transparent 55px);\n}\n.cells__alphabet {\n  background: #e6e6e6;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.cells__number {\n  background: #e6e6e6;\n  grid-column: 1/span 1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.cells__input {\n  border: none;\n  padding: 0 6px;\n}\n.cells input, .cells button {\n  border: none;\n  background: #fff;\n  padding: 0 6px;\n  font-family: &quot;Noto Sans&quot;, sans-serif;\n}\n\n.input__explanation {\n  grid-column: 3/span 2;\n  grid-row: 15;\n}\n.input__see-more {\n  grid-column: 5;\n  grid-row: 15;\n  text-align: left;\n  padding: 6px;\n  background: #fff;\n}\n.input__sm-1, .input__sm-2, .input__sm-3 {\n  text-align: center;\n  padding: 6px;\n  grid-row: 15;\n  background: #fff;\n}\n.input__sm-1 {\n  grid-column: 8;\n}\n.input__sm-2 {\n  grid-column: 9;\n}\n.input__sm-3 {\n  grid-column: 10;\n}\n\n.icon-bar {\n  background: #f3f2f1;\n  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);\n  position: relative;\n  display: grid;\n  padding: 10px 15px;\n  grid-template-columns: repeat(6, max-content);\n  grid-template-rows: auto 35px;\n  grid-auto-flow: dense;\n}\n.icon-bar &gt; div {\n  display: grid;\n  grid-template-rows: repeat(2, 30px) 30px;\n  border-right: 1px solid #cdcdcd;\n  grid-gap: 5px;\n}\n.icon-bar__name {\n  font-size: 12px;\n  text-align: center;\n  align-self: end;\n  margin-bottom: 3px;\n}\n.icon-bar .icon-desc {\n  margin-top: 5px;\n  line-height: 1.15;\n  font-size: 13px;\n}\n.icon-bar .icon {\n  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/spriteExcel.png);\n}\n\n.icon-bar__clipboard {\n  grid-template-columns: 50px 30px;\n  padding-right: 10px;\n}\n.icon-bar__clipboard .icon-bar__name {\n  grid-column: 1/span 2;\n}\n.icon-bar__clipboard .icon-paste {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  grid-row: 1/span 2;\n}\n.icon-bar__clipboard .icon-paste .icon {\n  background-position: -30px -60px;\n  height: 45px;\n  width: 100%;\n}\n.icon-bar__clipboard .icon-paste span {\n  margin-top: 5px;\n  display: block;\n}\n.icon-bar__clipboard .icon-cut {\n  background-position: 0 0;\n}\n.icon-bar__clipboard .icon-copy {\n  background-position: -30px 0;\n}\n\n.icon-bar__font {\n  padding: 0 10px;\n  grid-template-columns: repeat(3, 30px) 40px repeat(2, 30px);\n  justify-content: space-around;\n}\n.icon-bar__font .icon-bar__name {\n  grid-column: 1/span 5;\n}\n.icon-bar__font select {\n  height: 25px;\n}\n.icon-bar__font select:nth-child(1) {\n  grid-column: 1/span 4;\n}\n.icon-bar__font select:nth-child(1) option {\n  font-family: var(--font);\n}\n.icon-bar__font select:nth-child(2) {\n  margin-left: -6px;\n  grid-column: 5/span 2;\n}\n.icon-bar__font .icon-bold {\n  background-position: -30px -150px;\n}\n.icon-bar__font .icon-italic {\n  background-position: -60px -150px;\n}\n.icon-bar__font .icon-underline {\n  background-position: -90px -150px;\n  border-right: 1px solid #cdcdcd;\n  margin-right: -2px;\n}\n.icon-bar__font .icon-border {\n  background-position: -60px 0;\n  margin: 0 5px;\n}\n.icon-bar__font .icon-fill {\n  background-position: -90px 0;\n  border-left: 1px solid #cdcdcd;\n  margin-left: -2px;\n}\n.icon-bar__font .icon-color {\n  background-position: -120px 0;\n}\n\n.icon-bar__alignment {\n  padding: 0 10px;\n  grid-template-columns: repeat(5, 30px) 160px;\n}\n.icon-bar__alignment .icon-bar__name {\n  grid-column: 1/span 6;\n}\n.icon-bar__alignment .icon-alignt {\n  background-position: -150px 0;\n}\n.icon-bar__alignment .icon-alignm {\n  background-position: -180px 0;\n}\n.icon-bar__alignment .icon-alignb {\n  background-position: -210px 0;\n}\n.icon-bar__alignment .icon-orientation {\n  background-position: -240px 0;\n  border-left: 1px solid #cdcdcd;\n}\n.icon-bar__alignment .icon-alignl {\n  background-position: 0 -30px;\n  grid-column: 1;\n}\n.icon-bar__alignment .icon-alignc {\n  background-position: -30px -30px;\n}\n.icon-bar__alignment .icon-alignr {\n  background-position: -60px -30px;\n}\n.icon-bar__alignment .icon-indentinc {\n  background-position: -90px -30px;\n  border-left: 1px solid #cdcdcd;\n}\n.icon-bar__alignment .icon-indentdec {\n  background-position: -120px -30px;\n}\n.icon-bar__alignment .wrap-text, .icon-bar__alignment .merge-center {\n  grid-column: 6;\n  border-left: 1px solid #cdcdcd;\n  padding-left: 5px;\n  display: flex;\n  align-items: center;\n}\n.icon-bar__alignment .wrap-text .icon, .icon-bar__alignment .merge-center .icon {\n  width: 30px;\n  height: 30px;\n}\n.icon-bar__alignment .wrap-text span, .icon-bar__alignment .merge-center span {\n  display: block;\n  padding-left: 5px;\n}\n.icon-bar__alignment .wrap-text {\n  grid-row: 1;\n}\n.icon-bar__alignment .wrap-text .icon {\n  background-position: -270px 0;\n}\n.icon-bar__alignment .merge-center .icon {\n  background-position: -150px -30px;\n}\n\n.icon-bar__number {\n  grid-template-columns: repeat(5, 30px);\n  padding: 0 10px;\n}\n.icon-bar__number select {\n  grid-column: span 5;\n  height: 25px;\n}\n.icon-bar__number .icon-acc {\n  background-position: -180px -30px;\n}\n.icon-bar__number .icon-percent {\n  background-position: -210px -30px;\n}\n.icon-bar__number .icon-comma {\n  background-position: -240px -30px;\n}\n.icon-bar__number .icon-decimalinc {\n  background-position: -270px -30px;\n  border-left: 1px solid #cdcdcd;\n}\n.icon-bar__number .icon-decimaldec {\n  background-position: 0 -60px;\n}\n.icon-bar__number .icon-bar__name {\n  grid-column: span 5;\n}\n\n.icon-bar__styles {\n  grid-template-columns: 80px 70px 60px;\n  padding: 0 10px;\n  text-align: center;\n}\n.icon-bar__styles .icon-bar__name {\n  grid-column: span 3;\n}\n.icon-bar__styles .icon {\n  width: 45px;\n  height: 45px;\n  margin: -8px auto 5px;\n}\n.icon-bar__styles .conditional .icon {\n  background-position: -75px -60px;\n}\n.icon-bar__styles .format-table .icon {\n  background-position: -120px -60px;\n}\n.icon-bar__styles .cell-style .icon {\n  background-position: -165px -60px;\n}\n\n.icon-bar__cells {\n  grid-template-columns: repeat(3, 50px);\n  padding: 0 10px;\n  text-align: center;\n}\n.icon-bar__cells .icon-bar__name {\n  grid-column: span 3;\n}\n.icon-bar__cells .icon {\n  width: 45px;\n  height: 45px;\n  margin: -8px auto 5px;\n}\n.icon-bar__cells .cell-insert .icon {\n  background-position: -210px -60px;\n}\n.icon-bar__cells .cell-delete .icon {\n  background-position: -255px -60px;\n}\n.icon-bar__cells .cell-format .icon {\n  background-position: -30px -105px;\n}","js":""};
+    __preprocessors = {
+      "html": "pug",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "Pug",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

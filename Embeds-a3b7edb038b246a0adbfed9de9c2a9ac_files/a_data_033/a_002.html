@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Javascript Tetris</title>
+    <link rel="stylesheet" href="a_data_002/style.css">
+  </head>
+
+  <body>
+    <center>
+    <h1>Hit ESC To Pause Play</h1>
+    </center>
+    <div id="tetris">
+      <div id="menu">
+        <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
+        <p><canvas id="upcoming" width="50" height="50"></canvas></p>
+        <p>score <span id="score">00000</span></p>
+        <p>rows <span id="rows">0</span></p>
+      <div style="cursor: pointer; width: 80px; opacity: 0.9; z-index: 10001;" id="stats"><div style="background-color: rgb(8, 8, 24); padding: 2px 0px 3px;"><div style="font-family: Helvetica, Arial, sans-serif; text-align: left; font-size: 9px; color: rgb(0, 255, 255); margin: 0px 0px 1px 3px;"><span style="font-weight:bold">0 FPS</span> (0-2)</div><canvas style="display: block; margin-left: 3px;" width="74" height="30"></canvas></div><div style="background-color: rgb(8, 24, 8); padding: 2px 0px 3px; display: none;"><div style="font-family: Helvetica, Arial, sans-serif; text-align: left; font-size: 9px; color: rgb(0, 255, 0); margin: 0px 0px 1px 3px;"><span style="font-weight:bold">31664 MS</span> (18-35789)</div><canvas style="display: block; margin-left: 3px;" width="74" height="30"></canvas></div><div style="background-color: rgb(24, 8, 13); padding: 2px 0px 3px; display: none;"><div style="font-family: Helvetica, Arial, sans-serif; text-align: left; font-size: 9px; color: rgb(255, 0, 128); margin: 0px 0px 1px 3px;"><span style="font-weight:bold">MB</span></div><canvas style="display: block; margin-left: 3px;" width="74" height="30"></canvas></div></div></div>
+      <canvas id="canvas" width="100" height="200">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </canvas>
+    </div>
+
+    <script src="a_data_002/stats.js"></script>
+    <script async="" defer="defer" src="a_data_002/index.js"></script>
+      
+      
+      
+</body></html>

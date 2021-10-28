@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Class Syntax - web43</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="anGVKBb2bAw26ATmFi07LYDy9X4oXU3b9kb7jv3CvXj2SwCoyEaVxJ2MOb8FVhbT6hQiy7mv6NC5pQW1v32/pA==">
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/ZELVZXV" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code">// constructor functions the old way
+// function Pet(attrs){
+//   this.name = attrs.name;
+//   this.location = attrs.location;
+//   this.phrase = attrs.phrase;
+// }
+
+// Pet.prototype.speak = function(){
+//   return `${this.name} says ${this.phrase}`;
+// }
+
+// class syntax 
+
+// class Pet{
+//   constructor(attrs){
+//     //assign our keys here
+//     this.name = attrs.name;
+//     this.location = attrs.location;
+//     this.phrase = attrs.phrase;
+//   }
+//   speak(){
+//     return `${this.name} says ${this.phrase}`;
+//   }
+// }
+
+// creating a child the old way
+// function BabyPet(attrs){
+//   Pet.call(this, attrs); // telling BabyPet to inherit the keys from Pet
+//   this.toy = attrs.toy;
+// }
+
+// BabyPet.prototype = Object.create(Pet.prototype); // inherit the methods from Pet
+
+// BabyPet.prototype.play = function(){
+//   return `${this.name} plays with their ${this.toy}`;
+// }
+
+// converting the child to class syntax
+// class BabyPet extends Pet{
+//   constructor(attrs){
+//     super(attrs);
+//     // any special attributes for the baby go here
+//     this.toy = attrs.toy;
+//   }
+//   // any special methods for the baby go here
+//   play(){
+//     return `${this.name} plays with their ${this.toy}`;
+//   }
+// }
+
+// Create our objects by invoking our construtor functions 
+
+// const ada = new Pet({
+//   name: 'Ada',
+//   location: 'Canada',
+//   phrase: 'wooof wooof'
+// });
+
+// const noa = new BabyPet({
+//   name: 'Noa',
+//   location: 'Canada',
+//   phrase: 'bark bark',
+//   toy: 'stuffed racoon'
+// });
+
+// console.log(ada.speak());
+// console.log(noa.speak());
+// console.log(noa.play());
+
+//Classes
+// classes are not hoisted - that means if we are putting information above a class we have referenced it will not work 
+// the use strict - this forces us to write cleaner code with errors if we don't 
+// Methods are a special syntax 
+// a constructor is visibile
+
+// Child Classes 
+// extends links up the dunder proto - it tells us where we came from 
+// extends tells super what to super to
+// extends + super do what .call and Object.create did 
+
+// class User{
+//   constructor(name, email){
+//     this.name = name;
+//     this.email = email;
+//   }
+//   access(){
+//     return `${this.name} is using ${this.email} and they have logged in successfully!`;
+//   }
+// }
+
+// class GeneralAdmin extends User{
+//   constructor(name, email, specialToken){
+//     super(name, email);
+//     this.specialToken = specialToken;
+//   }
+//   resetPassword(user){
+//     return `${this.name} helped reset ${user.name}'s password`;
+//   }
+// }
+// //grand child 
+// class SuperAdmin extends GeneralAdmin{
+//   constructor(name, email, specialToken, title){
+//     super(name, email, specialToken);
+//     this.title = title;
+//   }
+//   deleteUser(user){
+//     return `${this.name} has disabled ${user.name}'s account'`;
+//   }
+// }
+
+
+// // //create our users
+// const zach = new User('Zach', 'zach.bosch@hotmail.com');
+
+// // const cara = new GeneralAdmin('Cara', 'cara@gmail.com', 13579);
+
+// // const kirk = new SuperAdmin('Kirk', 'kirk-lincoln@aol.com', 55223, 'lead systems admin');
+// // console.log(zach.access());
+// // console.log(cara.access());
+// // console.log(cara.resetPassword(zach));
+// // console.log(kirk.access());
+// // console.log(kirk.resetPassword(cara));
+// // console.log(kirk.deleteUser(zach));
+
+// class Parent{
+//   constructor(prop){
+//     this.name = prop.name;
+//     this.loction = prop.location;
+//     this.job = prop.job;
+//   }
+//   work(){
+//     return `${this.name} is a ${this.job}`;
+//   }
+// }
+
+// class Child extends Parent{
+//   constructor(prop){
+//     super(prop);
+//     this.major = prop.major;
+//   }
+//   study(){
+//     return `${this.name} is studying ${this.major}`;
+//   }
+// }
+
+// class ChildTwo extends Parent{
+//   constructor(prop){
+//     super(prop);
+//     this.instrument = prop.instrument;
+//   }
+//   music(){
+//     return `${this.name} plays ${this.instrument}`;
+//   }
+// }
+
+// class GrandChild extends Child{
+//   constructor(props){
+//     super(props);
+//     this.toy = props.toy;
+//   }
+//   play(){
+//     return `${this.name} plays with ${this.toy}`;
+//   }
+// }
+
+
+// //create our objects 
+
+// const mom = new Parent({
+//   name: 'Mom',
+//   location: 'USA',
+//   job: 'computer programmer'
+// });
+
+// const sara = new Child({
+//   name: 'Sara',
+//   location: 'USA',
+//   job: 'student',
+//   major: 'biochemistry'
+// });
+
+// const jake = new ChildTwo({
+//   name: 'Jake',
+//   location: 'Europe',
+//   job: 'musician',
+//   instrument: 'drums'
+// });
+
+// const jim = new GrandChild({
+//   name: 'Jim',
+//   location: 'USA',
+//   job: 'a baby',
+//   major: 'first words',
+//   toy: 'ball'
+// })
+
+// console.log(mom.work());
+// console.log(sara.work());
+// console.log(sara.study());
+// console.log(jake.work());
+// console.log(jake.music());
+// console.log(jim.work());
+// console.log(jim.study());
+// console.log(jim.play());
+
+
+/// REVIEW 
+
+//functions - parameters are placeholder values, the hold the place for the arguments we will be passing in when the function is invoked 
+
+function add(num1, num2){
+  return num2 + num1;
+  // 5 + 4
+}
+
+// console.log(add(4, 5));
+
+// // Objects 
+// const obj = {
+//   //keyvalue pairs
+//   name: 'Brit',
+//   // methods - functions that belong to an object (NO ARROW FUNCTIONS!)
+// }
+
+// Array = []
+// order matters, every item in an array is assigned an index and the index starts at 0
+
+// array[index].key
+
+// Skeleton Syntax 
+
+// Prototypes 
+
+function Parent(attributes){
+  // assign our values here
+  this.name = attributes.name;
+}
+
+// abstract out our methods
+Parent.prototype.methodName = function(){
+  // return something here
+}
+
+// child skeleton syntax 
+
+function Child(attributes){
+  Parent.call(this, attributes);
+  // any special attributes go here
+}
+
+// tell the child to inherit the methods too
+
+Child.prototype = Object.create(Parent.prototype);
+
+// any special methods of the child
+Child.prototype.methodName = function(){
+  
+}
+
+// Class Syntax Skeleton 
+
+class Parent{
+  constructor(attributes){
+    //assigning our attributes here
+    this.name = attributes.name;
+  }
+  // methods go here
+  methodName(){
+    //return something here
+  }
+}
+
+//child syntax skeleton 
+
+class Child extends Parent{
+  constructor(attributes){
+    super(attributes);
+    // any special attributes for the child go here
+  }
+  // any special methods for the child go here
+  methodName(){
+    //return something
+  }
+}
+
+// ARRAY METHODS! 
+//.forEach()
+// iterates through every single item in the array without stopping
+// does not return a new array 
+// return keyword is optional 
+
+array.forEach(function(item){
+  console.log(item.key);
+});
+
+
+//.map()
+// automatically returns a new array
+// used for converting data 
+// needs a return keyword 
+// whatever gets returned is included in the new array 
+
+const newArray = array.map(function(item){
+  return //whatever we want inside the newArray;
+});
+
+//.filter()
+// automatically returns a new array 
+// used for filtering data - if it's true it's included 
+// needs a return keyword
+
+const newArray = array.filter(function(item){
+  return // something that could be true or false, if it's true it's included if it's false it's ignored 
+});
+
+//.reduce()
+// returns a single value
+// used for sums and products 
+// we need to tell it where to start with an inital value 
+// it has 2 arguments required accumulator, current value 
+
+
+const singleValue = array.reduce(function(accumulator, item){
+  return accumulator + item;
+},initalValue);</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Class Syntax - web43" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Class Syntax - web43" data-src="https://cdpn.io/bgoonz/fullembedgrid/ZELVZXV?animations=run&amp;type=embed" src="https://cdpn.io/bgoonz/fullembedgrid/ZELVZXV?animations=run&amp;type=embed" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/BritHemming/fullpage/YzNRmgr?default-tab=js,result&amp;height=265&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"","css":"","js":"// constructor functions the old way\n// function Pet(attrs){\n//   this.name = attrs.name;\n//   this.location = attrs.location;\n//   this.phrase = attrs.phrase;\n// }\n\n// Pet.prototype.speak = function(){\n//   return `${this.name} says ${this.phrase}`;\n// }\n\n// class syntax \n\n// class Pet{\n//   constructor(attrs){\n//     //assign our keys here\n//     this.name = attrs.name;\n//     this.location = attrs.location;\n//     this.phrase = attrs.phrase;\n//   }\n//   speak(){\n//     return `${this.name} says ${this.phrase}`;\n//   }\n// }\n\n// creating a child the old way\n// function BabyPet(attrs){\n//   Pet.call(this, attrs); // telling BabyPet to inherit the keys from Pet\n//   this.toy = attrs.toy;\n// }\n\n// BabyPet.prototype = Object.create(Pet.prototype); // inherit the methods from Pet\n\n// BabyPet.prototype.play = function(){\n//   return `${this.name} plays with their ${this.toy}`;\n// }\n\n// converting the child to class syntax\n// class BabyPet extends Pet{\n//   constructor(attrs){\n//     super(attrs);\n//     // any special attributes for the baby go here\n//     this.toy = attrs.toy;\n//   }\n//   // any special methods for the baby go here\n//   play(){\n//     return `${this.name} plays with their ${this.toy}`;\n//   }\n// }\n\n// Create our objects by invoking our construtor functions \n\n// const ada = new Pet({\n//   name: &#39;Ada&#39;,\n//   location: &#39;Canada&#39;,\n//   phrase: &#39;wooof wooof&#39;\n// });\n\n// const noa = new BabyPet({\n//   name: &#39;Noa&#39;,\n//   location: &#39;Canada&#39;,\n//   phrase: &#39;bark bark&#39;,\n//   toy: &#39;stuffed racoon&#39;\n// });\n\n// console.log(ada.speak());\n// console.log(noa.speak());\n// console.log(noa.play());\n\n//Classes\n// classes are not hoisted - that means if we are putting information above a class we have referenced it will not work \n// the use strict - this forces us to write cleaner code with errors if we don&#39;t \n// Methods are a special syntax \n// a constructor is visibile\n\n// Child Classes \n// extends links up the dunder proto - it tells us where we came from \n// extends tells super what to super to\n// extends + super do what .call and Object.create did \n\n// class User{\n//   constructor(name, email){\n//     this.name = name;\n//     this.email = email;\n//   }\n//   access(){\n//     return `${this.name} is using ${this.email} and they have logged in successfully!`;\n//   }\n// }\n\n// class GeneralAdmin extends User{\n//   constructor(name, email, specialToken){\n//     super(name, email);\n//     this.specialToken = specialToken;\n//   }\n//   resetPassword(user){\n//     return `${this.name} helped reset ${user.name}&#39;s password`;\n//   }\n// }\n// //grand child \n// class SuperAdmin extends GeneralAdmin{\n//   constructor(name, email, specialToken, title){\n//     super(name, email, specialToken);\n//     this.title = title;\n//   }\n//   deleteUser(user){\n//     return `${this.name} has disabled ${user.name}&#39;s account&#39;`;\n//   }\n// }\n\n\n// // //create our users\n// const zach = new User(&#39;Zach&#39;, &#39;zach.bosch@hotmail.com&#39;);\n\n// // const cara = new GeneralAdmin(&#39;Cara&#39;, &#39;cara@gmail.com&#39;, 13579);\n\n// // const kirk = new SuperAdmin(&#39;Kirk&#39;, &#39;kirk-lincoln@aol.com&#39;, 55223, &#39;lead systems admin&#39;);\n// // console.log(zach.access());\n// // console.log(cara.access());\n// // console.log(cara.resetPassword(zach));\n// // console.log(kirk.access());\n// // console.log(kirk.resetPassword(cara));\n// // console.log(kirk.deleteUser(zach));\n\n// class Parent{\n//   constructor(prop){\n//     this.name = prop.name;\n//     this.loction = prop.location;\n//     this.job = prop.job;\n//   }\n//   work(){\n//     return `${this.name} is a ${this.job}`;\n//   }\n// }\n\n// class Child extends Parent{\n//   constructor(prop){\n//     super(prop);\n//     this.major = prop.major;\n//   }\n//   study(){\n//     return `${this.name} is studying ${this.major}`;\n//   }\n// }\n\n// class ChildTwo extends Parent{\n//   constructor(prop){\n//     super(prop);\n//     this.instrument = prop.instrument;\n//   }\n//   music(){\n//     return `${this.name} plays ${this.instrument}`;\n//   }\n// }\n\n// class GrandChild extends Child{\n//   constructor(props){\n//     super(props);\n//     this.toy = props.toy;\n//   }\n//   play(){\n//     return `${this.name} plays with ${this.toy}`;\n//   }\n// }\n\n\n// //create our objects \n\n// const mom = new Parent({\n//   name: &#39;Mom&#39;,\n//   location: &#39;USA&#39;,\n//   job: &#39;computer programmer&#39;\n// });\n\n// const sara = new Child({\n//   name: &#39;Sara&#39;,\n//   location: &#39;USA&#39;,\n//   job: &#39;student&#39;,\n//   major: &#39;biochemistry&#39;\n// });\n\n// const jake = new ChildTwo({\n//   name: &#39;Jake&#39;,\n//   location: &#39;Europe&#39;,\n//   job: &#39;musician&#39;,\n//   instrument: &#39;drums&#39;\n// });\n\n// const jim = new GrandChild({\n//   name: &#39;Jim&#39;,\n//   location: &#39;USA&#39;,\n//   job: &#39;a baby&#39;,\n//   major: &#39;first words&#39;,\n//   toy: &#39;ball&#39;\n// })\n\n// console.log(mom.work());\n// console.log(sara.work());\n// console.log(sara.study());\n// console.log(jake.work());\n// console.log(jake.music());\n// console.log(jim.work());\n// console.log(jim.study());\n// console.log(jim.play());\n\n\n/// REVIEW \n\n//functions - parameters are placeholder values, the hold the place for the arguments we will be passing in when the function is invoked \n\nfunction add(num1, num2){\n  return num2 + num1;\n  // 5 + 4\n}\n\n// console.log(add(4, 5));\n\n// // Objects \n// const obj = {\n//   //keyvalue pairs\n//   name: &#39;Brit&#39;,\n//   // methods - functions that belong to an object (NO ARROW FUNCTIONS!)\n// }\n\n// Array = []\n// order matters, every item in an array is assigned an index and the index starts at 0\n\n// array[index].key\n\n// Skeleton Syntax \n\n// Prototypes \n\nfunction Parent(attributes){\n  // assign our values here\n  this.name = attributes.name;\n}\n\n// abstract out our methods\nParent.prototype.methodName = function(){\n  // return something here\n}\n\n// child skeleton syntax \n\nfunction Child(attributes){\n  Parent.call(this, attributes);\n  // any special attributes go here\n}\n\n// tell the child to inherit the methods too\n\nChild.prototype = Object.create(Parent.prototype);\n\n// any special methods of the child\nChild.prototype.methodName = function(){\n  \n}\n\n// Class Syntax Skeleton \n\nclass Parent{\n  constructor(attributes){\n    //assigning our attributes here\n    this.name = attributes.name;\n  }\n  // methods go here\n  methodName(){\n    //return something here\n  }\n}\n\n//child syntax skeleton \n\nclass Child extends Parent{\n  constructor(attributes){\n    super(attributes);\n    // any special attributes for the child go here\n  }\n  // any special methods for the child go here\n  methodName(){\n    //return something\n  }\n}\n\n// ARRAY METHODS! \n//.forEach()\n// iterates through every single item in the array without stopping\n// does not return a new array \n// return keyword is optional \n\narray.forEach(function(item){\n  console.log(item.key);\n});\n\n\n//.map()\n// automatically returns a new array\n// used for converting data \n// needs a return keyword \n// whatever gets returned is included in the new array \n\nconst newArray = array.map(function(item){\n  return //whatever we want inside the newArray;\n});\n\n//.filter()\n// automatically returns a new array \n// used for filtering data - if it&#39;s true it&#39;s included \n// needs a return keyword\n\nconst newArray = array.filter(function(item){\n  return // something that could be true or false, if it&#39;s true it&#39;s included if it&#39;s false it&#39;s ignored \n});\n\n//.reduce()\n// returns a single value\n// used for sums and products \n// we need to tell it where to start with an inital value \n// it has 2 arguments required accumulator, current value \n\n\nconst singleValue = array.reduce(function(accumulator, item){\n  return accumulator + item;\n},initalValue);"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script></body></html>

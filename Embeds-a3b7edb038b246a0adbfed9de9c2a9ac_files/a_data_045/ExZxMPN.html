@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Canvas Sparkly Circle Loader</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Xmu4uhOhfjdZhmlr4zkUdQkqCXSPq+6LIC1VhhX+Q52dK+kZqJTtkJbaXPU5bLXvXoEMA548ftJo9WJ4PaHwsg==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" aria-pressed="false">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+CSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" class="active" aria-pressed="true">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/ExZxMPN" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">iframe</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://free.timeanddate.com/clock/i7rggyus/n179/szw110/szh110/hoc090/hbw1/hfc000/cf100/hgr0/hwc00f/hcw10/fan2/facf90/fdi80/mqcfff/mql6/mqw2/mqd74/mhcfff/mhl6/mhw1/mhd74/mmcf90/mml4/mmw1/mmd74/hhcfff/hhs3/hhl110/hhb36/hhw11/hmcfff/hms3/hml110/hmw6/hmr5/hss1/hsb30/hsr7"</span> <span class="cm-attribute">frameborder</span>=<span class="cm-string">"0"</span> <span class="cm-attribute">width</span>=<span class="cm-string">"110"</span> <span class="cm-attribute">height</span>=<span class="cm-string">"110"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">iframe</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="css" id="actual-css-code" class=" cm-s-default"><span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#111</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://wallpapercave.com/wp/wp2763763.gif</span>);
+  <span class="cm-property">z-index</span>:<span class="cm-number">-9999</span>;
+  <span class="cm-property">width</span>:<span class="cm-number">50%</span>;
+  <span class="cm-property">zoom</span>:<span class="cm-number">1.1</span>;
+}
+
+<span class="cm-tag">canvas</span> {
+  <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+}
+
+<span class="cm-tag">iframe</span> {
+  <span class="cm-property">bottom</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">margin</span>: <span class="cm-atom">auto</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+}
+</code></pre>
+</div>
+<div id="js-box" class="code-wrap code-box box active" role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">const</span> <span class="cm-def">$</span> <span class="cm-operator">=</span> {};
+
+<span class="cm-variable">$</span>.<span class="cm-property">Particle</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">opt</span>) {
+  <span class="cm-keyword">this</span>.<span class="cm-property">radius</span> <span class="cm-operator">=</span> <span class="cm-number">7</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">x</span> <span class="cm-operator">=</span> <span class="cm-variable-2">opt</span>.<span class="cm-property">x</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">y</span> <span class="cm-operator">=</span> <span class="cm-variable-2">opt</span>.<span class="cm-property">y</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">angle</span> <span class="cm-operator">=</span> <span class="cm-variable-2">opt</span>.<span class="cm-property">angle</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">speed</span> <span class="cm-operator">=</span> <span class="cm-variable-2">opt</span>.<span class="cm-property">speed</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">accel</span> <span class="cm-operator">=</span> <span class="cm-variable-2">opt</span>.<span class="cm-property">accel</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">decay</span> <span class="cm-operator">=</span> <span class="cm-number">0.01</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">life</span> <span class="cm-operator">=</span> <span class="cm-number">1</span>;
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">Particle</span>.<span class="cm-property">prototype</span>.<span class="cm-property">step</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">i</span>) {
+  <span class="cm-keyword">this</span>.<span class="cm-property">speed</span> <span class="cm-operator">+=</span> <span class="cm-keyword">this</span>.<span class="cm-property">accel</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">x</span> <span class="cm-operator">+=</span> <span class="cm-variable">Math</span>.<span class="cm-property">cos</span>(<span class="cm-keyword">this</span>.<span class="cm-property">angle</span>) <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">speed</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">y</span> <span class="cm-operator">+=</span> <span class="cm-variable">Math</span>.<span class="cm-property">sin</span>(<span class="cm-keyword">this</span>.<span class="cm-property">angle</span>) <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">speed</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">angle</span> <span class="cm-operator">+=</span> <span class="cm-variable">$</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">64</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">accel</span> <span class="cm-operator">*=</span> <span class="cm-number">1.01</span>;
+  <span class="cm-keyword">this</span>.<span class="cm-property">life</span> <span class="cm-operator">-=</span> <span class="cm-keyword">this</span>.<span class="cm-property">decay</span>;
+
+  <span class="cm-keyword">if</span> (<span class="cm-keyword">this</span>.<span class="cm-property">life</span> <span class="cm-operator">&lt;=</span> <span class="cm-number">0</span>) {
+    <span class="cm-variable">$</span>.<span class="cm-property">particles</span>.<span class="cm-property">splice</span>(<span class="cm-variable-2">i</span>, <span class="cm-number">1</span>);
+  }
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">Particle</span>.<span class="cm-property">prototype</span>.<span class="cm-property">draw</span> <span class="cm-operator">=</span> <span class="cm-keyword">function</span> (<span class="cm-def">i</span>) {
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">fillStyle</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">strokeStyle</span> <span class="cm-operator">=</span>
+    <span class="cm-string-2">`hsla(${</span><span class="cm-variable">$</span>.<span class="cm-property">tick</span> <span class="cm-operator">+</span> <span class="cm-keyword">this</span>.<span class="cm-property">life</span> <span class="cm-operator">*</span> <span class="cm-number">120</span><span class="cm-string-2">}</span><span class="cm-string-2">, 100%, 60%, ${</span><span class="cm-keyword">this</span>.<span class="cm-property">life</span><span class="cm-string-2">}</span><span class="cm-string-2">)`</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">beginPath</span>();
+  <span class="cm-keyword">if</span> (<span class="cm-variable">$</span>.<span class="cm-property">particles</span>[<span class="cm-variable-2">i</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>]) {
+    <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">moveTo</span>(<span class="cm-keyword">this</span>.<span class="cm-property">x</span>, <span class="cm-keyword">this</span>.<span class="cm-property">y</span>);
+    <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">lineTo</span>(<span class="cm-variable">$</span>.<span class="cm-property">particles</span>[<span class="cm-variable-2">i</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>].<span class="cm-property">x</span>, <span class="cm-variable">$</span>.<span class="cm-property">particles</span>[<span class="cm-variable-2">i</span> <span class="cm-operator">-</span> <span class="cm-number">1</span>].<span class="cm-property">y</span>);
+  }
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">stroke</span>();
+
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">beginPath</span>();
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">arc</span>(
+    <span class="cm-keyword">this</span>.<span class="cm-property">x</span>,
+    <span class="cm-keyword">this</span>.<span class="cm-property">y</span>,
+    <span class="cm-variable">Math</span>.<span class="cm-property">max</span>(<span class="cm-number">0.001</span>, <span class="cm-keyword">this</span>.<span class="cm-property">life</span> <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">radius</span>),
+    <span class="cm-number">0</span>,
+    <span class="cm-variable">$</span>.<span class="cm-property">TWO_PI</span>
+  );
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">fill</span>();
+
+  <span class="cm-keyword">const</span> <span class="cm-def">size</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">*</span> <span class="cm-number">1.25</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">fillRect</span>(
+    <span class="cm-operator">~</span><span class="cm-operator">~</span>(<span class="cm-keyword">this</span>.<span class="cm-property">x</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">-</span> <span class="cm-number">0.5</span>) <span class="cm-operator">*</span> <span class="cm-number">35</span> <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">life</span>),
+    <span class="cm-operator">~</span><span class="cm-operator">~</span>(<span class="cm-keyword">this</span>.<span class="cm-property">y</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">random</span>() <span class="cm-operator">-</span> <span class="cm-number">0.5</span>) <span class="cm-operator">*</span> <span class="cm-number">35</span> <span class="cm-operator">*</span> <span class="cm-keyword">this</span>.<span class="cm-property">life</span>),
+    <span class="cm-variable-2">size</span>,
+    <span class="cm-variable-2">size</span>
+  );
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">step</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">$</span>.<span class="cm-property">particles</span>.<span class="cm-property">push</span>(
+    <span class="cm-keyword">new</span> <span class="cm-variable">$</span>.<span class="cm-property">Particle</span>({
+      <span class="cm-property">x</span>: <span class="cm-variable">$</span>.<span class="cm-property">width</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">cos</span>(<span class="cm-variable">$</span>.<span class="cm-property">tick</span> <span class="cm-operator">/</span> <span class="cm-number">20</span>) <span class="cm-operator">*</span> <span class="cm-variable">$</span>.<span class="cm-property">min</span>) <span class="cm-operator">/</span> <span class="cm-number">2</span>,
+      <span class="cm-property">y</span>: <span class="cm-variable">$</span>.<span class="cm-property">height</span> <span class="cm-operator">/</span> <span class="cm-number">2</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">sin</span>(<span class="cm-variable">$</span>.<span class="cm-property">tick</span> <span class="cm-operator">/</span> <span class="cm-number">20</span>) <span class="cm-operator">*</span> <span class="cm-variable">$</span>.<span class="cm-property">min</span>) <span class="cm-operator">/</span> <span class="cm-number">2</span>,
+      <span class="cm-property">angle</span>: <span class="cm-variable">$</span>.<span class="cm-property">globalRotation</span> <span class="cm-operator">+</span> <span class="cm-variable">$</span>.<span class="cm-property">globalAngle</span>,
+      <span class="cm-property">speed</span>: <span class="cm-number">0</span>,
+      <span class="cm-property">accel</span>: <span class="cm-number">0.01</span>,
+    })
+  );
+
+  <span class="cm-variable">$</span>.<span class="cm-property">particles</span>.<span class="cm-property">forEach</span>((<span class="cm-def">elem</span>, <span class="cm-def">index</span>) <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">elem</span>.<span class="cm-property">step</span>(<span class="cm-variable-2">index</span>);
+  });
+
+  <span class="cm-variable">$</span>.<span class="cm-property">globalRotation</span> <span class="cm-operator">+=</span> <span class="cm-variable">$</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">6</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">globalAngle</span> <span class="cm-operator">+=</span> <span class="cm-variable">$</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">6</span>;
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">draw</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">clearRect</span>(<span class="cm-number">0</span>, <span class="cm-number">0</span>, <span class="cm-variable">$</span>.<span class="cm-property">width</span>, <span class="cm-variable">$</span>.<span class="cm-property">height</span>);
+
+  <span class="cm-variable">$</span>.<span class="cm-property">particles</span>.<span class="cm-property">forEach</span>((<span class="cm-def">elem</span>, <span class="cm-def">index</span>) <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">elem</span>.<span class="cm-property">draw</span>(<span class="cm-variable-2">index</span>);
+  });
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">init</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">$</span>.<span class="cm-property">canvas</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">createElement</span>(<span class="cm-string">"canvas"</span>);
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">canvas</span>.<span class="cm-property">getContext</span>(<span class="cm-string">"2d"</span>);
+  <span class="cm-variable">$</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-number">300</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-number">300</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">canvas</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">width</span> <span class="cm-operator">*</span> <span class="cm-variable">window</span>.<span class="cm-property">devicePixelRatio</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">canvas</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">height</span> <span class="cm-operator">*</span> <span class="cm-variable">window</span>.<span class="cm-property">devicePixelRatio</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">canvas</span>.<span class="cm-property">style</span>.<span class="cm-property">width</span> <span class="cm-operator">=</span> <span class="cm-string-2">`${</span><span class="cm-variable">$</span>.<span class="cm-property">width</span><span class="cm-string-2">}</span><span class="cm-string-2">px`</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">canvas</span>.<span class="cm-property">style</span>.<span class="cm-property">height</span> <span class="cm-operator">=</span> <span class="cm-string-2">`${</span><span class="cm-variable">$</span>.<span class="cm-property">height</span><span class="cm-string-2">}</span><span class="cm-string-2">px`</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">scale</span>(<span class="cm-variable">window</span>.<span class="cm-property">devicePixelRatio</span>, <span class="cm-variable">window</span>.<span class="cm-property">devicePixelRatio</span>);
+  <span class="cm-variable">$</span>.<span class="cm-property">min</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">width</span> <span class="cm-operator">*</span> <span class="cm-number">0.5</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">particles</span> <span class="cm-operator">=</span> [];
+  <span class="cm-variable">$</span>.<span class="cm-property">globalAngle</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">globalRotation</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">tick</span> <span class="cm-operator">=</span> <span class="cm-number">0</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">PI</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">PI</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">TWO_PI</span> <span class="cm-operator">=</span> <span class="cm-variable">$</span>.<span class="cm-property">PI</span> <span class="cm-operator">*</span> <span class="cm-number">2</span>;
+  <span class="cm-variable">$</span>.<span class="cm-property">ctx</span>.<span class="cm-property">globalCompositeOperation</span> <span class="cm-operator">=</span> <span class="cm-string">"lighter"</span>;
+  <span class="cm-variable">document</span>.<span class="cm-property">body</span>.<span class="cm-property">appendChild</span>(<span class="cm-variable">$</span>.<span class="cm-property">canvas</span>);
+  <span class="cm-variable">$</span>.<span class="cm-property">loop</span>();
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">loop</span> <span class="cm-operator">=</span> () <span class="cm-operator">=&gt;</span> {
+  <span class="cm-variable">requestAnimationFrame</span>(<span class="cm-variable">$</span>.<span class="cm-property">loop</span>);
+  <span class="cm-variable">$</span>.<span class="cm-property">step</span>();
+  <span class="cm-variable">$</span>.<span class="cm-property">draw</span>();
+  <span class="cm-variable">$</span>.<span class="cm-property">tick</span><span class="cm-operator">++</span>;
+};
+
+<span class="cm-variable">$</span>.<span class="cm-property">init</span>();
+</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Canvas Sparkly Circle Loader" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Canvas Sparkly Circle Loader" data-src="https://cdpn.io/bgoonz/fullembedgrid/ExZxMPN?animations=run&amp;type=embed" src="ExZxMPN_data/ExZxMPN.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/jackrugile/fullpage/JAKbg?default-tab=js,result&amp;height=375&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;iframe src=&quot;https://free.timeanddate.com/clock/i7rggyus/n179/szw110/szh110/hoc090/hbw1/hfc000/cf100/hgr0/hwc00f/hcw10/fan2/facf90/fdi80/mqcfff/mql6/mqw2/mqd74/mhcfff/mhl6/mhw1/mhd74/mmcf90/mml4/mmw1/mmd74/hhcfff/hhs3/hhl110/hhb36/hhw11/hmcfff/hms3/hml110/hmw6/hmr5/hss1/hsb30/hsr7&quot; frameborder=&quot;0&quot; width=&quot;110&quot; height=&quot;110&quot;&gt;&lt;/iframe&gt;","css":"body {\n  background: #111;\n  overflow: hidden;\n  background: url(https://wallpapercave.com/wp/wp2763763.gif);\n  z-index:-9999;\n  width:50%;\n  zoom:1.1;\n}\n\ncanvas {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\niframe {\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  position: absolute;\n  right: 0;\n  top: 0;\n}","js":"const $ = {};\n\n$.Particle = function (opt) {\n  this.radius = 7;\n  this.x = opt.x;\n  this.y = opt.y;\n  this.angle = opt.angle;\n  this.speed = opt.speed;\n  this.accel = opt.accel;\n  this.decay = 0.01;\n  this.life = 1;\n};\n\n$.Particle.prototype.step = function (i) {\n  this.speed += this.accel;\n  this.x += Math.cos(this.angle) * this.speed;\n  this.y += Math.sin(this.angle) * this.speed;\n  this.angle += $.PI / 64;\n  this.accel *= 1.01;\n  this.life -= this.decay;\n\n  if (this.life &lt;= 0) {\n    $.particles.splice(i, 1);\n  }\n};\n\n$.Particle.prototype.draw = function (i) {\n  $.ctx.fillStyle = $.ctx.strokeStyle =\n  `hsla(${$.tick + this.life * 120}, 100%, 60%, ${this.life})`;\n  $.ctx.beginPath();\n  if ($.particles[i - 1]) {\n    $.ctx.moveTo(this.x, this.y);\n    $.ctx.lineTo($.particles[i - 1].x, $.particles[i - 1].y);\n  }\n  $.ctx.stroke();\n\n  $.ctx.beginPath();\n  $.ctx.arc(\n  this.x,\n  this.y,\n  Math.max(0.001, this.life * this.radius),\n  0,\n  $.TWO_PI);\n\n  $.ctx.fill();\n\n  const size = Math.random() * 1.25;\n  $.ctx.fillRect(\n  ~~(this.x + (Math.random() - 0.5) * 35 * this.life),\n  ~~(this.y + (Math.random() - 0.5) * 35 * this.life),\n  size,\n  size);\n\n};\n\n$.step = () =&gt; {\n  $.particles.push(\n  new $.Particle({\n    x: $.width / 2 + Math.cos($.tick / 20) * $.min / 2,\n    y: $.height / 2 + Math.sin($.tick / 20) * $.min / 2,\n    angle: $.globalRotation + $.globalAngle,\n    speed: 0,\n    accel: 0.01 }));\n\n\n\n  $.particles.forEach((elem, index) =&gt; {\n    elem.step(index);\n  });\n\n  $.globalRotation += $.PI / 6;\n  $.globalAngle += $.PI / 6;\n};\n\n$.draw = () =&gt; {\n  $.ctx.clearRect(0, 0, $.width, $.height);\n\n  $.particles.forEach((elem, index) =&gt; {\n    elem.draw(index);\n  });\n};\n\n$.init = () =&gt; {\n  $.canvas = document.createElement(&quot;canvas&quot;);\n  $.ctx = $.canvas.getContext(&quot;2d&quot;);\n  $.width = 300;\n  $.height = 300;\n  $.canvas.width = $.width * window.devicePixelRatio;\n  $.canvas.height = $.height * window.devicePixelRatio;\n  $.canvas.style.width = `${$.width}px`;\n  $.canvas.style.height = `${$.height}px`;\n  $.ctx.scale(window.devicePixelRatio, window.devicePixelRatio);\n  $.min = $.width * 0.5;\n  $.particles = [];\n  $.globalAngle = 0;\n  $.globalRotation = 0;\n  $.tick = 0;\n  $.PI = Math.PI;\n  $.TWO_PI = $.PI * 2;\n  $.ctx.globalCompositeOperation = &quot;lighter&quot;;\n  document.body.appendChild($.canvas);\n  $.loop();\n};\n\n$.loop = () =&gt; {\n  requestAnimationFrame($.loop);\n  $.step();\n  $.draw();\n  $.tick++;\n};\n\n$.init();"};
+    __preprocessors = {
+      "html": "none",
+      "css": "none",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "CSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - CSS-only Colorful Calendar Concept</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="lYpl+0uaq6zcPwD5lqnpiZGs7MxU/HqcgxSkmwolIGr+gwWmWif20IrLrDj9vr/gTqfsMLLBA+CwuJUoKb8ORA==">
+<link rel="stylesheet" media="all" href="GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #111111;
+      color: #eeeeee;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #111111;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #eeeeee;
+      background-color: #333333;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #555555;
+      color: #eeeeee;
+      box-shadow: inset 0px 3px #797979;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #eeeeee;
+    }
+
+    .embed-nav svg {
+      stroke: #eeeeee !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #666666; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" class="active" aria-pressed="true">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/vYmKQYj" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"route"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"index"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"route"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"oct-week-3"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"route"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"oct-week-4"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"route"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"nov-week-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"route"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"schedule"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">main</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-device"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-header"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-subheader"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-bar"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-button -left"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-bars -calendar"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#index"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-left -schedule"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-title"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-heading -calendar"</span><span class="cm-tag cm-bracket">&gt;</span>Calendar<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-heading -schedule"</span><span class="cm-tag cm-bracket">&gt;</span>Wednesday, November 10<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-button -right"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-search"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">section</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-app"</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-week"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>SUN<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>MON<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>TUE<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>WED<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>THU<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>FRI<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-weekday"</span><span class="cm-tag cm-bracket">&gt;</span>SAT<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-scene -calendar"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-month -october"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-header"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-link"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#oct-week-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>October<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#nov-week-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-up"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#oct-week-4"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-up"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span>  <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-month -november"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-header"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-link"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#nov-week-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>November<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-up"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-month -december"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-header"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-link"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>December<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#nov-week-1"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-down"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#oct-week-3"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-down"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#schedule"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-month -january"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">header</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-header"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-link"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>January<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-arrow"</span> <span class="cm-attribute">href</span>=<span class="cm-string">"#oct-week-4"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-chevron-down"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">header</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-day"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-scene -schedule"</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>08:00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>wake up<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item -long"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>12:15<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>meeting with the team, discussing the project requirements<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>13:00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>lunch with Peter<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-map-marker"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span>cafe <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">q</span><span class="cm-tag cm-bracket">&gt;</span>Petit brasserie<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">q</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>14:30<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>call with Johnathan and Stevie<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item -long"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>16:45<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>project presentation<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-map-marker"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span>Head Office<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>18:00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>call with Johnathan and Stevie<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item -long"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>19:00<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>David's birthday party<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+          <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">i</span> <span class="cm-attribute">class</span>=<span class="cm-string">"fa fa-map-marker"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">i</span><span class="cm-tag cm-bracket">&gt;</span>bar <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">q</span><span class="cm-tag cm-bracket">&gt;</span>Tailor's John<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">q</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-item"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-time"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"cal-task"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+      <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">section</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">main</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"meta"</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>CSS-only Colorful <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">&gt;</span>Calendar Concept<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h1</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    Dribbble Rework<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span> <span class="cm-tag cm-bracket">/&gt;</span>
+    Original Shot by <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://dribbble.com/shots/2335073-Calendar-App-Animation"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>Ludmila Shevchenko<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    Click on the arrows (when enabled) and the highlighted date to see the effect.<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">&gt;</span>
+    You can also go <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span>back<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">strong</span><span class="cm-tag cm-bracket">&gt;</span> in your browser to navigate between scenes, or click the left arrow in the schedule view.
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+  <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+    Works in all modern browsers.
+  <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600</span>);
+
+<span class="cm-variable-2">$device-width</span>: <span class="cm-number">54vh</span>;
+<span class="cm-variable-2">$device-height</span>: <span class="cm-number">96vh</span>;
+<span class="cm-variable-2">$tile-size</span>: <span class="cm-variable-2">$device-width</span> <span class="cm-operator">/</span> <span class="cm-number">7</span>;
+
+<span class="cm-variable-2">$duration</span>: <span class="cm-number">0.6s</span>;
+<span class="cm-variable-2">$easing</span>: <span class="cm-variable cm-callee">cubic-bezier</span>(<span class="cm-number">0.645</span>, <span class="cm-number">0.045</span>, <span class="cm-number">0.355</span>, <span class="cm-number">1</span>);
+
+<span class="cm-variable-2">$type-small</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">4</span>;
+<span class="cm-variable-2">$type-normal</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">3</span>;
+<span class="cm-variable-2">$type-large</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">2.5</span>;
+
+<span class="cm-variable-2">$colors</span>: (
+  <span class="cm-atom">#FBEC6B</span>,
+  <span class="cm-atom">#F4BC6B</span>,
+  <span class="cm-atom">#EB8B6B</span>,
+  <span class="cm-atom">#E0536B</span>,
+  <span class="cm-atom">#D6306D</span>,
+  <span class="cm-atom">#A32C68</span>,
+  <span class="cm-atom">#722A65</span>,
+  <span class="cm-atom">#422662</span>,
+  <span class="cm-atom">#12255D</span>,
+  <span class="cm-atom">#275B75</span>,
+  <span class="cm-atom">#3C918B</span>,
+  <span class="cm-atom">#52C6A2</span>,
+  <span class="cm-atom">#66F8B6</span>,
+  <span class="cm-variable cm-callee">lighten</span>(<span class="cm-atom">#66f8b6</span>, <span class="cm-number">10%</span>)
+);
+
+<span class="cm-def">@function</span> <span class="cm-variable cm-callee">list-slice</span>(<span class="cm-variable-2">$list</span>, <span class="cm-variable-2">$from</span>, <span class="cm-variable-2">$to</span>: <span class="cm-variable cm-callee">length</span>(<span class="cm-variable-2">$list</span>)) {
+  <span class="cm-variable-2">$result</span>: ();
+  
+  <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-variable-2">$from</span> <span class="cm-tag">through</span> <span class="cm-variable-2">$to</span> {
+    <span class="cm-variable-2">$result</span>: <span class="cm-variable cm-callee">append</span>(<span class="cm-variable-2">$result</span>, <span class="cm-variable cm-callee">nth</span>(<span class="cm-variable-2">$list</span>, <span class="cm-variable-2">$i</span>));
+  }
+  
+  <span class="cm-def">@return</span> <span class="cm-variable-2">$result</span>;
+}
+
+<span class="cm-def">@function</span> <span class="cm-variable cm-callee">shadows</span>(<span class="cm-variable-2">$from</span>: <span class="cm-number">1</span>, <span class="cm-variable-2">$app</span>: <span class="cm-tag">false</span>) {
+  <span class="cm-variable-2">$shadows</span>: ();
+  <span class="cm-variable-2">$i</span>: <span class="cm-number">0</span>;
+  
+  <span class="cm-def">@if</span> (<span class="cm-variable-2">$app</span>) {
+    <span class="cm-def">@each</span> <span class="cm-variable-2">$color</span> <span class="cm-tag">in</span> <span class="cm-variable cm-callee">list-slice</span>(<span class="cm-variable-2">$colors</span>, <span class="cm-variable-2">$from</span>, <span class="cm-variable cm-callee">length</span>(<span class="cm-variable-2">$colors</span>) - <span class="cm-number">1</span>) {
+      <span class="cm-variable-2">$i</span>: <span class="cm-variable-2">$i</span> + <span class="cm-number">1</span>;
+      <span class="cm-variable-2">$shadows</span>: <span class="cm-variable cm-callee">append</span>(<span class="cm-variable-2">$shadows</span>, <span class="cm-variable-2">$color</span>, <span class="cm-variable">comma</span>);
+    }
+    
+    <span class="cm-def">@return</span> <span class="cm-variable-2">$shadows</span>;
+  }
+
+  <span class="cm-def">@each</span> <span class="cm-variable-2">$color</span> <span class="cm-tag">in</span> <span class="cm-variable cm-callee">list-slice</span>(<span class="cm-variable-2">$colors</span>, <span class="cm-variable-2">$from</span>, <span class="cm-variable cm-callee">length</span>(<span class="cm-variable-2">$colors</span>) - <span class="cm-number">1</span>) {
+    <span class="cm-variable-2">$i</span>: <span class="cm-variable-2">$i</span> + <span class="cm-number">1</span>;
+    <span class="cm-variable-2">$subshadows</span>: ();
+    <span class="cm-variable-2">$darkest-color</span>: <span class="cm-variable cm-callee">nth</span>(<span class="cm-variable cm-callee">list-slice</span>(<span class="cm-variable-2">$colors</span>, <span class="cm-variable-2">$from</span>), <span class="cm-variable-2">$i</span> + <span class="cm-number">1</span>);
+
+    <span class="cm-def">@for</span> <span class="cm-variable-2">$j</span> <span class="cm-tag">from</span> <span class="cm-number">1</span> <span class="cm-tag">through</span> <span class="cm-number">7</span> {
+      <span class="cm-variable-2">$subshadows</span>: <span class="cm-variable cm-callee">append</span>(
+        <span class="cm-variable-2">$subshadows</span>,
+        (<span class="cm-variable-2">$j</span> - <span class="cm-number">1</span>) * <span class="cm-variable-2">$tile-size</span> <span class="cm-variable-2">$i</span> * <span class="cm-variable-2">$tile-size</span> <span class="cm-variable cm-callee">mix</span>(<span class="cm-variable-2">$darkest-color</span>, <span class="cm-variable-2">$color</span>, <span class="cm-variable cm-callee">percentage</span>(<span class="cm-variable-2">$j</span> <span class="cm-operator">/</span> <span class="cm-number">7</span>)),
+        <span class="cm-variable">comma</span>);
+    }
+
+    <span class="cm-variable-2">$shadows</span>: <span class="cm-variable cm-callee">append</span>(<span class="cm-variable-2">$shadows</span>, <span class="cm-variable-2">$subshadows</span>, <span class="cm-variable">comma</span>);
+  }
+  
+  <span class="cm-def">@return</span> <span class="cm-variable-2">$shadows</span>;
+}
+
+%<span class="cm-tag">transition</span> {
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"index"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-calendar</span> {
+    &gt; <span class="cm-qualifier">.cal-month</span>, &gt; <span class="cm-qualifier">.cal-header</span> {
+      <span class="cm-property">animation</span>: <span class="cm-variable">fade-in</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$duration</span> * <span class="cm-number">0.5</span> <span class="cm-variable-2">$easing</span> <span class="cm-atom">both</span>;
+    }
+  }
+}
+
+<span class="cm-def">@keyframes</span> <span class="cm-variable">fade-in</span> {
+  <span class="cm-tag">from</span> { <span class="cm-property">opacity</span>: <span class="cm-number">0</span>; }
+  <span class="cm-tag">to</span> { <span class="cm-property">opacity</span>: <span class="cm-number">1</span>; }
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"oct-week-3"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  [<span class="cm-tag">href</span>=<span class="cm-string">"#oct-week-3"</span>] {
+    <span class="cm-property">cursor</span>: <span class="cm-atom">default</span>;
+  }
+  
+  <span class="cm-qualifier">.cal-app</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">1</span>, <span class="cm-variable">true</span>));
+  }
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"oct-week-4"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-qualifier">.cal-month</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(-<span class="cm-variable-2">$tile-size</span>);
+      
+    &amp;<span class="cm-qualifier">.-october</span> &gt; <span class="cm-qualifier">.cal-header</span> {
+      <span class="cm-property">transform</span>:
+        <span class="cm-variable cm-callee">translateY</span>(<span class="cm-variable-2">$tile-size</span>)
+        <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">4</span>);
+    }
+  }
+  
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-calendar</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">box-shadow</span>: <span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">2</span>);
+  }
+  
+  <span class="cm-qualifier">.cal-app</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">2</span>, <span class="cm-variable">true</span>));
+  }
+  
+  [<span class="cm-tag">href</span>=<span class="cm-string">"#oct-week-4"</span>] {
+    <span class="cm-property">z-index</span>: <span class="cm-number">-1</span>;
+  }
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"nov-week-1"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-qualifier">.cal-month</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(-<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">2</span>);
+      
+      &amp;<span class="cm-qualifier">.-october</span> &gt; <span class="cm-qualifier">.cal-header</span> {
+        <span class="cm-property">transform</span>:
+          <span class="cm-variable cm-callee">translateY</span>(<span class="cm-variable-2">$tile-size</span>)
+          <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">4</span>);
+        <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+      }
+      
+      &amp;<span class="cm-qualifier">.-november</span> {
+        <span class="cm-def">@extend</span> %<span class="cm-property">inactive-month</span>;
+      }
+      
+      &amp;<span class="cm-qualifier">.-december</span> {
+        <span class="cm-def">@extend</span> %<span class="cm-property">active-month</span>;
+      }
+  }
+  
+  <span class="cm-qualifier">.cal-app</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">3</span>, <span class="cm-variable">true</span>));
+  }
+  
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-calendar</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">box-shadow</span>: <span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">3</span>);
+  }
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"nov-week-2"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-qualifier">.cal-month</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateY</span>(-<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">3</span>);
+      
+      &amp;<span class="cm-qualifier">.-october</span> &gt; <span class="cm-qualifier">.cal-header</span> {
+        <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+      }
+      
+      &amp;<span class="cm-qualifier">.-november</span> {
+        <span class="cm-def">@extend</span> %<span class="cm-property">inactive-month</span>;
+      }
+      
+      &amp;<span class="cm-qualifier">.-december</span> {
+        <span class="cm-def">@extend</span> %<span class="cm-property">active-month</span>;
+      }
+  }
+  
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-calendar</span>:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">box-shadow</span>: <span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">4</span>);
+  }
+  
+  <span class="cm-qualifier">.cal-app</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">4</span>, <span class="cm-variable">true</span>));
+  }
+}
+
+[<span class="cm-tag">id</span>=<span class="cm-string">"schedule"</span>]:<span class="cm-variable-3">target</span> ~ <span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-qualifier">.cal-bar</span> <span class="cm-qualifier">.-schedule</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+  }
+  
+  <span class="cm-qualifier">.cal-bar</span> <span class="cm-qualifier">.-calendar</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  }
+  
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-schedule</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">2</span>;
+  }
+  
+  %<span class="cm-tag">schedule-text</span> {
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">0</span>);
+  }
+  
+  <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-number">1</span> <span class="cm-tag">through</span> <span class="cm-number">7</span> {
+    <span class="cm-qualifier">.cal-item</span>:<span class="cm-variable cm-callee">nth-child</span>(#{<span class="cm-variable-2">$i</span>}) %<span class="cm-tag">schedule-text</span> {
+      <span class="cm-property">transition-delay</span>: <span class="cm-number">0.06s</span> * (<span class="cm-variable-2">$i</span> - <span class="cm-number">1</span>);
+    }
+  }
+  
+  <span class="cm-qualifier">.cal-scene</span><span class="cm-qualifier">.-calendar</span> {
+    &amp;, * {
+      <span class="cm-property">transition-delay</span>: <span class="cm-variable-2">$duration</span>;
+    }
+  }
+}
+
+<span class="cm-qualifier">.cal-device</span> {
+  <span class="cm-property">width</span>: <span class="cm-variable-2">$device-width</span>;
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$device-height</span>;
+  <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+  
+  &gt; <span class="cm-qualifier">.cal-header</span> {
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span> * <span class="cm-number">1.5</span>;
+    <span class="cm-property">background</span>: <span class="cm-atom">#1c3e69</span>;
+  }
+  
+  <span class="cm-comment">// Initial state</span>
+  <span class="cm-qualifier">.cal-month</span><span class="cm-qualifier">.-october</span>, <span class="cm-qualifier">.cal-month</span><span class="cm-qualifier">.-december</span>, <span class="cm-qualifier">.cal-month</span><span class="cm-qualifier">.-january</span> {
+      <span class="cm-def">@extend</span> %<span class="cm-tag">inactive-month</span>;
+  }
+  
+  <span class="cm-qualifier">.cal-month</span><span class="cm-qualifier">.-november</span> {
+    <span class="cm-def">@extend</span> %<span class="cm-tag">active-month</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-app</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$device-height</span> - <span class="cm-variable-2">$tile-size</span> * <span class="cm-number">1.5</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-variable cm-callee">shadows</span>(<span class="cm-number">1</span>, <span class="cm-variable">true</span>));
+}
+
+<span class="cm-qualifier">.cal-week</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">row</span>;
+}
+
+<span class="cm-qualifier">.cal-weekday</span> {
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">1</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-normal</span>;
+}
+
+<span class="cm-qualifier">.fa</span> {
+  <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-normal</span>;
+}
+
+<span class="cm-qualifier">.cal-scene</span> {
+  <span class="cm-def">@extend</span> %<span class="cm-tag">transition</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  
+  &amp;<span class="cm-qualifier">.-calendar</span> {
+    &amp;:<span class="cm-variable-3">before</span> {
+      <span class="cm-property">content</span>: <span class="cm-string">''</span>;
+      <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+      <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span>;
+      <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+      <span class="cm-property">top</span>: -<span class="cm-variable-2">$tile-size</span>;
+      <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+      <span class="cm-property">box-shadow</span>: <span class="cm-variable cm-callee">shadows</span>();
+      <span class="cm-property">transition</span>: <span class="cm-variable">box-shadow</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+    }
+  }
+  
+  &amp;<span class="cm-qualifier">.-schedule</span> {
+    <span class="cm-property">z-index</span>: <span class="cm-number">-1</span>;
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  }
+}
+
+%<span class="cm-tag">inactive-month</span> {
+  &gt; <span class="cm-qualifier">.cal-header</span> {    
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">4</span>);
+
+    &gt; <span class="cm-qualifier">.cal-link</span> {
+      <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-keyword">white</span>, <span class="cm-number">0.4</span>);
+      &gt; <span class="cm-tag">span</span> {
+        <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable cm-callee">calc</span>(<span class="cm-number">-50%</span> - #{<span class="cm-variable-2">$tile-size</span> <span class="cm-error">/</span> <span class="cm-error">4</span>})) <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+        <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+      }
+    }
+
+    &gt; <span class="cm-qualifier">.cal-arrow</span> {
+      <span class="cm-property">opacity</span>: <span class="cm-number">1</span>;
+      <span class="cm-property">pointer-events</span>: <span class="cm-atom">inherit</span>;
+    }
+  }
+  
+  <span class="cm-qualifier">.cal-day</span> {
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-keyword">white</span>, <span class="cm-number">0.4</span>);
+  }
+  
+  &amp;<span class="cm-qualifier">.-october</span> {
+    <span class="cm-qualifier">.cal-arrow</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#EB8B6B</span>;
+    }
+  }
+  
+  &amp;<span class="cm-qualifier">.-november</span> {
+    <span class="cm-qualifier">.cal-arrow</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#D6306D</span>;
+    }
+  }
+  
+  &amp;<span class="cm-qualifier">.-december</span> {
+    <span class="cm-qualifier">.cal-arrow</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#102152</span>;
+    }
+  }
+  
+  &amp;<span class="cm-qualifier">.-january</span> {
+    <span class="cm-qualifier">.cal-arrow</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#97FACD</span>;
+    }
+  }
+}
+
+%<span class="cm-tag">active-month</span> {
+  &gt; <span class="cm-qualifier">.cal-header</span> {    
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">2</span>);
+  }
+  
+  <span class="cm-qualifier">.cal-link</span> {
+    <span class="cm-property">background-color</span>: <span class="cm-keyword">white</span>;
+    <span class="cm-property">color</span>: <span class="cm-keyword">gray</span>;
+
+    &gt; <span class="cm-tag">span</span> {
+      <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-number">-50%</span>) <span class="cm-variable cm-callee">translateY</span>(<span class="cm-number">-50%</span>);
+    }
+  }
+
+  <span class="cm-qualifier">.cal-arrow</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">pointer-events</span>: <span class="cm-atom">none</span>;
+  }
+  
+  <span class="cm-qualifier">.cal-day</span> {
+    <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  }
+  
+  &amp;<span class="cm-qualifier">.-november</span> {
+    <span class="cm-qualifier">.cal-link</span> <span class="cm-tag">span</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#DA3F6C</span>;
+    } 
+  }
+  
+  &amp;<span class="cm-qualifier">.-december</span> {
+    <span class="cm-qualifier">.cal-link</span> <span class="cm-tag">span</span> {
+      <span class="cm-property">color</span>: <span class="cm-atom">#26255F</span>;
+    } 
+  }
+}
+
+<span class="cm-qualifier">.cal-month</span> {
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-def">@extend</span> %<span class="cm-tag">cf</span>;
+  <span class="cm-property">counter-reset</span>: <span class="cm-variable">month</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">transform</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+  <span class="cm-property">z-index</span>: <span class="cm-number">1</span>;
+  
+  &amp;:<span class="cm-variable-3">first-child</span> {
+    <span class="cm-property">margin-top</span>: -<span class="cm-variable-2">$tile-size</span>;
+    <span class="cm-def">@extend</span> %<span class="cm-tag">inactive-month</span>;
+    
+    &gt; <span class="cm-qualifier">.cal-header</span> {
+      <span class="cm-property">top</span>: <span class="cm-number">2</span> * <span class="cm-variable-2">$tile-size</span>;
+    }
+    
+    ~ <span class="cm-qualifier">.cal-month</span> {
+      <span class="cm-property">margin-top</span>: -<span class="cm-variable-2">$tile-size</span>;
+    }
+  }
+  
+  &gt; <span class="cm-qualifier">.cal-header</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+    <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span> * <span class="cm-number">3</span>;
+    <span class="cm-property">padding</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">3.5</span>;
+    <span class="cm-property">z-index</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+    
+    &gt; <span class="cm-qualifier">.cal-link</span> {
+      <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+      <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+      <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-small</span>;
+      <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+      <span class="cm-property">color</span>: <span class="cm-keyword">gray</span>;
+      <span class="cm-property">text-transform</span>: <span class="cm-atom">uppercase</span>;
+      <span class="cm-property">padding</span>: <span class="cm-variable-2">$type-normal</span> <span class="cm-operator">/</span> <span class="cm-number">4</span> <span class="cm-variable-2">$type-normal</span> * <span class="cm-number">2</span>;
+      <span class="cm-property">border-radius</span>: <span class="cm-variable-2">$type-normal</span>;
+      <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+      <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+      <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+      
+      &gt; <span class="cm-tag">span</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+        <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+        <span class="cm-property">top</span>: <span class="cm-number">48%</span>; <span class="cm-comment">// Uppercase text gets vertically centered weirdly.</span>
+        <span class="cm-property">left</span>: <span class="cm-number">50%</span>;
+        <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+      }
+    }
+  }
+  
+  &amp;<span class="cm-qualifier">.-january</span> {
+    <span class="cm-property">margin-top</span>: <span class="cm-number">0</span> <span class="cm-keyword">!important</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-subheader</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">2</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+}
+
+<span class="cm-qualifier">.cal-bar</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">row</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  
+  &gt; <span class="cm-qualifier">.cal-title</span> {
+    <span class="cm-property">flex-grow</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  }
+  
+  <span class="cm-qualifier">.-schedule</span> {
+    <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-button</span> {
+  <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  
+  &gt; * {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+    <span class="cm-def">@extend</span> %<span class="cm-tag">transition</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-large</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-title</span> {
+  &gt; <span class="cm-qualifier">.cal-heading</span> {
+    <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+    <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">left</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-large</span>;
+    <span class="cm-def">@extend</span> %<span class="cm-tag">transition</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-arrow</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">absolute</span>;
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">background</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">top</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">right</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-variable-2">$tile-size</span> <span class="cm-operator">/</span> <span class="cm-number">6</span>;
+  <span class="cm-property">background-clip</span>: <span class="cm-atom">content-box</span>;
+  <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  <span class="cm-property">opacity</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">pointer-events</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">gray</span>;
+  
+  <span class="cm-comment">// Stupid font awesome icons</span>
+  <span class="cm-qualifier">.fa-chevron-up</span> {
+    <span class="cm-property">top</span>: <span class="cm-number">-1px</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-day</span> {
+  <span class="cm-property">counter-increment</span>: <span class="cm-variable">month</span>;
+  <span class="cm-property">width</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+  <span class="cm-property">float</span>: <span class="cm-atom">left</span>;
+  <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-normal</span>;
+  <span class="cm-def">@extend</span> %<span class="cm-tag">transition</span>;
+  
+  &amp;[<span class="cm-tag">href</span>=<span class="cm-string">"#schedule"</span>]:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">background</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-keyword">white</span>, <span class="cm-number">0.4</span>);
+  }
+  
+  &amp;:<span class="cm-variable-3">before</span> {
+    <span class="cm-property">content</span>: <span class="cm-variable cm-callee">counter</span>(<span class="cm-variable">month</span>);
+    <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">75%</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">75%</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">border-radius</span>: <span class="cm-number">50%</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-item</span> {
+  <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">row</span>;
+  
+  &amp;<span class="cm-qualifier">.-long</span> {
+    <span class="cm-property">height</span>: <span class="cm-variable-2">$tile-size</span> * <span class="cm-number">2</span>;
+  }
+  
+  <span class="cm-def">@for</span> <span class="cm-variable-2">$i</span> <span class="cm-tag">from</span> <span class="cm-number">1</span> <span class="cm-tag">through</span> <span class="cm-number">8</span> {
+    &amp;:<span class="cm-variable cm-callee">nth-child</span>(#{<span class="cm-variable-2">$i</span>}) {
+      &gt; <span class="cm-qualifier">.cal-time</span> {      
+        <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">mix</span>(<span class="cm-atom">#BD1F50</span>, <span class="cm-atom">#FA739D</span>, <span class="cm-variable cm-callee">percentage</span>((<span class="cm-variable-2">$i</span> - <span class="cm-number">1</span>) <span class="cm-operator">/</span> <span class="cm-number">8</span>));
+      }
+      
+      &gt; <span class="cm-qualifier">.cal-task</span> {
+        <span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">mix</span>(<span class="cm-atom">#E8B1C2</span>, <span class="cm-keyword">white</span>, <span class="cm-variable cm-callee">percentage</span>((<span class="cm-variable-2">$i</span> - <span class="cm-number">1</span>) <span class="cm-operator">/</span> <span class="cm-number">8</span>));
+      }
+    }
+  }
+}
+
+<span class="cm-qualifier">.cal-time</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">2</span> * <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">flex-basis</span>: <span class="cm-number">2</span> * <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">line-height</span>: <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+  <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+
+  &gt; * {
+    <span class="cm-def">@extend</span> %<span class="cm-tag">schedule-text</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">-2</span>);
+    <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-normal</span>;
+  }
+}
+
+<span class="cm-qualifier">.cal-task</span> {
+  <span class="cm-property">flex-basis</span>: <span class="cm-number">5</span> * <span class="cm-variable-2">$tile-size</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">background-color</span>: <span class="cm-keyword">white</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">column</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">flex-start</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span> <span class="cm-variable-2">$type-normal</span>;
+  <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-small</span>;
+
+  &gt; <span class="cm-tag">p</span> {
+    <span class="cm-property">margin-top</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">margin-bottom</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#12255E</span>;
+  }
+
+  &gt; <span class="cm-tag">a</span> {
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">color</span>: <span class="cm-atom">#EA80A2</span>;
+    <span class="cm-property">font-weight</span>: <span class="cm-number">600</span>;
+    
+    &gt; <span class="cm-qualifier">.fa</span> {
+      <span class="cm-property">margin-right</span>: <span class="cm-variable-2">$type-small</span> <span class="cm-operator">/</span> <span class="cm-number">2</span>;
+    }
+  }
+
+  &gt; * {
+    <span class="cm-def">@extend</span> %<span class="cm-tag">schedule-text</span>;
+    <span class="cm-property">transition</span>: <span class="cm-atom">all</span> <span class="cm-variable-2">$duration</span> <span class="cm-variable-2">$easing</span>;
+    <span class="cm-property">transform</span>: <span class="cm-variable cm-callee">translateX</span>(<span class="cm-variable-2">$tile-size</span> * <span class="cm-number">5</span>);
+  }
+}
+
+<span class="cm-qualifier">.meta</span> {
+  <span class="cm-property">flex-basis</span>: <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">80%</span> - #{<span class="cm-variable-2">$device-width</span>});
+  <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-normal</span>;
+  <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+  
+  <span class="cm-tag">p</span>, <span class="cm-tag">a</span> { <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-keyword">white</span>, <span class="cm-number">0.7</span>); }
+  <span class="cm-tag">h1</span> {
+    <span class="cm-property">font-size</span>: <span class="cm-variable-2">$type-large</span> * <span class="cm-number">3</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-variable-2">$type-large</span> * <span class="cm-number">3</span>;
+    <span class="cm-property">font-weight</span>: <span class="cm-number">300</span>;
+    <span class="cm-property">color</span>: <span class="cm-keyword">white</span>;
+  }
+  <span class="cm-tag">p</span> { <span class="cm-property">line-height</span>: <span class="cm-number">1.4</span>; }
+  
+  <span class="cm-tag">a</span>:<span class="cm-variable-3">hover</span> {
+    <span class="cm-property">color</span>: <span class="cm-variable cm-callee">rgba</span>(<span class="cm-keyword">white</span>, <span class="cm-number">0.7</span>);
+  }
+  
+  <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">750px</span>) {
+    <span class="cm-property">display</span>: <span class="cm-atom">none</span>;
+  }
+}
+
+<span class="cm-tag">body</span> {
+  <span class="cm-property">background</span>: <span class="cm-atom">#4ACDDE</span>;
+  <span class="cm-property">background</span>: <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">135deg</span>, <span class="cm-atom">#4EFFDF</span>, <span class="cm-atom">#48BBDE</span>, <span class="cm-atom">#F47EC6</span>);
+  <span class="cm-property">font-family</span>: <span class="cm-variable">Source</span> <span class="cm-variable">Sans</span> <span class="cm-variable">Pro</span>, <span class="cm-atom">sans-serif</span>;
+  <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+  <span class="cm-property">flex-direction</span>: <span class="cm-atom">row</span>;
+  <span class="cm-property">justify-content</span>: <span class="cm-atom">space-around</span>;
+  <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+  <span class="cm-property">overflow</span>: <span class="cm-atom">hidden</span>;
+  
+  <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">750px</span>) {
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+  }
+}
+
+<span class="cm-tag">html</span>, <span class="cm-tag">body</span> {
+  <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+  <span class="cm-property">margin</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+  <span class="cm-property">quotes</span>: <span class="cm-string">"«"</span> <span class="cm-string">"»"</span>;
+}
+
+*, *:<span class="cm-variable-3">before</span>, *:<span class="cm-variable-3">after</span> {
+  <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+  <span class="cm-property">position</span>: <span class="cm-atom">relative</span>;
+}
+
+%<span class="cm-tag">cf</span>:<span class="cm-variable-3">before</span>,
+%<span class="cm-tag">cf</span>:<span class="cm-variable-3">after</span> {
+    <span class="cm-property">content</span>: <span class="cm-string">" "</span>; <span class="cm-comment">/* 1 */</span>
+    <span class="cm-property">display</span>: <span class="cm-atom">table</span>; <span class="cm-comment">/* 2 */</span>
+}
+
+%<span class="cm-tag">cf</span>:<span class="cm-variable-3">after</span> {
+    <span class="cm-property">clear</span>: <span class="cm-atom">both</span>;
+}</code></pre>
+<a href="#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for CSS-only Colorful Calendar Concept" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for CSS-only Colorful Calendar Concept" data-src="https://cdpn.io/bgoonz/fullembedgrid/vYmKQYj?animations=run&amp;type=embed" src="vYmKQYj_data/vYmKQYj.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/davidkpiano/fullpage/xwyVXO?default-tab=html%2Cresult&amp;theme-id=dark">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;route&quot; id=&quot;index&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;route&quot; id=&quot;oct-week-3&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;route&quot; id=&quot;oct-week-4&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;route&quot; id=&quot;nov-week-1&quot;&gt;&lt;/div&gt;\n&lt;div class=&quot;route&quot; id=&quot;schedule&quot;&gt;&lt;/div&gt;\n&lt;main class=&quot;cal-device&quot;&gt;\n  &lt;header class=&quot;cal-header&quot;&gt;\n    &lt;div class=&quot;cal-subheader&quot;&gt;&lt;/div&gt;\n    &lt;div class=&quot;cal-bar&quot;&gt;\n      &lt;div class=&quot;cal-button -left&quot;&gt;\n        &lt;i class=&quot;fa fa-bars -calendar&quot;&gt;&lt;/i&gt;\n        &lt;a href=&quot;#index&quot; class=&quot;fa fa-chevron-left -schedule&quot;&gt;&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-title&quot;&gt;\n        &lt;div class=&quot;cal-heading -calendar&quot;&gt;Calendar&lt;/div&gt;\n        &lt;div class=&quot;cal-heading -schedule&quot;&gt;Wednesday, November 10&lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-button -right&quot;&gt;\n        &lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/header&gt;\n  &lt;section class=&quot;cal-app&quot;&gt;\n    &lt;header class=&quot;cal-week&quot;&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;SUN&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;MON&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;TUE&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;WED&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;THU&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;FRI&lt;/div&gt;\n      &lt;div class=&quot;cal-weekday&quot;&gt;SAT&lt;/div&gt;\n    &lt;/header&gt;\n    &lt;div class=&quot;cal-scene -calendar&quot;&gt;\n      &lt;div class=&quot;cal-month -october&quot;&gt;\n        &lt;header class=&quot;cal-header&quot;&gt;\n          &lt;a class=&quot;cal-link&quot; href=&quot;#oct-week-1&quot;&gt;&lt;span&gt;October&lt;/span&gt;&lt;/a&gt;\n          &lt;a class=&quot;cal-arrow&quot; href=&quot;#nov-week-1&quot;&gt;&lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n          &lt;a class=&quot;cal-arrow&quot; href=&quot;#oct-week-4&quot;&gt;&lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n        &lt;/header&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot;  class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-month -november&quot;&gt;\n        &lt;header class=&quot;cal-header&quot;&gt;\n          &lt;a class=&quot;cal-link&quot; href=&quot;#nov-week-1&quot;&gt;&lt;span&gt;November&lt;/span&gt;&lt;/a&gt;\n          &lt;a class=&quot;cal-arrow&quot;&gt;&lt;i class=&quot;fa fa-chevron-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n        &lt;/header&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-month -december&quot;&gt;\n        &lt;header class=&quot;cal-header&quot;&gt;\n          &lt;a class=&quot;cal-link&quot;&gt;&lt;span&gt;December&lt;/span&gt;&lt;/a&gt;\n          &lt;a class=&quot;cal-arrow&quot; href=&quot;#nov-week-1&quot;&gt;&lt;i class=&quot;fa fa-chevron-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n          &lt;a class=&quot;cal-arrow&quot; href=&quot;#oct-week-3&quot;&gt;&lt;i class=&quot;fa fa-chevron-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n        &lt;/header&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a href=&quot;#schedule&quot; class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-month -january&quot;&gt;\n        &lt;header class=&quot;cal-header&quot;&gt;\n          &lt;div class=&quot;cal-link&quot;&gt;&lt;span&gt;January&lt;/span&gt;&lt;/div&gt;\n          &lt;a class=&quot;cal-arrow&quot; href=&quot;#oct-week-4&quot;&gt;&lt;i class=&quot;fa fa-chevron-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;\n        &lt;/header&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n        &lt;a class=&quot;cal-day&quot;&gt;&lt;/a&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;cal-scene -schedule&quot;&gt;\n      &lt;div class=&quot;cal-item&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;08:00&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;wake up&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item -long&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;12:15&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;meeting with the team, discussing the project requirements&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;13:00&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;lunch with Peter&lt;/p&gt;\n          &lt;a&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;cafe &lt;q&gt;Petit brasserie&lt;/q&gt;&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;14:30&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;call with Johnathan and Stevie&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item -long&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;16:45&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;project presentation&lt;/p&gt;\n          &lt;a&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;Head Office&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;18:00&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;call with Johnathan and Stevie&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item -long&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;span&gt;19:00&lt;/span&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;\n          &lt;p&gt;David&#39;s birthday party&lt;/p&gt;\n          &lt;a&gt;&lt;i class=&quot;fa fa-map-marker&quot;&gt;&lt;/i&gt;bar &lt;q&gt;Tailor&#39;s John&lt;/q&gt;&lt;/a&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=&quot;cal-item&quot;&gt;\n        &lt;div class=&quot;cal-time&quot;&gt;&lt;/div&gt;\n        &lt;div class=&quot;cal-task&quot;&gt;&lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/section&gt;\n&lt;/main&gt;\n&lt;div class=&quot;meta&quot;&gt;\n  &lt;h1&gt;CSS-only Colorful &lt;br&gt;Calendar Concept&lt;/h1&gt;\n  &lt;p&gt;\n    Dribbble Rework&lt;br /&gt;\n    Original Shot by &lt;a href=&quot;https://dribbble.com/shots/2335073-Calendar-App-Animation&quot; target=&quot;_blank&quot;&gt;Ludmila Shevchenko&lt;/a&gt;\n  &lt;/p&gt;\n  &lt;p&gt;\n    Click on the arrows (when enabled) and the highlighted date to see the effect.&lt;br&gt;\n    You can also go &lt;strong&gt;back&lt;/strong&gt; in your browser to navigate between scenes, or click the left arrow in the schedule view.\n  &lt;/p&gt;\n  &lt;p&gt;\n    Works in all modern browsers.\n  &lt;/p&gt;\n&lt;/div&gt;","css":"@charset &quot;UTF-8&quot;;\n@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);\n.cal-day, .cal-title &gt; .cal-heading, .cal-button &gt; *, .cal-scene {\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n\n[id=index]:target ~ .cal-device .cal-scene.-calendar &gt; .cal-month, [id=index]:target ~ .cal-device .cal-scene.-calendar &gt; .cal-header {\n  -webkit-animation: fade-in 0.6s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) both;\n          animation: fade-in 0.6s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) both;\n}\n\n@-webkit-keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n\n@keyframes fade-in {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n[id=oct-week-3]:target ~ .cal-device [href=&quot;#oct-week-3&quot;] {\n  cursor: default;\n}\n[id=oct-week-3]:target ~ .cal-device .cal-app {\n  background: linear-gradient(#FBEC6B, #F4BC6B, #EB8B6B, #E0536B, #D6306D, #A32C68, #722A65, #422662, #12255D, #275B75, #3C918B, #52C6A2, #66F8B6);\n}\n\n[id=oct-week-4]:target ~ .cal-device .cal-month {\n  transform: translateY(-7.7142857143vh);\n}\n[id=oct-week-4]:target ~ .cal-device .cal-month.-october &gt; .cal-header {\n  transform: translateY(7.7142857143vh) translateX(30.8571428571vh);\n}\n[id=oct-week-4]:target ~ .cal-device .cal-scene.-calendar:before {\n  box-shadow: 0vh 7.7142857143vh #f3b56b, 7.7142857143vh 7.7142857143vh #f1ae6b, 15.4285714286vh 7.7142857143vh #f0a76b, 23.1428571429vh 7.7142857143vh #efa06b, 30.8571428571vh 7.7142857143vh #ee996b, 38.5714285714vh 7.7142857143vh #ec926b, 46.2857142857vh 7.7142857143vh #eb8b6b, 0vh 15.4285714286vh #e9836b, 7.7142857143vh 15.4285714286vh #e87b6b, 15.4285714286vh 15.4285714286vh #e6736b, 23.1428571429vh 15.4285714286vh #e56b6b, 30.8571428571vh 15.4285714286vh #e3636b, 38.5714285714vh 15.4285714286vh #e25b6b, 46.2857142857vh 15.4285714286vh #e0536b, 0vh 23.1428571429vh #df4e6b, 7.7142857143vh 23.1428571429vh #dd496c, 15.4285714286vh 23.1428571429vh #dc446c, 23.1428571429vh 23.1428571429vh #da3f6c, 30.8571428571vh 23.1428571429vh #d93a6c, 38.5714285714vh 23.1428571429vh #d7356d, 46.2857142857vh 23.1428571429vh #d6306d, 0vh 30.8571428571vh #cf2f6c, 7.7142857143vh 30.8571428571vh #c72f6c, 15.4285714286vh 30.8571428571vh #c02e6b, 23.1428571429vh 30.8571428571vh #b92e6a, 30.8571428571vh 30.8571428571vh #b22d69, 38.5714285714vh 30.8571428571vh #aa2d69, 46.2857142857vh 30.8571428571vh #a32c68, 0vh 38.5714285714vh #9c2c68, 7.7142857143vh 38.5714285714vh #952b67, 15.4285714286vh 38.5714285714vh #8e2b67, 23.1428571429vh 38.5714285714vh #872b66, 30.8571428571vh 38.5714285714vh #802b66, 38.5714285714vh 38.5714285714vh #792a65, 46.2857142857vh 38.5714285714vh #722a65, 0vh 46.2857142857vh #6b2965, 7.7142857143vh 46.2857142857vh #642964, 15.4285714286vh 46.2857142857vh #5d2864, 23.1428571429vh 46.2857142857vh #572863, 30.8571428571vh 46.2857142857vh #502763, 38.5714285714vh 46.2857142857vh #492762, 46.2857142857vh 46.2857142857vh #422662, 0vh 54vh #3b2661, 7.7142857143vh 54vh #342661, 15.4285714286vh 54vh #2d2660, 23.1428571429vh 54vh #27255f, 30.8571428571vh 54vh #20255e, 38.5714285714vh 54vh #19255e, 46.2857142857vh 54vh #12255d, 0vh 61.7142857143vh #152d60, 7.7142857143vh 61.7142857143vh #183464, 15.4285714286vh 61.7142857143vh #1b3c67, 23.1428571429vh 61.7142857143vh #1e446b, 30.8571428571vh 61.7142857143vh #214c6e, 38.5714285714vh 61.7142857143vh #245372, 46.2857142857vh 61.7142857143vh #275b75, 0vh 69.4285714286vh #2a6378, 7.7142857143vh 69.4285714286vh #2d6a7b, 15.4285714286vh 69.4285714286vh #30727e, 23.1428571429vh 69.4285714286vh #337a82, 30.8571428571vh 69.4285714286vh #368285, 38.5714285714vh 69.4285714286vh #398988, 46.2857142857vh 69.4285714286vh #3c918b, 0vh 77.1428571429vh #3f998e, 7.7142857143vh 77.1428571429vh #42a092, 15.4285714286vh 77.1428571429vh #45a895, 23.1428571429vh 77.1428571429vh #49af98, 30.8571428571vh 77.1428571429vh #4cb79b, 38.5714285714vh 77.1428571429vh #4fbe9f, 46.2857142857vh 77.1428571429vh #52c6a2, 0vh 84.8571428571vh #55cda5, 7.7142857143vh 84.8571428571vh #58d4a8, 15.4285714286vh 84.8571428571vh #5bdbab, 23.1428571429vh 84.8571428571vh #5de3ad, 30.8571428571vh 84.8571428571vh #60eab0, 38.5714285714vh 84.8571428571vh #63f1b3, 46.2857142857vh 84.8571428571vh #66f8b6, 0vh 92.5714285714vh #6df8b9, 7.7142857143vh 92.5714285714vh #74f9bd, 15.4285714286vh 92.5714285714vh #7bf9c0, 23.1428571429vh 92.5714285714vh #82f9c3, 30.8571428571vh 92.5714285714vh #89f9c6, 38.5714285714vh 92.5714285714vh #90faca, 46.2857142857vh 92.5714285714vh #97facd;\n}\n[id=oct-week-4]:target ~ .cal-device .cal-app {\n  background: linear-gradient(#F4BC6B, #EB8B6B, #E0536B, #D6306D, #A32C68, #722A65, #422662, #12255D, #275B75, #3C918B, #52C6A2, #66F8B6);\n}\n[id=oct-week-4]:target ~ .cal-device [href=&quot;#oct-week-4&quot;] {\n  z-index: -1;\n}\n\n[id=nov-week-1]:target ~ .cal-device .cal-month {\n  transform: translateY(-15.4285714286vh);\n}\n[id=nov-week-1]:target ~ .cal-device .cal-month.-october &gt; .cal-header {\n  transform: translateY(7.7142857143vh) translateX(30.8571428571vh);\n  opacity: 0;\n}\n[id=nov-week-1]:target ~ .cal-device .cal-app {\n  background: linear-gradient(#EB8B6B, #E0536B, #D6306D, #A32C68, #722A65, #422662, #12255D, #275B75, #3C918B, #52C6A2, #66F8B6);\n}\n[id=nov-week-1]:target ~ .cal-device .cal-scene.-calendar:before {\n  box-shadow: 0vh 7.7142857143vh #e9836b, 7.7142857143vh 7.7142857143vh #e87b6b, 15.4285714286vh 7.7142857143vh #e6736b, 23.1428571429vh 7.7142857143vh #e56b6b, 30.8571428571vh 7.7142857143vh #e3636b, 38.5714285714vh 7.7142857143vh #e25b6b, 46.2857142857vh 7.7142857143vh #e0536b, 0vh 15.4285714286vh #df4e6b, 7.7142857143vh 15.4285714286vh #dd496c, 15.4285714286vh 15.4285714286vh #dc446c, 23.1428571429vh 15.4285714286vh #da3f6c, 30.8571428571vh 15.4285714286vh #d93a6c, 38.5714285714vh 15.4285714286vh #d7356d, 46.2857142857vh 15.4285714286vh #d6306d, 0vh 23.1428571429vh #cf2f6c, 7.7142857143vh 23.1428571429vh #c72f6c, 15.4285714286vh 23.1428571429vh #c02e6b, 23.1428571429vh 23.1428571429vh #b92e6a, 30.8571428571vh 23.1428571429vh #b22d69, 38.5714285714vh 23.1428571429vh #aa2d69, 46.2857142857vh 23.1428571429vh #a32c68, 0vh 30.8571428571vh #9c2c68, 7.7142857143vh 30.8571428571vh #952b67, 15.4285714286vh 30.8571428571vh #8e2b67, 23.1428571429vh 30.8571428571vh #872b66, 30.8571428571vh 30.8571428571vh #802b66, 38.5714285714vh 30.8571428571vh #792a65, 46.2857142857vh 30.8571428571vh #722a65, 0vh 38.5714285714vh #6b2965, 7.7142857143vh 38.5714285714vh #642964, 15.4285714286vh 38.5714285714vh #5d2864, 23.1428571429vh 38.5714285714vh #572863, 30.8571428571vh 38.5714285714vh #502763, 38.5714285714vh 38.5714285714vh #492762, 46.2857142857vh 38.5714285714vh #422662, 0vh 46.2857142857vh #3b2661, 7.7142857143vh 46.2857142857vh #342661, 15.4285714286vh 46.2857142857vh #2d2660, 23.1428571429vh 46.2857142857vh #27255f, 30.8571428571vh 46.2857142857vh #20255e, 38.5714285714vh 46.2857142857vh #19255e, 46.2857142857vh 46.2857142857vh #12255d, 0vh 54vh #152d60, 7.7142857143vh 54vh #183464, 15.4285714286vh 54vh #1b3c67, 23.1428571429vh 54vh #1e446b, 30.8571428571vh 54vh #214c6e, 38.5714285714vh 54vh #245372, 46.2857142857vh 54vh #275b75, 0vh 61.7142857143vh #2a6378, 7.7142857143vh 61.7142857143vh #2d6a7b, 15.4285714286vh 61.7142857143vh #30727e, 23.1428571429vh 61.7142857143vh #337a82, 30.8571428571vh 61.7142857143vh #368285, 38.5714285714vh 61.7142857143vh #398988, 46.2857142857vh 61.7142857143vh #3c918b, 0vh 69.4285714286vh #3f998e, 7.7142857143vh 69.4285714286vh #42a092, 15.4285714286vh 69.4285714286vh #45a895, 23.1428571429vh 69.4285714286vh #49af98, 30.8571428571vh 69.4285714286vh #4cb79b, 38.5714285714vh 69.4285714286vh #4fbe9f, 46.2857142857vh 69.4285714286vh #52c6a2, 0vh 77.1428571429vh #55cda5, 7.7142857143vh 77.1428571429vh #58d4a8, 15.4285714286vh 77.1428571429vh #5bdbab, 23.1428571429vh 77.1428571429vh #5de3ad, 30.8571428571vh 77.1428571429vh #60eab0, 38.5714285714vh 77.1428571429vh #63f1b3, 46.2857142857vh 77.1428571429vh #66f8b6, 0vh 84.8571428571vh #6df8b9, 7.7142857143vh 84.8571428571vh #74f9bd, 15.4285714286vh 84.8571428571vh #7bf9c0, 23.1428571429vh 84.8571428571vh #82f9c3, 30.8571428571vh 84.8571428571vh #89f9c6, 38.5714285714vh 84.8571428571vh #90faca, 46.2857142857vh 84.8571428571vh #97facd;\n}\n\n[id=nov-week-2]:target ~ .cal-device .cal-month {\n  transform: translateY(-23.1428571429vh);\n}\n[id=nov-week-2]:target ~ .cal-device .cal-month.-october &gt; .cal-header {\n  opacity: 0;\n}\n[id=nov-week-2]:target ~ .cal-device .cal-scene.-calendar:before {\n  box-shadow: 0vh 7.7142857143vh #df4e6b, 7.7142857143vh 7.7142857143vh #dd496c, 15.4285714286vh 7.7142857143vh #dc446c, 23.1428571429vh 7.7142857143vh #da3f6c, 30.8571428571vh 7.7142857143vh #d93a6c, 38.5714285714vh 7.7142857143vh #d7356d, 46.2857142857vh 7.7142857143vh #d6306d, 0vh 15.4285714286vh #cf2f6c, 7.7142857143vh 15.4285714286vh #c72f6c, 15.4285714286vh 15.4285714286vh #c02e6b, 23.1428571429vh 15.4285714286vh #b92e6a, 30.8571428571vh 15.4285714286vh #b22d69, 38.5714285714vh 15.4285714286vh #aa2d69, 46.2857142857vh 15.4285714286vh #a32c68, 0vh 23.1428571429vh #9c2c68, 7.7142857143vh 23.1428571429vh #952b67, 15.4285714286vh 23.1428571429vh #8e2b67, 23.1428571429vh 23.1428571429vh #872b66, 30.8571428571vh 23.1428571429vh #802b66, 38.5714285714vh 23.1428571429vh #792a65, 46.2857142857vh 23.1428571429vh #722a65, 0vh 30.8571428571vh #6b2965, 7.7142857143vh 30.8571428571vh #642964, 15.4285714286vh 30.8571428571vh #5d2864, 23.1428571429vh 30.8571428571vh #572863, 30.8571428571vh 30.8571428571vh #502763, 38.5714285714vh 30.8571428571vh #492762, 46.2857142857vh 30.8571428571vh #422662, 0vh 38.5714285714vh #3b2661, 7.7142857143vh 38.5714285714vh #342661, 15.4285714286vh 38.5714285714vh #2d2660, 23.1428571429vh 38.5714285714vh #27255f, 30.8571428571vh 38.5714285714vh #20255e, 38.5714285714vh 38.5714285714vh #19255e, 46.2857142857vh 38.5714285714vh #12255d, 0vh 46.2857142857vh #152d60, 7.7142857143vh 46.2857142857vh #183464, 15.4285714286vh 46.2857142857vh #1b3c67, 23.1428571429vh 46.2857142857vh #1e446b, 30.8571428571vh 46.2857142857vh #214c6e, 38.5714285714vh 46.2857142857vh #245372, 46.2857142857vh 46.2857142857vh #275b75, 0vh 54vh #2a6378, 7.7142857143vh 54vh #2d6a7b, 15.4285714286vh 54vh #30727e, 23.1428571429vh 54vh #337a82, 30.8571428571vh 54vh #368285, 38.5714285714vh 54vh #398988, 46.2857142857vh 54vh #3c918b, 0vh 61.7142857143vh #3f998e, 7.7142857143vh 61.7142857143vh #42a092, 15.4285714286vh 61.7142857143vh #45a895, 23.1428571429vh 61.7142857143vh #49af98, 30.8571428571vh 61.7142857143vh #4cb79b, 38.5714285714vh 61.7142857143vh #4fbe9f, 46.2857142857vh 61.7142857143vh #52c6a2, 0vh 69.4285714286vh #55cda5, 7.7142857143vh 69.4285714286vh #58d4a8, 15.4285714286vh 69.4285714286vh #5bdbab, 23.1428571429vh 69.4285714286vh #5de3ad, 30.8571428571vh 69.4285714286vh #60eab0, 38.5714285714vh 69.4285714286vh #63f1b3, 46.2857142857vh 69.4285714286vh #66f8b6, 0vh 77.1428571429vh #6df8b9, 7.7142857143vh 77.1428571429vh #74f9bd, 15.4285714286vh 77.1428571429vh #7bf9c0, 23.1428571429vh 77.1428571429vh #82f9c3, 30.8571428571vh 77.1428571429vh #89f9c6, 38.5714285714vh 77.1428571429vh #90faca, 46.2857142857vh 77.1428571429vh #97facd;\n}\n[id=nov-week-2]:target ~ .cal-device .cal-app {\n  background: linear-gradient(#E0536B, #D6306D, #A32C68, #722A65, #422662, #12255D, #275B75, #3C918B, #52C6A2, #66F8B6);\n}\n\n[id=schedule]:target ~ .cal-device .cal-bar .-schedule {\n  opacity: 1;\n}\n[id=schedule]:target ~ .cal-device .cal-bar .-calendar {\n  opacity: 0;\n}\n[id=schedule]:target ~ .cal-device .cal-scene.-schedule {\n  opacity: 1;\n  z-index: 2;\n}\n[id=schedule]:target ~ .cal-device .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-time &gt; * {\n  transform: translateX(0);\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(1) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(1) .cal-time &gt; * {\n  transition-delay: 0s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(2) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(2) .cal-time &gt; * {\n  transition-delay: 0.06s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(3) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(3) .cal-time &gt; * {\n  transition-delay: 0.12s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(4) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(4) .cal-time &gt; * {\n  transition-delay: 0.18s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(5) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(5) .cal-time &gt; * {\n  transition-delay: 0.24s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(6) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(6) .cal-time &gt; * {\n  transition-delay: 0.3s;\n}\n[id=schedule]:target ~ .cal-device .cal-item:nth-child(7) .cal-task &gt; *, [id=schedule]:target ~ .cal-device .cal-item:nth-child(7) .cal-time &gt; * {\n  transition-delay: 0.36s;\n}\n[id=schedule]:target ~ .cal-device .cal-scene.-calendar, [id=schedule]:target ~ .cal-device .cal-scene.-calendar * {\n  transition-delay: 0.6s;\n}\n\n.cal-device {\n  width: 54vh;\n  height: 96vh;\n  background: white;\n}\n.cal-device &gt; .cal-header {\n  height: 11.5714285714vh;\n  background: #1c3e69;\n}\n.cal-app {\n  height: 84.4285714286vh;\n  width: 100%;\n  background: linear-gradient(#FBEC6B, #F4BC6B, #EB8B6B, #E0536B, #D6306D, #A32C68, #722A65, #422662, #12255D, #275B75, #3C918B, #52C6A2, #66F8B6);\n}\n\n.cal-week {\n  height: 7.7142857143vh;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n\n.cal-weekday {\n  color: white;\n  width: 7.7142857143vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1;\n  font-weight: 600;\n  font-size: 2.5714285714vh;\n}\n\n.fa {\n  font-size: 2.5714285714vh;\n}\n\n.cal-scene {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n}\n.cal-scene.-calendar:before {\n  content: &quot;&quot;;\n  display: block;\n  height: 7.7142857143vh;\n  width: 7.7142857143vh;\n  position: absolute;\n  top: -7.7142857143vh;\n  left: 0;\n  box-shadow: 0vh 7.7142857143vh #fae56b, 7.7142857143vh 7.7142857143vh #f9de6b, 15.4285714286vh 7.7142857143vh #f8d76b, 23.1428571429vh 7.7142857143vh #f7d16b, 30.8571428571vh 7.7142857143vh #f6ca6b, 38.5714285714vh 7.7142857143vh #f5c36b, 46.2857142857vh 7.7142857143vh #f4bc6b, 0vh 15.4285714286vh #f3b56b, 7.7142857143vh 15.4285714286vh #f1ae6b, 15.4285714286vh 15.4285714286vh #f0a76b, 23.1428571429vh 15.4285714286vh #efa06b, 30.8571428571vh 15.4285714286vh #ee996b, 38.5714285714vh 15.4285714286vh #ec926b, 46.2857142857vh 15.4285714286vh #eb8b6b, 0vh 23.1428571429vh #e9836b, 7.7142857143vh 23.1428571429vh #e87b6b, 15.4285714286vh 23.1428571429vh #e6736b, 23.1428571429vh 23.1428571429vh #e56b6b, 30.8571428571vh 23.1428571429vh #e3636b, 38.5714285714vh 23.1428571429vh #e25b6b, 46.2857142857vh 23.1428571429vh #e0536b, 0vh 30.8571428571vh #df4e6b, 7.7142857143vh 30.8571428571vh #dd496c, 15.4285714286vh 30.8571428571vh #dc446c, 23.1428571429vh 30.8571428571vh #da3f6c, 30.8571428571vh 30.8571428571vh #d93a6c, 38.5714285714vh 30.8571428571vh #d7356d, 46.2857142857vh 30.8571428571vh #d6306d, 0vh 38.5714285714vh #cf2f6c, 7.7142857143vh 38.5714285714vh #c72f6c, 15.4285714286vh 38.5714285714vh #c02e6b, 23.1428571429vh 38.5714285714vh #b92e6a, 30.8571428571vh 38.5714285714vh #b22d69, 38.5714285714vh 38.5714285714vh #aa2d69, 46.2857142857vh 38.5714285714vh #a32c68, 0vh 46.2857142857vh #9c2c68, 7.7142857143vh 46.2857142857vh #952b67, 15.4285714286vh 46.2857142857vh #8e2b67, 23.1428571429vh 46.2857142857vh #872b66, 30.8571428571vh 46.2857142857vh #802b66, 38.5714285714vh 46.2857142857vh #792a65, 46.2857142857vh 46.2857142857vh #722a65, 0vh 54vh #6b2965, 7.7142857143vh 54vh #642964, 15.4285714286vh 54vh #5d2864, 23.1428571429vh 54vh #572863, 30.8571428571vh 54vh #502763, 38.5714285714vh 54vh #492762, 46.2857142857vh 54vh #422662, 0vh 61.7142857143vh #3b2661, 7.7142857143vh 61.7142857143vh #342661, 15.4285714286vh 61.7142857143vh #2d2660, 23.1428571429vh 61.7142857143vh #27255f, 30.8571428571vh 61.7142857143vh #20255e, 38.5714285714vh 61.7142857143vh #19255e, 46.2857142857vh 61.7142857143vh #12255d, 0vh 69.4285714286vh #152d60, 7.7142857143vh 69.4285714286vh #183464, 15.4285714286vh 69.4285714286vh #1b3c67, 23.1428571429vh 69.4285714286vh #1e446b, 30.8571428571vh 69.4285714286vh #214c6e, 38.5714285714vh 69.4285714286vh #245372, 46.2857142857vh 69.4285714286vh #275b75, 0vh 77.1428571429vh #2a6378, 7.7142857143vh 77.1428571429vh #2d6a7b, 15.4285714286vh 77.1428571429vh #30727e, 23.1428571429vh 77.1428571429vh #337a82, 30.8571428571vh 77.1428571429vh #368285, 38.5714285714vh 77.1428571429vh #398988, 46.2857142857vh 77.1428571429vh #3c918b, 0vh 84.8571428571vh #3f998e, 7.7142857143vh 84.8571428571vh #42a092, 15.4285714286vh 84.8571428571vh #45a895, 23.1428571429vh 84.8571428571vh #49af98, 30.8571428571vh 84.8571428571vh #4cb79b, 38.5714285714vh 84.8571428571vh #4fbe9f, 46.2857142857vh 84.8571428571vh #52c6a2, 0vh 92.5714285714vh #55cda5, 7.7142857143vh 92.5714285714vh #58d4a8, 15.4285714286vh 92.5714285714vh #5bdbab, 23.1428571429vh 92.5714285714vh #5de3ad, 30.8571428571vh 92.5714285714vh #60eab0, 38.5714285714vh 92.5714285714vh #63f1b3, 46.2857142857vh 92.5714285714vh #66f8b6, 0vh 100.2857142857vh #6df8b9, 7.7142857143vh 100.2857142857vh #74f9bd, 15.4285714286vh 100.2857142857vh #7bf9c0, 23.1428571429vh 100.2857142857vh #82f9c3, 30.8571428571vh 100.2857142857vh #89f9c6, 38.5714285714vh 100.2857142857vh #90faca, 46.2857142857vh 100.2857142857vh #97facd;\n  transition: box-shadow 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.cal-scene.-schedule {\n  z-index: -1;\n  opacity: 0;\n}\n\n.cal-month:first-child &gt; .cal-header, [id=nov-week-1]:target ~ .cal-device .cal-month.-november &gt; .cal-header, [id=nov-week-2]:target ~ .cal-device .cal-month.-november &gt; .cal-header, .cal-device .cal-month.-october &gt; .cal-header, .cal-device .cal-month.-december &gt; .cal-header, .cal-device .cal-month.-january &gt; .cal-header {\n  transform: translateX(30.8571428571vh);\n}\n.cal-month:first-child &gt; .cal-header &gt; .cal-link, [id=nov-week-1]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-link, [id=nov-week-2]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-link, .cal-device .cal-month.-october &gt; .cal-header &gt; .cal-link, .cal-device .cal-month.-december &gt; .cal-header &gt; .cal-link, .cal-device .cal-month.-january &gt; .cal-header &gt; .cal-link {\n  background-color: rgba(255, 255, 255, 0.4);\n}\n.cal-month:first-child &gt; .cal-header &gt; .cal-link &gt; span, [id=nov-week-1]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-link &gt; span, [id=nov-week-2]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-link &gt; span, .cal-device .cal-month.-october &gt; .cal-header &gt; .cal-link &gt; span, .cal-device .cal-month.-december &gt; .cal-header &gt; .cal-link &gt; span, .cal-device .cal-month.-january &gt; .cal-header &gt; .cal-link &gt; span {\n  transform: translateX(calc(-50% - 1.9285714286vh)) translateY(-50%);\n  color: white;\n}\n.cal-month:first-child &gt; .cal-header &gt; .cal-arrow, [id=nov-week-1]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-arrow, [id=nov-week-2]:target ~ .cal-device .cal-month.-november &gt; .cal-header &gt; .cal-arrow, .cal-device .cal-month.-october &gt; .cal-header &gt; .cal-arrow, .cal-device .cal-month.-december &gt; .cal-header &gt; .cal-arrow, .cal-device .cal-month.-january &gt; .cal-header &gt; .cal-arrow {\n  opacity: 1;\n  pointer-events: inherit;\n}\n.cal-month:first-child .cal-day, [id=nov-week-1]:target ~ .cal-device .cal-month.-november .cal-day, [id=nov-week-2]:target ~ .cal-device .cal-month.-november .cal-day, .cal-device .cal-month.-october .cal-day, .cal-device .cal-month.-december .cal-day, .cal-device .cal-month.-january .cal-day {\n  color: rgba(255, 255, 255, 0.4);\n}\n.-october.cal-month:first-child .cal-arrow, [id=nov-week-1]:target ~ .cal-device .-october.cal-month.-november .cal-arrow, [id=nov-week-2]:target ~ .cal-device .-october.cal-month.-november .cal-arrow, .cal-device .-october.cal-month .cal-arrow {\n  color: #EB8B6B;\n}\n.-november.cal-month:first-child .cal-arrow, [id=nov-week-1]:target ~ .cal-device .-november.cal-month .cal-arrow, [id=nov-week-2]:target ~ .cal-device .-november.cal-month .cal-arrow, .cal-device .-november.cal-month.-october .cal-arrow, .cal-device .-november.cal-month.-december .cal-arrow, .cal-device .-november.cal-month.-january .cal-arrow {\n  color: #D6306D;\n}\n.-december.cal-month:first-child .cal-arrow, [id=nov-week-1]:target ~ .cal-device .-december.cal-month.-november .cal-arrow, [id=nov-week-2]:target ~ .cal-device .-december.cal-month.-november .cal-arrow, .cal-device .-december.cal-month .cal-arrow {\n  color: #102152;\n}\n.-january.cal-month:first-child .cal-arrow, [id=nov-week-1]:target ~ .cal-device .-january.cal-month.-november .cal-arrow, [id=nov-week-2]:target ~ .cal-device .-january.cal-month.-november .cal-arrow, .cal-device .-january.cal-month .cal-arrow {\n  color: #97FACD;\n}\n\n[id=nov-week-1]:target ~ .cal-device .cal-month.-december &gt; .cal-header, [id=nov-week-2]:target ~ .cal-device .cal-month.-december &gt; .cal-header, .cal-device .cal-month.-november &gt; .cal-header {\n  transform: translateX(15.4285714286vh);\n}\n[id=nov-week-1]:target ~ .cal-device .cal-month.-december .cal-link, [id=nov-week-2]:target ~ .cal-device .cal-month.-december .cal-link, .cal-device .cal-month.-november .cal-link {\n  background-color: white;\n  color: gray;\n}\n[id=nov-week-1]:target ~ .cal-device .cal-month.-december .cal-link &gt; span, [id=nov-week-2]:target ~ .cal-device .cal-month.-december .cal-link &gt; span, .cal-device .cal-month.-november .cal-link &gt; span {\n  transform: translateX(-50%) translateY(-50%);\n}\n[id=nov-week-1]:target ~ .cal-device .cal-month.-december .cal-arrow, [id=nov-week-2]:target ~ .cal-device .cal-month.-december .cal-arrow, .cal-device .cal-month.-november .cal-arrow {\n  opacity: 0;\n  pointer-events: none;\n}\n[id=nov-week-1]:target ~ .cal-device .cal-month.-december .cal-day, [id=nov-week-2]:target ~ .cal-device .cal-month.-december .cal-day, .cal-device .cal-month.-november .cal-day {\n  color: white;\n}\n[id=nov-week-1]:target ~ .cal-device .-november.cal-month.-december .cal-link span, [id=nov-week-2]:target ~ .cal-device .-november.cal-month.-december .cal-link span, .cal-device .-november.cal-month .cal-link span {\n  color: #DA3F6C;\n}\n[id=nov-week-1]:target ~ .cal-device .-december.cal-month .cal-link span, [id=nov-week-2]:target ~ .cal-device .-december.cal-month .cal-link span, .cal-device .-december.cal-month.-november .cal-link span {\n  color: #26255F;\n}\n\n.cal-month {\n  display: block;\n  counter-reset: month;\n  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n  z-index: 1;\n}\n.cal-month:first-child {\n  margin-top: -7.7142857143vh;\n}\n.cal-month:first-child &gt; .cal-header {\n  top: 15.4285714286vh;\n}\n.cal-month:first-child ~ .cal-month {\n  margin-top: -7.7142857143vh;\n}\n.cal-month &gt; .cal-header {\n  position: absolute;\n  height: 7.7142857143vh;\n  width: 23.1428571429vh;\n  padding: 2.2040816327vh;\n  z-index: 1;\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.cal-month &gt; .cal-header &gt; .cal-link {\n  display: block;\n  height: 100%;\n  width: 100%;\n  font-size: 1.9285714286vh;\n  text-decoration: none;\n  color: gray;\n  text-transform: uppercase;\n  padding: 0.6428571429vh 5.1428571429vh;\n  border-radius: 2.5714285714vh;\n  background: white;\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n  font-weight: 600;\n}\n.cal-month &gt; .cal-header &gt; .cal-link &gt; span {\n  display: block;\n  position: absolute;\n  top: 48%;\n  left: 50%;\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n}\n.cal-month.-january {\n  margin-top: 0 !important;\n}\n\n.cal-subheader {\n  height: 3.8571428571vh;\n  width: 100%;\n}\n\n.cal-bar {\n  height: 7.7142857143vh;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n.cal-bar &gt; .cal-title {\n  flex-grow: 1;\n  height: 100%;\n}\n.cal-bar .-schedule {\n  opacity: 0;\n}\n\n.cal-button {\n  width: 7.7142857143vh;\n  height: 7.7142857143vh;\n}\n.cal-button &gt; * {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  text-decoration: none;\n  font-size: 3.0857142857vh;\n}\n\n.cal-title &gt; .cal-heading {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  font-size: 3.0857142857vh;\n}\n\n.cal-arrow {\n  position: absolute;\n  height: 7.7142857143vh;\n  width: 7.7142857143vh;\n  background: white;\n  top: 0;\n  right: 0;\n  padding: 1.2857142857vh;\n  background-clip: content-box;\n  border-radius: 50%;\n  opacity: 0;\n  pointer-events: none;\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-decoration: none;\n  color: gray;\n}\n.cal-arrow .fa-chevron-up {\n  top: -1px;\n}\n\n.cal-day {\n  counter-increment: month;\n  width: 7.7142857143vh;\n  height: 7.7142857143vh;\n  display: block;\n  float: left;\n  text-decoration: none;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  color: white;\n  font-size: 2.5714285714vh;\n}\n.cal-day[href=&quot;#schedule&quot;]:before {\n  background: rgba(255, 255, 255, 0.4);\n}\n.cal-day:before {\n  content: counter(month);\n  display: block;\n  height: 75%;\n  width: 75%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 50%;\n}\n\n.cal-item {\n  height: 7.7142857143vh;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.cal-item.-long {\n  height: 15.4285714286vh;\n}\n.cal-item:nth-child(1) &gt; .cal-time {\n  background-color: #fa739d;\n}\n.cal-item:nth-child(1) &gt; .cal-task {\n  background-color: white;\n}\n.cal-item:nth-child(2) &gt; .cal-time {\n  background-color: #f26993;\n}\n.cal-item:nth-child(2) &gt; .cal-task {\n  background-color: #fcf5f7;\n}\n.cal-item:nth-child(3) &gt; .cal-time {\n  background-color: #eb5e8a;\n}\n.cal-item:nth-child(3) &gt; .cal-task {\n  background-color: #f9ecf0;\n}\n.cal-item:nth-child(4) &gt; .cal-time {\n  background-color: #e35480;\n}\n.cal-item:nth-child(4) &gt; .cal-task {\n  background-color: #f6e2e8;\n}\n.cal-item:nth-child(5) &gt; .cal-time {\n  background-color: #dc4977;\n}\n.cal-item:nth-child(5) &gt; .cal-task {\n  background-color: #f4d8e1;\n}\n.cal-item:nth-child(6) &gt; .cal-time {\n  background-color: #d43f6d;\n}\n.cal-item:nth-child(6) &gt; .cal-task {\n  background-color: #f1ced9;\n}\n.cal-item:nth-child(7) &gt; .cal-time {\n  background-color: #cc3463;\n}\n.cal-item:nth-child(7) &gt; .cal-task {\n  background-color: #eec5d1;\n}\n.cal-item:nth-child(8) &gt; .cal-time {\n  background-color: #c52a5a;\n}\n.cal-item:nth-child(8) &gt; .cal-task {\n  background-color: #ebbbca;\n}\n\n.cal-time {\n  width: 15.4285714286vh;\n  flex-basis: 15.4285714286vh;\n  height: 100%;\n  justify-content: center;\n  line-height: 7.7142857143vh;\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  color: white;\n}\n.cal-time &gt; * {\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transform: translateX(-15.4285714286vh);\n  font-weight: 600;\n  font-size: 2.5714285714vh;\n}\n\n.cal-task {\n  flex-basis: 38.5714285714vh;\n  height: 100%;\n  background-color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 0 2.5714285714vh;\n  font-size: 1.9285714286vh;\n}\n.cal-task &gt; p {\n  margin-top: 0;\n  margin-bottom: 0;\n  color: #12255E;\n}\n.cal-task &gt; a {\n  text-decoration: none;\n  color: #EA80A2;\n  font-weight: 600;\n}\n.cal-task &gt; a &gt; .fa {\n  margin-right: 0.9642857143vh;\n}\n.cal-task &gt; * {\n  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);\n  transform: translateX(38.5714285714vh);\n}\n\n.meta {\n  flex-basis: calc(80% - 54vh);\n  font-size: 2.5714285714vh;\n  font-weight: 300;\n}\n.meta p, .meta a {\n  color: rgba(255, 255, 255, 0.7);\n}\n.meta h1 {\n  font-size: 9.2571428571vh;\n  line-height: 9.2571428571vh;\n  font-weight: 300;\n  color: white;\n}\n.meta p {\n  line-height: 1.4;\n}\n.meta a:hover {\n  color: rgba(255, 255, 255, 0.7);\n}\n@media (max-width: 750px) {\n  .meta {\n    display: none;\n  }\n}\n\nbody {\n  background: #4ACDDE;\n  background: linear-gradient(135deg, #4EFFDF, #48BBDE, #F47EC6);\n  font-family: Source Sans Pro, sans-serif;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n  overflow: hidden;\n}\n@media (max-width: 750px) {\n  body {\n    justify-content: center;\n  }\n}\n\nhtml, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  quotes: &quot;«&quot; &quot;»&quot;;\n}\n\n*, *:before, *:after {\n  box-sizing: border-box;\n  position: relative;\n}\n\n.cal-month:before,\n.cal-month:after {\n  content: &quot; &quot;;\n  /* 1 */\n  display: table;\n  /* 2 */\n}\n\n.cal-month:after {\n  clear: both;\n}","js":""};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script>
+
+
+</body></html>

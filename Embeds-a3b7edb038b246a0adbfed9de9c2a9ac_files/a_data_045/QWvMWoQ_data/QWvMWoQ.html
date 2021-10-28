@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - FullTextSearchjs</title>
+  
+  
+  
+  
+<style>
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font: 100%/1.5 "Open Sans", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.dataTable {
+  margin: 0 auto;
+  width: 80%;
+  padding: 1em;
+  text-align: center;
+}
+.dataTable .search {
+  margin: 2em auto 1em;
+  width: 100%;
+}
+.dataTable .search input[type="text"] {
+  width: 60%;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+}
+.dataTable .search input[type="submit"] {
+  width: 20%;
+  padding: 0.5em 1em;
+  border: 1px solid #ff5951;
+  color: #fff;
+  font-size: 1.5em;
+  background: #ff5951;
+  cursor: pointer;
+}
+.dataTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.dataTable table thead {
+  background: #bbb;
+}
+.dataTable table td,
+.dataTable table th {
+  padding: 1em 0.5em;
+  border: 1px solid #ccc;
+}
+.dataTable th td {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+.dataTable tbody tr:nth-child(2n) {
+  background: #f9f9f9;
+}
+.dataTable tbody tr:hover {
+  background: #eee;
+}
+.dataTable tbody td {
+  font-size: 1em;
+}
+.dataTable tbody tr.showRowResult {
+  display: table-row !important;
+}
+.dataTable tbody tr.showRowResult .addBgCell {
+  background: #f4364c;
+}
+.dataTable tbody tr.results:not(.showRowResult) {
+  display: none;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <section class="dataTable">
+
+  <header>
+    <h1>Full Text Search with Javascript</h1>
+    <h2>search what do you want to fined : </h2>
+  </header>
+
+  <section class="search">
+    <input type="text" name="filter" id="txtFind" placeholder="e.g :s c f">
+  </section>
+
+  <table id="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Skill</th>
+      </tr>
+    </thead>
+    <tbody class="bodyTable">
+      <tr>
+        <td>1</td>
+        <td>Mekaeil</td>
+        <td>Andisheh</td>
+        <td>Front-End Developer</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>David</td>
+        <td>Keri</td>
+        <td>Back-End Developer</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Jack</td>
+        <td>Cook</td>
+        <td>Designer</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Stive</td>
+        <td>Jobs</td>
+        <td>Co-Founder</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Jany</td>
+        <td>Anderson</td>
+        <td>Web Designer</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+
+<iframe style="width: 90%;" scrolling="no" title="FullTextSearchjs" src="QWvMWoQ_data/QWvMWoQ.html" loading="lazy" allowtransparency="true" allowfullscreen="true" height="800" frameborder="no">
+  See the Pen &lt;a href="https://codepen.io/bgoonz/pen/QWvMWoQ"&gt;
+  FullTextSearchjs&lt;/a&gt; by Bryan C Guner (&lt;a href="https://codepen.io/bgoonz"&gt;@bgoonz&lt;/a&gt;)
+  on &lt;a href="https://codepen.io"&gt;CodePen&lt;/a&gt;.
+</iframe>
+    <script src="../abpWrBP_data/abpWrBP_data/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e6459972.js"></script>
+
+  
+      <script id="rendered-js">
+"use strict";
+
+document.addEventListener("DOMContentLoaded", filterTable);
+
+function filterTable() {
+  const inputFilter = document.getElementById("txtFind"); // get input type of text
+  const bodyRow = document.
+  getElementById("table").
+  getElementsByTagName("tbody")[0]; // find Body Row Table
+  const rowTable = bodyRow.getElementsByTagName("tr"); // get all of the rows
+  const lengthRow = rowTable.length; // calculate number of rows
+  const lengthCol = document.getElementById("table").getElementsByTagName("th").
+  length; //number of table's column
+  let arrStr = []; // create array for save all of value from input
+  let saveNumRows = []; // create Array for save Row's number
+  const backupArr = []; // get backup the array
+  const getNumRows = []; // create array for use one time !
+  let lenVal;
+  var goFilter;
+  let numRowArr;
+
+  for (let i = 0; i < lengthRow; i++) {if (window.CP.shouldStopExecution(0)) break;
+    getNumRows[i] = rowTable[i].getElementsByTagName("td")[0].innerHTML; // save all of the Row's number
+  }window.CP.exitedLoop(0);
+  backupArr[0] = getNumRows; // get Backup the all of the row
+
+  // when user write and focus out
+  inputFilter.addEventListener("keyup", function (e) {
+    const val = this.value.toLowerCase().trim();
+    arrStr = val.split(" "); //save all of character in array
+    lenVal = arrStr.length; // get length of array
+
+    if (val.length == 0) {
+      // if length of input value is Zero
+      for (var i = 0; i < lengthRow; i++) {if (window.CP.shouldStopExecution(1)) break;
+        saveNumRows[i] = rowTable[i].getElementsByTagName("td")[0].innerHTML; // save all of the Row's number
+      } //for
+      window.CP.exitedLoop(1);} //if
+
+    for (var i = 0; i < lenVal; i++) {if (window.CP.shouldStopExecution(2)) break;
+      goFilter(arrStr[i], lenVal); // send value and length array
+    } //for
+    window.CP.exitedLoop(2);}); //inputFilter.addEventList ener
+
+  var goFilter = function goFilter(val, arrInput) {
+    for (
+    let i = 0, counter = 0, numRowArr = backupArr[arrInput - 1].length;
+    i < numRowArr;
+    i++)
+    {if (window.CP.shouldStopExecution(3)) break;
+      for (let j = 1; j < lengthCol; j++) {if (window.CP.shouldStopExecution(4)) break;
+        const colTable = rowTable[parseInt(backupArr[arrInput - 1][i]) - 1].
+        getElementsByTagName("td")[
+        j].innerHTML.toLowerCase(); //get table's cell
+
+        if (colTable.includes(val)) {
+          saveNumRows[counter] = rowTable[
+          parseInt(backupArr[arrInput - 1][i]) - 1].
+          getElementsByTagName("td")[0].innerHTML; // save number of row that is in result
+
+          rowTable[parseInt(saveNumRows[counter]) - 1].setAttribute(
+          "class",
+          "showRowResult");
+          // add class to display table-row for show
+
+          //saveNumRows[counter] = backupArr[arrInput-1][i];
+          counter++;
+          break; // when any result finded , break the row and go to the next row
+        } //if
+        else {
+            rowTable[parseInt(backupArr[arrInput - 1][i]) - 1].setAttribute(
+            "class",
+            "results");
+            // add class for hidden table's row that is not in result
+          } //else
+      } //for
+      window.CP.exitedLoop(4);} //for
+    window.CP.exitedLoop(3);backupArr[arrInput] = saveNumRows; // save number of rows in first Character or sevtence before Space
+    saveNumRows = []; // remove element's array for reuse again
+  }; //goFilter
+} //filterTable
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="../abpWrBP_data/abpWrBP_data/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c5.js"></script>
+
+
+
+ 
+</body></html>

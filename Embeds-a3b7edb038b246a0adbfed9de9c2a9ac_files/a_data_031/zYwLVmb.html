@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Dashed Border Generator</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="aQA6kS5ENb888WjskT0hFchQxt3RVQkBaqUbfkTGFEAR6WFn4EwWacdHO/IyXFDYBV9vASe7UQl1JIwiMqZp7w==">
+<link rel="stylesheet" media="all" href="../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #3d3d3e;
+      color: #ffffff;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #3d3d3e;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #ffffff;
+      background-color: #666666;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #888888;
+      color: #ffffff;
+      box-shadow: inset 0px 3px #dddddd;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #ffffff;
+    }
+
+    .embed-nav svg {
+      stroke: #ffffff !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../a_data_045/GRWdvNm_data/twilight-f15048ee49783cd27718c33661cb85565f285778b4899097ae7.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #555555; --borderWidth: 1px;" class="codepen-embed-body split-output static results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" class="active" aria-pressed="true">
+HTML
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+SCSS
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" aria-pressed="false">
+JS
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/zYwLVmb" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box active" role="region" aria-label="HTML">
+<pre tabindex="0"><code data-lang="htmlmixed" id="actual-html-code" class=" cm-s-default"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"content"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Dashed border using <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>background-image<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> property<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+        Creating dashed borders with background-image is not a new concept. Many people use it because it allows full flexibility, and with a little creativity (and a few lines of code) it is possible to do cool things without it being too complicated.
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"boxes"</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-a"</span><span class="cm-tag cm-bracket">&gt;</span>Simple<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-b"</span><span class="cm-tag cm-bracket">&gt;</span>Slanted<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-c"</span><span class="cm-tag cm-bracket">&gt;</span>Dotted<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-d"</span><span class="cm-tag cm-bracket">&gt;</span>Long<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-e"</span><span class="cm-tag cm-bracket">&gt;</span>Cornered<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-f"</span><span class="cm-tag cm-bracket">&gt;</span>Centered<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-g"</span><span class="cm-tag cm-bracket">&gt;</span>Faded<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"box box-h"</span><span class="cm-tag cm-bracket">&gt;</span>Animated<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">hr</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>Create your own <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span>background-image<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tag cm-bracket">&gt;</span> border<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">h2</span><span class="cm-tag cm-bracket">&gt;</span>
+    
+    <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"generator"</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">form</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Border width
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"borderWidth"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"10"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"3"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Border color<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">br</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"borderColor"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"color"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"#333333"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Dash length
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"dashLength"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"30"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"10"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Spacing
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"spacing"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"30"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"10"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Slanting angle
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"slanting"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"-60"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"60"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"0"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Fade
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"borderFade"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"0"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"100"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"0"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"diraction"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"checkbox"</span><span class="cm-tag cm-bracket">&gt;</span>
+                Flip diraction
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+                Animation
+                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">name</span>=<span class="cm-string">"animation"</span> <span class="cm-attribute">type</span>=<span class="cm-string">"range"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"input"</span> <span class="cm-attribute">min</span>=<span class="cm-string">"0"</span> <span class="cm-attribute">max</span>=<span class="cm-string">"1"</span> <span class="cm-attribute">step</span>=<span class="cm-string">"0.1"</span> <span class="cm-attribute">value</span>=<span class="cm-string">"0"</span><span class="cm-tag cm-bracket">&gt;</span>
+            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">Label</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">form</span><span class="cm-tag cm-bracket">&gt;</span>
+
+        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"result"</span><span class="cm-tag cm-bracket">&gt;</span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span>
+
+<span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">"https://twitter.com/amit_sheen"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"twitterLink"</span> <span class="cm-attribute">target</span>=<span class="cm-string">"_blank"</span><span class="cm-tag cm-bracket">&gt;</span>
+   <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://assets.codepen.io/1948355/twitterLogo2.png"</span> <span class="cm-tag cm-bracket">/&gt;</span>
+<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tag cm-bracket">&gt;</span>
+</code></pre>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<pre tabindex="0"><code data-lang="text/x-scss" id="actual-css-code" class=" cm-s-default"><span class="cm-def">@import</span> <span class="cm-variable cm-callee">url</span>(<span class="cm-string">'https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&amp;display=swap'</span>);
+
+*, *::<span class="cm-variable-3">before</span>, *::<span class="cm-variable-3">after</span> {
+    <span class="cm-property">padding</span>: <span class="cm-number">0</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-atom">auto</span>;
+    <span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;
+}
+
+<span class="cm-tag">body</span> {
+    <span class="cm-property">font-family</span>: <span class="cm-string">'Open Sans Condensed'</span>, <span class="cm-atom">sans-serif</span>;
+    <span class="cm-property">min-height</span>: <span class="cm-number">100vh</span>;
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#eee</span>;
+    <span class="cm-property">background-size</span>: <span class="cm-number">10px</span> <span class="cm-number">10px</span>;
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-number">50%</span> <span class="cm-number">50%</span>, <span class="cm-atom">#ddd</span>, <span class="cm-atom">#ddd</span> <span class="cm-number">1px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">1px</span>),
+        <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-atom">#ddd</span>, <span class="cm-atom">#ddd</span> <span class="cm-number">1px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">1px</span>),
+        <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-number">0</span> <span class="cm-number">100%</span>, <span class="cm-atom">#ddd</span>, <span class="cm-atom">#ddd</span> <span class="cm-number">1px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">1px</span>),
+        <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-number">100%</span> <span class="cm-number">0</span>, <span class="cm-atom">#ddd</span>, <span class="cm-atom">#ddd</span> <span class="cm-number">1px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">1px</span>),
+        <span class="cm-variable cm-callee">radial-gradient</span>(<span class="cm-atom">circle</span> <span class="cm-variable">at</span> <span class="cm-number">100%</span> <span class="cm-number">100%</span>, <span class="cm-atom">#ddd</span>, <span class="cm-atom">#ddd</span> <span class="cm-number">1px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">1px</span>);
+    <span class="cm-property">color</span>: <span class="cm-atom">#333</span>;
+}
+
+:<span class="cm-variable-3">root</span> {
+    <span class="cm-variable-2">--clr-border</span>: <span class="cm-atom">#333</span>;
+    <span class="cm-variable-2">--AnimationLength</span>: <span class="cm-number">0px</span>;
+}
+
+<span class="cm-qualifier">.content</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>; <span class="cm-property">max-width</span>: <span class="cm-number">960px</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">2em</span> <span class="cm-number">2em</span> <span class="cm-number">10em</span>;
+}
+
+<span class="cm-tag">h2</span> {
+    <span class="cm-property">margin</span>: <span class="cm-number">1em</span> <span class="cm-atom">auto</span>;
+    <span class="cm-property">text-decoration</span>: <span class="cm-atom">underline</span>;
+    <span class="cm-property">text-decoration-color</span>: <span class="cm-atom">#aaa</span>;
+
+    &amp; <span class="cm-tag">span</span> {
+        <span class="cm-property">color</span>: <span class="cm-atom">#777</span>;
+    }
+}
+
+<span class="cm-tag">p</span> { 
+    <span class="cm-property">margin</span>: <span class="cm-number">2em</span> <span class="cm-atom">auto</span>;
+    <span class="cm-property">font-weight</span>: <span class="cm-atom">bold</span>;
+}
+
+<span class="cm-tag">hr</span> {
+    <span class="cm-property">height</span>: <span class="cm-number">3px</span>;
+    <span class="cm-property">border</span>: <span class="cm-atom">none</span>;
+    <span class="cm-property">margin</span>: <span class="cm-number">4em</span> <span class="cm-atom">auto</span>;
+    <span class="cm-property">background-color</span>: <span class="cm-atom">#aaa</span>;
+}
+
+<span class="cm-qualifier">.boxes</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+    <span class="cm-property">grid-gap</span>: <span class="cm-number">2em</span>;
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-variable">auto-fit</span>, <span class="cm-variable cm-callee">minmax</span>(<span class="cm-number">160px</span>, <span class="cm-number">1fr</span>));
+}
+
+<span class="cm-qualifier">.box</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">flex</span>;
+    <span class="cm-property">justify-content</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">align-items</span>: <span class="cm-atom">center</span>;
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>; <span class="cm-property">height</span>: <span class="cm-number">123px</span>;
+    <span class="cm-property">font-size</span>: <span class="cm-number">2em</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">0.5em</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1</span>;
+    <span class="cm-property">background-position</span>:  <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-number">100%</span> <span class="cm-number">0</span>, <span class="cm-number">0</span> <span class="cm-number">100%</span>;
+    <span class="cm-property">background-size</span>: <span class="cm-number">3px</span> <span class="cm-number">100%</span>, <span class="cm-number">100%</span> <span class="cm-number">3px</span>, <span class="cm-number">3px</span> <span class="cm-number">100%</span> , <span class="cm-number">100%</span> <span class="cm-number">3px</span>;
+    <span class="cm-property">background-repeat</span>: <span class="cm-atom">no-repeat</span>;
+}
+
+<span class="cm-qualifier">.box-a</span> { <span class="cm-comment">// Simple</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>) <span class="cm-comment">// bottom</span>
+    ;
+    <span class="cm-property">border-image</span>: <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>);
+}
+
+<span class="cm-qualifier">.box-b</span> { <span class="cm-comment">// Slanted</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">45deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">135deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">225deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">315deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-c</span> { <span class="cm-comment">// Dotted</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">6px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">6px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">6px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">3px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">6px</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-d</span> { <span class="cm-comment">// Long</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">36px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">36px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">36px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">36px</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-e</span> { <span class="cm-comment">// Cornered</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">75%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">75%</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">75%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">75%</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">75%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">75%</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">25%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">75%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">75%</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-f</span> { <span class="cm-comment">// Centered</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-atom">transparent</span> <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">85%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">85%</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-atom">transparent</span> <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">85%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">85%</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-atom">transparent</span> <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">85%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">85%</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-atom">transparent</span> <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">15%</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">85%</span>, <span class="cm-atom">transparent</span> <span class="cm-number">85%</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-g</span> { <span class="cm-comment">// Faded</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">40px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">40px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">40px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">30px</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">40px</span>) <span class="cm-comment">// bottom</span>
+    ;
+}
+
+<span class="cm-qualifier">.box-h</span> { <span class="cm-comment">// Animated</span>
+    <span class="cm-property">background-image</span>:
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">0deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// left</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">90deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// top</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">180deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>), <span class="cm-comment">// right</span>
+        <span class="cm-variable cm-callee">repeating-linear-gradient</span>(<span class="cm-number">270deg</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>), <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--clr-border</span>) <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">10px</span>, <span class="cm-atom">transparent</span> <span class="cm-number">20px</span>) <span class="cm-comment">// bottom</span>
+    ;
+    <span class="cm-property">background-size</span>: <span class="cm-number">3px</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">20px</span>), <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">20px</span>) <span class="cm-number">3px</span>, <span class="cm-number">3px</span> <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">20px</span>) , <span class="cm-variable cm-callee">calc</span>(<span class="cm-number">100%</span> + <span class="cm-number">20px</span>) <span class="cm-number">3px</span>;
+    <span class="cm-property">animation</span>: <span class="cm-variable">boxBorderAnimation</span> <span class="cm-number">1s</span> <span class="cm-atom">infinite</span> <span class="cm-atom">linear</span>;
+
+    <span class="cm-def">@keyframes</span> <span class="cm-variable">boxBorderAnimation</span> {
+        <span class="cm-tag">from</span> { <span class="cm-property">background-position</span>:  <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-number">-20px</span> <span class="cm-number">0</span>, <span class="cm-number">100%</span> <span class="cm-number">-20px</span>, <span class="cm-number">0</span> <span class="cm-number">100%</span>; }
+        <span class="cm-tag">to</span> { <span class="cm-property">background-position</span>:  <span class="cm-number">0</span> <span class="cm-number">-20px</span>, <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-number">100%</span> <span class="cm-number">0</span>, <span class="cm-number">-20px</span> <span class="cm-number">100%</span>; }
+    }
+}
+
+<span class="cm-comment">// Generator:</span>
+
+<span class="cm-qualifier">.generator</span> {
+    <span class="cm-property">display</span>: <span class="cm-atom">grid</span>;
+    <span class="cm-property">grid-template-columns</span>: <span class="cm-variable cm-callee">repeat</span>(<span class="cm-number">2</span>, <span class="cm-number">1fr</span>);
+    <span class="cm-property">grid-gap</span>: <span class="cm-number">3em</span>;
+
+    <span class="cm-def">@media</span> (<span class="cm-property">max-width</span>: <span class="cm-number">768px</span>) {
+        <span class="cm-property">grid-template-columns</span>: <span class="cm-number">1fr</span>;
+    }
+
+}
+
+<span class="cm-tag">form</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+
+    <span class="cm-tag">label</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+        <span class="cm-property">font-weight</span>: <span class="cm-atom">bold</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+
+        &amp; + <span class="cm-tag">label</span> {
+            <span class="cm-property">margin-top</span>: <span class="cm-number">1.5em</span>;
+        }
+    }
+    
+    <span class="cm-qualifier">.input</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+        <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    }
+}
+
+<span class="cm-qualifier">.result</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">height</span>: <span class="cm-number">100%</span>;
+    <span class="cm-property">padding</span>: <span class="cm-number">1em</span>;
+    <span class="cm-property">line-height</span>: <span class="cm-number">1.2</span>;
+    <span class="cm-property">background-repeat</span>: <span class="cm-atom">no-repeat</span>;
+
+    <span class="cm-tag">span</span> {
+        <span class="cm-property">display</span>: <span class="cm-atom">block</span>;
+        <span class="cm-property">padding-left</span>: <span class="cm-number">4em</span>;
+        <span class="cm-property">text-indent</span>: <span class="cm-number">-2em</span>;
+        <span class="cm-property">margin</span>: <span class="cm-number">0.5em</span> <span class="cm-atom">auto</span>;
+    }
+
+    <span class="cm-def">@keyframes</span> <span class="cm-variable">borderAnimation</span> {
+        <span class="cm-tag">from</span> { <span class="cm-property">background-position</span>:  <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--AnimationLength</span>) <span class="cm-number">0</span>, <span class="cm-number">100%</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--AnimationLength</span>), <span class="cm-number">0</span> <span class="cm-number">100%</span>; }
+        <span class="cm-tag">to</span> { <span class="cm-property">background-position</span>:  <span class="cm-number">0</span> <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--AnimationLength</span>), <span class="cm-number">0</span> <span class="cm-number">0</span>, <span class="cm-number">100%</span> <span class="cm-number">0</span>, <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--AnimationLength</span>) <span class="cm-number">100%</span>; }
+    }
+}
+
+<span class="cm-qualifier">.twitterLink</span> {
+  <span class="cm-property">position</span>: <span class="cm-atom">fixed</span>;
+  <span class="cm-property">bottom</span>: <span class="cm-number">0.5em</span>; <span class="cm-property">right</span>: <span class="cm-number">0.5em</span>;
+  &amp; <span class="cm-tag">img</span> {
+    <span class="cm-property">width</span>: <span class="cm-number">2em</span>;
+    <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">grayscale</span>(<span class="cm-number">100%</span>);
+    <span class="cm-property">transition</span>: <span class="cm-variable">filter</span> <span class="cm-number">0.25s</span>;
+    &amp;:<span class="cm-variable-3">hover</span> {
+      <span class="cm-property">filter</span>: <span class="cm-variable cm-callee">grayscale</span>(<span class="cm-number">0%</span>);
+    }
+  }
+}</code></pre>
+<a href="#0" id="view-css-compiled-button" class="action-button bottom right view-compiled-button" data-type="css">
+View Compiled
+</a>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<pre tabindex="0"><code data-lang="javascript" id="actual-js-code" class=" cm-s-default"><span class="cm-keyword">function</span> <span class="cm-def">_</span>(<span class="cm-def">e</span>, <span class="cm-def">all</span><span class="cm-operator">=</span><span class="cm-atom">false</span>) {
+    <span class="cm-keyword">let</span> <span class="cm-def">divs</span> <span class="cm-operator">=</span> <span class="cm-variable">document</span>.<span class="cm-property">querySelectorAll</span>(<span class="cm-variable-2">e</span>);
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">all</span> <span class="cm-operator">||</span> (<span class="cm-variable-2">divs</span>.<span class="cm-property">length</span> <span class="cm-operator">&gt;</span> <span class="cm-number">1</span>)) { <span class="cm-keyword">return</span> <span class="cm-variable-2">divs</span>; }
+    <span class="cm-keyword">return</span> <span class="cm-variable-2">divs</span>[<span class="cm-number">0</span>];
+}
+
+<span class="cm-variable">_</span>(<span class="cm-string">'input'</span>, <span class="cm-atom">true</span>).<span class="cm-property">forEach</span>(<span class="cm-def">element</span> <span class="cm-operator">=&gt;</span> {
+    <span class="cm-variable-2">element</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">'input'</span>, <span class="cm-variable">drawBordr</span>);
+});
+
+<span class="cm-keyword">const</span> <span class="cm-def">resultDiv</span> <span class="cm-operator">=</span> <span class="cm-variable">_</span>(<span class="cm-string">'.result'</span>);
+
+<span class="cm-variable">drawBordr</span>();
+<span class="cm-keyword">function</span> <span class="cm-def">drawBordr</span>() {
+
+    <span class="cm-keyword">let</span> <span class="cm-def">borderWidth</span> <span class="cm-operator">=</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="borderWidth"]'</span>).<span class="cm-property">value</span>);
+    <span class="cm-keyword">let</span> <span class="cm-def">color1</span> <span class="cm-operator">=</span> <span class="cm-variable">_</span>(<span class="cm-string">'[name="borderColor"]'</span>).<span class="cm-property">value</span>;
+    <span class="cm-keyword">let</span> <span class="cm-def">dashLength</span> <span class="cm-operator">=</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="dashLength"]'</span>).<span class="cm-property">value</span>);
+    <span class="cm-keyword">let</span> <span class="cm-def">spacing</span> <span class="cm-operator">=</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="spacing"]'</span>).<span class="cm-property">value</span>);
+    <span class="cm-keyword">let</span> <span class="cm-def">slanting</span> <span class="cm-operator">=</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="slanting"]'</span>).<span class="cm-property">value</span>);
+    <span class="cm-keyword">let</span> <span class="cm-def">borderFade</span> <span class="cm-operator">=</span> <span class="cm-number">100</span> <span class="cm-operator">-</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="borderFade"]'</span>).<span class="cm-property">value</span>);
+    <span class="cm-keyword">let</span> <span class="cm-def">diraction</span> <span class="cm-operator">=</span> <span class="cm-variable">_</span>(<span class="cm-string">'[name="diraction"]'</span>).<span class="cm-property">checked</span>;
+    <span class="cm-keyword">let</span> <span class="cm-def">animation</span> <span class="cm-operator">=</span> <span class="cm-variable">Number</span>(<span class="cm-variable">_</span>(<span class="cm-string">'[name="animation"]'</span>).<span class="cm-property">value</span>);
+
+    <span class="cm-keyword">let</span> <span class="cm-def">color2</span> <span class="cm-operator">=</span> <span class="cm-string">'transparent'</span>;
+
+    <span class="cm-keyword">const</span> <span class="cm-def">backgroundImage</span> <span class="cm-operator">=</span> <span class="cm-string-2">`</span>
+        <span class="cm-string-2">repeating-linear-gradient(${</span><span class="cm-variable-2">slanting</span> <span class="cm-operator">+</span> (<span class="cm-variable-2">diraction</span> <span class="cm-operator">?</span> <span class="cm-number">180</span> : <span class="cm-number">0</span>) <span class="cm-string-2">}</span><span class="cm-string-2">deg, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span><span class="cm-string-2">, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">dashLength</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">spacing</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span>)<span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> <span class="cm-variable-2">spacing</span><span class="cm-string-2">}</span><span class="cm-string-2">px),</span>
+        <span class="cm-string-2">repeating-linear-gradient(${</span><span class="cm-variable-2">slanting</span> <span class="cm-operator">+</span> (<span class="cm-variable-2">diraction</span> <span class="cm-operator">?</span> <span class="cm-number">270</span> : <span class="cm-number">90</span>)<span class="cm-string-2">}</span><span class="cm-string-2">deg, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span><span class="cm-string-2">, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">dashLength</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">spacing</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span>)<span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> <span class="cm-variable-2">spacing</span><span class="cm-string-2">}</span><span class="cm-string-2">px),</span>
+        <span class="cm-string-2">repeating-linear-gradient(${</span><span class="cm-variable-2">slanting</span> <span class="cm-operator">+</span> (<span class="cm-variable-2">diraction</span> <span class="cm-operator">?</span> <span class="cm-number">0</span> : <span class="cm-number">180</span>) <span class="cm-string-2">}</span><span class="cm-string-2">deg, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span><span class="cm-string-2">, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">dashLength</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">spacing</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span>)<span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> <span class="cm-variable-2">spacing</span><span class="cm-string-2">}</span><span class="cm-string-2">px),</span>
+        <span class="cm-string-2">repeating-linear-gradient(${</span><span class="cm-variable-2">slanting</span> <span class="cm-operator">+</span> (<span class="cm-variable-2">diraction</span> <span class="cm-operator">?</span> <span class="cm-number">90</span> : <span class="cm-number">270</span>)<span class="cm-string-2">}</span><span class="cm-string-2">deg, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span><span class="cm-string-2">, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">dashLength</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color2</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> (<span class="cm-variable">Math</span>.<span class="cm-property">round</span>(<span class="cm-variable-2">spacing</span> <span class="cm-operator">*</span> <span class="cm-variable-2">borderFade</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span>)<span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">color1</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> <span class="cm-variable-2">spacing</span><span class="cm-string-2">}</span><span class="cm-string-2">px)`</span>;
+
+    <span class="cm-keyword">const</span> <span class="cm-def">borderLengthPx</span> <span class="cm-operator">=</span> <span class="cm-variable">Math</span>.<span class="cm-property">round</span>((<span class="cm-variable-2">dashLength</span> <span class="cm-operator">+</span> <span class="cm-variable-2">spacing</span>) <span class="cm-operator">/</span> <span class="cm-variable">Math</span>.<span class="cm-property">sin</span>((<span class="cm-number">90</span> <span class="cm-operator">-</span> <span class="cm-variable">Math</span>.<span class="cm-property">abs</span>(<span class="cm-variable-2">slanting</span>)) <span class="cm-operator">*</span> <span class="cm-variable">Math</span>.<span class="cm-property">PI</span> <span class="cm-operator">/</span> <span class="cm-number">180</span>) <span class="cm-operator">*</span> <span class="cm-number">100</span>) <span class="cm-operator">/</span> <span class="cm-number">100</span>;
+    <span class="cm-keyword">const</span> <span class="cm-def">borderLength</span> <span class="cm-operator">=</span> (<span class="cm-variable-2">animation</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span>) <span class="cm-operator">?</span> <span class="cm-string-2">`calc(100% + ${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px)`</span> : <span class="cm-string">'100%'</span>;
+    <span class="cm-keyword">const</span> <span class="cm-def">backgroundSize</span> <span class="cm-operator">=</span> <span class="cm-string-2">`${</span><span class="cm-variable-2">borderWidth</span><span class="cm-string-2">}</span><span class="cm-string-2">px ${</span><span class="cm-variable-2">borderLength</span><span class="cm-string-2">}</span><span class="cm-string-2">, ${</span><span class="cm-variable-2">borderLength</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">borderWidth</span><span class="cm-string-2">}</span><span class="cm-string-2">px, ${</span><span class="cm-variable-2">borderWidth</span><span class="cm-string-2">}</span><span class="cm-string-2">px ${</span><span class="cm-variable-2">borderLength</span><span class="cm-string-2">}</span> <span class="cm-string-2">, ${</span><span class="cm-variable-2">borderLength</span><span class="cm-string-2">}</span> <span class="cm-string-2">${</span><span class="cm-variable-2">borderWidth</span><span class="cm-string-2">}</span><span class="cm-string-2">px`</span>;
+    <span class="cm-keyword">const</span> <span class="cm-def">backgroundPosition</span> <span class="cm-operator">=</span> <span class="cm-string-2">`0 0, 0 0, 100% 0, 0 100%`</span>;
+
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">style</span>.<span class="cm-property">backgroundImage</span> <span class="cm-operator">=</span> <span class="cm-variable-2">backgroundImage</span>;
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">style</span>.<span class="cm-property">backgroundSize</span> <span class="cm-operator">=</span> <span class="cm-variable-2">backgroundSize</span>;
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">style</span>.<span class="cm-property">backgroundPosition</span> <span class="cm-operator">=</span> <span class="cm-variable-2">backgroundPosition</span>;
+
+    <span class="cm-keyword">const</span> <span class="cm-def">animationPropery</span> <span class="cm-operator">=</span> (<span class="cm-variable-2">animation</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span>) <span class="cm-operator">?</span> <span class="cm-string-2">`borderAnimation ${</span><span class="cm-variable">Math</span>.<span class="cm-property">round</span>((<span class="cm-number">1.1</span> <span class="cm-operator">-</span> <span class="cm-variable-2">animation</span>) <span class="cm-operator">*</span> <span class="cm-number">10</span>) <span class="cm-operator">/</span> <span class="cm-number">10</span><span class="cm-string-2">}</span><span class="cm-string-2">s infinite linear${</span><span class="cm-variable-2">diraction</span> <span class="cm-operator">?</span> <span class="cm-string">' reverse'</span> : <span class="cm-string">''</span><span class="cm-string-2">}</span><span class="cm-string-2">`</span> : <span class="cm-string">'unset'</span>;
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">style</span>.<span class="cm-property">animation</span> <span class="cm-operator">=</span> <span class="cm-variable-2">animationPropery</span>;
+
+    <span class="cm-keyword">let</span> <span class="cm-def">animationTxt</span> <span class="cm-operator">=</span> <span class="cm-string">''</span>;
+    <span class="cm-keyword">if</span> (<span class="cm-variable-2">animation</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span>) {
+        <span class="cm-variable">document</span>.<span class="cm-property">documentElement</span>.<span class="cm-property">style</span>.<span class="cm-property">setProperty</span>(<span class="cm-string">'--AnimationLength'</span>, <span class="cm-string-2">`-${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px`</span>);
+
+        <span class="cm-variable-2">animationTxt</span> <span class="cm-operator">=</span> <span class="cm-string-2">`</span>
+                <span class="cm-string-2">&lt;span&gt;&lt;b&gt;animation:&lt;/b&gt; ${</span><span class="cm-variable-2">animationPropery</span><span class="cm-string-2">}</span><span class="cm-string-2">;&lt;/span&gt;</span>
+            <span class="cm-string-2">}&lt;br&gt;</span>
+            <span class="cm-string-2">&lt;br&gt;</span>
+            <span class="cm-string-2">@keyframes &lt;b&gt;borderAnimation&lt;/b&gt; {</span>
+                <span class="cm-string-2">&lt;span&gt;from { background-position:  0 0, -${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px 0, 100% -${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px, 0 100%; }&lt;/span&gt;</span>
+                <span class="cm-string-2">&lt;span&gt;to { background-position:  0 -${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px, 0 0, 100% 0, -${</span><span class="cm-variable-2">borderLengthPx</span><span class="cm-string-2">}</span><span class="cm-string-2">px 100%; }&lt;/span&gt;</span>
+        <span class="cm-string-2">`</span>;
+    }
+
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">style</span>.<span class="cm-property">padding</span> <span class="cm-operator">=</span> <span class="cm-string-2">`calc(1em + ${</span><span class="cm-variable-2">borderWidth</span><span class="cm-string-2">}</span><span class="cm-string-2">px)`</span>;
+    
+    <span class="cm-variable">resultDiv</span>.<span class="cm-property">innerHTML</span> <span class="cm-operator">=</span> <span class="cm-string-2">`</span>
+        <span class="cm-string-2">&lt;code&gt;</span>
+            <span class="cm-string-2">.box {</span>
+                <span class="cm-string-2">&lt;span&gt;&lt;b&gt;background-image:&lt;/b&gt; ${</span><span class="cm-variable-2">backgroundImage</span><span class="cm-string-2">}</span><span class="cm-string-2">;&lt;/span&gt;</span>
+                <span class="cm-string-2">&lt;span&gt;&lt;b&gt;background-size:&lt;/b&gt; ${</span><span class="cm-variable-2">backgroundSize</span><span class="cm-string-2">}</span><span class="cm-string-2">;&lt;/span&gt;</span>
+                <span class="cm-string-2">&lt;span&gt;&lt;b&gt;background-position:&lt;/b&gt; ${</span><span class="cm-variable-2">backgroundPosition</span><span class="cm-string-2">}</span><span class="cm-string-2">;&lt;/span&gt;</span>
+                <span class="cm-string-2">&lt;span&gt;&lt;b&gt;background-repeat:&lt;/b&gt; no-repeat; &lt;/span&gt;</span>
+                <span class="cm-string-2">${</span><span class="cm-variable-2">animationTxt</span><span class="cm-string-2">}</span>
+            <span class="cm-string-2">}</span>
+        <span class="cm-string-2">&lt;/code&gt;</span>
+    <span class="cm-string-2">`</span>;
+}</code></pre>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Dashed Border Generator" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Dashed Border Generator" data-src="https://cdpn.io/bgoonz/fullembedgrid/zYwLVmb?animations=run&amp;type=embed" src="zYwLVmb_data/zYwLVmb.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/amit_sheen/fullpage/xxZeyjO?default-tab=html%2Cresult">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<script nonce="">
+    __processedPen = {"html":"&lt;div class=&quot;content&quot;&gt;\n\n    &lt;h2&gt;Dashed border using &lt;span&gt;background-image&lt;/span&gt; property&lt;/h2&gt;\n    \n    &lt;p&gt;\n        Creating dashed borders with background-image is not a new concept. Many people use it because it allows full flexibility, and with a little creativity (and a few lines of code) it is possible to do cool things without it being too complicated.\n    &lt;/p&gt;\n\n    &lt;div class=&quot;boxes&quot;&gt;\n        &lt;div class=&quot;box box-a&quot;&gt;Simple&lt;/div&gt;\n        &lt;div class=&quot;box box-b&quot;&gt;Slanted&lt;/div&gt;\n        &lt;div class=&quot;box box-c&quot;&gt;Dotted&lt;/div&gt;\n        &lt;div class=&quot;box box-d&quot;&gt;Long&lt;/div&gt;\n        &lt;div class=&quot;box box-e&quot;&gt;Cornered&lt;/div&gt;\n        &lt;div class=&quot;box box-f&quot;&gt;Centered&lt;/div&gt;\n        &lt;div class=&quot;box box-g&quot;&gt;Faded&lt;/div&gt;\n        &lt;div class=&quot;box box-h&quot;&gt;Animated&lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;hr&gt;\n\n    &lt;h2&gt;Create your own &lt;span&gt;background-image&lt;/span&gt; border&lt;/h2&gt;\n    \n    &lt;div class=&quot;generator&quot;&gt;\n\n        &lt;form&gt;\n\n            &lt;Label&gt;\n                Border width\n                &lt;input name=&quot;borderWidth&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;3&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Border color&lt;br&gt;\n                &lt;input name=&quot;borderColor&quot; type=&quot;color&quot; class=&quot;input&quot; value=&quot;#333333&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Dash length\n                &lt;input name=&quot;dashLength&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;1&quot; max=&quot;30&quot; value=&quot;10&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Spacing\n                &lt;input name=&quot;spacing&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;1&quot; max=&quot;30&quot; value=&quot;10&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Slanting angle\n                &lt;input name=&quot;slanting&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;-60&quot; max=&quot;60&quot; value=&quot;0&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Fade\n                &lt;input name=&quot;borderFade&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot;&gt;\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                &lt;input name=&quot;diraction&quot; type=&quot;checkbox&quot;&gt;\n                Flip diraction\n            &lt;/Label&gt;\n\n            &lt;Label&gt;\n                Animation\n                &lt;input name=&quot;animation&quot; type=&quot;range&quot; class=&quot;input&quot; min=&quot;0&quot; max=&quot;1&quot; step=&quot;0.1&quot; value=&quot;0&quot;&gt;\n            &lt;/Label&gt;\n\n        &lt;/form&gt;\n\n        &lt;div class=&quot;result&quot;&gt;&lt;/div&gt;\n\n    &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;a href=&quot;https://twitter.com/amit_sheen&quot; class=&quot;twitterLink&quot; target=&quot;_blank&quot;&gt;\n   &lt;img src=&quot;https://assets.codepen.io/1948355/twitterLogo2.png&quot; /&gt;\n&lt;/a&gt;","css":"@import url(&quot;https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&amp;display=swap&quot;);\n*, *::before, *::after {\n  padding: 0;\n  margin: 0 auto;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: &quot;Open Sans Condensed&quot;, sans-serif;\n  min-height: 100vh;\n  background-color: #eee;\n  background-size: 10px 10px;\n  background-image: radial-gradient(circle at 50% 50%, #ddd, #ddd 1px, transparent 1px), radial-gradient(circle at 0 0, #ddd, #ddd 1px, transparent 1px), radial-gradient(circle at 0 100%, #ddd, #ddd 1px, transparent 1px), radial-gradient(circle at 100% 0, #ddd, #ddd 1px, transparent 1px), radial-gradient(circle at 100% 100%, #ddd, #ddd 1px, transparent 1px);\n  color: #333;\n}\n\n:root {\n  --clr-border: #333;\n  --AnimationLength: 0px;\n}\n\n.content {\n  width: 100%;\n  max-width: 960px;\n  padding: 2em 2em 10em;\n}\n\nh2 {\n  margin: 1em auto;\n  text-decoration: underline;\n  -webkit-text-decoration-color: #aaa;\n          text-decoration-color: #aaa;\n}\nh2 span {\n  color: #777;\n}\n\np {\n  margin: 2em auto;\n  font-weight: bold;\n}\n\nhr {\n  height: 3px;\n  border: none;\n  margin: 4em auto;\n  background-color: #aaa;\n}\n\n.boxes {\n  width: 100%;\n  display: grid;\n  grid-gap: 2em;\n  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));\n}\n\n.box {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 123px;\n  font-size: 2em;\n  padding: 0.5em;\n  line-height: 1;\n  background-position: 0 0, 0 0, 100% 0, 0 100%;\n  background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;\n  background-repeat: no-repeat;\n}\n\n.box-a {\n  background-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(90deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(180deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(270deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px);\n  -o-border-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px);\n     border-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px);\n}\n\n.box-b {\n  background-image: repeating-linear-gradient(45deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(135deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(225deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(315deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px);\n}\n\n.box-c {\n  background-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 3px, transparent 3px, transparent 6px), repeating-linear-gradient(90deg, var(--clr-border), var(--clr-border) 3px, transparent 3px, transparent 6px), repeating-linear-gradient(180deg, var(--clr-border), var(--clr-border) 3px, transparent 3px, transparent 6px), repeating-linear-gradient(270deg, var(--clr-border), var(--clr-border) 3px, transparent 3px, transparent 6px);\n}\n\n.box-d {\n  background-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 30px, transparent 30px, transparent 36px), repeating-linear-gradient(90deg, var(--clr-border), var(--clr-border) 30px, transparent 30px, transparent 36px), repeating-linear-gradient(180deg, var(--clr-border), var(--clr-border) 30px, transparent 30px, transparent 36px), repeating-linear-gradient(270deg, var(--clr-border), var(--clr-border) 30px, transparent 30px, transparent 36px);\n}\n\n.box-e {\n  background-image: linear-gradient(0deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(90deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(180deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%), linear-gradient(270deg, var(--clr-border), var(--clr-border) 25%, transparent 25%, transparent 75%, var(--clr-border) 75%);\n}\n\n.box-f {\n  background-image: linear-gradient(0deg, transparent 15%, var(--clr-border) 15%, var(--clr-border) 85%, transparent 85%), linear-gradient(90deg, transparent 15%, var(--clr-border) 15%, var(--clr-border) 85%, transparent 85%), linear-gradient(180deg, transparent 15%, var(--clr-border) 15%, var(--clr-border) 85%, transparent 85%), linear-gradient(270deg, transparent 15%, var(--clr-border) 15%, var(--clr-border) 85%, transparent 85%);\n}\n\n.box-g {\n  background-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 10px, transparent 20px, transparent 30px, var(--clr-border) 40px), repeating-linear-gradient(90deg, var(--clr-border), var(--clr-border) 10px, transparent 20px, transparent 30px, var(--clr-border) 40px), repeating-linear-gradient(180deg, var(--clr-border), var(--clr-border) 10px, transparent 20px, transparent 30px, var(--clr-border) 40px), repeating-linear-gradient(270deg, var(--clr-border), var(--clr-border) 10px, transparent 20px, transparent 30px, var(--clr-border) 40px);\n}\n\n.box-h {\n  background-image: repeating-linear-gradient(0deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(90deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(180deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), repeating-linear-gradient(270deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px);\n  background-size: 3px calc(100% + 20px), calc(100% + 20px) 3px, 3px calc(100% + 20px), calc(100% + 20px) 3px;\n  -webkit-animation: boxBorderAnimation 1s infinite linear;\n          animation: boxBorderAnimation 1s infinite linear;\n}\n@-webkit-keyframes boxBorderAnimation {\n  from {\n    background-position: 0 0, -20px 0, 100% -20px, 0 100%;\n  }\n  to {\n    background-position: 0 -20px, 0 0, 100% 0, -20px 100%;\n  }\n}\n@keyframes boxBorderAnimation {\n  from {\n    background-position: 0 0, -20px 0, 100% -20px, 0 100%;\n  }\n  to {\n    background-position: 0 -20px, 0 0, 100% 0, -20px 100%;\n  }\n}\n\n.generator {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  grid-gap: 3em;\n}\n@media (max-width: 768px) {\n  .generator {\n    grid-template-columns: 1fr;\n  }\n}\n\nform {\n  width: 100%;\n}\nform label {\n  display: block;\n  font-weight: bold;\n  width: 100%;\n}\nform label + label {\n  margin-top: 1.5em;\n}\nform .input {\n  display: block;\n  width: 100%;\n}\n\n.result {\n  width: 100%;\n  height: 100%;\n  padding: 1em;\n  line-height: 1.2;\n  background-repeat: no-repeat;\n}\n.result span {\n  display: block;\n  padding-left: 4em;\n  text-indent: -2em;\n  margin: 0.5em auto;\n}\n@-webkit-keyframes borderAnimation {\n  from {\n    background-position: 0 0, var(--AnimationLength) 0, 100% var(--AnimationLength), 0 100%;\n  }\n  to {\n    background-position: 0 var(--AnimationLength), 0 0, 100% 0, var(--AnimationLength) 100%;\n  }\n}\n@keyframes borderAnimation {\n  from {\n    background-position: 0 0, var(--AnimationLength) 0, 100% var(--AnimationLength), 0 100%;\n  }\n  to {\n    background-position: 0 var(--AnimationLength), 0 0, 100% 0, var(--AnimationLength) 100%;\n  }\n}\n\n.twitterLink {\n  position: fixed;\n  bottom: 0.5em;\n  right: 0.5em;\n}\n.twitterLink img {\n  width: 2em;\n  filter: grayscale(100%);\n  transition: filter 0.25s;\n}\n.twitterLink img:hover {\n  filter: grayscale(0%);\n}","js":"function _(e, all = false) {\n  let divs = document.querySelectorAll(e);\n  if (all || divs.length &gt; 1) {return divs;}\n  return divs[0];\n}\n\n_(&#39;input&#39;, true).forEach(element =&gt; {\n  element.addEventListener(&#39;input&#39;, drawBordr);\n});\n\nconst resultDiv = _(&#39;.result&#39;);\n\ndrawBordr();\nfunction drawBordr() {\n\n  let borderWidth = Number(_(&#39;[name=&quot;borderWidth&quot;]&#39;).value);\n  let color1 = _(&#39;[name=&quot;borderColor&quot;]&#39;).value;\n  let dashLength = Number(_(&#39;[name=&quot;dashLength&quot;]&#39;).value);\n  let spacing = Number(_(&#39;[name=&quot;spacing&quot;]&#39;).value);\n  let slanting = Number(_(&#39;[name=&quot;slanting&quot;]&#39;).value);\n  let borderFade = 100 - Number(_(&#39;[name=&quot;borderFade&quot;]&#39;).value);\n  let diraction = _(&#39;[name=&quot;diraction&quot;]&#39;).checked;\n  let animation = Number(_(&#39;[name=&quot;animation&quot;]&#39;).value);\n\n  let color2 = &#39;transparent&#39;;\n\n  const backgroundImage = `\n        repeating-linear-gradient(${slanting + (diraction ? 180 : 0)}deg, ${color1}, ${color1} ${Math.round(dashLength * borderFade) / 100}px, ${color2} ${dashLength}px, ${color2} ${dashLength + Math.round(spacing * borderFade) / 100}px, ${color1} ${dashLength + spacing}px),\n        repeating-linear-gradient(${slanting + (diraction ? 270 : 90)}deg, ${color1}, ${color1} ${Math.round(dashLength * borderFade) / 100}px, ${color2} ${dashLength}px, ${color2} ${dashLength + Math.round(spacing * borderFade) / 100}px, ${color1} ${dashLength + spacing}px),\n        repeating-linear-gradient(${slanting + (diraction ? 0 : 180)}deg, ${color1}, ${color1} ${Math.round(dashLength * borderFade) / 100}px, ${color2} ${dashLength}px, ${color2} ${dashLength + Math.round(spacing * borderFade) / 100}px, ${color1} ${dashLength + spacing}px),\n        repeating-linear-gradient(${slanting + (diraction ? 90 : 270)}deg, ${color1}, ${color1} ${Math.round(dashLength * borderFade) / 100}px, ${color2} ${dashLength}px, ${color2} ${dashLength + Math.round(spacing * borderFade) / 100}px, ${color1} ${dashLength + spacing}px)`;\n\n  const borderLengthPx = Math.round((dashLength + spacing) / Math.sin((90 - Math.abs(slanting)) * Math.PI / 180) * 100) / 100;\n  const borderLength = animation &gt; 0 ? `calc(100% + ${borderLengthPx}px)` : &#39;100%&#39;;\n  const backgroundSize = `${borderWidth}px ${borderLength}, ${borderLength} ${borderWidth}px, ${borderWidth}px ${borderLength} , ${borderLength} ${borderWidth}px`;\n  const backgroundPosition = `0 0, 0 0, 100% 0, 0 100%`;\n\n  resultDiv.style.backgroundImage = backgroundImage;\n  resultDiv.style.backgroundSize = backgroundSize;\n  resultDiv.style.backgroundPosition = backgroundPosition;\n\n  const animationPropery = animation &gt; 0 ? `borderAnimation ${Math.round((1.1 - animation) * 10) / 10}s infinite linear${diraction ? &#39; reverse&#39; : &#39;&#39;}` : &#39;unset&#39;;\n  resultDiv.style.animation = animationPropery;\n\n  let animationTxt = &#39;&#39;;\n  if (animation &gt; 0) {\n    document.documentElement.style.setProperty(&#39;--AnimationLength&#39;, `-${borderLengthPx}px`);\n\n    animationTxt = `\n                &lt;span&gt;&lt;b&gt;animation:&lt;/b&gt; ${animationPropery};&lt;/span&gt;\n            }&lt;br&gt;\n            &lt;br&gt;\n            @keyframes &lt;b&gt;borderAnimation&lt;/b&gt; {\n                &lt;span&gt;from { background-position:  0 0, -${borderLengthPx}px 0, 100% -${borderLengthPx}px, 0 100%; }&lt;/span&gt;\n                &lt;span&gt;to { background-position:  0 -${borderLengthPx}px, 0 0, 100% 0, -${borderLengthPx}px 100%; }&lt;/span&gt;\n        `;\n  }\n\n  resultDiv.style.padding = `calc(1em + ${borderWidth}px)`;\n\n  resultDiv.innerHTML = `\n        &lt;code&gt;\n            .box {\n                &lt;span&gt;&lt;b&gt;background-image:&lt;/b&gt; ${backgroundImage};&lt;/span&gt;\n                &lt;span&gt;&lt;b&gt;background-size:&lt;/b&gt; ${backgroundSize};&lt;/span&gt;\n                &lt;span&gt;&lt;b&gt;background-position:&lt;/b&gt; ${backgroundPosition};&lt;/span&gt;\n                &lt;span&gt;&lt;b&gt;background-repeat:&lt;/b&gt; no-repeat; &lt;/span&gt;\n                ${animationTxt}\n            }\n        &lt;/code&gt;\n    `;\n}"};
+    __preprocessors = {
+      "html": "none",
+      "css": "scss",
+      "js": "none"
+    };
+    __preprocessorNames = {
+      "html": "HTML",
+      "css": "SCSS",
+      "js": "JS"
+    };
+    __editable = false;
+    __embed_prefill = false;
+  </script>
+<script src="../a_data_045/GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script></body></html>

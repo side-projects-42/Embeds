@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="pc firefox93" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>CodePen Embed - Linear vs Binary Search</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="3xcIhqTJiRhyvbwWt8ilKt6IMyowgsl99H8FdSxg6AsnyP8Mf/Q5G02oKXeTB8NfjlwOTzNp7q8yYhDioNYwsw==">
+<link rel="stylesheet" media="all" href="../a_data_045/GRWdvNm_data/embed-a597cbe50c093a5ab46947b89753b103d8d51022d1dd6e8246ddac.css">
+<style>
+    .hide {
+      display: none !important;
+    }
+
+    #result-box {
+      background: #fefefe;
+      color: #333333;
+    }
+    .embed-footer,
+    .embed-nav {
+      background: #fefefe;
+      
+    }
+    .embed-nav .code-types a,
+    .embed-nav .result-button-list a,
+    .action-button {
+      color: #333333;
+      background-color: #eeeeee;
+    }
+    .embed-nav .code-types a.active,
+    .embed-nav .result-button-list a.active,
+    .action-button.active {
+      background: #cccccc;
+      color: #333333;
+      box-shadow: inset 0px 3px #333333;
+    }
+    .embed-nav .logo-wrap .edit-on-codepen {
+      color: #333333;
+    }
+
+    .embed-nav svg {
+      stroke: #333333 !important;
+    }
+  </style>
+<link rel="stylesheet" media="all" href="../a_data_031/JjNaPpL_data/classic-2f580a4f64cde43e8200dde97a2fc1ecce816d17982d065f52d3.css">
+<meta name="monetization" content="$ilp.uphold.com/biyqg2MkQKbe">
+</head>
+<body id="the-body" style="border: 1px solid #eeeeee; --borderWidth: 1px;" class="codepen-embed-body results-active">
+<nav class="embed-nav group" id="embed-nav">
+<ul class="code-types">
+<li class="code-type">
+<a id="html-link" href="#html-box" role="button" aria-pressed="false">
+Pug
+</a>
+</li>
+<li class="code-type">
+<a id="css-link" href="#css-box" role="button" aria-pressed="false">
+Sass
+</a>
+</li>
+<li class="code-type">
+<a id="js-link" href="#js-box" role="button" aria-pressed="false">
+Babel
+</a>
+</li>
+</ul>
+<ul class="result-button-list">
+<li class="results results-type">
+<a id="result-link" href="#result-box" class="active" aria-pressed="true" role="button">
+Result
+</a>
+</li>
+<li>
+<a href="#resources-link" id="skip-results-iframe-link">Skip Results Iframe</a>
+</li>
+</ul>
+<div class="logo-wrap" id="edit-area">
+<a class="edit-on-codepen" target="_blank" rel="noopener" href="https://codepen.io/bgoonz/pen/MWbZoOa" title="Edit on CodePen">
+<div class="large-logo">
+<span id="edit-on-text" class="open-on">EDIT ON</span>
+<svg id="embed-codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="CodePen">
+<path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+</svg>
+</div>
+<div class="box-logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20 0 26 26" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" role="img" aria-label="Edit on CodePen">
+<path id="icon-codepen-box" d="M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24"></path>
+</svg>
+</div>
+</a>
+</div>
+</nav>
+<div id="output" data-border-style="thin" data-header="true">
+<div id="html-box" class="code-wrap code-box box " role="region" aria-label="HTML">
+<div class="editable-badge">
+Live
+ </div>
+<textarea id="html" style="display: none" class="code-box"></textarea>
+</div>
+<div id="css-box" class="code-wrap code-box box " role="region" aria-label="CSS">
+<div class="editable-badge">
+Live
+</div>
+<textarea id="css" style="display: none" class="code-box"></textarea>
+</div>
+<div id="js-box" class="code-wrap code-box box " role="region" aria-label="JS">
+<div class="editable-badge">
+Live
+</div>
+<textarea id="js" style="display: none" class="code-box"></textarea>
+</div>
+<div id="result-box" class="code-box active zoom-1" role="region" aria-label="Result">
+<iframe allow="camera; geolocation; microphone" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="result-iframe  " id="result-iframe" loading="lazy" name="CodePen Preview for Linear vs Binary Search" sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation" scrolling="yes" title="CodePen Preview for Linear vs Binary Search" data-src="https://cdpn.io/bgoonz/fullembedgrid/MWbZoOa?animations=run&amp;type=embed" src="MWbZoOa_data/MWbZoOa.html" frameborder="0">
+  </iframe>
+</div>
+<div id="about-box">
+<div class="about-container">
+<div class="about-user">
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener"><img src="../a_data_045/GRWdvNm_data/default.webp" loading="lazy" alt="" class="about-image"></a>
+<div class="about-user-info">
+<p>
+This Pen is owned by <a href="https://codepen.io/bgoonz" target="_blank" rel="noopener">Bryan C Guner</a> on <a href="https://codepen.io/" target="_blank" rel="noopener">CodePen</a>.
+It is a fork of <a href="https://cdpn.io/youfoundron/fullpage/LZGWyp?default-tab=result&amp;editable=true&amp;theme-id=light">this Pen.</a>
+</p>
+<p>
+<a href="https://codepen.io/bgoonz" target="_blank" rel="noopener" class="about-user-more">
+See more by @bgoonz on CodePen
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="resources-box" class="resources-box">
+<h3>External CSS</h3>
+<p>
+This Pen doesn't use any external CSS resources.
+</p>
+<h3>External JavaScript</h3>
+<p>
+This Pen doesn't use any external JavaScript resources.
+</p>
+</div>
+</div>
+<footer class="embed-footer" id="embed-footer">
+<button id="resources-link" class="resources-link action-button bottom left" href="#resources-box" aria-pressed="false" role="button">
+Resources
+</button>
+<ul class="scaling-choices bottom right">
+<li><button class="action-button" id="zoom-button-1">1×</button></li>
+<li><button class="action-button" id="zoom-button-05">0.5×</button></li>
+<li><button class="action-button" id="zoom-button-025">0.25×</button></li>
+</ul>
+<button id="rerun-button" class="action-button rerun-button bottom right">
+Rerun
+</button>
+</footer>
+<textarea id="init-data" style="display:none">{"__browser":{"device":"unknown_device","mobile":false,"name":"firefox","platform":"pc","version":"93"},"__constants":{"gridIframeSandboxAttributes":"allow-forms
+ allow-modals allow-pointer-lock allow-presentation allow-same-origin 
+allow-scripts"},"__CPDATA":{"domain_iframe":"https://cdpn.io","environment":"production","host":"codepen.io","iframe_allow":"camera;
+ geolocation; microphone","iframe_sandbox":"allow-downloads allow-forms 
+allow-modals allow-pointer-lock allow-popups allow-presentation 
+allow-same-origin allow-scripts 
+allow-top-navigation-by-user-activation"},"__graphql":{"data":null,"errors":[{"message":"Cannot
+ return null for non-nullable field 
+Query.sessionUser"}]},"__pay_stripe_public":"pk_NgCjQmQs7wXOFmfNC0LKMgEkmlThn","__pay_braintree_env":"production","__boomboom":{"serve_url":"https://cdpn.io/cp/internal/boomboom","store_url":"https://codepen.io/cp/internal/boomboom/store"},"__pageType":"embed","__item":"{\"editor_settings\":{\"auto_run\":true,\"autocomplete\":false,\"code_folding\":true,\"css_pre_processor\":\"none\",\"css_prefix\":\"neither\",\"css_starter\":\"neither\",\"emmet_active\":true,\"font_size\":\"14\",\"font_type\":\"monaco\",\"format_on_save\":false,\"html_pre_processor\":\"none\",\"indent_with\":\"spaces\",\"js_pre_processor\":\"none\",\"key_bindings\":\"normal\",\"line_numbers\":true,\"line_wrapping\":true,\"match_brackets\":true,\"snippets\":{\"markupSnippets\":{},\"stylesheetSnippets\":{}},\"tab_size\":\"2\",\"theme\":\"twilight\",\"id\":\"MWbZoOa\",\"auto_save\":true},\"hashid\":\"MWbZoOa\",\"itemType\":\"pen\",\"resources\":[],\"tags\":[\"algorithm\",\"linear\",\"binary\",\"search\"],\"id\":50757733,\"user_id\":5160002,\"html\":\"h1
+ Linear vs Binary\\n\\ninput(type=\\\"text\\\" 
+maxLength=\\\"1\\\")#random-letter\\n.controls\\n  button#random-btn 
+Random\\n  button#search-btn Search\\n\\n.searches\\n  - var alpha = 
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')\\n\\n  .linear-search\\n    h2 
+Linear\\n    p.info#linear-info &amp;nbsp;\\n    ul.data\\n      for 
+char in alpha\\n        - var id = char + '-linear'\\n        li(id=id)=
+ char\\n\\n  .binary-search\\n    h2 Binary\\n    p.info#binary-info 
+&amp;nbsp;\\n    ul.data\\n      for char in alpha\\n        - var id = 
+char + '-binary'\\n        li(id=id)= char\",\"css\":\"// ## FONTS 
+##\\n@font-face(\\\"OperatorMono-Bold\\\" 
+\\\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Bold\\\")\\n@font-face(\\\"OperatorMono-Medium\\\"
+ 
+\\\"https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Medium\\\")\\n\\n//
+ ## VARS ##\\n$white: white\\n$yellow: #FFF32B\\n$blue: #3BB0FF\\n$red: 
+#FF014E\\n$green: #66FF00\\n$reg-stack: \\\"OperatorMono-Medium\\\", 
+\\\"Lucida Console\\\", Monaco, monospace\\n$bold-stack: 
+\\\"OperatorMono-Bold\\\", \\\"Lucida Console\\\", Monaco, 
+monospace\\n\\n// ## ANIMATIONS ##\\n@keyframes shake\\n  10%, 90%\\n   
+ transform: translate3d(-1px, 0, 0)\\n  20%, 80%\\n    transform: 
+translate3d(2px, 0, 0)\\n  30%, 50%, 70%\\n    transform: 
+translate3d(-4px, 0, 0)\\n  40%, 60%\\n    transform: translate3d(4px, 
+0, 0)\\n\\nbody\\n  background: $blue\\n  text-align: center\\n  
+font-family: $reg-stack\\n  color: $white\\n  \\nh1, h2, h3, h4, h5, 
+h6\\n  color: $yellow\\n  font-family: $bold-stack\\n  font-size: 2em\\n
+  \\nh1\\n  font-size: 3em\\n  \\ninput#random-letter\\n  text-align: 
+center\\n  width: 1em\\n  border: none\\n  border-bottom: 5px solid 
+$white\\n  padding-bottom: .2em\\n  text-transform: uppercase\\n  
+background: $blue\\n  font-size: 3em\\n  font-family: $reg-stack\\n  
+color: white\\n  &amp;.shake\\n    animation: shake 0.82s 
+cubic-bezier(.36,.07,.19,.97) both\\n  &amp;:focus\\n    outline: 
+none\\n  \\nbutton\\n  text-align: center\\n  border: none\\n  
+background: $blue\\n  border: 5px solid $yellow\\n  color: $yellow\\n  
+font-size: 30px\\n  font-family: $bold-stack\\n  padding: .15em 1.3em\\n
+  margin: 1em\\n  transition: border-color .2s, color .2s\\n  
+-webkit-transition: border-color .2s, color .2s\\n  &amp;:hover\\n    
+color: $white\\n    border-color: $white\\n    cursor: 
+pointer\\n\\n.searches\\n  .linear-search, .binary-search\\n    display:
+ inline-block\\n  \\nul.data\\n  padding: 0\\n  margin: 1em\\n  
+margin-top: 0\\n  li\\n    display: inline-block\\n    border-bottom: 
+2px solid rgba(0,0,0,0)\\n    &amp;.exempt\\n      color: $red\\n      
+border-bottom: 2px solid $red\\n    &amp;.found\\n      color: $green\\n
+      border-bottom: 2px solid $green\",\"parent\":8493511,\"js\":\"// 
+## Global Variables\\nconst ALPHABET = 
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')\\nconst ARR_LENGTH = 
+ALPHABET.LENGTH\\nconst SEARCH_INTERVAL_TIME = 800\\nlet 
+linear_interval\\nlet binary_interval\\n\\n// ## Helper 
+Functions\\nfunction getArgumentsAsArray() {\\n  let args = 
+Array.from(arguments)\\n  if (typeof args[0] === \\\"object\\\") args = 
+args[0]\\n  if (args[0] &amp;&amp; args[0].length) args = args[0]\\n  
+return args\\n}\\nfunction sum() {\\n  let args = 
+getArgumentsAsArray(arguments)\\n  return Array.from(args).reduce( (p, 
+c) =&gt; p + c )\\n}\\nfunction avg() {\\n  let args = 
+getArgumentsAsArray(arguments)\\n  return sum(args) / 
+args.length\\n}\\nfunction randomIndex(array) {\\n  return 
+Math.ceil(Math.random() * array.length) - 1\\n}\\nfunction 
+randomElement(array) {\\n  return array[randomIndex(array)]\\n}\\n\\n// 
+## Search Functions\\nfunction startLinearSearch(value, set) {\\n  let 
+current_value\\n  let current_elm\\n  let current_index = 0\\n  let 
+num_iterations = 0\\n  let info = 
+document.getElementById('linear-info')\\n  linear_interval = 
+setInterval( () =&gt; {\\n    current_value = set[current_index]\\n    
+current_elm = document.getElementById(`${current_value}-linear`)\\n    
+num_iterations += 1\\n    if (current_index &gt;= set.length) { \\n     
+ clearInterval(linear_interval)\\n      info.innerHTML = `Index: -1, 
+Value: none, Num Iterations: ${num_iterations}`\\n      return\\n    
+}\\n    if (current_value != value) {\\n      current_elm.className = 
+\\\"exempt\\\"\\n      info.innerHTML = `Index: ${current_index}, Value:
+ ${current_value}, Num Iterations: ${num_iterations}`\\n    }\\n    if 
+(current_value == value) {\\n      clearInterval(linear_interval)\\n    
+  current_elm.className = \\\"found\\\"\\n      info.innerHTML = `Index:
+ ${current_index}, Value: ${current_value}, Num Iterations: 
+${num_iterations}`\\n      return\\n    }\\n    current_index += 1\\n  
+}, SEARCH_INTERVAL_TIME)\\n}\\nfunction startBinarySearch(value, set) 
+{\\n  let current_value\\n  let current_elm\\n  let current_index\\n  
+let num_iterations = 0\\n  let min = 0\\n  let max = set.length - 1\\n  
+let info = document.getElementById('binary-info')\\n  binary_interval = 
+setInterval( () =&gt; {\\n    num_iterations += 1\\n    if (min &gt; 
+max) {\\n      clearInterval(binary_interval)\\n      info.innerHTML = 
+`Index: -1, Value: none, Num Iterations: ${num_iterations}`\\n      
+return\\n    }\\n    current_index = Math.floor(avg(min, max))\\n    
+current_value = set[current_index]\\n    current_elm = 
+document.getElementById(`${current_value}-binary`)\\n    if 
+(current_value &lt; value) { \\n      min = current_index + 1\\n      
+set.slice(0, min).forEach( (n) =&gt; { \\n        
+document.getElementById(`${n}-binary`).className = \\\"exempt\\\"\\n    
+  })\\n      // current_elm.className = \\\"exempt\\\"\\n      
+info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num 
+Iterations: ${num_iterations}`\\n    }\\n    if (current_value &gt; 
+value ) {\\n      max = current_index - 1\\n      
+set.slice(current_index, set.length).forEach( (n) =&gt; { \\n        
+document.getElementById(`${n}-binary`).className = \\\"exempt\\\"\\n    
+  })\\n      info.innerHTML = `Index: ${current_index}, Value: 
+${current_value}, Num Iterations: ${num_iterations}`\\n    }\\n    if 
+(current_value == value) {\\n      clearInterval(binary_interval)\\n    
+  current_elm.className = \\\"found\\\"\\n      info.innerHTML = `Index:
+ ${current_index}, Value: ${current_value}, Num Iterations: 
+${num_iterations}`\\n      return\\n    }\\n  }, 
+SEARCH_INTERVAL_TIME)\\n}\\n\\n\\n// ## DOM triggered 
+functions\\nfunction reset() {\\n  clearInterval(linear_interval)\\n  
+clearInterval(binary_interval)\\n  let exempt = 
+document.querySelectorAll('.exempt')\\n  
+Array.prototype.forEach.call(exempt, (el) =&gt; { 
+el.classList.remove('exempt') })\\n  let found = 
+document.querySelectorAll('.found')\\n  
+Array.prototype.forEach.call(found, (el) =&gt; { 
+el.classList.remove('found') })\\n  let info = 
+document.querySelectorAll('.info')\\n  
+Array.prototype.forEach.call(info, (el) =&gt; { el.innerHTML = 
+'&amp;nbsp;' })\\n  enableButton('random-btn')\\n  
+enableButton('search-btn')\\n}\\nfunction getRandomLetter() {\\n  
+reset()\\n  const value = randomElement(ALPHABET)\\n  let input = 
+document.getElementById('random-letter')\\n  input.value = value\\n  
+input.style.webkitAnimationName = 'shake'\\n  input.className = 
+'shake'\\n}\\nfunction disableButton(id) {\\n  
+document.getElementById(id).disabled = true\\n}\\nfunction 
+enableButton(id) {\\n  document.getElementById(id).disabled = 
+false\\n}\\n\\n// ## Setup functions\\nfunction setupInputHandlers () 
+{\\n  let input = document.getElementById('random-letter')\\n  
+input.onkeyup = function() {\\n    this.value = 
+this.value.toUpperCase()\\n    reset()\\n  }\\n  
+input.addEventListener('webkitAnimationEnd', function() {\\n    
+this.style.webkitAnimationName = ''\\n    this.className = ''\\n  }, 
+false)\\n  let random_btn = document.getElementById('random-btn')\\n  
+random_btn.onclick = function (e) {\\n    e.preventDefault()\\n    
+getRandomLetter()\\n  }\\n  let search_btn = 
+document.getElementById('search-btn')\\n  search_btn.onclick = function 
+(e) {\\n    e.preventDefault()\\n    if (input.value.length) {\\n      
+startLinearSearch(input.value, ALPHABET)\\n      
+startBinarySearch(input.value, ALPHABET)\\n    }\\n  }\\n}\\nfunction 
+inputFocus() {\\n  let input = 
+document.getElementById('random-letter')\\n  input.focus()\\n}\\n\\n// 
+Let's roll\\nwindow.onload = () =&gt; {\\n  setupInputHandlers()\\n  
+inputFocus()\\n}\",\"html_pre_processor\":\"pug\",\"css_pre_processor\":\"sass\",\"js_pre_processor\":\"babel\",\"html_classes\":\"\",\"css_starter\":\"neither\",\"css_prefix_free\":null,\"css_external\":null,\"js_library\":null,\"js_modernizr\":null,\"js_external\":null,\"created_at\":\"2021-03-11T08:59:06.000Z\",\"updated_at\":\"2021-03-11T08:59:06.000Z\",\"session_hash\":null,\"title\":\"Linear
+ vs Binary Search\",\"description\":\"Algorithm visualization of Linear 
+vs Binary Search\",\"slug_hash\":\"MWbZoOa\",\"head\":\"&lt;meta 
+name=\\\"viewport\\\" content=\\\"width=device-width, 
+initial-scale=1\\\"&gt;\\n\",\"private\":false,\"has_animation\":true,\"css_pre_processor_lib\":\"\",\"checksum\":0,\"screenshot_uuid\":null,\"team_id\":0,\"css_prefix\":\"neither\",\"template\":false,\"js_module\":null,\"pen_hash\":null}","__jwt":"eyJhbGciOiJIUzI1NiJ9.eyJjbGFpbXMiOnsidXNlcl9pZCI6MX0sImV4cCI6MTYzNTM2NjUzNn0.2rhp5uk7QZ-_w6CRRV5abYxcNhh_Hm-usgXd1qRS4kE","__processorsMap":{"autoprefixer":"autoprefixer-10","babel":"babel-7","coffeescript":"coffeescript-2","format-1":"format-1","flutter":"flutter-1","haml":"haml-4","less":"less-3","lint-1":"lint-1","livescript":"livescript-1","markdown":"markdown-11","postcss":"postcss-7","pug":"pug-2","sass":"sass-1","scss":"sass-1","sass-ruby-3":"sass-ruby-3","sass-ruby-compass-3":"sass-ruby-compass-3","slim":"slim-3","stylus":"stylus-0","typescript":"typescript-4","vue":"vue-2","vue3":"vue-3"},"__favicon_mask_icon":"https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg","__favicon_shortcut_icon":"https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico","__path_to_iframe_console_runner":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-d8236034cc3508e70b0763f2575a8bb5850f9aea541206ce56704c013047d712.js","__path_to_iframe_refresh_css":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js","__path_to_iframe_runtime_errors":"https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js","__path_to_processor_worker":"https://cpwebassets.codepen.io/assets/packs/router.js","__path_to_stop_execution_on_timeout":"https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js","__pen_normalize_css_url":"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css","__pen_prefix_free_url":"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js","__pen_reset_css_url":"https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"}</textarea>
+<script nonce="">
+    __editor_config = {"id":"classic","editors":[{"id":"html","type":"html","name":"HTML","showEditor":true,"showSettings":true,"showProcessors":true,"embeds":{"showViewCompiled":true},"settings":[{"id":"processor","name":"HTML Preprocessor","type":"select","visible":true,"values":[{"id":"none","name":"None","value":"none","default":true},{"id":"haml","name":"Haml","value":"haml"},{"id":"markdown","name":"Markdown","value":"markdown"},{"id":"slim","name":"Slim","value":"slim"},{"id":"pug","name":"Pug","value":"pug"}]},{"id":"html_classes","name":"Add Class(es) to \u003chtml\u003e","type":"input","placeholder":"e.g. single post post-1234","visible":true},{"id":"head","name":"Stuff for \u003chead\u003e","type":"textarea","placeholder":"e.g. \u003cmeta\u003e, \u003clink\u003e, \u003cscript\u003e","visible":true}],"actions":[{"id":"tidy_html","type":"tidy_code","name":"Format HTML","disabled_processors":["haml","slim"]},{"id":"view_compiled_html","type":"view_compiled","name":"View Compiled HTML","disabled_processors":["none"],"showInEmbeds":true},{"id":"analyze_html","type":"analyze","name":"Analyze HTML"},{"id":"maximize_html_editor","type":"maximize","name":"Maximize HTML Editor"},{"id":"minimize_html_editor","type":"minimize","name":"Minimize HTML Editor"},{"id":"fold_all_html","type":"fold_all","name":"Fold All"},{"id":"unfold_all_html","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"haml","name":"Haml"},{"id":"markdown","name":"Markdown"},{"id":"slim","name":"Slim"},{"id":"pug","name":"Pug"}]},{"id":"css","type":"css","name":"CSS","showEditor":true,"showSettings":true,"showProcessors":true,"showVendorPrefixing":true,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_css","type":"tidy_code","name":"Format CSS","disabled_processors":["sass","stylus"]},{"id":"view_compiled_css","type":"view_compiled","name":"View Compiled CSS","disabled_processors":["none"],"disabled_prefixes":["neither","prefixfree"]},{"id":"analyze_css","type":"analyze","name":"Analyze CSS"},{"id":"maximize_css_editor","type":"maximize","name":"Maximize CSS Editor"},{"id":"minimize_css_editor","type":"minimize","name":"Minimize CSS Editor"},{"id":"fold_all_css","type":"fold_all","name":"Fold All","disabled_processors":["sass"]},{"id":"unfold_all_css","type":"unfold_all","name":"Unfold All","disabled_processors":["sass"]}],"processors":[{"id":"none","name":"None"},{"id":"less","name":"Less"},{"id":"scss","name":"SCSS"},{"id":"sass","name":"Sass"},{"id":"stylus","name":"Stylus"},{"id":"postcss","name":"PostCSS"}],"parSuffixes":["less","scss","sass","styl"]},{"id":"js","type":"js","name":"JS","showEditor":true,"showSettings":true,"showProcessors":true,"detectImports":true,"externalResourcesHidden":false,"embeds":{"showViewCompiled":true},"actions":[{"id":"tidy_js","type":"tidy_code","name":"Format JavaScript","disabled_processors":["coffeescript, livescript"]},{"id":"view_compiled_js","type":"view_compiled","name":"View Compiled JavaScript","disabled_processors":["none"]},{"id":"analyze_js","type":"analyze","name":"Analyze JavaScript"},{"id":"maximize_js_editor","type":"maximize","name":"Maximize JavaScript Editor"},{"id":"minimize_js_editor","type":"minimize","name":"Minimize JavaScript Editor"},{"id":"fold_all_js","type":"fold_all","name":"Fold All"},{"id":"unfold_all_js","type":"unfold_all","name":"Unfold All"}],"processors":[{"id":"none","name":"None"},{"id":"babel","name":"Babel"},{"id":"typescript","name":"TypeScript"},{"id":"coffeescript","name":"CoffeeScript"},{"id":"livescript","name":"LiveScript"}]}],"formatters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/format"}],"layout":{"default":"top"},"linters":[{"id":"classic","name":"Classic","runOn":[{"eventType":"demand"}],"url":"https://fi593g2v2a.execute-api.us-west-2.amazonaws.com/production/lint"}],"preview":{"intervalMaxWaitMS":3500,"intervalMS":1200},"settings":[{"id":"details","name":"Pen Details","type":"setting"},{"id":"privacy","name":"Privacy","pro":true,"type":"setting"},{"id":"behavior","name":"Behavior","type":"setting"},{"id":"editor","name":"Editor","type":"setting"},{"id":"template","name":"Template","type":"setting"},{"id":"screenshot","name":"Screenshot","pro":true,"type":"setting"}]}
+    __processedPen = {"html":"&lt;h1&gt;Linear vs Binary&lt;/h1&gt;\n&lt;input type=&quot;text&quot; maxLength=&quot;1&quot; id=&quot;random-letter&quot;/&gt;\n&lt;div class=&quot;controls&quot;&gt;\n  &lt;button id=&quot;random-btn&quot;&gt;Random&lt;/button&gt;\n  &lt;button id=&quot;search-btn&quot;&gt;Search&lt;/button&gt;\n&lt;/div&gt;\n&lt;div class=&quot;searches&quot;&gt;\n  &lt;div class=&quot;linear-search&quot;&gt;\n    &lt;h2&gt;Linear&lt;/h2&gt;\n    &lt;p class=&quot;info&quot; id=&quot;linear-info&quot;&gt;&amp;nbsp;&lt;/p&gt;\n    &lt;ul class=&quot;data&quot;&gt;\n      &lt;li id=&quot;A-linear&quot;&gt;A&lt;/li&gt;\n      &lt;li id=&quot;B-linear&quot;&gt;B&lt;/li&gt;\n      &lt;li id=&quot;C-linear&quot;&gt;C&lt;/li&gt;\n      &lt;li id=&quot;D-linear&quot;&gt;D&lt;/li&gt;\n      &lt;li id=&quot;E-linear&quot;&gt;E&lt;/li&gt;\n      &lt;li id=&quot;F-linear&quot;&gt;F&lt;/li&gt;\n      &lt;li id=&quot;G-linear&quot;&gt;G&lt;/li&gt;\n      &lt;li id=&quot;H-linear&quot;&gt;H&lt;/li&gt;\n      &lt;li id=&quot;I-linear&quot;&gt;I&lt;/li&gt;\n      &lt;li id=&quot;J-linear&quot;&gt;J&lt;/li&gt;\n      &lt;li id=&quot;K-linear&quot;&gt;K&lt;/li&gt;\n      &lt;li id=&quot;L-linear&quot;&gt;L&lt;/li&gt;\n      &lt;li id=&quot;M-linear&quot;&gt;M&lt;/li&gt;\n      &lt;li id=&quot;N-linear&quot;&gt;N&lt;/li&gt;\n      &lt;li id=&quot;O-linear&quot;&gt;O&lt;/li&gt;\n      &lt;li id=&quot;P-linear&quot;&gt;P&lt;/li&gt;\n      &lt;li id=&quot;Q-linear&quot;&gt;Q&lt;/li&gt;\n      &lt;li id=&quot;R-linear&quot;&gt;R&lt;/li&gt;\n      &lt;li id=&quot;S-linear&quot;&gt;S&lt;/li&gt;\n      &lt;li id=&quot;T-linear&quot;&gt;T&lt;/li&gt;\n      &lt;li id=&quot;U-linear&quot;&gt;U&lt;/li&gt;\n      &lt;li id=&quot;V-linear&quot;&gt;V&lt;/li&gt;\n      &lt;li id=&quot;W-linear&quot;&gt;W&lt;/li&gt;\n      &lt;li id=&quot;X-linear&quot;&gt;X&lt;/li&gt;\n      &lt;li id=&quot;Y-linear&quot;&gt;Y&lt;/li&gt;\n      &lt;li id=&quot;Z-linear&quot;&gt;Z&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n  &lt;div class=&quot;binary-search&quot;&gt;\n    &lt;h2&gt;Binary&lt;/h2&gt;\n    &lt;p class=&quot;info&quot; id=&quot;binary-info&quot;&gt;&amp;nbsp;&lt;/p&gt;\n    &lt;ul class=&quot;data&quot;&gt;\n      &lt;li id=&quot;A-binary&quot;&gt;A&lt;/li&gt;\n      &lt;li id=&quot;B-binary&quot;&gt;B&lt;/li&gt;\n      &lt;li id=&quot;C-binary&quot;&gt;C&lt;/li&gt;\n      &lt;li id=&quot;D-binary&quot;&gt;D&lt;/li&gt;\n      &lt;li id=&quot;E-binary&quot;&gt;E&lt;/li&gt;\n      &lt;li id=&quot;F-binary&quot;&gt;F&lt;/li&gt;\n      &lt;li id=&quot;G-binary&quot;&gt;G&lt;/li&gt;\n      &lt;li id=&quot;H-binary&quot;&gt;H&lt;/li&gt;\n      &lt;li id=&quot;I-binary&quot;&gt;I&lt;/li&gt;\n      &lt;li id=&quot;J-binary&quot;&gt;J&lt;/li&gt;\n      &lt;li id=&quot;K-binary&quot;&gt;K&lt;/li&gt;\n      &lt;li id=&quot;L-binary&quot;&gt;L&lt;/li&gt;\n      &lt;li id=&quot;M-binary&quot;&gt;M&lt;/li&gt;\n      &lt;li id=&quot;N-binary&quot;&gt;N&lt;/li&gt;\n      &lt;li id=&quot;O-binary&quot;&gt;O&lt;/li&gt;\n      &lt;li id=&quot;P-binary&quot;&gt;P&lt;/li&gt;\n      &lt;li id=&quot;Q-binary&quot;&gt;Q&lt;/li&gt;\n      &lt;li id=&quot;R-binary&quot;&gt;R&lt;/li&gt;\n      &lt;li id=&quot;S-binary&quot;&gt;S&lt;/li&gt;\n      &lt;li id=&quot;T-binary&quot;&gt;T&lt;/li&gt;\n      &lt;li id=&quot;U-binary&quot;&gt;U&lt;/li&gt;\n      &lt;li id=&quot;V-binary&quot;&gt;V&lt;/li&gt;\n      &lt;li id=&quot;W-binary&quot;&gt;W&lt;/li&gt;\n      &lt;li id=&quot;X-binary&quot;&gt;X&lt;/li&gt;\n      &lt;li id=&quot;Y-binary&quot;&gt;Y&lt;/li&gt;\n      &lt;li id=&quot;Z-binary&quot;&gt;Z&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;","css":"@font-face (&quot;OperatorMono-Bold&quot; &quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Bold&quot;);\n@font-face (&quot;OperatorMono-Medium&quot; &quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/161040/OperatorMono-Medium&quot;);\n@keyframes shake {\n  10%, 90% {\n    transform: translate3d(-1px, 0, 0);\n  }\n  20%, 80% {\n    transform: translate3d(2px, 0, 0);\n  }\n  30%, 50%, 70% {\n    transform: translate3d(-4px, 0, 0);\n  }\n  40%, 60% {\n    transform: translate3d(4px, 0, 0);\n  }\n}\nbody {\n  background: #3BB0FF;\n  text-align: center;\n  font-family: &quot;OperatorMono-Medium&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  color: white;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  color: #FFF32B;\n  font-family: &quot;OperatorMono-Bold&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  font-size: 2em;\n}\n\nh1 {\n  font-size: 3em;\n}\n\ninput#random-letter {\n  text-align: center;\n  width: 1em;\n  border: none;\n  border-bottom: 5px solid white;\n  padding-bottom: 0.2em;\n  text-transform: uppercase;\n  background: #3BB0FF;\n  font-size: 3em;\n  font-family: &quot;OperatorMono-Medium&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  color: white;\n}\ninput#random-letter.shake {\n  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;\n}\ninput#random-letter:focus {\n  outline: none;\n}\n\nbutton {\n  text-align: center;\n  border: none;\n  background: #3BB0FF;\n  border: 5px solid #FFF32B;\n  color: #FFF32B;\n  font-size: 30px;\n  font-family: &quot;OperatorMono-Bold&quot;, &quot;Lucida Console&quot;, Monaco, monospace;\n  padding: 0.15em 1.3em;\n  margin: 1em;\n  transition: border-color 0.2s, color 0.2s;\n  -webkit-transition: border-color 0.2s, color 0.2s;\n}\nbutton:hover {\n  color: white;\n  border-color: white;\n  cursor: pointer;\n}\n\n.searches .linear-search, .searches .binary-search {\n  display: inline-block;\n}\n\nul.data {\n  padding: 0;\n  margin: 1em;\n  margin-top: 0;\n}\nul.data li {\n  display: inline-block;\n  border-bottom: 2px solid rgba(0, 0, 0, 0);\n}\nul.data li.exempt {\n  color: #FF014E;\n  border-bottom: 2px solid #FF014E;\n}\nul.data li.found {\n  color: #66FF00;\n  border-bottom: 2px solid #66FF00;\n}","js":"// ## Global Variables\nconst ALPHABET = &#39;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;.split(&#39;&#39;);\nconst ARR_LENGTH = ALPHABET.LENGTH;\nconst SEARCH_INTERVAL_TIME = 800;\nlet linear_interval;\nlet binary_interval;\n\n// ## Helper Functions\nfunction getArgumentsAsArray() {\n  let args = Array.from(arguments);\n  if (typeof args[0] === &quot;object&quot;) args = args[0];\n  if (args[0] &amp;&amp; args[0].length) args = args[0];\n  return args;\n}\nfunction sum() {\n  let args = getArgumentsAsArray(arguments);\n  return Array.from(args).reduce((p, c) =&gt; p + c);\n}\nfunction avg() {\n  let args = getArgumentsAsArray(arguments);\n  return sum(args) / args.length;\n}\nfunction randomIndex(array) {\n  return Math.ceil(Math.random() * array.length) - 1;\n}\nfunction randomElement(array) {\n  return array[randomIndex(array)];\n}\n\n// ## Search Functions\nfunction startLinearSearch(value, set) {\n  let current_value;\n  let current_elm;\n  let current_index = 0;\n  let num_iterations = 0;\n  let info = document.getElementById(&#39;linear-info&#39;);\n  linear_interval = setInterval(() =&gt; {\n    current_value = set[current_index];\n    current_elm = document.getElementById(`${current_value}-linear`);\n    num_iterations += 1;\n    if (current_index &gt;= set.length) {\n      clearInterval(linear_interval);\n      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    if (current_value != value) {\n      current_elm.className = &quot;exempt&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value == value) {\n      clearInterval(linear_interval);\n      current_elm.className = &quot;found&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    current_index += 1;\n  }, SEARCH_INTERVAL_TIME);\n}\nfunction startBinarySearch(value, set) {\n  let current_value;\n  let current_elm;\n  let current_index;\n  let num_iterations = 0;\n  let min = 0;\n  let max = set.length - 1;\n  let info = document.getElementById(&#39;binary-info&#39;);\n  binary_interval = setInterval(() =&gt; {\n    num_iterations += 1;\n    if (min &gt; max) {\n      clearInterval(binary_interval);\n      info.innerHTML = `Index: -1, Value: none, Num Iterations: ${num_iterations}`;\n      return;\n    }\n    current_index = Math.floor(avg(min, max));\n    current_value = set[current_index];\n    current_elm = document.getElementById(`${current_value}-binary`);\n    if (current_value &lt; value) {\n      min = current_index + 1;\n      set.slice(0, min).forEach(n =&gt; {\n        document.getElementById(`${n}-binary`).className = &quot;exempt&quot;;\n      });\n      // current_elm.className = &quot;exempt&quot;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value &gt; value) {\n      max = current_index - 1;\n      set.slice(current_index, set.length).forEach(n =&gt; {\n        document.getElementById(`${n}-binary`).className = &quot;exempt&quot;;\n      });\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n    }\n    if (current_value == value) {\n      clearInterval(binary_interval);\n      current_elm.className = &quot;found&quot;;\n      info.innerHTML = `Index: ${current_index}, Value: ${current_value}, Num Iterations: ${num_iterations}`;\n      return;\n    }\n  }, SEARCH_INTERVAL_TIME);\n}\n\n\n// ## DOM triggered functions\nfunction reset() {\n  clearInterval(linear_interval);\n  clearInterval(binary_interval);\n  let exempt = document.querySelectorAll(&#39;.exempt&#39;);\n  Array.prototype.forEach.call(exempt, el =&gt; {el.classList.remove(&#39;exempt&#39;);});\n  let found = document.querySelectorAll(&#39;.found&#39;);\n  Array.prototype.forEach.call(found, el =&gt; {el.classList.remove(&#39;found&#39;);});\n  let info = document.querySelectorAll(&#39;.info&#39;);\n  Array.prototype.forEach.call(info, el =&gt; {el.innerHTML = &#39;&amp;nbsp;&#39;;});\n  enableButton(&#39;random-btn&#39;);\n  enableButton(&#39;search-btn&#39;);\n}\nfunction getRandomLetter() {\n  reset();\n  const value = randomElement(ALPHABET);\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.value = value;\n  input.style.webkitAnimationName = &#39;shake&#39;;\n  input.className = &#39;shake&#39;;\n}\nfunction disableButton(id) {\n  document.getElementById(id).disabled = true;\n}\nfunction enableButton(id) {\n  document.getElementById(id).disabled = false;\n}\n\n// ## Setup functions\nfunction setupInputHandlers() {\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.onkeyup = function () {\n    this.value = this.value.toUpperCase();\n    reset();\n  };\n  input.addEventListener(&#39;webkitAnimationEnd&#39;, function () {\n    this.style.webkitAnimationName = &#39;&#39;;\n    this.className = &#39;&#39;;\n  }, false);\n  let random_btn = document.getElementById(&#39;random-btn&#39;);\n  random_btn.onclick = function (e) {\n    e.preventDefault();\n    getRandomLetter();\n  };\n  let search_btn = document.getElementById(&#39;search-btn&#39;);\n  search_btn.onclick = function (e) {\n    e.preventDefault();\n    if (input.value.length) {\n      startLinearSearch(input.value, ALPHABET);\n      startBinarySearch(input.value, ALPHABET);\n    }\n  };\n}\nfunction inputFocus() {\n  let input = document.getElementById(&#39;random-letter&#39;);\n  input.focus();\n}\n\n// Let&#39;s roll\nwindow.onload = () =&gt; {\n  setupInputHandlers();\n  inputFocus();\n};"};
+    __preprocessors = {
+      "html": "pug",
+      "css": "sass",
+      "js": "babel"
+    };
+    __preprocessorNames = {
+      "html": "Pug",
+      "css": "Sass",
+      "js": "Babel"
+    };
+    __editable = true;
+    __embed_prefill = false;
+  </script>
+<script src="../a_data_045/GRWdvNm_data/embed-e369dee9e85a1a53638c341339102b70938d2f103a2252bc1bf4c7e.js"></script></body></html>
